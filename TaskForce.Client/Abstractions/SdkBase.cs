@@ -7,5 +7,6 @@ namespace TaskForce.Client.Abstractions
     public abstract class SdkBase : LayoutBase
     {
         [Inject] protected SdkService Sdk { get; set; } = default!;
+        protected abstract Task GetRecords();
     }
 }

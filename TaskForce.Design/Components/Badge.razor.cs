@@ -17,10 +17,6 @@ namespace TaskForce.Design.Components
         private string? Text { get; set; }
         private string? Color { get; set; }
 
-        protected override Task GetRecords()
-        {
-            throw new NotImplementedException();
-        }
 
         protected override void OnParametersSet()
         {
@@ -44,12 +40,14 @@ namespace TaskForce.Design.Components
                 Text = StatoDiUtente switch
                 {
                     StatoUtente.Attivo => "Attivo",
+                    StatoUtente.Concluso => "Concluso",
                     _ => "Pausa"
                 };
 
                 Color = StatoDiUtente switch
                 {
                     StatoUtente.Attivo => $"{Theme}-primary",
+                    StatoUtente.Concluso => $"success",
                     _ => $"warning"
                 };
             }

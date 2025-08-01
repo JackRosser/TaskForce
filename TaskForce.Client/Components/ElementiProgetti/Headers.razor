@@ -1,0 +1,13 @@
+﻿@inherits LayoutBase
+
+@if(List is not null)
+{
+    <div class="index">
+        @foreach (var progetto in List)
+        {
+            var isShow = progetto.Id == ProgettoAttivo;
+            <button class="@($"{(isShow ? "active" : "")}")" @onclick="() => Change(progetto.Id)">@progetto.Nome</button>
+        }
+        <button>+</button>
+    </div>
+}

@@ -60,7 +60,7 @@
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            border-radius: 15px;
+            border-radius: 10px;
             overflow: hidden;
 
             & thead {
@@ -121,6 +121,10 @@
                     & tr {
                         background-color: $vs-alternate;
 
+                        &:nth-child(even) {
+                            background-color: rgba($vs-alternate, 0.6);
+                        }
+
 
                         & td {
                             padding: 1rem;
@@ -128,6 +132,10 @@
                             &:first-child {
                                 font-size: 1rem;
                             }
+                        }
+
+                        &:hover {
+                            background-color: $vs-background !important;
                         }
                     }
                 }
@@ -149,8 +157,40 @@
         &:hover {
             background-color: $vs-active;
             color: $vs-background;
+
+
+            & thead {
+                & tr {
+                    background-color: rgba($vs-primary, 0.4);
+                }
+            }       
+
+        & .dev-table {
+            & thead {
+                & tr {
+                    background-color: rgba($vs-active, 0.6);
+                }
+            }
+
+            & tbody {
+                & tr {
+                    background-color: $vs-active;
+
+                    &:nth-child(even) {
+                        background-color: rgba($vs-active, 0.6);
+                    }
+                }
+            }
+
+            & tr,
+            & th {
+                color: $vs-text;
+                text-transform: capitalize;
+                text-align: center;
+            }
         }
     }
+}
 }
 
 .index {
