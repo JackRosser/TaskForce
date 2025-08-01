@@ -10,8 +10,9 @@ namespace TaskForce.Dto.Progetto.FasiProgetto
         public int MacroFaseId { get; set; }
         [Required]
         public string Nome { get; set; } = null!;
-        public int? GiorniPrevistiBe { get; set; }
-        public int? GiorniPrevistiUi { get; set; }
+        public int? GiorniPrevisti { get; set; }
+        [Required]
+        public Tipologia TipoFase { get; set; }
         public StatoFase Stato { get; set; }
     }
 }

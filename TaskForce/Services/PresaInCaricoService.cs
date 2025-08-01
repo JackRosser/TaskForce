@@ -4,80 +4,117 @@ using TaskForce.Dto.Progetto.PresaInCarico;
 using TaskForce.Enum;
 using TaskForce.Models;
 
-namespace TaskForce.Services;
-
 public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
 {
-    public async Task<IEnumerable<PresaInCaricoDto>> GetByFaseAsync(int faseProgettoId, CancellationToken ct = default)
+    public async Task<IEnumerable<PresaInCaricoRequest>> GetByFaseAsync(int faseProgettoId, CancellationToken ct = default)
     {
-        var list = await db.PreseInCarico
+        return await db.PreseInCarico
             .AsNoTracking()
             .Where(p => p.FaseProgettoId == faseProgettoId)
             .OrderByDescending(p => p.DataPresaInCarico)
-            .Select(p => new PresaInCaricoDto
+            .Select(p => new PresaInCaricoRequest
             {
                 Id = p.Id,
                 FaseProgettoId = p.FaseProgettoId,
                 UserId = p.UserId,
+                UserName = db.Users.FirstOrDefault(u => u.Id == p.UserId)!.Nome,
                 DataPresaInCarico = p.DataPresaInCarico,
                 DataFineLavoro = p.DataFineLavoro
             })
             .ToListAsync(ct);
-
-        return list;
     }
 
-    public Task<PresaInCaricoDto?> GetByIdAsync(int id, CancellationToken ct = default) =>
+    public Task<PresaInCaricoRequest?> GetByIdAsync(int id, CancellationToken ct = default) =>
         db.PreseInCarico
           .AsNoTracking()
           .Where(p => p.Id == id)
-          .Select(p => new PresaInCaricoDto
+          .Select(p => new PresaInCaricoRequest
           {
               Id = p.Id,
               FaseProgettoId = p.FaseProgettoId,
               UserId = p.UserId,
+              UserName = db.Users.FirstOrDefault(u => u.Id == p.UserId)!.Nome,
               DataPresaInCarico = p.DataPresaInCarico,
               DataFineLavoro = p.DataFineLavoro
           })
           .FirstOrDefaultAsync(ct);
 
-    public async Task<PresaInCaricoDto> AssegnaAsync(int faseProgettoId, int userId, CancellationToken ct = default)
+    public async Task<PresaInCaricoRequest> AssegnaAsync(int faseProgettoId, int userId, CancellationToken ct = default)
     {
-        // Verifiche esistenza (opzionali ma consigliate)
-        var faseExists = await db.FasiProgetto.AnyAsync(f => f.Id == faseProgettoId, ct);
-        if (!faseExists) throw new KeyNotFoundException("FaseProgetto non trovata.");
+        var now = DateTime.Now;
 
-        var userExists = await db.Users.AnyAsync(u => u.Id == userId, ct);
-        if (!userExists) throw new KeyNotFoundException("User non trovato.");
-
-        using var tx = await db.Database.BeginTransactionAsync(ct);
-
-        var now = DateTime.Now; // come richiesto
         var entity = new PresaInCarico
         {
             FaseProgettoId = faseProgettoId,
             UserId = userId,
             DataPresaInCarico = now,
-            DataFineLavoro = null
+            Stato = StatoUtente.Attivo
         };
 
         db.PreseInCarico.Add(entity);
         await db.SaveChangesAsync(ct);
 
-        // Aggiorna lo stato della fase
-        await db.FasiProgetto
-            .Where(f => f.Id == faseProgettoId)
-            .ExecuteUpdateAsync(s => s.SetProperty(f => f.Stato, StatoFase.PresoInCarico), ct);
+        var user = await db.Users.FindAsync([userId], ct);
 
-        await tx.CommitAsync(ct);
-
-        return new PresaInCaricoDto
+        return new PresaInCaricoRequest
         {
             Id = entity.Id,
             FaseProgettoId = entity.FaseProgettoId,
             UserId = entity.UserId,
-            DataPresaInCarico = entity.DataPresaInCarico,
-            DataFineLavoro = entity.DataFineLavoro
+            UserName = user?.Nome,
+            DataPresaInCarico = entity.DataPresaInCarico
         };
+    }
+
+    public async Task<bool> EliminaAsync(int id, CancellationToken ct = default)
+    {
+        var entity = await db.PreseInCarico.FindAsync([id], ct);
+        if (entity is null) return false;
+
+        db.PreseInCarico.Remove(entity);
+        await db.SaveChangesAsync(ct);
+
+        return true;
+    }
+
+    public async Task<bool> MettiInPausaAsync(int id, CancellationToken ct = default)
+    {
+        var entity = await db.PreseInCarico.FindAsync([id], ct);
+        if (entity is null) return false;
+
+        entity.Stato = StatoUtente.InPausa;
+        await db.SaveChangesAsync(ct);
+
+        return true;
+    }
+
+    public async Task<bool> TerminaAsync(int id, CancellationToken ct = default)
+    {
+        var entity = await db.PreseInCarico.FindAsync([id], ct);
+        if (entity is null || entity.DataFineLavoro != null) return false;
+
+        entity.DataFineLavoro = DateTime.Now;
+        entity.Stato = StatoUtente.Attivo;
+
+        await db.SaveChangesAsync(ct);
+
+        // Aggiornamento stato fase se tutti hanno finito
+        var faseId = entity.FaseProgettoId;
+
+        var tutteTerminate = await db.PreseInCarico
+            .Where(p => p.FaseProgettoId == faseId)
+            .AllAsync(p => p.DataFineLavoro != null, ct);
+
+        if (tutteTerminate)
+        {
+            var fase = await db.FasiProgetto.FindAsync([faseId], ct);
+            if (fase != null)
+            {
+                fase.Stato = StatoFase.Completato;
+                await db.SaveChangesAsync(ct);
+            }
+        }
+
+        return true;
     }
 }

@@ -2,9 +2,7 @@
 {
     public enum StatoFase
     {
-        Dacompletare = 0,
-        PresoInCarico,
-        InPausa,
+        DaCompletare = 0,
         Completato
     }
 }

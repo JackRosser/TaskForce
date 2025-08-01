@@ -6,12 +6,10 @@ using TaskForce.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IUsersFasiService, UsersFasiService>();
 builder.Services.AddScoped<IProgettoService, ProgettoService>();
 builder.Services.AddScoped<IPresaInCaricoService, PresaInCaricoService>();
 builder.Services.AddScoped<IFaseProgettoService, FaseProgettoService>();
 builder.Services.AddScoped<IMacroFaseService, MacroFaseService>();
-builder.Services.AddScoped<IPausaService, PausaService>();
 
 
 builder.Services.AddControllers();

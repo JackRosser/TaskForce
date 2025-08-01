@@ -6,20 +6,18 @@ using Exception = System.Exception;
 namespace TaskForce.Client.Services
 {
     public class SdkService(
-        FasiProgettoClient fasiProgettoClient,
+        FasiClient fasiProgettoClient,
         MacroFasiClient macroFasiClient,
-        PauseClient pauseClient,
         PreseInCaricoClient preseInCaricoClient,
         ProgettiClient progettiClient,
         UsersClient usersClient,
-        UsersFasiClient usersFasiClient,
         ILogger<SdkService> logger)
     {
 
         /// <summary>
         /// Esegue la richiesta http e ritorna il risultato tramite Result pattern
         /// </summary>
-        public async Task<Result<T>> SendRequestAsync<T>(Func<FasiProgettoClient, Task<T>> action, [CallerMemberName] string caller = "")
+        public async Task<Result<T>> SendRequestAsync<T>(Func<FasiClient, Task<T>> action, [CallerMemberName] string caller = "")
         {
             try
             {
@@ -37,19 +35,6 @@ namespace TaskForce.Client.Services
             try
             {
                 return Result.Ok(await action(macroFasiClient));
-            }
-            catch (Exception ex)
-            {
-                logger.LogError($"Caller {caller},{ex.Message}");
-                return Result.Fail(ex.Message);
-            }
-        }
-
-        public async Task<Result<T>> SendRequestAsync<T>(Func<PauseClient, Task<T>> action, [CallerMemberName] string caller = "")
-        {
-            try
-            {
-                return Result.Ok(await action(pauseClient));
             }
             catch (Exception ex)
             {
@@ -89,19 +74,6 @@ namespace TaskForce.Client.Services
             try
             {
                 return Result.Ok(await action(progettiClient));
-            }
-            catch (Exception ex)
-            {
-                logger.LogError($"Caller {caller},{ex.Message}");
-                return Result.Fail(ex.Message);
-            }
-        }
-
-        public async Task<Result<T>> SendRequestAsync<T>(Func<UsersFasiClient, Task<T>> action, [CallerMemberName] string caller = "")
-        {
-            try
-            {
-                return Result.Ok(await action(usersFasiClient));
             }
             catch (Exception ex)
             {

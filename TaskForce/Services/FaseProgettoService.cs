@@ -4,8 +4,6 @@ using TaskForce.Dto.Progetto.FasiProgetto;
 using TaskForce.Enum;
 using TaskForce.Models;
 
-namespace TaskForce.Services;
-
 public class FaseProgettoService(AppDbContext db) : IFaseProgettoService
 {
     public async Task<GetFaseDto> CreateAsync(int macroFaseId, CreateFaseDto dto, CancellationToken ct = default)
@@ -14,9 +12,9 @@ public class FaseProgettoService(AppDbContext db) : IFaseProgettoService
         {
             MacroFaseId = macroFaseId,
             Nome = dto.Nome!,
-            GiorniPrevistiBe = dto.GiorniPrevistiBe,
-            GiorniPrevistiUi = dto.GiorniPrevistiUi,
-            Stato = StatoFase.Dacompletare
+            GiorniPrevisti = dto.GiorniPrevisti,
+            TipoFase = dto.TipoFase!.Value,
+            Stato = StatoFase.DaCompletare
         };
 
         db.FasiProgetto.Add(entity);
@@ -27,8 +25,8 @@ public class FaseProgettoService(AppDbContext db) : IFaseProgettoService
             Id = entity.Id,
             MacroFaseId = entity.MacroFaseId,
             Nome = entity.Nome,
-            GiorniPrevistiBe = entity.GiorniPrevistiBe ?? 0,
-            GiorniPrevistiUi = entity.GiorniPrevistiUi ?? 0,
+            GiorniPrevisti = entity.GiorniPrevisti ?? 0,
+            TipoFase = entity.TipoFase,
             Stato = entity.Stato
         };
     }
@@ -42,8 +40,8 @@ public class FaseProgettoService(AppDbContext db) : IFaseProgettoService
               Id = f.Id,
               MacroFaseId = f.MacroFaseId,
               Nome = f.Nome,
-              GiorniPrevistiBe = f.GiorniPrevistiBe ?? 0,
-              GiorniPrevistiUi = f.GiorniPrevistiUi ?? 0,
+              GiorniPrevisti = f.GiorniPrevisti ?? 0,
+              TipoFase = f.TipoFase,
               Stato = f.Stato
           })
           .FirstOrDefaultAsync(ct);
@@ -59,13 +57,13 @@ public class FaseProgettoService(AppDbContext db) : IFaseProgettoService
                 Id = f.Id,
                 MacroFaseId = f.MacroFaseId,
                 Nome = f.Nome,
-                GiorniPrevistiBe = f.GiorniPrevistiBe ?? 0,
-                GiorniPrevistiUi = f.GiorniPrevistiUi ?? 0,
+                GiorniPrevisti = f.GiorniPrevisti ?? 0,
+                TipoFase = f.TipoFase,
                 Stato = f.Stato
             })
             .ToListAsync(ct);
 
-        return list; // IEnumerable<GetFaseDto>
+        return list;
     }
 
     public async Task<bool> UpdateAsync(UpdateFaseProgettoDto dto, CancellationToken ct = default)
@@ -74,8 +72,8 @@ public class FaseProgettoService(AppDbContext db) : IFaseProgettoService
             .Where(f => f.Id == dto.Id && f.MacroFaseId == dto.MacroFaseId)
             .ExecuteUpdateAsync(s => s
                 .SetProperty(f => f.Nome, dto.Nome)
-                .SetProperty(f => f.GiorniPrevistiBe, dto.GiorniPrevistiBe)
-                .SetProperty(f => f.GiorniPrevistiUi, dto.GiorniPrevistiUi)
+                .SetProperty(f => f.GiorniPrevisti, dto.GiorniPrevisti)
+                .SetProperty(f => f.TipoFase, dto.TipoFase)
                 .SetProperty(f => f.Stato, dto.Stato),
                 ct);
 
@@ -90,5 +88,4 @@ public class FaseProgettoService(AppDbContext db) : IFaseProgettoService
 
         return affected == 1;
     }
-
 }

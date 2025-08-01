@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TaskForce.Enum;
 
 namespace TaskForce.Dto.Progetto.FasiProgetto
 {
@@ -6,7 +7,8 @@ namespace TaskForce.Dto.Progetto.FasiProgetto
     {
         [Required]
         public string? Nome { get; set; }
-        public int? GiorniPrevistiBe { get; set; }
-        public int? GiorniPrevistiUi { get; set; }
+        [Required]
+        public Tipologia? TipoFase { get; set; }
+        public int? GiorniPrevisti { get; set; }
     }
 }

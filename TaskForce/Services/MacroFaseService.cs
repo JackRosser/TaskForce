@@ -73,8 +73,7 @@ public class MacroFaseService(AppDbContext db) : IMacroFaseService
                         Id = f.Id,
                         MacroFaseId = f.MacroFaseId,
                         Nome = f.Nome,
-                        GiorniPrevistiBe = f.GiorniPrevistiBe ?? 0,
-                        GiorniPrevistiUi = f.GiorniPrevistiUi ?? 0,
+                        GiorniPrevisti = f.GiorniPrevisti ?? 0,
                         Stato = f.Stato
                     })
             })

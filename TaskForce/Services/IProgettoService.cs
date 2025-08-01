@@ -9,5 +9,6 @@ namespace TaskForce.Services
         Task<IEnumerable<GetProgettoDto>> GetAllAsync(CancellationToken ct = default);
         Task<bool> UpdateAsync(UpdateProgettoDto dto, CancellationToken ct = default);
         Task<bool> DeleteAsync(int id, CancellationToken ct = default);
+        Task<IEnumerable<GetProgettoWithFasiRequest>> GetAllWithInfoAsync(CancellationToken ct);
     }
 }

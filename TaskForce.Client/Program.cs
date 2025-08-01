@@ -29,7 +29,7 @@ builder.Services.AddScoped<StateContainerService>();
 builder.Services.AddTransient<HttpErrorMessageHandler>();
 
 
-builder.Services.AddHttpClient<FasiProgettoClient>(a =>
+builder.Services.AddHttpClient<FasiClient>(a =>
 {
     var uri = new Uri(apiBaseUrl);
     a.BaseAddress = new Uri($"{uri.Scheme}://{uri.Host}:{uri.Port}");
@@ -41,11 +41,6 @@ builder.Services.AddHttpClient<MacroFasiClient>(a =>
     a.BaseAddress = new Uri($"{uri.Scheme}://{uri.Host}:{uri.Port}");
 }).AddHttpMessageHandler<HttpErrorMessageHandler>().RemoveAllLoggers();
 
-builder.Services.AddHttpClient<PauseClient>(a =>
-{
-    var uri = new Uri(apiBaseUrl);
-    a.BaseAddress = new Uri($"{uri.Scheme}://{uri.Host}:{uri.Port}");
-}).AddHttpMessageHandler<HttpErrorMessageHandler>().RemoveAllLoggers();
 
 builder.Services.AddHttpClient<PreseInCaricoClient>(a =>
 {
@@ -65,11 +60,6 @@ builder.Services.AddHttpClient<UsersClient>(a =>
     a.BaseAddress = new Uri($"{uri.Scheme}://{uri.Host}:{uri.Port}");
 }).AddHttpMessageHandler<HttpErrorMessageHandler>().RemoveAllLoggers();
 
-builder.Services.AddHttpClient<UsersFasiClient>(a =>
-{
-    var uri = new Uri(apiBaseUrl);
-    a.BaseAddress = new Uri($"{uri.Scheme}://{uri.Host}:{uri.Port}");
-}).AddHttpMessageHandler<HttpErrorMessageHandler>().RemoveAllLoggers();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 

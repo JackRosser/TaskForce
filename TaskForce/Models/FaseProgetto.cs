@@ -7,8 +7,8 @@ namespace TaskForce.Models
         public int Id { get; set; }
         public int MacroFaseId { get; set; }
         public string Nome { get; set; } = null!;
-        public int? GiorniPrevistiBe { get; set; }
-        public int? GiorniPrevistiUi { get; set; }
+        public int? GiorniPrevisti { get; set; }
+        public Tipologia TipoFase { get; set; }
         public StatoFase Stato { get; set; }
     }
 }
