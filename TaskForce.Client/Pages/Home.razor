@@ -7,38 +7,50 @@
     {
         var isShow = progetto.Id == ProgettoVisualizzatoId;
         <div class="@($"progettocontainer {(isShow ? "d-flex" : "d-none")}")">
-            <section>
-                <strong>Consegna prevista:</strong>
-                <span>@progetto.Consegna.ToShortDateString()</span>
+            <section class="project-deadline">
+                <div class="info">
+                    <strong>Consegna prevista:</strong>
+                    <span class="date">@progetto.Consegna.ToShortDateString()</span>
+                </div>
+
                 @{
                     var oggi = DateTime.Today;
-                    bool tempoEsaurito = progetto.Consegna <= oggi ? true : false;                    
+                    bool tempoEsaurito = progetto.Consegna <= oggi;
                 }
-                @if(!tempoEsaurito)
+
+                @if (!tempoEsaurito)
                 {
-                    <div class="workday-countdown">
-                        <strong>Tempo mancante:</strong>
-                        <span>@TempoMancante</span>
-                        <strong>Giorni lavorativi</strong>
-                        <span>@GiorniLavorativi</span>
+                    <div class="countdown">
+                        <div>
+                            <strong>Tempo mancante:</strong>
+                            <span>@TempoMancante</span>
+                        </div>
+                        <div>
+                            <strong>Giorni lavorativi:</strong>
+                            <span>@GiorniLavorativi</span>
+                        </div>
                     </div>
                 }
                 else
                 {
-                    <strong>Tempo esaurito</strong>
+                    <div class="expired">
+                        <strong>Tempo esaurito</strong>
+                    </div>
                 }
             </section>
+
             @if (progetto.MacroFasi is not null)
             {
                 foreach (var macro in progetto.MacroFasi)
                 {
                     <div class="macrocontainer">
-                        <div>@macro.Nome</div>
+                        <h2>@macro.Nome</h2>
                         @if (macro.Fasi is not null)
                         {
-                            <table>
+                            <table class="macro-table">
                                 <thead>
                                     <tr>
+                                        <th></th>
                                         @foreach (var header in Headers)
                                         {
                                             <th>@header.Name</th>
@@ -51,11 +63,11 @@
                                         <tr>
                                             <td>@fase.Nome</td>
                                             <td>@fase.GiorniPrevisti</td>
-                                            <td>@fase.Stato</td>
+                                            <td><Badge StatoDiFase="@fase.Stato" /></td>
                                             <td>
                                                 @if (fase.PreseInCarico is not null)
                                                 {
-                                                    <table>
+                                                    <table class="dev-table">
                                                         <thead>
                                                             <tr>
                                                                 <th>Developer</th>
@@ -70,9 +82,9 @@
                                                             {
                                                                 <tr>
                                                                     <td>@dev.UserName</td>
-                                                                    <td>@dev.DataInizio</td>
-                                                                    <td>@dev.Stato</td>
-                                                                    <td>@dev.DataFine</td>
+                                                                    <td>@dev.DataInizio.ToShortDateString()</td>
+                                                                    <td><Badge StatoDiUtente="@dev.Stato" /></td>
+                                                                    <td>@(dev.DataFine?.ToShortDateString() ?? "")</td>
                                                                     <td>@dev.DeltaTempi</td>
                                                                 </tr>
                                                             }

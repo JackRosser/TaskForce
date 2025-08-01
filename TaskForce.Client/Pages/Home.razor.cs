@@ -29,7 +29,6 @@ namespace TaskForce.Client.Pages
         {
             Headers = new()
             {
-                new() { Name = "fase" },
                 new() { Name = "giorni previsti" },
                 new() { Name = "stato" },
                 new() { Name = "lavorazione" }

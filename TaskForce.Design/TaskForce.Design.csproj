@@ -23,4 +23,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TaskForce.Dto\TaskForce.Dto.csproj" />
+    <ProjectReference Include="..\TaskForce.Enum\TaskForce.Enum.csproj" />
+    <ProjectReference Include="..\TaskForce.Localization\TaskForce.Localization.csproj" />
+  </ItemGroup>
+
 </Project>

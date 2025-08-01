@@ -1,5 +1,13 @@
-main {
-width: 100vw;
-height: 100vh;
+@mixin maintheme($font, $background) {
+    font-family: $font;
+    background-color: $background;
+}
 
+main {
+    width: 100vw;
+    height: 100vh;
+
+    &.vs {
+        @include maintheme($vs-font, $vs-background);
+    }
 }

@@ -5,21 +5,151 @@
     height: 95%;
     flex-direction: column;
     color: $vs-text;
+    padding: 2rem;
 
-    & section {
+    & .project-deadline {
+        background-color: $vs-primary;
+        color: $vs-text;
         padding: 1rem;
+        border-radius: 15px 15px 0 0;
         display: flex;
         gap: 1rem;
 
-        & .workday-countdown {
+        & .info,
+        & .countdown {
             display: flex;
             gap: 1rem;
         }
+
+        & .info {
+            flex-grow: 1;
+        }
+
+        & .date {
+            color: $vs-active;
+        }
+
+        & .countdown span {
+            font-weight: 500;
+            color: $vs-important;
+        }
+
+        & .expired {
+            color: $danger;
+            font-weight: bold;
+        }
     }
 
+
     & .macrocontainer {
-        border: 1px solid blue;
+        cursor: pointer;
         padding: 1rem;
+        background-color: $vs-text-hover;
+        color: $vs-text;
+
+
+        & h2 {
+            margin: 0;
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        & .macro-table {
+            margin-top: 1rem;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 15px;
+            overflow: hidden;
+
+            & thead {
+                & tr {
+                    background-color: $vs-background;
+                    border-radius: 15px;
+
+                    & th {
+                        padding: 0.5rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            & tbody {
+                & tr {
+                    background-color: rgba($vs-background, 0.4);
+
+
+                    & td {
+                        padding: 1rem;
+
+                        &:first-child {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            & tr,
+            & th {
+                color: $vs-text;
+                text-transform: capitalize;
+                text-align: center;
+            }
+
+            & .dev-table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+                border-radius: 15px;
+                overflow: hidden;
+                font-size: 0.8rem;
+
+                & thead {
+                    & tr {
+                        background-color: $vs-primary;
+                        border-radius: 15px;
+
+                        & th {
+                            padding: 0.5rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                & tbody {
+                    & tr {
+                        background-color: $vs-alternate;
+
+
+                        & td {
+                            padding: 1rem;
+
+                            &:first-child {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                & tr,
+                & th {
+                    color: $vs-text;
+                    text-transform: capitalize;
+                    text-align: center;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            background-color: $vs-alternate;
+            color: $vs-background;
+        }
+
+        &:hover {
+            background-color: $vs-active;
+            color: $vs-background;
+        }
     }
 }
 
