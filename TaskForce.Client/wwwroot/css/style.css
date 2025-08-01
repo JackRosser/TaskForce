@@ -91,19 +91,23 @@ html, body {
 .progettocontainer {
   width: 100%;
   position: relative;
-  padding: 2rem 2rem 0;
   overflow: auto;
   height: 95%;
+  flex-direction: column;
+  color: #F5F5F0;
 }
 .progettocontainer section {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.progettocontainer section .workday-countdown {
+  display: flex;
+  gap: 1rem;
 }
 .progettocontainer .macrocontainer {
   border: 1px solid blue;
-  width: 100%;
-  height: 100%;
+  padding: 1rem;
 }
 
 .index {
@@ -112,8 +116,8 @@ html, body {
   overflow: auto;
 }
 .index button {
-  border: 1px solid #7F7F7F;
-  border-top: 1px solid transparent;
+  border: none;
+  border-right: 1px solid #7F7F7F;
   padding-inline: 0.8rem;
   font-size: 0.9rem;
   background-color: transparent;
@@ -122,13 +126,11 @@ html, body {
 .index button:hover {
   background-color: #7F7F7F;
 }
-.index button:first-child {
-  border-right: 0;
-}
 .index button.active {
   background-color: #E37933;
   font-weight: bold;
   color: #303030;
+  border-right: none;
 }
 
 /*!

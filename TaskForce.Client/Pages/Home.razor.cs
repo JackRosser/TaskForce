@@ -12,7 +12,7 @@ namespace TaskForce.Client.Pages
             await GetRecords();
             if (Progetti is not null)
             {
-                SetId(Progetti.FirstOrDefault().Id);
+                CambiaProgettoVisualizzato(Progetti.FirstOrDefault());
             }
         }
 
@@ -46,5 +46,42 @@ namespace TaskForce.Client.Pages
         {
             ProgettoVisualizzatoId = id;
         }
+
+        private void CambiaProgettoVisualizzato(GetProgettoWithFasiRequest progetto)
+        {
+            SetId(progetto.Id);
+            SetTempoMancante(progetto.Consegna);
+        }
+
+        // Countdown
+
+
+        private string? TempoMancante { get; set; }
+        private int? GiorniLavorativi { get; set; }
+
+        private void SetTempoMancante(DateTime target)
+        {
+            var oggi = DateTime.Today;
+
+            var totalDays = (target - oggi).Days;
+
+            // Arrotonda sempre per eccesso
+            var mesi = (int)Math.Floor(totalDays / 30.0);
+            var giorniResidui = (int)Math.Ceiling(totalDays - mesi * 30.0);
+
+            TempoMancante = $"{mesi} mesi {giorniResidui} giorni";
+
+            int lavorativi = 0;
+            for (var d = oggi; d < target; d = d.AddDays(1))
+            {
+                if (d.DayOfWeek != DayOfWeek.Saturday && d.DayOfWeek != DayOfWeek.Sunday)
+                {
+                    lavorativi++;
+                }
+            }
+
+            GiorniLavorativi = lavorativi;
+        }
+
     }
 }
