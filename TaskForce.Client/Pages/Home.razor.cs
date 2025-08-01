@@ -10,6 +10,10 @@ namespace TaskForce.Client.Pages
         {
             SetHeaders();
             await GetRecords();
+            if (Progetti is not null)
+            {
+                SetId(Progetti.FirstOrDefault().Id);
+            }
         }
 
         protected override async Task GetRecords()
@@ -20,21 +24,27 @@ namespace TaskForce.Client.Pages
         }
 
         // HEADER
-        private List<HeaderText>? Headers { get; set; }
+        private List<HeaderText> Headers { get; set; } = new();
         private void SetHeaders()
         {
             Headers = new()
             {
                 new() { Name = "fase" },
-                new() { Name = "backend" },
-                new() { Name = "ui/ux" },
+                new() { Name = "giorni previsti" },
                 new() { Name = "stato" },
-                new() { Name = "presa in carico" }
+                new() { Name = "lavorazione" }
             };
         }
         private class HeaderText
         {
             public string? Name { get; set; }
+        }
+
+        // VISUALIZZAZIONE SINGOLI PROGETTI
+        private int? ProgettoVisualizzatoId { get; set; }
+        private void SetId(int id)
+        {
+            ProgettoVisualizzatoId = id;
         }
     }
 }

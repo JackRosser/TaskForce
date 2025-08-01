@@ -1,5 +1,82 @@
 ﻿@page "/home"
 @inherits SdkBase
 
+@if(Progetti is not null)
+{
+    foreach(var progetto in Progetti)
+    {
+        var isShow = progetto.Id == ProgettoVisualizzatoId;
+        <div class="@($"progettocontainer text-white {(isShow ? "d-flex" : "d-none")}")">
+            <div>@progetto.Nome</div>
+            <div>@progetto.Consegna</div>
+            @if(progetto.MacroFasi is not null)
+            {
+                foreach(var macro in progetto.MacroFasi)
+                {
+                    <div class="macrocontainer">
+                        <div>@macro.Nome</div>
+                        @if(macro.Fasi is not null)
+                        {
+                            <table>
+                                <thead>
+                                    <tr>
+                                        @foreach(var header in Headers)
+                                        {
+                                            <th>@header.Name</th>
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach(var fase in macro.Fasi)
+                                    {
+                                        <tr>
+                                            <td>@fase.Nome</td>
+                                            <td>@fase.GiorniPrevisti</td>
+                                            <td>@fase.Stato</td>
+                                            <td>
+                                                @if(fase.PreseInCarico is not null)
+                                                {
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Developer</th>
+                                                                <th>Inizio</th>
+                                                                <th>Stato</th>
+                                                                <th>Fine</th>
+                                                                <th>Tempistiche</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @foreach(var dev in fase.PreseInCarico)
+                                                            {
+                                                                <tr>
+                                                                    <td>@dev.UserName</td>
+                                                                    <td>@dev.DataInizio</td>
+                                                                    <td>@dev.Stato</td>
+                                                                    <td>@dev.DataFine</td>
+                                                                    <td>@dev.DeltaTempi</td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    }
 
+    <div class="d-flex gap-2">
+        @foreach(var progetto in Progetti)
+        {
+            <button class="btn btn-success" @onclick="() => SetId(progetto.Id)">@progetto.Nome</button>
+        }
+    </div>
+}
 

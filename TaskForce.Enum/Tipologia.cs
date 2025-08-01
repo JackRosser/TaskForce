@@ -4,5 +4,6 @@
     {
         Backend = 0,
         Frontend,
+        BeUx
     }
 }
