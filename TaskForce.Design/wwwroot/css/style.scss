@@ -2,15 +2,12 @@
 
 //breakpoint
 $mobile: "max-width: 575px";
-$tablet: "max-width: 991px";
-$laptop: "max-width: 1199px";
-$big-screen: "min-width: 1200px";
-$screen-full: "max-width: 1919px";
-$screen-xxl: "min-width: 1920px";
+$tablet: "min-width: 576px and max-width: 991px";
+$desktop: "min-width: 992px and max-width: 1919px";
+$maxi: "min-width: 1920px";
 
 
-
-@mixin media-query($media) {
+@mixin screen($media) {
     @media only screen and ($media) {
         @content
     }

@@ -7,8 +7,10 @@
     {
         var isShow = progetto.Id == ProgettoVisualizzatoId;
         <div class="@($"progettocontainer text-white {(isShow ? "d-flex" : "d-none")}")">
-            <div>@progetto.Nome</div>
-            <div>@progetto.Consegna</div>
+            <section>
+                <div>@progetto.Nome</div>
+                <div>@progetto.Consegna</div>
+            </section>
             @if(progetto.MacroFasi is not null)
             {
                 foreach(var macro in progetto.MacroFasi)
@@ -72,10 +74,11 @@
         </div>
     }
 
-    <div class="d-flex gap-2">
+    <div class="index">
         @foreach(var progetto in Progetti)
         {
-            <button class="btn btn-success" @onclick="() => SetId(progetto.Id)">@progetto.Nome</button>
+        var isShow = progetto.Id == ProgettoVisualizzatoId;
+            <button class="@($"{(isShow ? "active" : "")}")" @onclick="() => SetId(progetto.Id)">@progetto.Nome</button>
         }
     </div>
 }
