@@ -1,0 +1,8 @@
+﻿@inherits LayoutComponentBase
+
+<CascadingValue Value="@Theme" Name="Theme">
+<main class="@($"bg-{Theme}-background")">
+<div class="@($"nav bg-{Theme}-primary")"></div>
+@Body
+</main>
+</CascadingValue>

@@ -1,0 +1,12 @@
+$custom-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+
+// Tema visual studio
+$vs-primary: #68217A;
+$vs-background: #303030;
+
+// Merge nel theme-colors dei nuovi colori
+$theme-colors: map-merge( $theme-colors, ( 
+    "vs-primary": $vs-primary, 
+    "vs-background": $vs-background
+
+) );

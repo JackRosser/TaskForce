@@ -1,0 +1,1 @@
+nswag run Swagger.nswag

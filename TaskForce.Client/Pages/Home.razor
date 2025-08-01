@@ -1,0 +1,18 @@
+﻿@page "/home"
+@inherits LayoutBase
+
+@if(Users is not null)
+{
+    foreach(var user in Users)
+    {
+        <div class="text-white">
+            <h3>@user.Nome</h3>
+        </div>
+    }
+}
+else
+{
+    <span class="text-white">Nessun utente</span>
+}
+
+

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce", "TaskForce\TaskForce.csproj", "{69D9936E-9914-4DAA-A949-0630800F853C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.Dto", "TaskForce.Dto\TaskForce.Dto.csproj", "{0EC9FE68-131A-4E89-BA32-0688439B16CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.Enum", "TaskForce.Enum\TaskForce.Enum.csproj", "{5FD4A554-861B-4BC3-B9A6-CFFA4C9FC991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.Client", "TaskForce.Client\TaskForce.Client.csproj", "{CB68F7CC-294A-42C9-8EB9-DA6D3FDE71C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.Sdk", "TaskForce.Sdk\TaskForce.Sdk.csproj", "{925931E4-6102-48DB-B551-05B0C01B38C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.Localization", "TaskForce.Localization\TaskForce.Localization.csproj", "{CA88B8E5-F7FD-4369-8252-ABA9618342C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.Design", "TaskForce.Design\TaskForce.Design.csproj", "{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69D9936E-9914-4DAA-A949-0630800F853C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D9936E-9914-4DAA-A949-0630800F853C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D9936E-9914-4DAA-A949-0630800F853C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D9936E-9914-4DAA-A949-0630800F853C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EC9FE68-131A-4E89-BA32-0688439B16CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC9FE68-131A-4E89-BA32-0688439B16CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC9FE68-131A-4E89-BA32-0688439B16CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC9FE68-131A-4E89-BA32-0688439B16CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD4A554-861B-4BC3-B9A6-CFFA4C9FC991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD4A554-861B-4BC3-B9A6-CFFA4C9FC991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD4A554-861B-4BC3-B9A6-CFFA4C9FC991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD4A554-861B-4BC3-B9A6-CFFA4C9FC991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB68F7CC-294A-42C9-8EB9-DA6D3FDE71C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB68F7CC-294A-42C9-8EB9-DA6D3FDE71C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB68F7CC-294A-42C9-8EB9-DA6D3FDE71C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB68F7CC-294A-42C9-8EB9-DA6D3FDE71C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925931E4-6102-48DB-B551-05B0C01B38C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925931E4-6102-48DB-B551-05B0C01B38C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925931E4-6102-48DB-B551-05B0C01B38C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925931E4-6102-48DB-B551-05B0C01B38C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA88B8E5-F7FD-4369-8252-ABA9618342C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA88B8E5-F7FD-4369-8252-ABA9618342C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA88B8E5-F7FD-4369-8252-ABA9618342C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA88B8E5-F7FD-4369-8252-ABA9618342C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F933118E-0CDF-4254-9FBC-37C1B082E911}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+﻿@import "../lib/bootstrap/scss/functions";
+
+//breakpoint
+$mobile: "max-width: 575px";
+$tablet: "max-width: 991px";
+$laptop: "max-width: 1199px";
+$big-screen: "min-width: 1200px";
+$screen-full: "max-width: 1919px";
+$screen-xxl: "min-width: 1920px";
+
+
+
+@mixin media-query($media) {
+    @media only screen and ($media) {
+        @content
+    }
+}
+
+
+
+// Breakpoints riscritti
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1920px);
+
+
+
+// Override breakpoints
+//$grid-breakpoints: map-merge( ( xxl: 1920px), $grid-breakpoints );
+
+//@import "../lib/bootstrap/themes/slate/_variables";
+@import "../lib/bootstrap/themes/Litera/_variables";
+@import "../lib/bootstrap/scss/_variables.scss";
+
+
+
+
+
+// qui importo i miei partials
+@import "../css/partials/_themes.scss";
+@import "../css/partials/_layout.scss";
+@import "../css/partials/_errors.scss";
+@import "../css/partials/_loading.scss";
+@import "../css/partials/_scrollbar.scss";
+
+
+@import "../lib/bootstrap/scss/mixins";
+@import "../lib/bootstrap/scss/bootstrap";
+// @import "../lib/bootstrap/themes/slate/_bootswatch";
+@import "../lib/bootstrap/themes/Litera/_bootswatch";
