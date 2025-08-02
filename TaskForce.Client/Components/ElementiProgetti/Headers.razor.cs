@@ -12,10 +12,6 @@ namespace TaskForce.Client.Components.ElementiProgetti
         {
             await ProgettoAttivoChanged.InvokeAsync(id);
         }
-        private async Task NuovoProgettoCreato()
-        {
-            await Update.InvokeAsync();
-        }
 
     }
 }
