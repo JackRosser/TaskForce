@@ -33,3 +33,9 @@ main {
         @include modal($vs-background, $vs-text, $vs-text-hover);
     }
 }
+
+.dropdown-menu {
+    &.vs {
+        @include dropdown($vs-background, $vs-text, $vs-active, $vs-text-hover, $vs-important);
+    }
+}

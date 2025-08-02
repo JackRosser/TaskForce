@@ -405,6 +405,27 @@ main.vs {
   border: none;
 }
 
+.dropdown-menu.vs {
+  background-color: #303030 !important;
+  cursor: pointer;
+  min-width: 250px !important;
+}
+.dropdown-menu.vs .dropdown-item {
+  color: #F5F5F0;
+  padding: 1rem;
+}
+.dropdown-menu.vs .dropdown-item:hover {
+  background-color: #7F7F7F;
+  color: #F5F5F0;
+}
+.dropdown-menu.vs.first-line li:first-child .dropdown-item {
+  background-color: #E37933;
+}
+.dropdown-menu.vs.first-line li:first-child .dropdown-item:hover {
+  background-color: #A9DCFF;
+  color: #303030;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
