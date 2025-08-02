@@ -71,5 +71,12 @@ namespace TaskForce.Client.Components
             await FirstOrLast(true);
         }
 
+        private async Task AfterNuovaSezione(GetProgettoWithFasiRequest proj)
+        {
+            await UpdateParent();
+            CambiaProgettoVisualizzato(proj);
+
+        }
+
     }
 }

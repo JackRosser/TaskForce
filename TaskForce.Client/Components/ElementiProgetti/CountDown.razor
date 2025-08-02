@@ -3,7 +3,7 @@
 @if(Progetto is not null)
 {
     <section class="project-deadline">
-        <Icon Element="@Icons.Folder" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Nuova sezione" />
+        <Icon Element="@Icons.Folder" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Nuova sezione" OnClick="Start"/>
         <div class="info">
             <strong>Consegna prevista:</strong>
             <span class="date">@Progetto.Consegna.ToShortDateString()</span>
@@ -35,3 +35,18 @@
         }
     </section>
 }
+<PopUp IsForm="true"
+       Model="@Form"
+       Update="AfterCreated"
+       OnSubmit="Submit"
+       Title="Crea una nuova sezione"
+       @ref="_popup">
+    <div class="container-fluid">
+        <div class="row row-cols-1">
+            <div class="col">
+                <label for="nome" class="form-label">Nome sezione</label>
+                <InputText id="nome" class="form-control" @bind-Value="@Form.Nome" />
+            </div>
+        </div>
+    </div>
+</PopUp>

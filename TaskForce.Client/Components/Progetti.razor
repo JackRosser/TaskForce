@@ -5,7 +5,7 @@
     {
         var isShow = progetto.Id == ProgettoVisualizzatoId;
         <div class="@($"progettocontainer {(isShow ? "d-flex" : "d-none")} {Theme}")">
-            <CountDown @ref="_countDown" Update="GetRecords" Progetto="@progetto"/>
+        <CountDown @ref="_countDown" SezioneCreata="AfterNuovaSezione" Progetto="@progetto" />
 
             @if (progetto.MacroFasi is not null)
             {

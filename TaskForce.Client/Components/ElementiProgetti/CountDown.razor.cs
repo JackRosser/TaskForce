@@ -1,7 +1,13 @@
-﻿namespace TaskForce.Client.Components.ElementiProgetti
+﻿using Microsoft.AspNetCore.Components;
+using TaskForce.Dto.Progetto;
+using TaskForce.Dto.Progetto.FasiProgetto.MacroFasi;
+
+namespace TaskForce.Client.Components.ElementiProgetti
 {
     public partial class CountDown : ProgettiBase
     {
+        [Parameter] public EventCallback<GetProgettoWithFasiRequest> SezioneCreata { get; set; }
+        private CreateMacroFaseDto? Form { get; set; }
         protected override void OnParametersSet()
         {
             if (Progetto is null) return;
@@ -33,6 +39,26 @@
             }
 
             GiorniLavorativi = lavorativi;
+        }
+
+
+        private async Task Submit()
+        {
+            if (Progetto is null) return;
+            await Sdk.SendRequestAsync(r => r.CreateMacroFaseAsync(Progetto.Id, Form));
+
+        }
+
+        public async Task Start()
+        {
+            Form = new();
+            await StartFormOnPopUp();
+        }
+
+        private async Task AfterCreated()
+        {
+            if (Progetto is null) return;
+            if (SezioneCreata.HasDelegate) { await SezioneCreata.InvokeAsync(Progetto); }
         }
     }
 }
