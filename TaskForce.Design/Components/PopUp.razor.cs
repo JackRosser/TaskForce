@@ -54,7 +54,7 @@ namespace TaskForce.Design.Components
             await Close();
         }
 
-        private async Task Close()
+        public async Task Close()
         {
             IsVisible = false;
             await InvokeAsync(StateHasChanged);

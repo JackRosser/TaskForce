@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TaskForce.Database;
-using TaskForce.Dto.Progetto.FasiProgetto;
 using TaskForce.Dto.Progetto.FasiProgetto.MacroFasi;
 using TaskForce.Models;
 
@@ -36,49 +35,24 @@ public class MacroFaseService(AppDbContext db) : IMacroFaseService
         return list;
     }
 
-    public async Task<bool> UpdateAsync(UpdateMacroFaseDto dto, CancellationToken ct = default)
+    public async Task UpdateAsync(int id, UpdateMacroFaseDto dto, CancellationToken ct)
     {
-        var affected = await db.MacroFasi
-            .Where(m => m.Id == dto.Id && m.ProgettoId == dto.ProgettoId)
-            .ExecuteUpdateAsync(s => s.SetProperty(m => m.Nome, dto.Nome!), ct);
+        var macroFase = await db.MacroFasi.FindAsync([id], ct);
+        if (macroFase is null)
+            throw new KeyNotFoundException($"MacroFase con id {id} non trovata");
 
-        return affected == 1;
+        macroFase.Nome = dto.Nome!;
+        await db.SaveChangesAsync(ct);
     }
 
-    public async Task<bool> DeleteAsync(int progettoId, int id, CancellationToken ct = default)
+    public async Task DeleteAsync(int id, CancellationToken ct)
     {
-        var affected = await db.MacroFasi
-            .Where(m => m.ProgettoId == progettoId && m.Id == id)
-            .ExecuteDeleteAsync(ct);
+        var macroFase = await db.MacroFasi.FindAsync([id], ct);
+        if (macroFase is null)
+            throw new KeyNotFoundException($"MacroFase con id {id} non trovata");
 
-        return affected == 1;
+        db.MacroFasi.Remove(macroFase);
+        await db.SaveChangesAsync(ct);
     }
 
-    public async Task<IEnumerable<MacroFaseWithFasiDto>> GetAllWithFasiAsync(int progettoId, CancellationToken ct = default)
-    {
-        var data = await db.MacroFasi
-            .AsNoTracking()
-            .Where(m => m.ProgettoId == progettoId)
-            .OrderBy(m => m.Id)
-            .Select(m => new MacroFaseWithFasiDto
-            {
-                Id = m.Id,
-                ProgettoId = m.ProgettoId,
-                Nome = m.Nome,
-                Fasi = db.FasiProgetto
-                    .Where(f => f.MacroFaseId == m.Id)
-                    .OrderBy(f => f.Id)
-                    .Select(f => new GetFaseDto
-                    {
-                        Id = f.Id,
-                        MacroFaseId = f.MacroFaseId,
-                        Nome = f.Nome,
-                        GiorniPrevisti = f.GiorniPrevisti ?? 0,
-                        Stato = f.Stato
-                    })
-            })
-            .ToListAsync(ct);
-
-        return data;
-    }
 }

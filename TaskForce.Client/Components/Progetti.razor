@@ -21,7 +21,7 @@
                                 <Icon Element="@Icons.AddFase" Pointer="true" Color="@($"{Theme}-primary")" ToolTip="Aggiungi una fase" OnClick="() => Start(progetto, macro.Id)" />
                             </span>
                         </span>
-                        <Icon Element="@Icons.Edit" Pointer="true" CssClass="fs-6" ToolTip="Modifica sezione" />
+                        <Icon Element="@Icons.Edit" Pointer="true" CssClass="fs-6" ToolTip="Modifica sezione" OnClick="() => StartEdit(macro)" />
                     </h2>
                     @if (macro.Fasi is not null)
                     {
@@ -82,6 +82,25 @@
             </div>
             <div class="col-6">
                 <EnumSelector Label="Tipo di lavorazione" TEnum="Tipologia?" @bind-Value="Form.TipoFase" Id="tipo" ShowDefaultOption="true" />
+            </div>
+        </div>
+    </div>
+</PopUp>
+
+<PopUp IsForm="true"
+       Model="@UpdateForm"
+       Update="AfterNuovaFase"
+       OnSubmit="ModificaSezione"
+       Title="Modifica questa sezione"
+       @ref="_popupEditSection">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <InputText id="nome" class="form-control" @bind-Value="@UpdateForm.Nome" />
+            </div>
+            <div class="col-12">
+                <Button Color="danger" OnClick="EliminaSezione" Text="Elimina questa sezione"/>
             </div>
         </div>
     </div>

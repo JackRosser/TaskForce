@@ -1,6 +1,8 @@
 ﻿using TaskForce.Client.Components.ElementiProgetti;
+using TaskForce.Design.Components;
 using TaskForce.Dto.Progetto;
 using TaskForce.Dto.Progetto.FasiProgetto;
+using TaskForce.Dto.Progetto.FasiProgetto.MacroFasi;
 
 namespace TaskForce.Client.Components
 {
@@ -86,7 +88,7 @@ namespace TaskForce.Client.Components
 
         private CreateFaseDto? Form { get; set; }
 
-        public async Task Start(GetProgettoWithFasiRequest proj, int id)
+        private async Task Start(GetProgettoWithFasiRequest proj, int id)
         {
             ProgettoSelezionato = proj;
             MacroFaseSelezionataId = id;
@@ -106,7 +108,34 @@ namespace TaskForce.Client.Components
 
         }
 
+        // Edit Macro Fase
+        private UpdateMacroFaseDto? UpdateForm { get; set; }
+        private PopUp _popupEditSection { get; set; } = null!;
+        private async Task ModificaSezione()
+        {
+            await Sdk.SendRequestAsync(r => r.UpdateMacroFaseAsync(MacroFaseSelezionataId.Value, UpdateForm));
+        }
+        private async Task StartEdit(GetMacroFaseDettaglioDto macro)
+        {
+            MacroFaseSelezionataId = macro.Id;
+            UpdateForm = new()
+            {
+                Nome = macro.Nome,
+            };
+            StateHasChanged();
+            await Task.Yield();
+            await _popupEditSection.Open();
+        }
 
+        private async Task EliminaSezione()
+        {
+            var response = await Sdk.SendRequestAsync(r => r.DeleteMacroFaseAsync(MacroFaseSelezionataId.Value));
+            if (response.IsSuccess)
+            {
+                await _popupEditSection.Close();
+                await AfterNuovaFase();
+            }
+        }
 
     }
 }
