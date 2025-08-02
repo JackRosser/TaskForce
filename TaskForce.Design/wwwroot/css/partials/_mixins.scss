@@ -39,3 +39,9 @@ main {
         @include dropdown($vs-background, $vs-text, $vs-active, $vs-text-hover, $vs-important);
     }
 }
+
+.loadercontainer {
+    &.vs {
+        @include loader($vs-primary);
+    }
+}

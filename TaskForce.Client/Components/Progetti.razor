@@ -1,93 +1,69 @@
 ﻿@inherits ProgettiBase
 @using TaskForce.Enum;
 
-    @foreach (var progetto in List)
-    {
-        var isShow = progetto.Id == ProgettoVisualizzatoId;
-        <div class="@($"progettocontainer {(isShow ? "d-flex" : "d-none")} {Theme}")">
+@foreach (var progetto in List)
+{
+    var isShow = progetto.Id == ProgettoVisualizzatoId;
+    <div class="@($"progettocontainer {(isShow ? "d-flex" : "d-none")} {Theme}")">
         <CountDown @ref="_countDown" SezioneCreata="AfterNuovaSezione" Progetto="@progetto" />
 
-            @if (progetto.MacroFasi is not null)
+        @if (progetto.MacroFasi is not null)
+        {
+            foreach (var macro in progetto.MacroFasi)
             {
-                foreach (var macro in progetto.MacroFasi)
-                {
-                    <div class="macrocontainer">
-                        <h2>
+                <div class="macrocontainer">
+                    <h2>
                         <span>
                             <span>
                                 @macro.Nome
                             </span>
                             <span>
-                                <Icon Element="@Icons.AddFase" Pointer="true" Color="@($"{Theme}-primary")" ToolTip="Aggiungi una fase" OnClick="() => Start(progetto, macro.Id)"/>
+                                <Icon Element="@Icons.AddFase" Pointer="true" Color="@($"{Theme}-primary")" ToolTip="Aggiungi una fase" OnClick="() => Start(progetto, macro.Id)" />
                             </span>
                         </span>
-                            <Icon Element="@Icons.Edit" Pointer="true" CssClass="fs-6" ToolTip="Modifica sezione" />
-                        </h2>
-                        @if (macro.Fasi is not null)
-                        {
-                            <table class="macro-table">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        @foreach (var header in Headers)
-                                        {
-                                            <th>@header.Name</th>
-                                        }
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var fase in macro.Fasi)
+                        <Icon Element="@Icons.Edit" Pointer="true" CssClass="fs-6" ToolTip="Modifica sezione" />
+                    </h2>
+                    @if (macro.Fasi is not null)
+                    {
+                        <table class="macro-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    @foreach (var header in Headers)
                                     {
-                                        <tr>
-                                            <td><Icon Element="@Icons.Edit" Pointer="true" ToolTip="Modifica Task" /></td>
-                                            <td class="intestazione">@fase.Nome</td>
-                                            <td>@fase.GiorniPrevisti</td>
-                                            <td><Badge StatoDiFase="@fase.Stato" /></td>
-                                            <td>
-
-                                                <table class="dev-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th><Icon Element="@Icons.AddUser" Pointer="true" Color="@($"{Theme}-text")" ToolTip="Aggiungi un developer per questa lavorazione" CssClass="fs-5" /></th>
-                                                            <th>Developer</th>
-                                                            <th>Inizio</th>
-                                                            <th>Stato</th>
-                                                            <th>Fine</th>
-                                                            <th>Tempistiche</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        @if (fase.PreseInCarico is not null)
-                                                        {
-                                                            @foreach (var dev in fase.PreseInCarico)
-                                                            {
-                                                                <tr>
-                                                                    <td><Icon Element="@Icons.Gear" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Gestisci developer" /></td>
-                                                                    <td>@dev.UserName</td>
-                                                                    <td>@dev.DataInizio.ToShortDateString()</td>
-                                                                    <td><Badge StatoDiUtente="@dev.Stato" /></td>
-                                                                    <td>@(dev.DataFine?.ToShortDateString() ?? "")</td>
-                                                                    <td>@dev.DeltaTempi</td>
-                                                                </tr>
-                                                            }
-                                                        }
-                                                    </tbody>
-                                                </table>
-
-                                            </td>
-                                        </tr>
+                                        <th>@header.Name</th>
                                     }
-                                </tbody>
-                            </table>
-                        }
-                    </div>
-                }
-            }
-        </div>
-    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var fase in macro.Fasi)
+                                {
+                                    <tr>
+                                        <td><Icon Element="@Icons.Edit" Pointer="true" ToolTip="Modifica Task" /></td>
+                                        <td class="intestazione">@fase.Nome</td>
+                                        <td>@fase.GiorniPrevisti</td>
+                                        <td><Badge StatoDiFase="@fase.Stato" /></td>
+                                        <td>
 
-    <Headers List="@List" ProgettoAttivo="@ProgettoVisualizzatoId" ProgettoAttivoChanged="SetId" Update="NuovoProgettoVisualizzatoImmediatamente"/>
+                                            <TabDevelopers Fase="@fase" Update="AfterNuovaFase"/>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            }
+        }
+    </div>
+}
+
+<Headers List="@List" ProgettoAttivo="@ProgettoVisualizzatoId" ProgettoAttivoChanged="SetId" Update="NuovoProgettoVisualizzatoImmediatamente" />
+
+
+
 <PopUp IsForm="true"
        Model="@Form"
        Update="AfterNuovaFase"

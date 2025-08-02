@@ -49,4 +49,29 @@ public class UserService(AppDbContext db) : IUserService
 
         return affected == 1;
     }
+
+    public async Task<IEnumerable<GetUserDto>> GetUtentiNonAssegnatiAllaFaseAsync(int id, CancellationToken ct = default)
+    {
+        // Recupera gli ID utente già associati alla fase
+        var utentiOccupati = await db.PreseInCarico
+            .Where(p => p.FaseProgettoId == id)
+            .Select(p => p.UserId)
+            .Distinct()
+            .ToListAsync(ct);
+
+        // Prendi tutti gli utenti esclusi quelli già occupati nella fase
+        var utentiDisponibili = await db.Users
+            .AsNoTracking()
+            .Where(u => !utentiOccupati.Contains(u.Id))
+            .Select(u => new GetUserDto
+            {
+                Id = u.Id,
+                Nome = u.Nome,
+                // aggiungi altre proprietà se servono
+            })
+            .ToListAsync(ct);
+
+        return utentiDisponibili;
+    }
+
 }

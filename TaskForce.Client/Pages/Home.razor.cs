@@ -8,6 +8,7 @@ namespace TaskForce.Client.Pages
     {
         private IEnumerable<GetProgettoWithFasiRequest>? Progetti { get; set; }
         private NuovoProgetto _nuovoProgetto { get; set; } = new();
+        private bool NessunProgettoInizializzato { get; set; }
         protected override async Task OnInitializedAsync()
         {
             await GetRecords();
@@ -19,6 +20,7 @@ namespace TaskForce.Client.Pages
             var response = await Sdk.SendRequestAsync(c => c.GetProgettiWithFasiInfoAsync());
             if (response.IsFailed) return;
             Progetti = response.Value;
+            if (Progetti is null || !Progetti.Any()) NessunProgettoInizializzato = true;
             IsLoading = false;
         }
 

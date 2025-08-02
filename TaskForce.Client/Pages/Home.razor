@@ -6,7 +6,7 @@
 {
     <Progetti List="@Progetti" Update="GetRecords"/>
 }
-else
+else if(NessunProgettoInizializzato)
 {
     <div class="newproject">
     <Button Text="Start" CssClass="new-project-btn" OnClick="() => _nuovoProgetto.Start()" />

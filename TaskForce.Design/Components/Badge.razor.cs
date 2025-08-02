@@ -14,6 +14,14 @@ namespace TaskForce.Design.Components
         /// Badge per un oggetto di tipo StatoUtente.
         /// </summary>
         [Parameter] public StatoUtente? StatoDiUtente { get; set; }
+        /// <summary>
+        /// Testo in mancanza di un enum
+        /// </summary>
+        [Parameter] public string? Title { get; set; }
+        /// <summary>
+        /// Colore in mancanza di un enum
+        /// </summary>
+        [Parameter] public string? StaticColor { get; set; }
         private string? Text { get; set; }
         private string? Color { get; set; }
 
@@ -51,6 +59,9 @@ namespace TaskForce.Design.Components
                     _ => $"warning"
                 };
             }
+
+            if (!string.IsNullOrEmpty(Title)) Text = Title;
+            if (!string.IsNullOrEmpty(StaticColor)) Color = StaticColor;
         }
     }
 }
