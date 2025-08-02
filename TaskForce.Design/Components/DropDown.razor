@@ -2,7 +2,7 @@
 
 
     <div class="dropdown">
-        <button class="btn @($"btn-{Theme}-{Color}") dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn @Theme @($"btn-{Theme}-{Color}") dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             @Text
         </button>
         <ul class="dropdown-menu @(FirstLineColor ? "first-line" : "") @Theme">

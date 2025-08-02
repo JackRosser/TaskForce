@@ -39,6 +39,7 @@ $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 19
 @import "../css/partials/_scrollbar.scss";
 @import "../css/partials/_progetto.scss";
 @import "../css/partials/_navbar.scss";
+@import "../css/partials/_buttons.scss";
 @import "../css/partials/_mixins.scss";
 
 
@@ -46,3 +47,5 @@ $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 19
 @import "../lib/bootstrap/scss/bootstrap";
 // @import "../lib/bootstrap/themes/slate/_bootswatch";
 @import "../lib/bootstrap/themes/Litera/_bootswatch";
+
+

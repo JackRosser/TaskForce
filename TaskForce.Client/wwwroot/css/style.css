@@ -146,10 +146,20 @@ nav {
   align-items: center;
   gap: 2rem;
 }
-nav img {
-  max-height: 55px;
-  width: 100px;
-  border-radius: 10px;
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Consolas", sans-serif;
+}
+nav .logo span:first-child {
+  color: #49BC93;
+}
+nav .logo span:nth-child(2) span {
+  color: #DCCC67;
+}
+nav .logo span:nth-child(2) span:nth-child(2) {
+  color: yellow;
 }
 nav .navelements {
   display: flex;
@@ -157,7 +167,7 @@ nav .navelements {
 }
 
 main.vs {
-  font-family: "Roboto", sans-serif;
+  font-family: "Consolas", sans-serif;
   background-color: #303030;
 }
 
@@ -165,7 +175,7 @@ main.vs {
   width: 100%;
   position: relative;
   overflow: auto;
-  height: calc(95% - 87px);
+  height: calc(95% - 71px);
   flex-direction: column;
   color: #F5F5F0;
   padding-inline: 2rem;
@@ -312,6 +322,10 @@ main.vs {
   font-weight: bold;
   color: #303030;
   border-right: none;
+}
+
+.btn.vs {
+  font-family: "Consolas", sans-serif !important;
 }
 
 /*!

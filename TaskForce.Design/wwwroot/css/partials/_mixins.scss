@@ -15,3 +15,9 @@ main {
         @include index($vs-background, $vs-text, $vs-text-hover, $vs-active, 1px, 5%)
     }
 }
+
+.btn {
+    &.vs {
+        @include button($vs-font);
+    }
+}
