@@ -1,0 +1,13 @@
+﻿@using TaskForce.Client.Pages
+@inherits SdkBase
+
+<PopUp IsForm="true"
+       Model="@Form"
+       OnSubmit="Submit"
+       Update="GetRecords"
+       Title="Crea un nuovo Progetto"
+       @ref="_popup">
+
+</PopUp>
+
+<Home @ref="_home"/>

@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@inherits LayoutBase
+
+
+@if(IsVisible)
+{
+    <div class="modal show" tabindex="-1" aria-labelledby="modal" aria-modal="true" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content @Theme">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">@Title</h1>
+                    <button type="button" class="btn-close" aria-label="Close" @onclick="Close"></button>
+                </div>
+                @if(IsForm && Model is not null)
+                {
+                    <EditForm OnValidSubmit="Submit" Model="Model">
+                        <DataAnnotationsValidator />
+                        <div class="modal-body">
+                            @ChildContent
+                        </div>
+                        <div class="modal-footer">
+                            <Button Text="Salva" Color="@($"{Theme}-active")" IsSubmit="true" />
+                            <Button Text="Chiudi" Color="@($"{Theme}-text-hover")" OnClick="Close" />
+                        </div>
+                    </EditForm>
+                }
+                else
+                {
+                        <div class="modal-body">
+                            @ChildContent
+                        </div>
+                        <div class="modal-footer">
+                            <Button Text="Chiudi" Color="@($"{Theme}-text-hover")" OnClick="Close" />
+                        </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+}

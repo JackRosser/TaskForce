@@ -68,6 +68,7 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 //CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 builder.Services.AddScoped<SdkService>();
+builder.Services.AddDevExpressBlazor();
 
 
 await builder.Build().RunAsync();

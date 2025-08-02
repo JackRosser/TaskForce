@@ -21,3 +21,9 @@ main {
         @include button($vs-font);
     }
 }
+
+.modal-content {
+    &.vs {
+        @include modal($vs-background, $vs-text, $vs-text-hover);
+    }
+}

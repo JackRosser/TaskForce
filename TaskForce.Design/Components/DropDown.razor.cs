@@ -6,6 +6,7 @@ namespace TaskForce.Design.Components
     public partial class DropDown : LayoutBase
     {
         [Parameter] public string Color { get; set; } = "active";
+        [Parameter] public string? CssClass { get; set; }
         [Parameter] public bool FirstLineColor { get; set; }
         [Parameter, EditorRequired] public string? Text { get; set; }
 

@@ -326,6 +326,34 @@ main.vs {
 
 .btn.vs {
   font-family: "Consolas", sans-serif !important;
+  border-radius: 5px;
+}
+.btn.vs.max {
+  min-width: 200px;
+}
+
+.modal-content.vs {
+  border-radius: 15px !important;
+  overflow: hidden;
+  font-size: 1rem;
+  background-color: #303030 !important;
+  color: #F5F5F0 !important;
+}
+.modal-content.vs .modal-header {
+  padding: 0.5rem 1rem;
+  background-color: #7F7F7F;
+  border: none;
+}
+.modal-content.vs .modal-header h1, .modal-content.vs .modal-header .h1 {
+  font-size: 1rem !important;
+  color: #F5F5F0;
+  font-weight: 400;
+}
+.modal-content.vs .modal-header .btn-close {
+  color: #F5F5F0 !important;
+}
+.modal-content.vs .modal-footer {
+  border: none;
 }
 
 /*!

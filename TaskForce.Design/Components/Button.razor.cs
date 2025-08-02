@@ -8,5 +8,7 @@ namespace TaskForce.Design.Components
         [Parameter] public string? Text { get; set; }
         [Parameter] public EventCallback OnClick { get; set; }
         [Parameter] public string? Color { get; set; }
+        [Parameter] public bool IsSubmit { get; set; }
+        [Parameter] public string? CssClass { get; set; }
     }
 }
