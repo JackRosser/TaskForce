@@ -9,7 +9,6 @@ namespace TaskForce.Client.Pages
         protected override async Task OnInitializedAsync()
         {
             await GetRecords();
-
         }
 
         protected override async Task GetRecords()
@@ -19,6 +18,11 @@ namespace TaskForce.Client.Pages
             if (response.IsFailed) return;
             Progetti = response.Value;
             IsLoading = false;
+        }
+
+        public async Task Refresh()
+        {
+            await GetRecords();
         }
 
 

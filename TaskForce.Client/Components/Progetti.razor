@@ -6,7 +6,7 @@
     @foreach (var progetto in List)
     {
         var isShow = progetto.Id == ProgettoVisualizzatoId;
-        <div class="@($"progettocontainer {(isShow ? "d-flex" : "d-none")}")">
+        <div class="@($"progettocontainer {(isShow ? "d-flex" : "d-none")} {Theme}")">
             <section class="project-deadline">
                 <div class="info">
                     <strong>Consegna prevista:</strong>

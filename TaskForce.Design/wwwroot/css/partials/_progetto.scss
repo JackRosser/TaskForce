@@ -1,15 +1,15 @@
-.progettocontainer {
+@mixin progettoContainer($background, $text, $text-hover, $primary, $active, $important, $alternate) {
     width: 100%;
     position: relative;
     overflow: auto;
-    height: 95%;
+    height: calc(95% - 87px);
     flex-direction: column;
-    color: $vs-text;
-    padding: 2rem;
+    color: $text;
+    padding-inline: 2rem;
 
     & .project-deadline {
-        background-color: $vs-primary;
-        color: $vs-text;
+        background-color: $primary;
+        color: $text;
         padding: 1rem;
         border-radius: 15px 15px 0 0;
         display: flex;
@@ -26,12 +26,12 @@
         }
 
         & .date {
-            color: $vs-active;
+            color: $active;
         }
 
         & .countdown span {
             font-weight: 500;
-            color: $vs-important;
+            color: $important;
         }
 
         & .expired {
@@ -42,10 +42,10 @@
 
 
     & .macrocontainer {
-        cursor: pointer;
+        cursor: grab;
         padding: 1rem;
-        background-color: $vs-text-hover;
-        color: $vs-text;
+        background-color: $text-hover;
+        color: $text;
 
 
         & h2 {
@@ -62,10 +62,11 @@
             border-spacing: 0;
             border-radius: 10px;
             overflow: hidden;
+            cursor: default;
 
             & thead {
                 & tr {
-                    background-color: $vs-background;
+                    background-color: $background;
                     border-radius: 15px;
 
                     & th {
@@ -77,7 +78,7 @@
 
             & tbody {
                 & tr {
-                    background-color: rgba($vs-background, 0.4);
+                    background-color: rgba($background, 0.4);
 
 
                     & td {
@@ -92,7 +93,7 @@
 
             & tr,
             & th {
-                color: $vs-text;
+                color: $text;
                 text-transform: capitalize;
                 text-align: center;
             }
@@ -107,7 +108,7 @@
 
                 & thead {
                     & tr {
-                        background-color: $vs-primary;
+                        background-color: $primary;
                         border-radius: 15px;
 
                         & th {
@@ -119,10 +120,10 @@
 
                 & tbody {
                     & tr {
-                        background-color: $vs-alternate;
+                        background-color: $alternate;
 
                         &:nth-child(even) {
-                            background-color: rgba($vs-alternate, 0.6);
+                            background-color: rgba($alternate, 0.6);
                         }
 
 
@@ -135,14 +136,14 @@
                         }
 
                         &:hover {
-                            background-color: $vs-background !important;
+                            background-color: $background !important;
                         }
                     }
                 }
 
                 & tr,
                 & th {
-                    color: $vs-text;
+                    color: $text;
                     text-transform: capitalize;
                     text-align: center;
                 }
@@ -150,71 +151,43 @@
         }
 
         &:nth-child(even) {
-            background-color: $vs-alternate;
-            color: $vs-background;
+            background-color: $alternate;
+            color: $background;
         }
 
-        &:hover {
-            background-color: $vs-active;
-            color: $vs-background;
-
-
-            & thead {
-                & tr {
-                    background-color: rgba($vs-primary, 0.4);
-                }
-            }       
-
-        & .dev-table {
-            & thead {
-                & tr {
-                    background-color: rgba($vs-active, 0.6);
-                }
-            }
-
-            & tbody {
-                & tr {
-                    background-color: $vs-active;
-
-                    &:nth-child(even) {
-                        background-color: rgba($vs-active, 0.6);
-                    }
-                }
-            }
-
-            & tr,
-            & th {
-                color: $vs-text;
-                text-transform: capitalize;
-                text-align: center;
-            }
+        &:active {
+            cursor: grabbing;
+            background-color: $active;
+            color: $text;
         }
     }
 }
-}
 
-.index {
-    height: 5%;
+@mixin index($background, $text, $text-hover, $active, $border:0, $height) {
+    height: $height;
     padding-left: 2rem;
     overflow: auto;
+    border-top: $border solid $text-hover;
+    display: flex;
+    align-items: center;
 
     & button {
         border: none;
-        border-right: 1px solid $vs-text-hover;
+        border-right: 1px solid $text-hover;
         padding-inline: 0.8rem;
         font-size: 0.9rem;
         background-color: transparent;
-        color: $vs-text;
+        color: $text;
 
         &:hover {
-            background-color: $vs-text-hover;
+            background-color: $text-hover;
         }
 
 
         &.active {
-            background-color: $vs-active;
+            background-color: $active;
             font-weight: bold;
-            color: $vs-background;
+            color: $background;
             border-right: none;
         }
     }

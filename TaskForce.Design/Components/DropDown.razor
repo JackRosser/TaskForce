@@ -1,0 +1,17 @@
+﻿@inherits LayoutBase
+
+
+    <div class="dropdown">
+        <button class="btn @($"btn-{Theme}-{Color}") dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            @Text
+        </button>
+        <ul class="dropdown-menu @(FirstLineColor ? "first-line" : "") @Theme">
+        @if (DropDownItems is not null)
+        {
+            foreach (var item in DropDownItems)
+            {
+                <li><a class="dropdown-item" @onclick="@item.Action">@item.Text</a></li>
+            }
+        }           
+        </ul>
+    </div>

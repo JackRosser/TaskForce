@@ -2,7 +2,7 @@
 
 @if(List is not null)
 {
-    <div class="index">
+    <div class="@($"index {Theme}")">
         @foreach (var progetto in List)
         {
             var isShow = progetto.Id == ProgettoAttivo;

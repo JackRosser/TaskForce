@@ -139,16 +139,37 @@ html, body {
   scrollbar-width: none;
 }
 
-.progettocontainer {
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+nav img {
+  max-height: 55px;
+  border-radius: 10px;
+}
+nav .navelements {
+  display: flex;
+  gap: 2rem;
+}
+
+main.vs {
+  font-family: "Roboto", sans-serif;
+  background-color: #303030;
+}
+
+.progettocontainer.vs {
   width: 100%;
   position: relative;
   overflow: auto;
-  height: 95%;
+  height: calc(95% - 87px);
   flex-direction: column;
   color: #F5F5F0;
-  padding: 2rem;
+  padding-inline: 2rem;
 }
-.progettocontainer .project-deadline {
+.progettocontainer.vs .project-deadline {
   background-color: #68217A;
   color: #F5F5F0;
   padding: 1rem;
@@ -156,67 +177,68 @@ html, body {
   display: flex;
   gap: 1rem;
 }
-.progettocontainer .project-deadline .info, .progettocontainer .project-deadline .countdown {
+.progettocontainer.vs .project-deadline .info, .progettocontainer.vs .project-deadline .countdown {
   display: flex;
   gap: 1rem;
 }
-.progettocontainer .project-deadline .info {
+.progettocontainer.vs .project-deadline .info {
   flex-grow: 1;
 }
-.progettocontainer .project-deadline .date {
+.progettocontainer.vs .project-deadline .date {
   color: #E37933;
 }
-.progettocontainer .project-deadline .countdown span {
+.progettocontainer.vs .project-deadline .countdown span {
   font-weight: 500;
   color: #A9DCFF;
 }
-.progettocontainer .project-deadline .expired {
+.progettocontainer.vs .project-deadline .expired {
   color: #d9534f;
   font-weight: bold;
 }
-.progettocontainer .macrocontainer {
-  cursor: pointer;
+.progettocontainer.vs .macrocontainer {
+  cursor: grab;
   padding: 1rem;
   background-color: #7F7F7F;
   color: #F5F5F0;
 }
-.progettocontainer .macrocontainer h2, .progettocontainer .macrocontainer .h2 {
+.progettocontainer.vs .macrocontainer h2, .progettocontainer.vs .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-.progettocontainer .macrocontainer .macro-table {
+.progettocontainer.vs .macrocontainer .macro-table {
   margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 10px;
   overflow: hidden;
+  cursor: default;
 }
-.progettocontainer .macrocontainer .macro-table thead tr {
+.progettocontainer.vs .macrocontainer .macro-table thead tr {
   background-color: #303030;
   border-radius: 15px;
 }
-.progettocontainer .macrocontainer .macro-table thead tr th {
+.progettocontainer.vs .macrocontainer .macro-table thead tr th {
   padding: 0.5rem;
   font-weight: 600;
 }
-.progettocontainer .macrocontainer .macro-table tbody tr {
+.progettocontainer.vs .macrocontainer .macro-table tbody tr {
   background-color: rgba(48, 48, 48, 0.4);
 }
-.progettocontainer .macrocontainer .macro-table tbody tr td {
+.progettocontainer.vs .macrocontainer .macro-table tbody tr td {
   padding: 1rem;
 }
-.progettocontainer .macrocontainer .macro-table tbody tr td:first-child {
+.progettocontainer.vs .macrocontainer .macro-table tbody tr td:first-child {
   font-size: 1.2rem;
 }
-.progettocontainer .macrocontainer .macro-table tr, .progettocontainer .macrocontainer .macro-table th {
+.progettocontainer.vs .macrocontainer .macro-table tr, .progettocontainer.vs .macrocontainer .macro-table th {
   color: #F5F5F0;
   text-transform: capitalize;
   text-align: center;
 }
-.progettocontainer .macrocontainer .macro-table .dev-table {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -224,66 +246,53 @@ html, body {
   overflow: hidden;
   font-size: 0.8rem;
 }
-.progettocontainer .macrocontainer .macro-table .dev-table thead tr {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table thead tr {
   background-color: #68217A;
   border-radius: 15px;
 }
-.progettocontainer .macrocontainer .macro-table .dev-table thead tr th {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table thead tr th {
   padding: 0.5rem;
   font-weight: 600;
 }
-.progettocontainer .macrocontainer .macro-table .dev-table tbody tr {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr {
   background-color: #269BA1;
 }
-.progettocontainer .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
   background-color: rgba(38, 155, 161, 0.6);
 }
-.progettocontainer .macrocontainer .macro-table .dev-table tbody tr td {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr td {
   padding: 1rem;
 }
-.progettocontainer .macrocontainer .macro-table .dev-table tbody tr td:first-child {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr td:first-child {
   font-size: 1rem;
 }
-.progettocontainer .macrocontainer .macro-table .dev-table tbody tr:hover {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr:hover {
   background-color: #303030 !important;
 }
-.progettocontainer .macrocontainer .macro-table .dev-table tr, .progettocontainer .macrocontainer .macro-table .dev-table th {
+.progettocontainer.vs .macrocontainer .macro-table .dev-table tr, .progettocontainer.vs .macrocontainer .macro-table .dev-table th {
   color: #F5F5F0;
   text-transform: capitalize;
   text-align: center;
 }
-.progettocontainer .macrocontainer:nth-child(even) {
+.progettocontainer.vs .macrocontainer:nth-child(even) {
   background-color: #269BA1;
   color: #303030;
 }
-.progettocontainer .macrocontainer:hover {
+.progettocontainer.vs .macrocontainer:active {
+  cursor: grabbing;
   background-color: #E37933;
-  color: #303030;
-}
-.progettocontainer .macrocontainer:hover thead tr {
-  background-color: rgba(104, 33, 122, 0.4);
-}
-.progettocontainer .macrocontainer:hover .dev-table thead tr {
-  background-color: rgba(227, 121, 51, 0.6);
-}
-.progettocontainer .macrocontainer:hover .dev-table tbody tr {
-  background-color: #E37933;
-}
-.progettocontainer .macrocontainer:hover .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(227, 121, 51, 0.6);
-}
-.progettocontainer .macrocontainer:hover .dev-table tr, .progettocontainer .macrocontainer:hover .dev-table th {
   color: #F5F5F0;
-  text-transform: capitalize;
-  text-align: center;
 }
 
-.index {
+.index.vs {
   height: 5%;
   padding-left: 2rem;
   overflow: auto;
+  border-top: 1px solid #7F7F7F;
+  display: flex;
+  align-items: center;
 }
-.index button {
+.index.vs button {
   border: none;
   border-right: 1px solid #7F7F7F;
   padding-inline: 0.8rem;
@@ -291,19 +300,14 @@ html, body {
   background-color: transparent;
   color: #F5F5F0;
 }
-.index button:hover {
+.index.vs button:hover {
   background-color: #7F7F7F;
 }
-.index button.active {
+.index.vs button.active {
   background-color: #E37933;
   font-weight: bold;
   color: #303030;
   border-right: none;
-}
-
-main.vs {
-  font-family: "Roboto", sans-serif;
-  background-color: #303030;
 }
 
 /*!

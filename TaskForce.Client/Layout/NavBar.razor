@@ -1,0 +1,9 @@
+﻿@inherits SdkBase
+
+<nav class="@($"{Theme}")">
+    <NavBarImage />
+    <div class="navelements">
+    <Button Color="@($"{Theme}-active")" Text="Nuovo progetto"/>
+    <DropDown DropDownItems="@DropDownUsers" FirstLineColor="true" Text="Developers" />
+    </div>
+</nav>

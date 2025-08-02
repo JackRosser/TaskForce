@@ -3,3 +3,15 @@ main {
         @include maintheme($vs-font, $vs-background);
     }
 }
+
+.progettocontainer {
+    &.vs {
+        @include progettoContainer($vs-background, $vs-text, $vs-text-hover, $vs-primary, $vs-active, $vs-important, $vs-alternate)
+    }
+}
+
+.index {
+    &.vs {
+        @include index($vs-background, $vs-text, $vs-text-hover, $vs-active, 1px, 5%)
+    }
+}
