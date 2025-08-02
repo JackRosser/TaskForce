@@ -1,9 +1,9 @@
-﻿@inherits SdkBase
+﻿@inherits LayoutBase
 
 <nav class="@($"{Theme}")">
     <NavBarImage />
     <div class="navelements">
-        <DropDown DropDownItems="@DropDownUsers" FirstLineColor="true" Text="Developers" CssClass="max" />
+        <DevMenu />
         <Button Color="@($"{Theme}-active")" Text="Temi" CssClass="max" />
     </div>
 </nav>

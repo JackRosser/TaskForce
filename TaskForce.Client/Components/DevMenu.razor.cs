@@ -3,12 +3,13 @@ using TaskForce.Client.Abstractions;
 using TaskForce.Design.Components;
 using TaskForce.Dto.User;
 
-namespace TaskForce.Client.Layout
+namespace TaskForce.Client.Components
 {
-    public partial class NavBar : SdkBase
+    public partial class DevMenu : SdkBase
     {
         private IEnumerable<GetUserDto>? Users { get; set; }
         private List<DropDownItem>? DropDownUsers { get; set; }
+        private CreateUserDto? Form { get; set; }
         protected override async Task OnInitializedAsync()
         {
             await GetRecords();
@@ -28,7 +29,7 @@ namespace TaskForce.Client.Layout
                 new DropDownItem
                 {
                     Text = "Aggiungi developer",
-                    Action = EventCallback.Factory.Create(this, () => UserMenu("Nessuno"))
+                    Action = EventCallback.Factory.Create(this, () => Start())
                 }
             };
 
@@ -38,14 +39,23 @@ namespace TaskForce.Client.Layout
                 Users.Select(u => new DropDownItem
                 {
                     Text = u.Nome,
-                    Action = EventCallback.Factory.Create(this, () => UserMenu(u.Nome))
+                    Action = EventCallback.Factory.Create(this, () => Start())
                 })
             );
         }
 
-        private void UserMenu(string nome)
+
+        private async Task Submit()
         {
-            Console.WriteLine($"User menu clicked for: {nome}");
+            await Sdk.SendRequestAsync(r => r.CreateNewUserAsync(Form));
+            await GetRecords();
+
+        }
+
+        public async Task Start()
+        {
+            Form = new();
+            await StartFormOnPopUp();
         }
 
     }
