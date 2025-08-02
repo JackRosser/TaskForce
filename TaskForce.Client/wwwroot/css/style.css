@@ -148,6 +148,7 @@ nav {
 }
 nav img {
   max-height: 55px;
+  width: 100px;
   border-radius: 10px;
 }
 nav .navelements {
@@ -175,6 +176,7 @@ main.vs {
   padding: 1rem;
   border-radius: 15px 15px 0 0;
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 .progettocontainer.vs .project-deadline .info, .progettocontainer.vs .project-deadline .countdown {
@@ -206,6 +208,9 @@ main.vs {
   font-weight: 800;
   font-size: 1.5rem;
   text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .progettocontainer.vs .macrocontainer .macro-table {
   margin-top: 1rem;
@@ -230,7 +235,8 @@ main.vs {
 .progettocontainer.vs .macrocontainer .macro-table tbody tr td {
   padding: 1rem;
 }
-.progettocontainer.vs .macrocontainer .macro-table tbody tr td:first-child {
+.progettocontainer.vs .macrocontainer .macro-table tbody tr td.intestazione {
+  text-align: start;
   font-size: 1.2rem;
 }
 .progettocontainer.vs .macrocontainer .macro-table tr, .progettocontainer.vs .macrocontainer .macro-table th {
@@ -280,8 +286,6 @@ main.vs {
 }
 .progettocontainer.vs .macrocontainer:active {
   cursor: grabbing;
-  background-color: #E37933;
-  color: #F5F5F0;
 }
 
 .index.vs {

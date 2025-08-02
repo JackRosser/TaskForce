@@ -6,7 +6,7 @@ namespace TaskForce.Client.Components
 {
     public partial class Progetti : LayoutBase
     {
-        [Parameter] public IEnumerable<GetProgettoWithFasiRequest>? List { get; set; }
+        [Parameter] public IEnumerable<GetProgettoWithFasiRequest> List { get; set; } = null!;
         private List<HeaderText> Headers { get; set; } = new();
         private string? TempoMancante { get; set; }
         private int? GiorniLavorativi { get; set; }
@@ -14,13 +14,13 @@ namespace TaskForce.Client.Components
         protected override void OnParametersSet()
         {
             SetHeaders();
-            if (List is null)
-            {
-                return;
-            }
-            CambiaProgettoVisualizzato(List.FirstOrDefault());
 
+            if (List is null || !List.Any())
+                return;
+
+            CambiaProgettoVisualizzato(List.First());
         }
+
 
         private void SetHeaders()
         {
@@ -67,11 +67,15 @@ namespace TaskForce.Client.Components
             ProgettoVisualizzatoId = id;
         }
 
-        private void CambiaProgettoVisualizzato(GetProgettoWithFasiRequest progetto)
+        private void CambiaProgettoVisualizzato(GetProgettoWithFasiRequest? progetto)
         {
+            if (progetto is null)
+                return;
+
             SetId(progetto.Id);
             SetTempoMancante(progetto.Consegna);
         }
+
 
     }
 }

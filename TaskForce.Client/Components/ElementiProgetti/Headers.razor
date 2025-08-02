@@ -1,6 +1,6 @@
 ﻿@inherits LayoutBase
 
-@if(List is not null)
+@if(List is not null && List.Count() > 0)
 {
     <div class="@($"index {Theme}")">
         @foreach (var progetto in List)

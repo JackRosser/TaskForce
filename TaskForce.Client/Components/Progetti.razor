@@ -1,13 +1,12 @@
 ﻿@inherits LayoutBase
 
 
-@if(List is not null)
-{
     @foreach (var progetto in List)
     {
         var isShow = progetto.Id == ProgettoVisualizzatoId;
         <div class="@($"progettocontainer {(isShow ? "d-flex" : "d-none")} {Theme}")">
             <section class="project-deadline">
+                <Icon Element="@Icons.Folder" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Nuova sezione" />
                 <div class="info">
                     <strong>Consegna prevista:</strong>
                     <span class="date">@progetto.Consegna.ToShortDateString()</span>
@@ -44,12 +43,16 @@
                 foreach (var macro in progetto.MacroFasi)
                 {
                     <div class="macrocontainer">
-                        <h2>@macro.Nome</h2>
+                        <h2>
+                            <span>@macro.Nome</span>
+                            <Icon Element="@Icons.Edit" Pointer="true" CssClass="fs-6" ToolTip="Modifica sezione" />
+                        </h2>
                         @if (macro.Fasi is not null)
                         {
                             <table class="macro-table">
                                 <thead>
                                     <tr>
+                                        <th></th>
                                         <th></th>
                                         @foreach (var header in Headers)
                                         {
@@ -61,26 +64,30 @@
                                     @foreach (var fase in macro.Fasi)
                                     {
                                         <tr>
-                                            <td>@fase.Nome</td>
+                                            <td><Icon Element="@Icons.Edit" Pointer="true" ToolTip="Modifica Task" /></td>
+                                            <td class="intestazione">@fase.Nome</td>
                                             <td>@fase.GiorniPrevisti</td>
                                             <td><Badge StatoDiFase="@fase.Stato" /></td>
                                             <td>
-                                                @if (fase.PreseInCarico is not null)
-                                                {
-                                                    <table class="dev-table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Developer</th>
-                                                                <th>Inizio</th>
-                                                                <th>Stato</th>
-                                                                <th>Fine</th>
-                                                                <th>Tempistiche</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
+
+                                                <table class="dev-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th><Icon Element="@Icons.AddUser" Pointer="true" Color="@($"{Theme}-text")" ToolTip="Aggiungi un developer per questa lavorazione" CssClass="fs-5" /></th>
+                                                            <th>Developer</th>
+                                                            <th>Inizio</th>
+                                                            <th>Stato</th>
+                                                            <th>Fine</th>
+                                                            <th>Tempistiche</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @if (fase.PreseInCarico is not null)
+                                                        {
                                                             @foreach (var dev in fase.PreseInCarico)
                                                             {
                                                                 <tr>
+                                                                    <td><Icon Element="@Icons.Gear" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Gestisci developer" /></td>
                                                                     <td>@dev.UserName</td>
                                                                     <td>@dev.DataInizio.ToShortDateString()</td>
                                                                     <td><Badge StatoDiUtente="@dev.Stato" /></td>
@@ -88,9 +95,10 @@
                                                                     <td>@dev.DeltaTempi</td>
                                                                 </tr>
                                                             }
-                                                        </tbody>
-                                                    </table>
-                                                }
+                                                        }
+                                                    </tbody>
+                                                </table>
+
                                             </td>
                                         </tr>
                                     }
@@ -103,5 +111,4 @@
         </div>
     }
 
-    <Headers List="@List" ProgettoAttivo="@ProgettoVisualizzatoId" ProgettoAttivoChanged="SetId"/>
-}
+    <Headers List="@List" ProgettoAttivo="@ProgettoVisualizzatoId" ProgettoAttivoChanged="SetId" />
