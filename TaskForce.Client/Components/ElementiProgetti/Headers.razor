@@ -8,6 +8,7 @@
             var isShow = progetto.Id == ProgettoAttivo;
             <button class="@($"{(isShow ? "active" : "")}")" @onclick="() => Change(progetto.Id)">@progetto.Nome</button>
         }
-        <button>+</button>
+        <button @onclick="() => _nuovoProgetto.Start()">+</button>
     </div>
 }
+<NuovoProgetto @ref="_nuovoProgetto" Update="NuovoProgettoCreato" />

@@ -1,26 +1,37 @@
-﻿using Microsoft.AspNetCore.Components;
-using TaskForce.Design.Abstractions;
+﻿using TaskForce.Client.Components.ElementiProgetti;
 using TaskForce.Dto.Progetto;
 
 namespace TaskForce.Client.Components
 {
-    public partial class Progetti : LayoutBase
+    public partial class Progetti : ProgettiBase
     {
-        [Parameter] public IEnumerable<GetProgettoWithFasiRequest> List { get; set; } = null!;
         private List<HeaderText> Headers { get; set; } = new();
         private string? TempoMancante { get; set; }
         private int? GiorniLavorativi { get; set; }
         private int? ProgettoVisualizzatoId { get; set; }
-        protected override void OnParametersSet()
+        protected override async Task OnParametersSetAsync()
+        {
+            await FirstOrLast();
+        }
+
+        private async Task FirstOrLast(bool last = false)
         {
             SetHeaders();
 
             if (List is null || !List.Any())
                 return;
 
-            CambiaProgettoVisualizzato(List.First());
-        }
+            if (last)
+            {
+                CambiaProgettoVisualizzato(List.Last());
+            }
+            else
+            {
+                CambiaProgettoVisualizzato(List.First());
+            }
 
+            await Task.CompletedTask;
+        }
 
         private void SetHeaders()
         {
@@ -76,6 +87,11 @@ namespace TaskForce.Client.Components
             SetTempoMancante(progetto.Consegna);
         }
 
+        private async Task NuovoProgettoVisualizzatoImmediatamente()
+        {
+            await Update.InvokeAsync();
+            await FirstOrLast(true);
+        }
 
     }
 }

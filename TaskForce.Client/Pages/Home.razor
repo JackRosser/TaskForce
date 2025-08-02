@@ -4,7 +4,7 @@
 <Loading Toggle="@IsLoading" />
 @if(Progetti is not null && Progetti.Any())
 {
-    <Progetti List="@Progetti" />
+    <Progetti List="@Progetti" Update="GetRecords"/>
 }
 else
 {

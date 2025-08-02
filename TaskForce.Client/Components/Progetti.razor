@@ -1,4 +1,4 @@
-﻿@inherits LayoutBase
+﻿@inherits ProgettiBase
 
 
     @foreach (var progetto in List)
@@ -111,4 +111,4 @@
         </div>
     }
 
-    <Headers List="@List" ProgettoAttivo="@ProgettoVisualizzatoId" ProgettoAttivoChanged="SetId" />
+    <Headers List="@List" ProgettoAttivo="@ProgettoVisualizzatoId" ProgettoAttivoChanged="SetId" Update="NuovoProgettoVisualizzatoImmediatamente"/>
