@@ -12,6 +12,7 @@ namespace TaskForce.Design.Components
         [Parameter] public EventCallback Update { get; set; }
         [Parameter] public bool IsForm { get; set; }
         [Parameter] public object? Model { get; set; }
+        [Parameter] public bool ForceLoad { get; set; }
 
         private bool IsVisible { get; set; }
         private ElementReference ModalRef;
@@ -40,11 +41,24 @@ namespace TaskForce.Design.Components
         private async Task Submit()
         {
             await OnSubmit.InvokeAsync();
-            await Update.InvokeAsync();
-            Close();
+            if (ForceLoad)
+            {
+                Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+            }
+            else
+            {
+                {
+                    await Update.InvokeAsync();
+                }
+            }
+            await Close();
         }
 
-        private void Close() => IsVisible = false;
+        private async Task Close()
+        {
+            IsVisible = false;
+            await InvokeAsync(StateHasChanged);
+        }
 
     }
 

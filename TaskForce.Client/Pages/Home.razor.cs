@@ -1,4 +1,5 @@
 ﻿using TaskForce.Client.Abstractions;
+using TaskForce.Client.Components;
 using TaskForce.Dto.Progetto;
 
 namespace TaskForce.Client.Pages
@@ -6,6 +7,7 @@ namespace TaskForce.Client.Pages
     public partial class Home : SdkBase
     {
         private IEnumerable<GetProgettoWithFasiRequest>? Progetti { get; set; }
+        private NuovoProgetto _nuovoProgetto { get; set; } = new();
         protected override async Task OnInitializedAsync()
         {
             await GetRecords();
@@ -19,12 +21,6 @@ namespace TaskForce.Client.Pages
             Progetti = response.Value;
             IsLoading = false;
         }
-
-        public async Task Refresh()
-        {
-            await GetRecords();
-        }
-
 
     }
 }

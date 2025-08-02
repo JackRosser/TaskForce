@@ -20,6 +20,12 @@ main {
     &.vs {
         @include button($vs-font);
     }
+
+    &.new-project-btn {
+        &.vs {
+            @include newProject($vs-active);
+        }
+    }
 }
 
 .modal-content {

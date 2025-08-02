@@ -3,8 +3,8 @@
 
 <PopUp IsForm="true"
        Model="@Form"
+       Update="@OnUpdate"
        OnSubmit="Submit"
-       Update="GetRecords"
        Title="Crea un nuovo Progetto"
        @ref="_popup">
 <div class="container-fluid">
@@ -20,5 +20,3 @@
 </div>
 </div>
 </PopUp>
-
-<Home @ref="_home"/>

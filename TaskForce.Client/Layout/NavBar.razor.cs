@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using TaskForce.Client.Abstractions;
-using TaskForce.Client.Components;
-using TaskForce.Client.Pages;
 using TaskForce.Design.Components;
 using TaskForce.Dto.User;
 
@@ -9,10 +7,8 @@ namespace TaskForce.Client.Layout
 {
     public partial class NavBar : SdkBase
     {
-        private Home _homePage { get; set; } = null!;
         private IEnumerable<GetUserDto>? Users { get; set; }
         private List<DropDownItem>? DropDownUsers { get; set; }
-        private NuovoProgetto _nuovoProgetto { get; set; } = null!;
         protected override async Task OnInitializedAsync()
         {
             await GetRecords();
@@ -52,9 +48,5 @@ namespace TaskForce.Client.Layout
             Console.WriteLine($"User menu clicked for: {nome}");
         }
 
-        private async Task NuovoProgetto()
-        {
-            await _nuovoProgetto.Start();
-        }
     }
 }

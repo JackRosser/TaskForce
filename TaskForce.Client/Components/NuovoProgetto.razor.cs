@@ -1,17 +1,17 @@
-﻿using TaskForce.Client.Abstractions;
-using TaskForce.Client.Pages;
+﻿using Microsoft.AspNetCore.Components;
+using TaskForce.Client.Abstractions;
 using TaskForce.Dto.Progetto;
 
 namespace TaskForce.Client.Components
 {
     public partial class NuovoProgetto : SdkBase
     {
-
-        private Home _home { get; set; } = null!;
+        [Parameter] public EventCallback Update { get; set; }
         private CreaProgettoDto? Form { get; set; }
         private async Task Submit()
         {
             await Sdk.SendRequestAsync(r => r.CreaProgettoAsync(Form));
+
         }
 
         public async Task Start()
@@ -20,10 +20,13 @@ namespace TaskForce.Client.Components
             await StartFormOnPopUp();
         }
 
-
-        protected override async Task GetRecords()
+        private async Task OnUpdate()
         {
-            await _home.Refresh();
+            if (Update.HasDelegate)
+            {
+                await Update.InvokeAsync();
+            }
         }
+
     }
 }

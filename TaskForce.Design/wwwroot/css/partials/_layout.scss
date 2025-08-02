@@ -8,3 +8,33 @@ main {
     height: 100vh;
 
 }
+
+@mixin newProject($active) {
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $active;
+    background: linear-gradient($active, white, $active);
+    border: none;
+    border-radius: 15px !important;
+    transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
+
+
+    &:hover {
+        transform: scale(1.03);
+        background: linear-gradient(white, $active, white);
+        color: white;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+.newproject {
+    width: 100%;
+    height: calc(100% - 71px);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}

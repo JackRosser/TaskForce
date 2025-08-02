@@ -4,6 +4,14 @@ main {
   height: 100vh;
 }
 
+.newproject {
+  width: 100%;
+  height: calc(100% - 71px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #blazor-error-ui {
   color-scheme: light only;
   background: lightyellow;
@@ -164,6 +172,29 @@ nav .logo span:nth-child(2) span:nth-child(2) {
 nav .navelements {
   display: flex;
   gap: 2rem;
+}
+
+.form-control {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+.form-control.invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+}
+.form-control.modified.valid {
+  border-color: #28a745;
+  background-color: #f4fef6;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
 }
 
 main.vs {
@@ -330,6 +361,24 @@ main.vs {
 }
 .btn.vs.max {
   min-width: 200px;
+}
+.btn.new-project-btn.vs {
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #E37933;
+  background: linear-gradient(#E37933, white, #E37933);
+  border: none;
+  border-radius: 15px !important;
+  transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
+}
+.btn.new-project-btn.vs:hover {
+  transform: scale(1.03);
+  background: linear-gradient(white, #E37933, white);
+  color: white;
+}
+.btn.new-project-btn.vs:active {
+  transform: scale(0.97);
 }
 
 .modal-content.vs {

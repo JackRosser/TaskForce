@@ -2,8 +2,14 @@
 @inherits SdkBase
 
 <Loading Toggle="@IsLoading" />
-@if(Progetti is not null)
+@if(Progetti is not null && Progetti.Any())
 {
     <Progetti List="@Progetti" />
 }
-
+else
+{
+    <div class="newproject">
+    <Button Text="Start" CssClass="new-project-btn" OnClick="() => _nuovoProgetto.Start()" />
+    </div>
+}
+<NuovoProgetto @ref="_nuovoProgetto" Update="GetRecords"/>
