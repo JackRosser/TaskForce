@@ -1,5 +1,6 @@
 ﻿using TaskForce.Client.Components.ElementiProgetti;
 using TaskForce.Dto.Progetto;
+using TaskForce.Dto.Progetto.FasiProgetto;
 
 namespace TaskForce.Client.Components
 {
@@ -8,6 +9,8 @@ namespace TaskForce.Client.Components
         private List<HeaderText> Headers { get; set; } = new();
         private CountDown _countDown { get; set; } = new();
         private int? ProgettoVisualizzatoId { get; set; }
+        private int? MacroFaseSelezionataId { get; set; }
+        private GetProgettoWithFasiRequest? ProgettoSelezionato { get; set; }
         protected override async Task OnParametersSetAsync()
         {
             await FirstOrLast();
@@ -77,6 +80,33 @@ namespace TaskForce.Client.Components
             CambiaProgettoVisualizzato(proj);
 
         }
+
+
+        // Nuova fase
+
+        private CreateFaseDto? Form { get; set; }
+
+        public async Task Start(GetProgettoWithFasiRequest proj, int id)
+        {
+            ProgettoSelezionato = proj;
+            MacroFaseSelezionataId = id;
+            Form = new();
+            await StartFormOnPopUp();
+        }
+
+        private async Task Submit()
+        {
+            await Sdk.SendRequestAsync(r => r.CreateFaseAsync(MacroFaseSelezionataId, Form));
+        }
+
+        private async Task AfterNuovaFase()
+        {
+            await UpdateParent();
+            CambiaProgettoVisualizzato(ProgettoSelezionato);
+
+        }
+
+
 
     }
 }

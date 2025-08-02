@@ -1,0 +1,13 @@
+﻿@typeparam TEnum
+
+<label for="@Id" class="form-label">@Label</label>
+<InputSelect id="@Id" class="form-select" Value="Value" ValueChanged="ValueChanged" ValueExpression="@ValueExpression">
+    @if (ShowDefaultOption)
+    {
+        <option value="">@(DefaultOptionText ?? "--Seleziona--")</option>
+    }
+    @foreach (var value in EnumValues)
+    {
+        <option value="@value">@LetturaEnum.Lettura(value.ToString())</option>
+    }
+</InputSelect>
