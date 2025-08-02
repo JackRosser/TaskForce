@@ -9,7 +9,7 @@ public class ProgettoService(AppDbContext db) : IProgettoService
 {
     public async Task<GetProgettoDto> CreateAsync(CreaProgettoDto dto, CancellationToken ct = default)
     {
-        var entity = new Progetto { Nome = dto.Nome!, Consegna = dto.Consegna };
+        var entity = new Progetto { Nome = dto.Nome!, Consegna = dto.Consegna.Value };
         db.Progetti.Add(entity);
         await db.SaveChangesAsync(ct);
 
