@@ -98,6 +98,20 @@ namespace TaskForce.Client.Services
             }
         }
 
+        public async Task<Result> SendRequestAsync(Func<FasiClient, Task> action, [CallerMemberName] string caller = "")
+        {
+            try
+            {
+                await action(fasiProgettoClient);
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError($"Caller {caller},{ex.Message}");
+                return Result.Fail(ex.Message);
+            }
+        }
+
 
     }
 }

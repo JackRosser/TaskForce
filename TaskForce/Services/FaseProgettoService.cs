@@ -66,26 +66,27 @@ public class FaseProgettoService(AppDbContext db) : IFaseProgettoService
         return list;
     }
 
-    public async Task<bool> UpdateAsync(UpdateFaseProgettoDto dto, CancellationToken ct = default)
+    public async Task UpdateAsync(int id, UpdateFaseProgettoDto dto, CancellationToken ct)
     {
-        var affected = await db.FasiProgetto
-            .Where(f => f.Id == dto.Id && f.MacroFaseId == dto.MacroFaseId)
-            .ExecuteUpdateAsync(s => s
-                .SetProperty(f => f.Nome, dto.Nome)
-                .SetProperty(f => f.GiorniPrevisti, dto.GiorniPrevisti)
-                .SetProperty(f => f.TipoFase, dto.TipoFase)
-                .SetProperty(f => f.Stato, dto.Stato),
-                ct);
+        var fase = await db.FasiProgetto.FindAsync([id], ct);
+        if (fase is null)
+            throw new KeyNotFoundException($"FaseProgetto con id {id} non trovata");
 
-        return affected == 1;
+        fase.Nome = dto.Nome;
+        fase.GiorniPrevisti = dto.GiorniPrevisti;
+        fase.TipoFase = dto.TipoFase;
+        fase.Stato = dto.Stato;
+
+        await db.SaveChangesAsync(ct);
     }
 
-    public async Task<bool> DeleteAsync(int macroFaseId, int id, CancellationToken ct = default)
+    public async Task DeleteAsync(int id, CancellationToken ct)
     {
-        var affected = await db.FasiProgetto
-            .Where(f => f.MacroFaseId == macroFaseId && f.Id == id)
-            .ExecuteDeleteAsync(ct);
+        var fase = await db.FasiProgetto.FindAsync([id], ct);
+        if (fase is null)
+            throw new KeyNotFoundException($"FaseProgetto con id {id} non trovata");
 
-        return affected == 1;
+        db.FasiProgetto.Remove(fase);
+        await db.SaveChangesAsync(ct);
     }
 }

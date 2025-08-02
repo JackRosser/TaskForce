@@ -12,6 +12,7 @@ namespace TaskForce.Client.Components
         private CountDown _countDown { get; set; } = new();
         private int? ProgettoVisualizzatoId { get; set; }
         private int? MacroFaseSelezionataId { get; set; }
+        private int? LavorazioneSelezionataId { get; set; }
         private GetProgettoWithFasiRequest? ProgettoSelezionato { get; set; }
         protected override async Task OnParametersSetAsync()
         {
@@ -133,6 +134,38 @@ namespace TaskForce.Client.Components
             if (response.IsSuccess)
             {
                 await _popupEditSection.Close();
+                await AfterNuovaFase();
+            }
+        }
+
+        // Edit Lavorazione
+        private UpdateFaseProgettoDto? UpdateFaseForm { get; set; }
+        private PopUp _popupEditFase { get; set; } = null!;
+        private async Task ModificaFase()
+        {
+            await Sdk.SendRequestAsync(r => r.UpdateFaseAsync(LavorazioneSelezionataId.Value, UpdateFaseForm));
+        }
+        private async Task StartEditFase(GetFaseDettaglioDto lavorazione)
+        {
+            LavorazioneSelezionataId = lavorazione.Id;
+            UpdateFaseForm = new()
+            {
+                Nome = lavorazione.Nome,
+                GiorniPrevisti = lavorazione.GiorniPrevisti,
+                TipoFase = lavorazione.TipoFase,
+                Stato = lavorazione.Stato
+            };
+            StateHasChanged();
+            await Task.Yield();
+            await _popupEditFase.Open();
+        }
+
+        private async Task EliminaFase()
+        {
+            var response = await Sdk.SendRequestAsync(r => r.DeleteFaseAsync(LavorazioneSelezionataId.Value));
+            if (response.IsSuccess)
+            {
+                await _popupEditFase.Close();
                 await AfterNuovaFase();
             }
         }

@@ -40,7 +40,7 @@
                                 @foreach (var fase in macro.Fasi)
                                 {
                                     <tr>
-                                        <td><Icon Element="@Icons.Edit" Pointer="true" ToolTip="Modifica Task" /></td>
+                                        <td><Icon Element="@Icons.Edit" Pointer="true" ToolTip="Modifica Task" OnClick="() => StartEditFase(fase)"/></td>
                                         <td class="intestazione">@fase.Nome</td>
                                         <td>@fase.GiorniPrevisti</td>
                                         <td><Badge StatoDiFase="@fase.Stato" /></td>
@@ -95,12 +95,41 @@
        @ref="_popupEditSection">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 mb-3">
+            <div class="col-12">
                 <label for="nome" class="form-label">Nome</label>
                 <InputText id="nome" class="form-control" @bind-Value="@UpdateForm.Nome" />
             </div>
-            <div class="col-12">
-                <Button Color="danger" OnClick="EliminaSezione" Text="Elimina questa sezione"/>
+            <div class="col-12 my-5">
+                <Button Color="danger" CssClass="w-100" OnClick="EliminaSezione" Text="Elimina questa sezione"/>
+            </div>
+        </div>
+    </div>
+</PopUp>
+
+<PopUp IsForm="true"
+       Model="@UpdateFaseForm"
+       Update="AfterNuovaFase"
+       OnSubmit="ModificaFase"
+       Title="Modifica questa lavorazione"
+       @ref="_popupEditFase">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <InputText id="nome" class="form-control" @bind-Value="@UpdateFaseForm.Nome" />
+            </div>
+            <div class="col-6 mb-3">
+                <label for="giorni" class="form-label">Giorni previsti</label>
+                <InputNumber id="giorni" class="form-control" @bind-Value="@UpdateFaseForm.GiorniPrevisti" />
+            </div>
+            <div class="col-6">
+                <EnumSelector Label="Tipo di lavorazione" TEnum="Tipologia" @bind-Value="UpdateFaseForm.TipoFase" Id="tipo"  />
+            </div>
+            <div class="col-6">
+                <EnumSelector Label="Stato" TEnum="StatoFase" @bind-Value="UpdateFaseForm.Stato" Id="tipo"  />
+            </div>
+            <div class="col-12 my-5">
+                <Button Color="danger" CssClass="w-100" OnClick="EliminaFase" Text="Elimina questa lavorazione" />
             </div>
         </div>
     </div>
