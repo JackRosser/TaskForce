@@ -27,7 +27,19 @@
                         <td>@lavorazione.DataInizio.ToShortDateString()</td>
                         <td><Badge StatoDiUtente="@lavorazione.Stato" /></td>
                         <td>@(lavorazione.DataFine?.ToShortDateString() ?? "")</td>
-                        <td>@lavorazione.DeltaTempi</td>
+                        @{
+                            var input = lavorazione.DeltaTempi;
+                            var color = input switch
+                            {
+                                null => "secondary",
+                                var s when s.StartsWith("+") => "danger",
+                                var s when s.StartsWith("-") => "success",
+                                _ => "info"
+                            };
+
+
+                        }
+                        <td><Badge StaticColor="@color" Title="@input" /></td>
                     </tr>
                 }
             }
