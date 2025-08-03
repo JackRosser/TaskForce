@@ -28,6 +28,7 @@
     <ProjectReference Include="..\TaskForce.Dto\TaskForce.Dto.csproj" />
     <ProjectReference Include="..\TaskForce.Enum\TaskForce.Enum.csproj" />
     <ProjectReference Include="..\TaskForce.Localization\TaskForce.Localization.csproj" />
+    <ProjectReference Include="..\TaskForce.LocalStorage\TaskForce.LocalStorage.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,6 +10,9 @@ nav {
         align-items: center;
         gap: 0.5rem;
         font-family: "Consolas", sans-serif;
+        background-color: $vs-background;
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
 
         & span {
             &:first-child {

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.Localization", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.Design", "TaskForce.Design\TaskForce.Design.csproj", "{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForce.LocalStorage", "TaskForce.LocalStorage\TaskForce.LocalStorage.csproj", "{12FCC71B-01DB-404B-A92E-CCA0F4E984BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE57F2BD-DC7F-4417-BFE5-5B832EA5E1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12FCC71B-01DB-404B-A92E-CCA0F4E984BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12FCC71B-01DB-404B-A92E-CCA0F4E984BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12FCC71B-01DB-404B-A92E-CCA0F4E984BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12FCC71B-01DB-404B-A92E-CCA0F4E984BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
