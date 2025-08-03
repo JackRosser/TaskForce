@@ -1,0 +1,22 @@
+﻿@using TaskForce.Client.Pages
+@inherits SdkBase
+
+<PopUp IsForm="true"
+       Model="@Form"
+       Update="@OnUpdate"
+       OnSubmit="Submit"
+       Title="Crea un nuovo Progetto"
+       @ref="_popup">
+<div class="container-fluid">
+<div class="row row-cols-1 row-cols-lg-2">
+<div class="col">
+<label for="nome" class="form-label">Nome progetto</label>
+<InputText id="nome" class="form-control" @bind-Value="@Form.Nome" />
+</div>
+<div class="col">
+<label for="data" class="form-label">Nome progetto</label>
+<InputDate id="data" class="form-control" @bind-Value="@Form.Consegna" />
+</div>
+</div>
+</div>
+</PopUp>

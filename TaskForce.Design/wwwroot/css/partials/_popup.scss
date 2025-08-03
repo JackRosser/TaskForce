@@ -1,0 +1,27 @@
+@mixin modal($background, $text, $text-hover) {
+    border-radius: 15px !important;
+    overflow: hidden;
+    font-size: 1rem;
+    background-color: $vs-background !important;
+    color: $vs-text !important;
+
+    & .modal-header {
+        padding: 0.5rem 1rem;
+        background-color: $vs-text-hover;
+        border: none;
+
+        & h1 {
+            font-size: 1rem !important;
+            color: $vs-text;
+            font-weight: 400;
+        }
+
+        & .btn-close {
+            color: $vs-text !important;
+        }
+    }
+
+    & .modal-footer {
+        border: none;
+    }
+}

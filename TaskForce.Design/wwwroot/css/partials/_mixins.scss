@@ -1,0 +1,79 @@
+main {
+    &.vs {
+        @include maintheme($vs-font, $vs-background);
+    }
+
+    &.isys {
+        @include maintheme($isys-font, $isys-background);
+    }
+}
+
+.progettocontainer {
+    &.vs {
+        @include progettoContainer($vs-background, $vs-text, $vs-text-hover, $vs-primary, $vs-active, $vs-important, $vs-alternate);
+    }
+
+    &.isys {
+        @include progettoContainer($isys-background, $isys-text, $isys-text-hover, $isys-primary, $isys-active, $isys-important, $isys-alternate);
+    }
+}
+
+.index {
+    &.vs {
+        @include index($vs-background, $vs-text, $vs-text-hover, $vs-active, 1px, 5%);
+    }
+
+    &.isys {
+        @include index($isys-background, $isys-text, $isys-text-hover, $isys-active, 1px, 5%);
+    }
+}
+
+.btn {
+    &.vs {
+        @include button($vs-font);
+    }
+
+    &.isys {
+        @include button($isys-font);
+    }
+
+    &.new-project-btn {
+        &.vs {
+            @include newProject($vs-active);
+        }
+
+        &.isys {
+            @include newProject($isys-active);
+        }
+    }
+}
+
+.modal-content {
+    &.vs {
+        @include modal($vs-background, $vs-text, $vs-text-hover);
+    }
+
+    &.isys {
+        @include modal($isys-background, $isys-text, $isys-text-hover);
+    }
+}
+
+.dropdown-menu {
+    &.vs {
+        @include dropdown($vs-background, $vs-text, $vs-active, $vs-text-hover, $vs-important);
+    }
+
+    &.isys {
+        @include dropdown($isys-background, $isys-text, $isys-active, $isys-text-hover, $isys-important);
+    }
+}
+
+.loadercontainer {
+    &.vs {
+        @include loader($vs-primary);
+    }
+
+    &.isys {
+        @include loader($isys-primary);
+    }
+}

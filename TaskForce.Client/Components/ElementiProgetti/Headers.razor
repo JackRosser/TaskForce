@@ -1,0 +1,14 @@
+﻿@inherits ProgettiBase
+
+@if(List is not null && List.Count() > 0)
+{
+    <div class="@($"index {Theme}")">
+        @foreach (var progetto in List)
+        {
+            var isShow = progetto.Id == ProgettoAttivo;
+            <button class="@($"{(isShow ? "active" : "")}")" @onclick="() => Change(progetto.Id)">@progetto.Nome</button>
+        }
+        <button @onclick="() => _nuovoProgetto.Start()">+</button>
+    </div>
+}
+<NuovoProgetto @ref="_nuovoProgetto" Update="UpdateParent" />

@@ -34,19 +34,16 @@ public class FasiProgettoController(IFaseProgettoService svc) : ControllerBase
         return CreatedAtAction(nameof(GetById), new { macroFaseId, id = created.Id }, created);
     }
 
-    [HttpPut("{id}/fase")]
+    [HttpPut("{id}")]
     [EndpointName("UpdateFase")]
     [EndpointSummary("Modifica una singola fase")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Update(int macroFaseId, int id, [FromBody] UpdateFaseProgettoDto dto, CancellationToken ct)
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateFaseProgettoDto dto, CancellationToken ct)
     {
-        if (id != dto.Id || macroFaseId != dto.MacroFaseId)
-            return BadRequest("Id path/body o MacroFaseId non coincidono.");
-
-        var ok = await svc.UpdateAsync(dto, ct);
-        return ok ? NoContent() : NotFound();
+        await svc.UpdateAsync(id, dto, ct);
+        return NoContent();
     }
 
     [HttpDelete("{id}")]
@@ -54,9 +51,9 @@ public class FasiProgettoController(IFaseProgettoService svc) : ControllerBase
     [EndpointSummary("Elimina una singola fase")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Delete(int macroFaseId, int id, CancellationToken ct)
+    public async Task<IActionResult> Delete(int id, CancellationToken ct)
     {
-        var ok = await svc.DeleteAsync(macroFaseId, id, ct);
-        return ok ? NoContent() : NotFound();
+        await svc.DeleteAsync(id, ct);
+        return NoContent();
     }
 }

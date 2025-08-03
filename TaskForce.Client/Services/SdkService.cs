@@ -82,6 +82,50 @@ namespace TaskForce.Client.Services
             }
         }
 
+        // Metodo senza tipi di ritorno specifici, utile per operazioni che non restituiscono dati
+
+        public async Task<Result> SendRequestAsync(Func<MacroFasiClient, Task> action, [CallerMemberName] string caller = "")
+        {
+            try
+            {
+                await action(macroFasiClient);
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError($"Caller {caller},{ex.Message}");
+                return Result.Fail(ex.Message);
+            }
+        }
+
+        public async Task<Result> SendRequestAsync(Func<FasiClient, Task> action, [CallerMemberName] string caller = "")
+        {
+            try
+            {
+                await action(fasiProgettoClient);
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError($"Caller {caller},{ex.Message}");
+                return Result.Fail(ex.Message);
+            }
+        }
+
+        public async Task<Result> SendRequestAsync(Func<PreseInCaricoClient, Task> action, [CallerMemberName] string caller = "")
+        {
+            try
+            {
+                await action(preseInCaricoClient);
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError($"Caller {caller},{ex.Message}");
+                return Result.Fail(ex.Message);
+            }
+        }
+
 
     }
 }

@@ -1,0 +1,8 @@
+@mixin button($font) {
+    font-family: $vs-font !important;
+    border-radius: 5px;
+
+    &.max {
+        min-width: 200px;
+    }
+}

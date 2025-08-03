@@ -57,4 +57,15 @@ public class UsersController(IUserService svc) : ControllerBase
         var ok = await svc.DeleteAsync(id, ct);
         return ok ? NoContent() : NotFound();
     }
+
+    [HttpGet("{id}/utenti-disponibili")]
+    [EndpointName("GetUtentiNonAssegnatiAllaFase")]
+    [EndpointSummary("Restituisce gli utenti che non sono assegnati alla fase specificata")]
+    [ProducesResponseType(typeof(IEnumerable<GetUserDto>), StatusCodes.Status200OK)]
+    public async Task<ActionResult<IEnumerable<GetUserDto>>> GetUtentiNonAssegnatiAllaFase(int id, CancellationToken ct)
+    {
+        var utenti = await svc.GetUtentiNonAssegnatiAllaFaseAsync(id, ct);
+        return Ok(utenti);
+    }
+
 }

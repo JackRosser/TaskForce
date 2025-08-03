@@ -1,4 +1,5 @@
 ﻿using TaskForce.Client.Abstractions;
+using TaskForce.Client.Components;
 using TaskForce.Dto.Progetto;
 
 namespace TaskForce.Client.Pages
@@ -6,35 +7,22 @@ namespace TaskForce.Client.Pages
     public partial class Home : SdkBase
     {
         private IEnumerable<GetProgettoWithFasiRequest>? Progetti { get; set; }
+        private NuovoProgetto _nuovoProgetto { get; set; } = new();
+        private bool NessunProgettoInizializzato { get; set; }
         protected override async Task OnInitializedAsync()
         {
-            SetHeaders();
             await GetRecords();
         }
 
         protected override async Task GetRecords()
         {
+            IsLoading = true;
             var response = await Sdk.SendRequestAsync(c => c.GetProgettiWithFasiInfoAsync());
             if (response.IsFailed) return;
             Progetti = response.Value;
+            if (Progetti is null || !Progetti.Any()) NessunProgettoInizializzato = true;
+            IsLoading = false;
         }
 
-        // HEADER
-        private List<HeaderText>? Headers { get; set; }
-        private void SetHeaders()
-        {
-            Headers = new()
-            {
-                new() { Name = "fase" },
-                new() { Name = "backend" },
-                new() { Name = "ui/ux" },
-                new() { Name = "stato" },
-                new() { Name = "presa in carico" }
-            };
-        }
-        private class HeaderText
-        {
-            public string? Name { get; set; }
-        }
     }
 }

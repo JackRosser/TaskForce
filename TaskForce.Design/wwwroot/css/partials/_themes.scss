@@ -1,12 +1,40 @@
 $custom-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 
 // Tema visual studio
+$vs-font: 'Consolas', sans-serif;
 $vs-primary: #68217A;
 $vs-background: #303030;
+$vs-text: #F5F5F0;
+$vs-text-hover: #7F7F7F;
+$vs-active: #E37933;
+$vs-alternate: #269BA1;
+$vs-important: #A9DCFF;
+
+// Tema ISystem
+$isys-font: 'Archia', sans-serif;
+$isys-primary: #FF5A1E;
+$isys-background: #ECECE4;
+$isys-text: $dark;
+$isys-text-hover: #C8C3B9;
+$isys-active: #FF5A1E;
+$isys-alternate: #B4CDBE;
+$isys-important: #FF4081;
 
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
     "vs-primary": $vs-primary, 
-    "vs-background": $vs-background
+    "vs-background": $vs-background,
+    "vs-text": $vs-text,
+    "vs-text-hover": $vs-text-hover,
+    "vs-active": $vs-active,
+    "vs-alternate": $vs-alternate,
+    "vs-important": $vs-important,
 
+    "isys-primary": $isys-primary, 
+    "isys-background": $isys-background,
+    "isys-text": $isys-text,
+    "isys-text-hover": $isys-text-hover,
+    "isys-active": $isys-active,
+    "isys-alternate": $isys-alternate,
+    "isys-important": $isys-important,
 ) );

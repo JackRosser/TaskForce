@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TaskForce.Database;
 using TaskForce.Dto.Progetto;
+using TaskForce.Enum;
 using TaskForce.Models;
 
 namespace TaskForce.Services;
@@ -9,7 +10,7 @@ public class ProgettoService(AppDbContext db) : IProgettoService
 {
     public async Task<GetProgettoDto> CreateAsync(CreaProgettoDto dto, CancellationToken ct = default)
     {
-        var entity = new Progetto { Nome = dto.Nome!, Consegna = dto.Consegna };
+        var entity = new Progetto { Nome = dto.Nome!, Consegna = dto.Consegna.Value };
         db.Progetti.Add(entity);
         await db.SaveChangesAsync(ct);
 
@@ -52,37 +53,15 @@ public class ProgettoService(AppDbContext db) : IProgettoService
         return affected == 1;
     }
 
-    private double CalcolaTempoLavorato(PresaInCarico presa)
-    {
-        if (presa.DataFineLavoro is null)
-            return 0;
-
-        var durata = presa.DataFineLavoro.Value - presa.DataPresaInCarico;
-        return durata.TotalSeconds;
-    }
-
 
     public async Task<IEnumerable<GetProgettoWithFasiRequest>> GetAllWithInfoAsync(CancellationToken ct = default)
     {
-        var progetti = await db.Progetti
-            .AsNoTracking()
-            .ToListAsync(ct);
-
-        var macroFasi = await db.MacroFasi
-            .AsNoTracking()
-            .ToListAsync(ct);
-
-        var fasi = await db.FasiProgetto
-            .AsNoTracking()
-            .ToListAsync(ct);
-
-        var prese = await db.PreseInCarico
-            .AsNoTracking()
-            .ToListAsync(ct);
-
-        var utenti = await db.Users
-            .AsNoTracking()
-            .ToListAsync(ct);
+        var progetti = await db.Progetti.AsNoTracking().ToListAsync(ct);
+        var macroFasi = await db.MacroFasi.AsNoTracking().ToListAsync(ct);
+        var fasi = await db.FasiProgetto.AsNoTracking().ToListAsync(ct);
+        var prese = await db.PreseInCarico.AsNoTracking().ToListAsync(ct);
+        var utenti = await db.Users.AsNoTracking().ToListAsync(ct);
+        var pause = await db.Pause.AsNoTracking().Where(p => p.DataFine != null).ToListAsync(ct);
 
         var result = progetti.Select(p => new GetProgettoWithFasiRequest
         {
@@ -91,10 +70,13 @@ public class ProgettoService(AppDbContext db) : IProgettoService
             Consegna = p.Consegna,
             MacroFasi = macroFasi
                 .Where(m => m.ProgettoId == p.Id)
+                .OrderBy(m => m.Ordine)
                 .Select(m => new GetMacroFaseDettaglioDto
+
                 {
                     Id = m.Id,
                     Nome = m.Nome,
+                    Ordine = m.Ordine,
                     Fasi = fasi
                         .Where(f => f.MacroFaseId == m.Id)
                         .Select(f =>
@@ -111,11 +93,21 @@ public class ProgettoService(AppDbContext db) : IProgettoService
                                 PreseInCarico = fasePrese.Select(presa =>
                                 {
                                     var user = utenti.FirstOrDefault(u => u.Id == presa.UserId);
-                                    var secondiLavorati = CalcolaTempoLavorato(presa);
-                                    var oreTotali = Math.Ceiling(secondiLavorati / 3600.0);
-                                    var giorni = (int)(oreTotali / 8);
-                                    var oreExtra = (int)(oreTotali % 8);
-                                    if (oreTotali > 0 && oreExtra == 0) oreExtra = 1;
+
+                                    int giorniEffettivi = 0;
+                                    if (presa.Stato == StatoUtente.Concluso && presa.DataFineLavoro.HasValue)
+                                    {
+                                        var pauseUtente = pause
+                                            .Where(p => p.PresaInCaricoId == presa.Id)
+                                            .Select(p => (p.DataInizio, p.DataFine!.Value))
+                                            .ToList();
+
+                                        giorniEffettivi = CalcolaGiorniLavorati(
+                                            presa.DataPresaInCarico,
+                                            presa.DataFineLavoro.Value,
+                                            pauseUtente);
+                                    }
+
 
                                     return new GetPresaInCaricoDettaglioDto
                                     {
@@ -125,9 +117,11 @@ public class ProgettoService(AppDbContext db) : IProgettoService
                                         Stato = presa.Stato,
                                         DataInizio = presa.DataPresaInCarico,
                                         DataFine = presa.DataFineLavoro,
-                                        GiorniEffettivi = giorni,
-                                        OreEffettiveExtra = oreExtra
+                                        GiorniEffettivi = giorniEffettivi,
+                                        GiorniPrevisti = f.GiorniPrevisti ?? 0
                                     };
+
+
                                 })
                             };
                         })
@@ -136,4 +130,47 @@ public class ProgettoService(AppDbContext db) : IProgettoService
 
         return result;
     }
+
+    private static int CalcolaGiorniLavorati(
+    DateTime inizio, DateTime fine,
+    List<(DateTime inizio, DateTime fine)> pause)
+    {
+        const int OrePerGiorno = 8;
+
+        // Calcolo ore effettive
+        var oreTotali = (fine - inizio).TotalHours;
+
+        // Somma pause
+        var orePausa = pause
+            .Sum(p =>
+            {
+                var start = p.inizio < inizio ? inizio : p.inizio;
+                var end = p.fine > fine ? fine : p.fine;
+                return end > start ? (end - start).TotalHours : 0;
+            });
+
+        var oreEffettive = oreTotali - orePausa;
+
+        // 🛑 Limite massimo: 8 ore al giorno, per ogni giorno tra inizio e fine
+        int giorniSolari = (int)Math.Ceiling((fine.Date - inizio.Date).TotalDays);
+        if (giorniSolari == 0)
+            giorniSolari = 1;
+
+        double oreMassimeConsentite = giorniSolari * OrePerGiorno;
+
+        oreEffettive = Math.Min(oreEffettive, oreMassimeConsentite);
+
+        return oreEffettive <= 0 ? 0 : (int)Math.Ceiling(oreEffettive / OrePerGiorno);
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -40,36 +40,42 @@ public class PreseInCaricoController(IPresaInCaricoService svc) : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
 
-    [HttpDelete("presaincarico/{id}")]
-    [EndpointName("AnnullaPresaInCarico")]
-    [EndpointSummary("Un utente annulla la propria presa in carico")]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Elimina(int id, CancellationToken ct)
-    {
-        var ok = await svc.EliminaAsync(id, ct);
-        return ok ? NoContent() : NotFound();
-    }
-
-    [HttpPatch("presaincarico/{id}/pausa")]
+    [HttpPatch("{id}/pausa")]
     [EndpointName("PausaPresaInCarico")]
     [EndpointSummary("L'utente mette in pausa la propria presa in carico")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> MettiInPausa(int id, CancellationToken ct)
+    public async Task<IActionResult> Pausa(int id, CancellationToken ct)
     {
-        var ok = await svc.MettiInPausaAsync(id, ct);
-        return ok ? NoContent() : NotFound();
+        await svc.PausaAsync(id, ct);
+        return NoContent();
     }
 
-    [HttpPatch("presaincarico/{id}/termina")]
-    [EndpointName("TerminaPresaInCarico")]
-    [EndpointSummary("L'utente termina il lavoro associato alla presa in carico")]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Termina(int id, CancellationToken ct)
+    [HttpPatch("{id}/riprendi")]
+    [EndpointName("RiprendiPresaInCarico")]
+    [EndpointSummary("L'utente riprende il lavoro")]
+    public async Task<IActionResult> Riprendi(int id, CancellationToken ct)
     {
-        var ok = await svc.TerminaAsync(id, ct);
-        return ok ? NoContent() : NotFound();
+        await svc.RiprendiAsync(id, ct);
+        return NoContent();
     }
+
+    [HttpPatch("{id}/concludi")]
+    [EndpointName("ConcludiPresaInCarico")]
+    [EndpointSummary("L'utente ha terminato il lavoro")]
+    public async Task<IActionResult> Concludi(int id, CancellationToken ct)
+    {
+        await svc.ConcludiAsync(id, ct);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    [EndpointName("EliminaPresaInCarico")]
+    [EndpointSummary("Elimina una presa in carico")]
+    public async Task<IActionResult> Delete(int id, CancellationToken ct)
+    {
+        await svc.DeleteAsync(id, ct);
+        return NoContent();
+    }
+
 }

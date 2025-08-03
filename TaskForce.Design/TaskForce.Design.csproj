@@ -20,7 +20,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevExpress.Blazor" Version="25.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>	  
+    <ProjectReference Include="..\TaskForce.Dto\TaskForce.Dto.csproj" />
+    <ProjectReference Include="..\TaskForce.Enum\TaskForce.Enum.csproj" />
+    <ProjectReference Include="..\TaskForce.Localization\TaskForce.Localization.csproj" />
+    <ProjectReference Include="..\TaskForce.LocalStorage\TaskForce.LocalStorage.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

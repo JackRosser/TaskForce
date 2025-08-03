@@ -1,0 +1,52 @@
+﻿@inherits ProgettiBase
+
+@if(Progetto is not null)
+{
+    <section class="project-deadline">
+        <Icon Element="@Icons.Folder" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Nuova sezione" OnClick="Start"/>
+        <div class="info">
+            <strong>Consegna prevista:</strong>
+            <span class="date">@Progetto.Consegna.ToShortDateString()</span>
+        </div>
+
+        @{
+            var oggi = DateTime.Today;
+            bool tempoEsaurito = Progetto.Consegna <= oggi;
+        }
+
+        @if (!tempoEsaurito)
+        {
+            <div class="countdown">
+                <div>
+                    <strong>Tempo mancante:</strong>
+                    <span>@TempoMancante</span>
+                </div>
+                <div>
+                    <strong>Giorni lavorativi:</strong>
+                    <span>@GiorniLavorativi</span>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="expired">
+                <strong>Tempo esaurito</strong>
+            </div>
+        }
+    </section>
+}
+<PopUp IsForm="true"
+       Model="@Form"
+       Update="AfterCreated"
+       OnSubmit="Submit"
+       Title="Crea una nuova sezione"
+       @ref="_popup">
+    <div class="container-fluid">
+        <div class="row row-cols-1">
+            <div class="col">
+                <label for="nome" class="form-label">Nome sezione</label>
+                <InputText id="nome" class="form-control" @bind-Value="@Form.Nome" />
+            </div>
+        </div>
+    </div>
+</PopUp>

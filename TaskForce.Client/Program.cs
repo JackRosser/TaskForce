@@ -1,8 +1,10 @@
+using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using TaskForce.Client;
 using TaskForce.Client.EventAggregator;
 using TaskForce.Client.Services;
+using TaskForce.LocalStorage;
 using TaskForceSdk;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -63,11 +65,16 @@ builder.Services.AddHttpClient<UsersClient>(a =>
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
+builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddScoped<TemaStorageService>();
+builder.Services.AddScoped<TemaState>();
+
 //var culture = new CultureInfo("it");
 //CultureInfo.DefaultThreadCurrentCulture = culture;
 //CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 builder.Services.AddScoped<SdkService>();
+builder.Services.AddDevExpressBlazor();
 
 
 await builder.Build().RunAsync();

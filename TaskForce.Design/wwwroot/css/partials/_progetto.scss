@@ -1,0 +1,208 @@
+@mixin progettoContainer($background, $text, $text-hover, $primary, $active, $important, $alternate) {
+    width: 100%;
+    height: calc(95% - 71px);
+    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    & .project-deadline {
+        background-color: $primary;
+        color: $text;
+        padding: 1rem;
+        border-radius: 15px 15px 0 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        & .info,
+        & .countdown {
+            display: flex;
+            gap: 1rem;
+        }
+
+        & .info {
+            flex-grow: 1;
+        }
+
+        & .date {
+            color: $active;
+        }
+
+        & .countdown span {
+            font-weight: 500;
+            color: $important;
+        }
+
+        & .expired {
+            color: $danger;
+            font-weight: bold;
+        }
+    }
+
+    & .macrobox {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: $text;
+        overflow: auto;
+
+        & .macrocontainer {
+            cursor: grab;
+            padding: 1rem;
+            background-color: $text-hover;
+            color: $text;
+
+
+            & h2 {
+                margin: 0;
+                font-weight: 800;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            & .macro-table {
+                margin-top: 1rem;
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+                border-radius: 10px;
+                overflow: hidden;
+                cursor: default;
+
+                & thead {
+                    & tr {
+                        background-color: $background;
+                        border-radius: 15px;
+
+                        & th {
+                            padding: 0.5rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                & tbody {
+                    & tr {
+                        background-color: rgba($background, 0.6);
+
+                        &:nth-child(even) {
+                            background-color: rgba($background, 0.4);
+                        }
+
+                        & td {
+                            padding: 1rem;
+
+
+                            &.intestazione {
+                                text-align: start;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+
+                & tr,
+                & th {
+                    color: $text;
+                    text-transform: capitalize;
+                    text-align: center;
+                }
+
+                & .dev-table {
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 0;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    font-size: 0.8rem;
+
+                    & thead {
+                        & tr {
+                            background-color: $primary;
+                            border-radius: 15px;
+
+                            & th {
+                                padding: 0.5rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    & tbody {
+                        & tr {
+                            background-color: $alternate;
+
+                            &:nth-child(even) {
+                                background-color: rgba($alternate, 0.6);
+                            }
+
+
+                            & td {
+                                padding: 1rem;
+
+                                &:first-child {
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            &:hover {
+                                background-color: $background !important;
+                            }
+                        }
+                    }
+
+                    & tr,
+                    & th {
+                        color: $text;
+                        text-transform: capitalize;
+                        text-align: center;
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                background-color: $alternate;
+                color: $background;
+            }
+
+            &:active {
+                cursor: grabbing;
+            }
+        }
+    }
+}
+
+@mixin index($background, $text, $text-hover, $active, $border:0, $height) {
+    height: $height;
+    padding-left: 2rem;
+    overflow: auto;
+    border-top: $border solid $text-hover;
+    display: flex;
+    align-items: center;
+
+    & button {
+        border: none;
+        border-right: 1px solid $text-hover;
+        padding-inline: 0.8rem;
+        font-size: 0.9rem;
+        background-color: transparent;
+        color: $text;
+
+        &:hover {
+            background-color: $text-hover;
+        }
+
+
+        &.active {
+            background-color: $active;
+            font-weight: bold;
+            color: $background;
+            border-right: none;
+        }
+    }
+}

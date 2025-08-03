@@ -2,15 +2,12 @@
 
 //breakpoint
 $mobile: "max-width: 575px";
-$tablet: "max-width: 991px";
-$laptop: "max-width: 1199px";
-$big-screen: "min-width: 1200px";
-$screen-full: "max-width: 1919px";
-$screen-xxl: "min-width: 1920px";
+$tablet: "min-width: 576px and max-width: 991px";
+$desktop: "min-width: 992px and max-width: 1919px";
+$maxi: "min-width: 1920px";
 
 
-
-@mixin media-query($media) {
+@mixin screen($media) {
     @media only screen and ($media) {
         @content
     }
@@ -40,9 +37,18 @@ $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 19
 @import "../css/partials/_errors.scss";
 @import "../css/partials/_loading.scss";
 @import "../css/partials/_scrollbar.scss";
+@import "../css/partials/_progetto.scss";
+@import "../css/partials/_navbar.scss";
+@import "../css/partials/_buttons.scss";
+@import "../css/partials/_popup.scss";
+@import "../css/partials/_form.scss";
+@import "../css/partials/_dropdown.scss";
+@import "../css/partials/_mixins.scss";
 
 
 @import "../lib/bootstrap/scss/mixins";
 @import "../lib/bootstrap/scss/bootstrap";
 // @import "../lib/bootstrap/themes/slate/_bootswatch";
 @import "../lib/bootstrap/themes/Litera/_bootswatch";
+
+

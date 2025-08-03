@@ -63,12 +63,40 @@ namespace TaskForce.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Ordine")
+                        .HasColumnType("int");
+
                     b.Property<int>("ProgettoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.ToTable("MacroFasi");
+                });
+
+            modelBuilder.Entity("TaskForce.Models.Pausa", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("DataFine")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DataInizio")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PresaInCaricoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pause");
                 });
 
             modelBuilder.Entity("TaskForce.Models.PresaInCarico", b =>

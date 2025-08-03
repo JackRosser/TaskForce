@@ -7,6 +7,6 @@ namespace TaskForce.Dto.Progetto
         [Required]
         public string? Nome { get; set; }
         [Required]
-        public DateTime Consegna { get; set; }
+        public DateTime? Consegna { get; set; }
     }
 }

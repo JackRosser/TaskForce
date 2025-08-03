@@ -1,0 +1,28 @@
+@mixin dropdown($background, $text, $active, $text-hover, $important) {
+    background-color: $background !important;
+    cursor: pointer;
+    min-width: 250px !important;
+
+    & .dropdown-item {
+        color: $text;
+        padding: 1rem;
+
+        &:hover {
+            background-color: $text-hover;
+            color: $text;
+        }
+    }
+
+    &.first-line {
+        & li:first-child {
+            & .dropdown-item {
+                background-color: $active;
+
+                &:hover {
+                    background-color: $important;
+                    color: $background;
+                }
+            }
+        }
+    }
+}

@@ -9,13 +9,6 @@ namespace TaskForce.Controllers;
 [Tags("MacroFasi")]
 public class MacroFasiController(IMacroFaseService svc) : ControllerBase
 {
-    [HttpGet("with-fasi")]
-    [EndpointName("GetAllMacroFasiAndFasi")]
-    [EndpointSummary("Ottiene tutte le macro fasi e tutte le fasi a esse associate")]
-    [ProducesResponseType(typeof(IEnumerable<MacroFaseWithFasiDto>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<MacroFaseWithFasiDto>>> GetAllWithFasi(int progettoId, CancellationToken ct)
-        => Ok(await svc.GetAllWithFasiAsync(progettoId, ct));
-
 
     [HttpGet]
     [EndpointName("GetAllMacroFasi")]
@@ -44,27 +37,24 @@ public class MacroFasiController(IMacroFaseService svc) : ControllerBase
         return CreatedAtAction(nameof(GetById), new { progettoId, id = created.Id }, created);
     }
 
-    [HttpPut("{id}/macrofase")]
+    [HttpPut("{id}")]
     [EndpointName("UpdateMacroFase")]
     [EndpointSummary("Modifica una macro fase")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    public async Task<IActionResult> Update(int progettoId, int id, [FromBody] UpdateMacroFaseDto dto, CancellationToken ct)
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateMacroFaseDto dto, CancellationToken ct)
     {
-        if (id != dto.Id || progettoId != dto.ProgettoId)
-            return BadRequest("Id path/body o ProgettoId non coincidono.");
-
-        var ok = await svc.UpdateAsync(dto, ct);
-        return ok ? NoContent() : NotFound();
+        await svc.UpdateAsync(id, dto, ct);
+        return NoContent();
     }
 
     [HttpDelete("{id}")]
     [EndpointName("DeleteMacroFase")]
     [EndpointSummary("Elimina una macro fase")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    public async Task<IActionResult> Delete(int progettoId, int id, CancellationToken ct)
+    public async Task<IActionResult> Delete(int id, CancellationToken ct)
     {
-        var ok = await svc.DeleteAsync(progettoId, id, ct);
-        return ok ? NoContent() : NotFound();
+        await svc.DeleteAsync(id, ct);
+        return NoContent();
     }
 
 

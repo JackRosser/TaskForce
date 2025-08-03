@@ -1,0 +1,35 @@
+﻿@using TaskForce.Enum
+@inherits ProgettiBase
+
+@if(Lavorazione is not null)
+{
+    <PopUp Title="Gestione developer"
+           @ref="_popup">
+        <div class="container-fluid">
+            <div class="row mt-5">
+                @if(Lavorazione.Stato != StatoUtente.Concluso)
+                {
+                    @if(Lavorazione.Stato != StatoUtente.InPausa)
+                    {
+                        <div class="col-6">
+                        <Button OnClick="Pausa" Text="Pausa" Color="warning" CssClass="max" />
+                        </div>
+                        <div class="col-6">
+                        <Button OnClick="FineLavorazione" Text="Fine lavorazione" Color="success" CssClass="max" />
+                        </div>
+                    }
+                    else if(Lavorazione.Stato == StatoUtente.InPausa)
+                    {
+                        <div class="col-12">
+                        <Button OnClick="RiprendiLavorazione" Text="Riprendi" Color="@($"{Theme}-active")" CssClass="max w-100" />
+                        </div>
+
+                    }
+                }
+                <div class="col-12">
+                    <Button OnClick="EliminaLavorazione" Text="Elimina questa lavorazione" Color="danger" CssClass="max w-100 my-5" />
+                </div>
+            </div>
+        </div>
+    </PopUp>
+}
