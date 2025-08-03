@@ -40,8 +40,19 @@ namespace TaskForce.Dto.Progetto
         public DateTime? DataFine { get; set; }
 
         public int GiorniEffettivi { get; set; }
-        public int OreEffettiveExtra { get; set; }
-        public string? DeltaTempi => GiorniEffettivi > 0 ? $"+{GiorniEffettivi}g {OreEffettiveExtra}h" : null;
+        public int GiorniPrevisti { get; set; }
+
+        public int DeltaGiorni => GiorniEffettivi - GiorniPrevisti;
+        public string? DeltaTempi => Stato == StatoUtente.Concluso ? DeltaGiorni switch
+        {
+            > 0 => $"+{DeltaGiorni}g",
+            < 0 => $"-{Math.Abs(DeltaGiorni)}g",
+            _ => "Allineamento"
+        }
+    : null;
+
+
     }
+
 
 }

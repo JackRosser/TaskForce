@@ -6,6 +6,8 @@ using TaskForce.Models;
 
 public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
 {
+    private const int OrePerGiorno = 8;
+
     public async Task<IEnumerable<PresaInCaricoRequest>> GetByFaseAsync(int faseProgettoId, CancellationToken ct = default)
     {
         return await db.PreseInCarico
@@ -71,6 +73,17 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
         var presa = await db.PreseInCarico.FindAsync([id], ct)
             ?? throw new KeyNotFoundException("Presa in carico non trovata");
 
+        if (presa.Stato != StatoUtente.Attivo)
+            throw new InvalidOperationException("Non puoi mettere in pausa una lavorazione non attiva");
+
+        // Apri nuova pausa
+        var pausa = new Pausa
+        {
+            PresaInCaricoId = presa.Id,
+            DataInizio = DateTime.Now
+        };
+
+        db.Pause.Add(pausa);
         presa.Stato = StatoUtente.InPausa;
         await db.SaveChangesAsync(ct);
     }
@@ -80,6 +93,19 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
         var presa = await db.PreseInCarico.FindAsync([id], ct)
             ?? throw new KeyNotFoundException("Presa in carico non trovata");
 
+        if (presa.Stato != StatoUtente.InPausa)
+            throw new InvalidOperationException("La lavorazione non è in pausa");
+
+        // Chiudi l'ultima pausa aperta
+        var pausa = await db.Pause
+            .Where(p => p.PresaInCaricoId == presa.Id && p.DataFine == null)
+            .OrderByDescending(p => p.DataInizio)
+            .FirstOrDefaultAsync(ct);
+
+        if (pausa is null)
+            throw new InvalidOperationException("Nessuna pausa aperta trovata");
+
+        pausa.DataFine = DateTime.Now;
         presa.Stato = StatoUtente.Attivo;
         await db.SaveChangesAsync(ct);
     }
@@ -92,6 +118,19 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
         presa.Stato = StatoUtente.Concluso;
         presa.DataFineLavoro = DateTime.Now;
 
+        // Calcolo tempo effettivo
+        var pause = await db.Pause
+            .Where(p => p.PresaInCaricoId == presa.Id && p.DataFine != null)
+            .Select(p => new { p.DataInizio, p.DataFine })
+            .ToListAsync(ct);
+
+        int giorniEffettivi = CalcolaGiorniLavorati(
+        presa.DataPresaInCarico,
+        presa.DataFineLavoro.Value,
+        pause.Select(p => (p.DataInizio, p.DataFine!.Value)).ToList());
+
+
+        // Verifica se tutti hanno concluso la fase
         var tuttePrese = await db.PreseInCarico
             .Where(p => p.FaseProgettoId == presa.FaseProgettoId)
             .ToListAsync(ct);
@@ -100,7 +139,9 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
         {
             var fase = await db.FasiProgetto.FindAsync([presa.FaseProgettoId], ct);
             if (fase is not null)
+            {
                 fase.Stato = StatoFase.Completato;
+            }
         }
 
         await db.SaveChangesAsync(ct);
@@ -117,7 +158,7 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
         db.PreseInCarico.Remove(presa);
         await db.SaveChangesAsync(ct);
 
-        // Verifica se non ci sono più lavorazioni per quella fase
+        // Se non ci sono più lavorazioni per la fase, riporta a DaCompletare
         bool nessunaLavorazione = !await db.PreseInCarico
             .AnyAsync(p => p.FaseProgettoId == faseId, ct);
 
@@ -133,8 +174,24 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
             }
         }
     }
+
+    private static int CalcolaGiorniLavorati(
+    DateTime inizio, DateTime fine,
+    List<(DateTime inizio, DateTime fine)> pause)
+    {
+        const int OrePerGiorno = 8;
+        TimeSpan totale = fine - inizio;
+
+        foreach (var p in pause)
+        {
+            var start = p.inizio < inizio ? inizio : p.inizio;
+            var end = p.fine > fine ? fine : p.fine;
+            if (end > start)
+                totale -= (end - start);
+        }
+
+        var oreTotali = totale.TotalHours;
+        return oreTotali <= 0 ? 0 : (int)Math.Ceiling(oreTotali / OrePerGiorno);
+    }
+
 }
-
-
-
-
