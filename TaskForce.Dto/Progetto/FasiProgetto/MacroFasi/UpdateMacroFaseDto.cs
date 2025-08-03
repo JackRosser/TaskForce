@@ -6,5 +6,6 @@ namespace TaskForce.Dto.Progetto.FasiProgetto.MacroFasi
     {
         [Required]
         public string? Nome { get; set; }
+        public int Ordine { get; set; }
     }
 }

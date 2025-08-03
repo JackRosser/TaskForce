@@ -70,10 +70,13 @@ public class ProgettoService(AppDbContext db) : IProgettoService
             Consegna = p.Consegna,
             MacroFasi = macroFasi
                 .Where(m => m.ProgettoId == p.Id)
+                .OrderBy(m => m.Ordine)
                 .Select(m => new GetMacroFaseDettaglioDto
+
                 {
                     Id = m.Id,
                     Nome = m.Nome,
+                    Ordine = m.Ordine,
                     Fasi = fasi
                         .Where(f => f.MacroFaseId == m.Id)
                         .Select(f =>

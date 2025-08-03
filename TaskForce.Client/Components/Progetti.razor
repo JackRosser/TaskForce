@@ -11,7 +11,11 @@
         {
             foreach (var macro in progetto.MacroFasi)
             {
-                <div class="macrocontainer">
+                    <div class="macrocontainer" draggable="true"
+                         @ondragstart="() => OnDragStart(macro)"
+                         @ondragover:preventDefault="true"
+                         @ondragover="OnDragOver"
+                         @ondrop="() => OnDrop(progetto, macro)">
                     <h2>
                         <span>
                             <span>
@@ -39,7 +43,7 @@
                             <tbody>
                                 @foreach (var fase in macro.Fasi)
                                 {
-                                    <tr>
+                                        <tr>
                                         <td><Icon Element="@Icons.Edit" Pointer="true" ToolTip="Modifica Task" OnClick="() => StartEditFase(fase)"/></td>
                                         <td class="intestazione">@fase.Nome</td>
                                         <td>@fase.GiorniPrevisti</td>

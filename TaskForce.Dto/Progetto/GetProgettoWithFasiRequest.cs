@@ -15,7 +15,7 @@ namespace TaskForce.Dto.Progetto
     {
         public int Id { get; set; }
         public string Nome { get; set; } = null!;
-
+        public int Ordine { get; set; }
         public IEnumerable<GetFaseDettaglioDto>? Fasi { get; set; }
     }
 

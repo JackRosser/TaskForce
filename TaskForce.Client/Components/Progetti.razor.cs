@@ -1,4 +1,5 @@
-﻿using TaskForce.Client.Components.ElementiProgetti;
+﻿using Microsoft.AspNetCore.Components.Web;
+using TaskForce.Client.Components.ElementiProgetti;
 using TaskForce.Design.Components;
 using TaskForce.Dto.Progetto;
 using TaskForce.Dto.Progetto.FasiProgetto;
@@ -168,6 +169,93 @@ namespace TaskForce.Client.Components
             await _popupEditFase.Close();
             await AfterNuovaFase();
         }
+
+        // DRAG E DROP
+
+        private GetMacroFaseDettaglioDto? draggedMacro;
+
+        private void OnDragStart(GetMacroFaseDettaglioDto macro)
+        {
+            draggedMacro = macro;
+        }
+
+        private async Task OnDrop(GetProgettoWithFasiRequest progetto, GetMacroFaseDettaglioDto targetMacro)
+        {
+            Console.WriteLine("OnDrop triggered");
+
+            if (draggedMacro is null)
+            {
+                Console.WriteLine("draggedMacro è null");
+                return;
+            }
+
+            if (draggedMacro.Id == targetMacro.Id)
+            {
+                Console.WriteLine("Trascinato su se stesso");
+                return;
+            }
+
+            var lista = progetto.MacroFasi?.ToList();
+            if (lista is null)
+            {
+                Console.WriteLine("MacroFasi è null");
+                return;
+            }
+
+            int fromIndex = lista.FindIndex(m => m.Id == draggedMacro.Id);
+            int toIndex = lista.FindIndex(m => m.Id == targetMacro.Id);
+
+            if (fromIndex == -1 || toIndex == -1)
+            {
+                Console.WriteLine("Indici non trovati");
+                return;
+            }
+
+            lista.RemoveAt(fromIndex);
+            lista.Insert(toIndex, draggedMacro);
+
+            for (int i = 0; i < lista.Count; i++)
+                lista[i].Ordine = i + 1;
+
+            progetto.MacroFasi = lista;
+            ProgettoSelezionato = progetto;
+
+            Console.WriteLine("Aggiorno server");
+            await AggiornaOrdineServer(lista);
+            draggedMacro = null;
+        }
+
+        private Task OnDragOver(DragEventArgs e)
+        {
+            Console.WriteLine("DragOver");
+            return Task.CompletedTask;
+        }
+
+
+        private async Task AggiornaOrdineServer(IEnumerable<GetMacroFaseDettaglioDto> macroFasi)
+        {
+            if (ProgettoSelezionato is null) return;
+            var aggiornamenti = macroFasi.Select(m => new UpdateMacroFaseDto
+            {
+                Nome = m.Nome,
+                Ordine = m.Ordine
+            });
+
+            foreach (var macro in macroFasi)
+            {
+                Console.WriteLine($"Aggiorno {macro.Nome} → Ordine {macro.Ordine}");
+
+                await Sdk.SendRequestAsync(c => c.UpdateMacroFaseAsync(macro.Id, new UpdateMacroFaseDto
+                {
+                    Nome = macro.Nome,
+                    Ordine = macro.Ordine
+                }));
+            }
+
+            await AfterNuovaSezione(ProgettoSelezionato);
+        }
+
+
 
     }
 }

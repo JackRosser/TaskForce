@@ -9,12 +9,29 @@ public class MacroFaseService(AppDbContext db) : IMacroFaseService
 {
     public async Task<GetMacroFaseDto> CreateAsync(int progettoId, CreateMacroFaseDto dto, CancellationToken ct = default)
     {
-        var entity = new MacroFase { ProgettoId = progettoId, Nome = dto.Nome! };
+        var ultimoOrdine = await db.MacroFasi
+            .Where(m => m.ProgettoId == progettoId)
+            .MaxAsync(m => (int?)m.Ordine, ct) ?? 0;
+
+        var entity = new MacroFase
+        {
+            ProgettoId = progettoId,
+            Nome = dto.Nome!,
+            Ordine = ultimoOrdine + 1
+        };
+
         db.MacroFasi.Add(entity);
         await db.SaveChangesAsync(ct);
 
-        return new GetMacroFaseDto { Id = entity.Id, ProgettoId = entity.ProgettoId, Nome = entity.Nome };
+        return new GetMacroFaseDto
+        {
+            Id = entity.Id,
+            ProgettoId = entity.ProgettoId,
+            Nome = entity.Nome,
+            Ordine = entity.Ordine
+        };
     }
+
 
     public Task<GetMacroFaseDto?> GetByIdAsync(int progettoId, int id, CancellationToken ct = default) =>
         db.MacroFasi
@@ -42,8 +59,11 @@ public class MacroFaseService(AppDbContext db) : IMacroFaseService
             throw new KeyNotFoundException($"MacroFase con id {id} non trovata");
 
         macroFase.Nome = dto.Nome!;
+        macroFase.Ordine = dto.Ordine!;
         await db.SaveChangesAsync(ct);
     }
+
+
 
     public async Task DeleteAsync(int id, CancellationToken ct)
     {
