@@ -1,11 +1,10 @@
 @mixin progettoContainer($background, $text, $text-hover, $primary, $active, $important, $alternate) {
     width: 100%;
-    position: relative;
-    overflow: auto;
     height: calc(95% - 71px);
-    flex-direction: column;
-    color: $text;
     padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 
     & .project-deadline {
         background-color: $primary;
@@ -41,80 +40,43 @@
         }
     }
 
-
-    & .macrocontainer {
-        cursor: grab;
-        padding: 1rem;
-        background-color: $text-hover;
+    & .macrobox {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         color: $text;
+        overflow: auto;
+
+        & .macrocontainer {
+            cursor: grab;
+            padding: 1rem;
+            background-color: $text-hover;
+            color: $text;
 
 
-        & h2 {
-            margin: 0;
-            font-weight: 800;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        & .macro-table {
-            margin-top: 1rem;
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            border-radius: 10px;
-            overflow: hidden;
-            cursor: default;
-
-            & thead {
-                & tr {
-                    background-color: $background;
-                    border-radius: 15px;
-
-                    & th {
-                        padding: 0.5rem;
-                        font-weight: 600;
-                    }
-                }
+            & h2 {
+                margin: 0;
+                font-weight: 800;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
 
-            & tbody {
-                & tr {
-                    background-color: rgba($background, 0.4);
-
-
-                    & td {
-                        padding: 1rem;
-
-
-                        &.intestazione {
-                            text-align: start;
-                            font-size: 1.2rem;
-                        }
-                    }
-                }
-            }
-
-            & tr,
-            & th {
-                color: $text;
-                text-transform: capitalize;
-                text-align: center;
-            }
-
-            & .dev-table {
+            & .macro-table {
+                margin-top: 1rem;
                 width: 100%;
                 border-collapse: separate;
                 border-spacing: 0;
-                border-radius: 15px;
+                border-radius: 10px;
                 overflow: hidden;
-                font-size: 0.8rem;
+                cursor: default;
 
                 & thead {
                     & tr {
-                        background-color: $primary;
+                        background-color: $background;
                         border-radius: 15px;
 
                         & th {
@@ -126,23 +88,20 @@
 
                 & tbody {
                     & tr {
-                        background-color: $alternate;
+                        background-color: rgba($background, 0.6);
 
                         &:nth-child(even) {
-                            background-color: rgba($alternate, 0.6);
+                            background-color: rgba($background, 0.4);
                         }
-
 
                         & td {
                             padding: 1rem;
 
-                            &:first-child {
-                                font-size: 1rem;
-                            }
-                        }
 
-                        &:hover {
-                            background-color: $background !important;
+                            &.intestazione {
+                                text-align: start;
+                                font-size: 1.2rem;
+                            }
                         }
                     }
                 }
@@ -153,16 +112,67 @@
                     text-transform: capitalize;
                     text-align: center;
                 }
+
+                & .dev-table {
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 0;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    font-size: 0.8rem;
+
+                    & thead {
+                        & tr {
+                            background-color: $primary;
+                            border-radius: 15px;
+
+                            & th {
+                                padding: 0.5rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    & tbody {
+                        & tr {
+                            background-color: $alternate;
+
+                            &:nth-child(even) {
+                                background-color: rgba($alternate, 0.6);
+                            }
+
+
+                            & td {
+                                padding: 1rem;
+
+                                &:first-child {
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            &:hover {
+                                background-color: $background !important;
+                            }
+                        }
+                    }
+
+                    & tr,
+                    & th {
+                        color: $text;
+                        text-transform: capitalize;
+                        text-align: center;
+                    }
+                }
             }
-        }
 
-        &:nth-child(even) {
-            background-color: $alternate;
-            color: $background;
-        }
+            &:nth-child(even) {
+                background-color: $alternate;
+                color: $background;
+            }
 
-        &:active {
-            cursor: grabbing;
+            &:active {
+                cursor: grabbing;
+            }
         }
     }
 }

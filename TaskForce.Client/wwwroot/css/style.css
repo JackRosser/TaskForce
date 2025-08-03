@@ -166,12 +166,11 @@ main.vs {
 
 .progettocontainer.vs {
   width: 100%;
-  position: relative;
-  overflow: auto;
   height: calc(95% - 71px);
-  flex-direction: column;
-  color: #F5F5F0;
   padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 .progettocontainer.vs .project-deadline {
   background-color: #68217A;
@@ -200,13 +199,21 @@ main.vs {
   color: #d9534f;
   font-weight: bold;
 }
-.progettocontainer.vs .macrocontainer {
+.progettocontainer.vs .macrobox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #F5F5F0;
+  overflow: auto;
+}
+.progettocontainer.vs .macrobox .macrocontainer {
   cursor: grab;
   padding: 1rem;
   background-color: #7F7F7F;
   color: #F5F5F0;
 }
-.progettocontainer.vs .macrocontainer h2, .progettocontainer.vs .macrocontainer .h2 {
+.progettocontainer.vs .macrobox .macrocontainer h2, .progettocontainer.vs .macrobox .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
   font-size: 1.5rem;
@@ -215,7 +222,7 @@ main.vs {
   justify-content: space-between;
   align-items: center;
 }
-.progettocontainer.vs .macrocontainer .macro-table {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table {
   margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
@@ -224,30 +231,33 @@ main.vs {
   overflow: hidden;
   cursor: default;
 }
-.progettocontainer.vs .macrocontainer .macro-table thead tr {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table thead tr {
   background-color: #303030;
   border-radius: 15px;
 }
-.progettocontainer.vs .macrocontainer .macro-table thead tr th {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table thead tr th {
   padding: 0.5rem;
   font-weight: 600;
 }
-.progettocontainer.vs .macrocontainer .macro-table tbody tr {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table tbody tr {
+  background-color: rgba(48, 48, 48, 0.6);
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table tbody tr:nth-child(even) {
   background-color: rgba(48, 48, 48, 0.4);
 }
-.progettocontainer.vs .macrocontainer .macro-table tbody tr td {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table tbody tr td {
   padding: 1rem;
 }
-.progettocontainer.vs .macrocontainer .macro-table tbody tr td.intestazione {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
   text-align: start;
   font-size: 1.2rem;
 }
-.progettocontainer.vs .macrocontainer .macro-table tr, .progettocontainer.vs .macrocontainer .macro-table th {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table tr, .progettocontainer.vs .macrobox .macrocontainer .macro-table th {
   color: #F5F5F0;
   text-transform: capitalize;
   text-align: center;
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -255,39 +265,39 @@ main.vs {
   overflow: hidden;
   font-size: 0.8rem;
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table thead tr {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead tr {
   background-color: #68217A;
   border-radius: 15px;
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table thead tr th {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead tr th {
   padding: 0.5rem;
   font-weight: 600;
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr {
   background-color: #269BA1;
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
   background-color: rgba(38, 155, 161, 0.6);
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr td {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
   padding: 1rem;
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr td:first-child {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr td:first-child {
   font-size: 1rem;
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table tbody tr:hover {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr:hover {
   background-color: #303030 !important;
 }
-.progettocontainer.vs .macrocontainer .macro-table .dev-table tr, .progettocontainer.vs .macrocontainer .macro-table .dev-table th {
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tr, .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table th {
   color: #F5F5F0;
   text-transform: capitalize;
   text-align: center;
 }
-.progettocontainer.vs .macrocontainer:nth-child(even) {
+.progettocontainer.vs .macrobox .macrocontainer:nth-child(even) {
   background-color: #269BA1;
   color: #303030;
 }
-.progettocontainer.vs .macrocontainer:active {
+.progettocontainer.vs .macrobox .macrocontainer:active {
   cursor: grabbing;
 }
 

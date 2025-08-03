@@ -6,7 +6,7 @@
     var isShow = progetto.Id == ProgettoVisualizzatoId;
     <div class="@($"progettocontainer {(isShow ? "d-flex" : "d-none")} {Theme}")">
         <CountDown @ref="_countDown" SezioneCreata="AfterNuovaSezione" Progetto="@progetto" />
-
+        <div class="macrobox">
         @if (progetto.MacroFasi is not null)
         {
             foreach (var macro in progetto.MacroFasi)
@@ -58,6 +58,7 @@
             }
         }
     </div>
+        </div>
 }
 
 <Headers List="@List" ProgettoAttivo="@ProgettoVisualizzatoId" ProgettoAttivoChanged="SetId" Update="NuovoProgettoVisualizzatoImmediatamente" />
