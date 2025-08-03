@@ -10,6 +10,7 @@ namespace TaskForce.Client.Components.ElementiProgetti
         [Parameter] public GetFaseDettaglioDto? Fase { get; set; }
         private IEnumerable<GetUserDto>? Users { get; set; }
         private PresaInCaricoRequest? Form { get; set; }
+        private DevManagement _devManagement { get; set; } = default!;
         private async Task Submit()
         {
             if (Fase is null) return;

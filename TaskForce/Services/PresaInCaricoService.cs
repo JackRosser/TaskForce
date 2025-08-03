@@ -66,55 +66,75 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
         };
     }
 
-    public async Task<bool> EliminaAsync(int id, CancellationToken ct = default)
+    public async Task PausaAsync(int id, CancellationToken ct = default)
     {
-        var entity = await db.PreseInCarico.FindAsync([id], ct);
-        if (entity is null) return false;
+        var presa = await db.PreseInCarico.FindAsync([id], ct)
+            ?? throw new KeyNotFoundException("Presa in carico non trovata");
 
-        db.PreseInCarico.Remove(entity);
+        presa.Stato = StatoUtente.InPausa;
         await db.SaveChangesAsync(ct);
-
-        return true;
     }
 
-    public async Task<bool> MettiInPausaAsync(int id, CancellationToken ct = default)
+    public async Task RiprendiAsync(int id, CancellationToken ct = default)
     {
-        var entity = await db.PreseInCarico.FindAsync([id], ct);
-        if (entity is null) return false;
+        var presa = await db.PreseInCarico.FindAsync([id], ct)
+            ?? throw new KeyNotFoundException("Presa in carico non trovata");
 
-        entity.Stato = StatoUtente.InPausa;
+        presa.Stato = StatoUtente.Attivo;
         await db.SaveChangesAsync(ct);
-
-        return true;
     }
 
-    public async Task<bool> TerminaAsync(int id, CancellationToken ct = default)
+    public async Task ConcludiAsync(int id, CancellationToken ct = default)
     {
-        var entity = await db.PreseInCarico.FindAsync([id], ct);
-        if (entity is null || entity.DataFineLavoro != null) return false;
+        var presa = await db.PreseInCarico.FindAsync([id], ct)
+            ?? throw new KeyNotFoundException("Presa in carico non trovata");
 
-        entity.DataFineLavoro = DateTime.Now;
-        entity.Stato = StatoUtente.Attivo;
+        presa.Stato = StatoUtente.Concluso;
+        presa.DataFineLavoro = DateTime.Now;
 
-        await db.SaveChangesAsync(ct);
+        var tuttePrese = await db.PreseInCarico
+            .Where(p => p.FaseProgettoId == presa.FaseProgettoId)
+            .ToListAsync(ct);
 
-        // Aggiornamento stato fase se tutti hanno finito
-        var faseId = entity.FaseProgettoId;
-
-        var tutteTerminate = await db.PreseInCarico
-            .Where(p => p.FaseProgettoId == faseId)
-            .AllAsync(p => p.DataFineLavoro != null, ct);
-
-        if (tutteTerminate)
+        if (tuttePrese.All(p => p.Stato == StatoUtente.Concluso))
         {
-            var fase = await db.FasiProgetto.FindAsync([faseId], ct);
-            if (fase != null)
-            {
+            var fase = await db.FasiProgetto.FindAsync([presa.FaseProgettoId], ct);
+            if (fase is not null)
                 fase.Stato = StatoFase.Completato;
+        }
+
+        await db.SaveChangesAsync(ct);
+    }
+
+    public async Task DeleteAsync(int id, CancellationToken ct = default)
+    {
+        var presa = await db.PreseInCarico.FindAsync([id], ct);
+        if (presa is null)
+            throw new KeyNotFoundException($"Presa in carico con id {id} non trovata");
+
+        var faseId = presa.FaseProgettoId;
+
+        db.PreseInCarico.Remove(presa);
+        await db.SaveChangesAsync(ct);
+
+        // Verifica se non ci sono più lavorazioni per quella fase
+        bool nessunaLavorazione = !await db.PreseInCarico
+            .AnyAsync(p => p.FaseProgettoId == faseId, ct);
+
+        if (nessunaLavorazione)
+        {
+            var fase = await db.FasiProgetto
+                .FirstOrDefaultAsync(f => f.Id == faseId, ct);
+
+            if (fase is not null && fase.Stato == StatoFase.Completato)
+            {
+                fase.Stato = StatoFase.DaCompletare;
                 await db.SaveChangesAsync(ct);
             }
         }
-
-        return true;
     }
 }
+
+
+
+

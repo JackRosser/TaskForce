@@ -143,6 +143,7 @@ namespace TaskForce.Client.Components
         private PopUp _popupEditFase { get; set; } = null!;
         private async Task ModificaFase()
         {
+            if (LavorazioneSelezionataId is null) return;
             await Sdk.SendRequestAsync(r => r.UpdateFaseAsync(LavorazioneSelezionataId.Value, UpdateFaseForm));
         }
         private async Task StartEditFase(GetFaseDettaglioDto lavorazione)
@@ -162,12 +163,10 @@ namespace TaskForce.Client.Components
 
         private async Task EliminaFase()
         {
+            if (LavorazioneSelezionataId is null) return;
             var response = await Sdk.SendRequestAsync(r => r.DeleteFaseAsync(LavorazioneSelezionataId.Value));
-            if (response.IsSuccess)
-            {
-                await _popupEditFase.Close();
-                await AfterNuovaFase();
-            }
+            await _popupEditFase.Close();
+            await AfterNuovaFase();
         }
 
     }

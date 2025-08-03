@@ -1,11 +1,12 @@
-﻿@inherits ProgettiBase
+﻿@using TaskForce.Enum
+@inherits ProgettiBase
 
-@if(Fase is not null)
+@if (Fase is not null)
 {
     <table class="dev-table">
         <thead>
             <tr>
-                <th><Icon Element="@Icons.AddUser" Pointer="true" Color="@($"{Theme}-text")" ToolTip="Aggiungi un developer per questa lavorazione" CssClass="fs-5" OnClick="Start"/></th>
+                <th><Icon Element="@Icons.AddUser" Pointer="true" Color="@($"{Theme}-text")" ToolTip="Aggiungi un developer per questa lavorazione" CssClass="fs-5" OnClick="Start" /></th>
                 <th>Developer</th>
                 <th>Inizio</th>
                 <th>Stato</th>
@@ -16,15 +17,17 @@
         <tbody>
             @if (Fase.PreseInCarico is not null)
             {
-                @foreach (var dev in Fase.PreseInCarico)
+                @foreach (var lavorazione in Fase.PreseInCarico)
                 {
                     <tr>
-                        <td><Icon Element="@Icons.Gear" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Gestisci developer" /></td>
-                        <td>@dev.UserName</td>
-                        <td>@dev.DataInizio.ToShortDateString()</td>
-                        <td><Badge StatoDiUtente="@dev.Stato" /></td>
-                        <td>@(dev.DataFine?.ToShortDateString() ?? "")</td>
-                        <td>@dev.DeltaTempi</td>
+                        <td>
+                            <Icon Element="@Icons.Gear" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Gestisci developer" OnClick="() => _devManagement.Start(lavorazione)" />
+                        </td>
+                        <td>@lavorazione.UserName</td>
+                        <td>@lavorazione.DataInizio.ToShortDateString()</td>
+                        <td><Badge StatoDiUtente="@lavorazione.Stato" /></td>
+                        <td>@(lavorazione.DataFine?.ToShortDateString() ?? "")</td>
+                        <td>@lavorazione.DeltaTempi</td>
                     </tr>
                 }
             }
@@ -41,7 +44,7 @@
     <div class="container-fluid">
         <div class="row row-cols-1">
             <div class="col">
-                @if(Users is not null && Users.Any())
+                @if (Users is not null && Users.Any())
                 {
                     <InputSelect id="users" class="form-select" @bind-Value="@Form.UserId">
                         <option selected disabled value>--Seleziona un developer--</option>
@@ -53,9 +56,10 @@
                 }
                 else
                 {
-                    <Badge Title="Nessun developer disponibile" StaticColor="danger"/>
+                    <Badge Title="Nessun developer disponibile" StaticColor="danger" />
                 }
             </div>
         </div>
     </div>
 </PopUp>
+<DevManagement @ref="_devManagement" Update="UpdateParent" />
