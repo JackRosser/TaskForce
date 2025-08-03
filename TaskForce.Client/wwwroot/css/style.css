@@ -281,10 +281,10 @@ main.isys {
   font-weight: 600;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr {
-  background-color: #269BA1;
+  background-color: #D473B7;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(38, 155, 161, 0.6);
+  background-color: rgba(212, 115, 183, 0.6);
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
   padding: 1rem;
@@ -301,7 +301,7 @@ main.isys {
   text-align: center;
 }
 .progettocontainer.vs .macrobox .macrocontainer:nth-child(even) {
-  background-color: #269BA1;
+  background-color: #D473B7;
   color: #303030;
 }
 .progettocontainer.vs .macrobox .macrocontainer:active {
@@ -714,7 +714,7 @@ main.isys {
   --bs-vs-text: #F5F5F0;
   --bs-vs-text-hover: #7F7F7F;
   --bs-vs-active: #E37933;
-  --bs-vs-alternate: #269BA1;
+  --bs-vs-alternate: #D473B7;
   --bs-vs-important: #A9DCFF;
   --bs-isys-primary: #FF5A1E;
   --bs-isys-background: #ECECE4;
@@ -736,7 +736,7 @@ main.isys {
   --bs-vs-text-rgb: 245, 245, 240;
   --bs-vs-text-hover-rgb: 127, 127, 127;
   --bs-vs-active-rgb: 227, 121, 51;
-  --bs-vs-alternate-rgb: 38, 155, 161;
+  --bs-vs-alternate-rgb: 212, 115, 183;
   --bs-vs-important-rgb: 169, 220, 255;
   --bs-isys-primary-rgb: 255, 90, 30;
   --bs-isys-background-rgb: 236, 236, 228;
@@ -3925,19 +3925,19 @@ textarea.form-control-lg {
 
 .btn-vs-alternate {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #269BA1;
-  --bs-btn-border-color: #269BA1;
+  --bs-btn-bg: #D473B7;
+  --bs-btn-border-color: #D473B7;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(32.3, 131.75, 136.85);
-  --bs-btn-hover-border-color: rgb(30.4, 124, 128.8);
-  --bs-btn-focus-shadow-rgb: 71, 170, 175;
+  --bs-btn-hover-bg: rgb(180.2, 97.75, 155.55);
+  --bs-btn-hover-border-color: rgb(169.6, 92, 146.4);
+  --bs-btn-focus-shadow-rgb: 218, 136, 194;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(30.4, 124, 128.8);
-  --bs-btn-active-border-color: rgb(28.5, 116.25, 120.75);
+  --bs-btn-active-bg: rgb(169.6, 92, 146.4);
+  --bs-btn-active-border-color: rgb(159, 86.25, 137.25);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #269BA1;
-  --bs-btn-disabled-border-color: #269BA1;
+  --bs-btn-disabled-bg: #D473B7;
+  --bs-btn-disabled-border-color: #D473B7;
 }
 
 .btn-vs-important {
@@ -4298,19 +4298,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-vs-alternate {
-  --bs-btn-color: #269BA1;
-  --bs-btn-border-color: #269BA1;
+  --bs-btn-color: #D473B7;
+  --bs-btn-border-color: #D473B7;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #269BA1;
-  --bs-btn-hover-border-color: #269BA1;
-  --bs-btn-focus-shadow-rgb: 38, 155, 161;
+  --bs-btn-hover-bg: #D473B7;
+  --bs-btn-hover-border-color: #D473B7;
+  --bs-btn-focus-shadow-rgb: 212, 115, 183;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #269BA1;
-  --bs-btn-active-border-color: #269BA1;
+  --bs-btn-active-bg: #D473B7;
+  --bs-btn-active-border-color: #D473B7;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #269BA1;
+  --bs-btn-disabled-color: #D473B7;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #269BA1;
+  --bs-btn-disabled-border-color: #D473B7;
   --bs-gradient: none;
 }
 
@@ -8482,8 +8482,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-vs-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-vs-alternate:hover, .link-vs-alternate:focus {
-  color: RGBA(30, 124, 129, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(30, 124, 129, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(170, 92, 146, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(170, 92, 146, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-vs-important {
@@ -13973,7 +13973,7 @@ table,
   background-color: #E37933;
 }
 .alert-vs-alternate {
-  background-color: #269BA1;
+  background-color: #D473B7;
 }
 .alert-vs-important {
   background-color: #A9DCFF;
