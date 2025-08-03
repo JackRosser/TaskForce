@@ -118,19 +118,7 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
         presa.Stato = StatoUtente.Concluso;
         presa.DataFineLavoro = DateTime.Now;
 
-        // Calcolo tempo effettivo
-        var pause = await db.Pause
-            .Where(p => p.PresaInCaricoId == presa.Id && p.DataFine != null)
-            .Select(p => new { p.DataInizio, p.DataFine })
-            .ToListAsync(ct);
-
-        int giorniEffettivi = CalcolaGiorniLavorati(
-        presa.DataPresaInCarico,
-        presa.DataFineLavoro.Value,
-        pause.Select(p => (p.DataInizio, p.DataFine!.Value)).ToList());
-
-
-        // Verifica se tutti hanno concluso la fase
+        // Se tutti hanno concluso, aggiorna la fase
         var tuttePrese = await db.PreseInCarico
             .Where(p => p.FaseProgettoId == presa.FaseProgettoId)
             .ToListAsync(ct);
@@ -146,6 +134,7 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
 
         await db.SaveChangesAsync(ct);
     }
+
 
     public async Task DeleteAsync(int id, CancellationToken ct = default)
     {
@@ -175,23 +164,5 @@ public class PresaInCaricoService(AppDbContext db) : IPresaInCaricoService
         }
     }
 
-    private static int CalcolaGiorniLavorati(
-    DateTime inizio, DateTime fine,
-    List<(DateTime inizio, DateTime fine)> pause)
-    {
-        const int OrePerGiorno = 8;
-        TimeSpan totale = fine - inizio;
-
-        foreach (var p in pause)
-        {
-            var start = p.inizio < inizio ? inizio : p.inizio;
-            var end = p.fine > fine ? fine : p.fine;
-            if (end > start)
-                totale -= (end - start);
-        }
-
-        var oreTotali = totale.TotalHours;
-        return oreTotali <= 0 ? 0 : (int)Math.Ceiling(oreTotali / OrePerGiorno);
-    }
 
 }

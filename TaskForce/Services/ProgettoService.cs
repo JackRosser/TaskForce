@@ -150,6 +150,8 @@ public class ProgettoService(AppDbContext db) : IProgettoService
 
         // 🛑 Limite massimo: 8 ore al giorno, per ogni giorno tra inizio e fine
         int giorniSolari = (int)Math.Ceiling((fine.Date - inizio.Date).TotalDays);
+        if (giorniSolari == 0)
+            giorniSolari = 1;
 
         double oreMassimeConsentite = giorniSolari * OrePerGiorno;
 
