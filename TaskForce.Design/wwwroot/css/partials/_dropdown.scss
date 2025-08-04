@@ -1,11 +1,13 @@
-@mixin dropdown($background, $text, $active, $text-hover, $important) {
+@mixin dropdown($background, $text, $active, $text-hover, $important, $font) {
     background-color: $background !important;
     cursor: pointer;
     min-width: 250px !important;
+    font-family: $font !important;
 
     & .dropdown-item {
         color: $text;
         padding: 1rem;
+        font-family: $font !important;
 
         &:hover {
             background-color: $text-hover;

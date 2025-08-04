@@ -597,10 +597,12 @@ main.isys {
   background-color: #303030 !important;
   cursor: pointer;
   min-width: 250px !important;
+  font-family: "Consolas", sans-serif !important;
 }
 .dropdown-menu.vs .dropdown-item {
   color: #F5F5F0;
   padding: 1rem;
+  font-family: "Consolas", sans-serif !important;
 }
 .dropdown-menu.vs .dropdown-item:hover {
   background-color: #7F7F7F;
@@ -617,10 +619,12 @@ main.isys {
   background-color: #ECECE4 !important;
   cursor: pointer;
   min-width: 250px !important;
+  font-family: "Archia", sans-serif !important;
 }
 .dropdown-menu.isys .dropdown-item {
   color: #343a40;
   padding: 1rem;
+  font-family: "Archia", sans-serif !important;
 }
 .dropdown-menu.isys .dropdown-item:hover {
   background-color: #C8C3B9;
