@@ -196,14 +196,14 @@ main.isys {
   flex-grow: 1;
 }
 .progettocontainer.vs .project-deadline .date {
-  color: #E37933;
+  color: #F5F5F0;
 }
 .progettocontainer.vs .project-deadline .countdown span {
   font-weight: 500;
-  color: #A9DCFF;
+  color: #F5F5F0;
 }
 .progettocontainer.vs .project-deadline .expired {
-  color: #d9534f;
+  color: #F5F5F0;
   font-weight: bold;
 }
 .progettocontainer.vs .macrobox {
@@ -332,14 +332,14 @@ main.isys {
   flex-grow: 1;
 }
 .progettocontainer.isys .project-deadline .date {
-  color: #FF5A1E;
+  color: #343a40;
 }
 .progettocontainer.isys .project-deadline .countdown span {
   font-weight: 500;
-  color: #FF4081;
+  color: #343a40;
 }
 .progettocontainer.isys .project-deadline .expired {
-  color: #d9534f;
+  color: #343a40;
   font-weight: bold;
 }
 .progettocontainer.isys .macrobox {
