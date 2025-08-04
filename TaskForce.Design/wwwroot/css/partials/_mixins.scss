@@ -28,7 +28,8 @@ main {
     }
 }
 
-.btn {
+.btn
+{
     &.vs {
         @include button($vs-font);
     }
@@ -58,13 +59,14 @@ main {
     }
 }
 
-.dropdown-menu {
+.dropdown-menu
+{
     &.vs {
-        @include dropdown($vs-background, $vs-text, $vs-active, $vs-text-hover, $vs-important);
+        @include dropdown($vs-background, $vs-text, $vs-active, $vs-text-hover, $vs-important, $vs-font);
     }
 
     &.isys {
-        @include dropdown($isys-background, $isys-text, $isys-active, $isys-text-hover, $isys-important);
+        @include dropdown($isys-background, $isys-text, $isys-active, $isys-text-hover, $isys-important, $isys-font);
     }
 }
 
