@@ -190,6 +190,7 @@ main.isys {
 }
 .progettocontainer.vs .project-deadline .info, .progettocontainer.vs .project-deadline .countdown {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 .progettocontainer.vs .project-deadline .info {
@@ -326,6 +327,7 @@ main.isys {
 }
 .progettocontainer.isys .project-deadline .info, .progettocontainer.isys .project-deadline .countdown {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 .progettocontainer.isys .project-deadline .info {
@@ -489,7 +491,7 @@ main.isys {
   background-color: #C8C3B9;
 }
 .index.isys button.active {
-  background-color: #FF5A1E;
+  background-color: #B4CDBE;
   font-weight: bold;
   color: #ECECE4;
   border-right: none;
@@ -531,15 +533,15 @@ main.isys {
   padding: 2rem 4rem;
   font-size: 2rem;
   font-weight: 600;
-  color: #FF5A1E;
-  background: linear-gradient(#FF5A1E, white, #FF5A1E);
+  color: #B4CDBE;
+  background: linear-gradient(#B4CDBE, white, #B4CDBE);
   border: none;
   border-radius: 15px !important;
   transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
 }
 .btn.new-project-btn.isys:hover {
   transform: scale(1.03);
-  background: linear-gradient(white, #FF5A1E, white);
+  background: linear-gradient(white, #B4CDBE, white);
   color: white;
 }
 .btn.new-project-btn.isys:active {
@@ -631,7 +633,7 @@ main.isys {
   color: #343a40;
 }
 .dropdown-menu.isys.first-line li:first-child .dropdown-item {
-  background-color: #FF5A1E;
+  background-color: #B4CDBE;
 }
 .dropdown-menu.isys.first-line li:first-child .dropdown-item:hover {
   background-color: #FF4081;
@@ -724,7 +726,7 @@ main.isys {
   --bs-isys-background: #ECECE4;
   --bs-isys-text: #343a40;
   --bs-isys-text-hover: #C8C3B9;
-  --bs-isys-active: #FF5A1E;
+  --bs-isys-active: #B4CDBE;
   --bs-isys-alternate: #B4CDBE;
   --bs-isys-important: #FF4081;
   --bs-primary-rgb: 69, 130, 236;
@@ -746,7 +748,7 @@ main.isys {
   --bs-isys-background-rgb: 236, 236, 228;
   --bs-isys-text-rgb: 52, 58, 64;
   --bs-isys-text-hover-rgb: 200, 195, 185;
-  --bs-isys-active-rgb: 255, 90, 30;
+  --bs-isys-active-rgb: 180, 205, 190;
   --bs-isys-alternate-rgb: 180, 205, 190;
   --bs-isys-important-rgb: 255, 64, 129;
   --bs-primary-text-emphasis: rgb(27.6, 52, 94.4);
@@ -4030,20 +4032,20 @@ textarea.form-control-lg {
 }
 
 .btn-isys-active {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #FF5A1E;
-  --bs-btn-border-color: #FF5A1E;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(216.75, 76.5, 25.5);
-  --bs-btn-hover-border-color: #cc4818;
-  --bs-btn-focus-shadow-rgb: 255, 115, 64;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #cc4818;
-  --bs-btn-active-border-color: rgb(191.25, 67.5, 22.5);
+  --bs-btn-color: #000;
+  --bs-btn-bg: #B4CDBE;
+  --bs-btn-border-color: #B4CDBE;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
+  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-focus-shadow-rgb: 153, 174, 162;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #c3d7cb;
+  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #FF5A1E;
-  --bs-btn-disabled-border-color: #FF5A1E;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #B4CDBE;
+  --bs-btn-disabled-border-color: #B4CDBE;
 }
 
 .btn-isys-alternate {
@@ -4404,19 +4406,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-isys-active {
-  --bs-btn-color: #FF5A1E;
-  --bs-btn-border-color: #FF5A1E;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #FF5A1E;
-  --bs-btn-hover-border-color: #FF5A1E;
-  --bs-btn-focus-shadow-rgb: 255, 90, 30;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #FF5A1E;
-  --bs-btn-active-border-color: #FF5A1E;
+  --bs-btn-color: #B4CDBE;
+  --bs-btn-border-color: #B4CDBE;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #B4CDBE;
+  --bs-btn-hover-border-color: #B4CDBE;
+  --bs-btn-focus-shadow-rgb: 180, 205, 190;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #B4CDBE;
+  --bs-btn-active-border-color: #B4CDBE;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #FF5A1E;
+  --bs-btn-disabled-color: #B4CDBE;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #FF5A1E;
+  --bs-btn-disabled-border-color: #B4CDBE;
   --bs-gradient: none;
 }
 
@@ -8350,7 +8352,7 @@ textarea.form-control-lg {
 }
 
 .text-bg-isys-active {
-  color: #fff !important;
+  color: #000 !important;
   background-color: RGBA(var(--bs-isys-active-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -8540,8 +8542,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-isys-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-isys-active:hover, .link-isys-active:focus {
-  color: RGBA(204, 72, 24, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(204, 72, 24, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-isys-alternate {
@@ -13995,7 +13997,7 @@ table,
   background-color: #C8C3B9;
 }
 .alert-isys-active {
-  background-color: #FF5A1E;
+  background-color: #B4CDBE;
 }
 .alert-isys-alternate {
   background-color: #B4CDBE;

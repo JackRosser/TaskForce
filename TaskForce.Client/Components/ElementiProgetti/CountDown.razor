@@ -6,12 +6,13 @@
         <Icon Element="@Icons.Folder" Pointer="true" Color="@($"{Theme}-text")" CssClass="fs-5" ToolTip="Nuova sezione" OnClick="Start"/>
         <div class="info">
             <strong>Consegna prevista:</strong>
-            <span class="date">@Progetto.Consegna.ToShortDateString()</span>
+            <span class="date p-2 rounded-pill @($"bg-{Theme}-active")">@Progetto.Consegna.ToShortDateString()</span>
             @{
                 var sommaGiorni = Progetto.MacroFasi?.Sum(m => m.Fasi?.Sum(f => f.GiorniPrevisti) ?? 0) ?? 0;
+                var excedeedDays = sommaGiorni < GiorniLavorativi ? "bg-success" : "bg-danger";
             }
             <strong>Giorni inseriti:</strong>
-            <span>@sommaGiorni</span>
+            <span class="@excedeedDays text-white p-2 rounded-pill">@sommaGiorni</span>
         </div>
 
         @{
@@ -24,11 +25,11 @@
             <div class="countdown">
                 <div>
                     <strong>Tempo mancante:</strong>
-                    <span>@TempoMancante</span>
+                    <span class="p-2 rounded-pill @($"bg-{Theme}-active")">@TempoMancante</span>
                 </div>
                 <div>
                     <strong>Giorni lavorativi:</strong>
-                    <span>@GiorniLavorativi</span>
+                    <span class="p-2 rounded-pill @($"bg-{Theme}-active")">@GiorniLavorativi</span>
                 </div>
             </div>
         }
