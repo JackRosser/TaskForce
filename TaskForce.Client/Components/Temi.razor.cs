@@ -30,6 +30,10 @@ namespace TaskForce.Client.Components
             {
                 new() { Value = Tema.vs, Nome = "Visual Studio" },
                 new() { Value = Tema.isys, Nome = "I-System" },
+                new() { Value = Tema.gray, Nome = "Sobrio" },
+                new() { Value = Tema.fut, Nome = "Futuristico" },
+                new() { Value = Tema.mod, Nome = "Moderno" },
+                new() { Value = Tema.vin, Nome = "Vintage" },
             };
 
             foreach (var tema in TemiDisponibili)

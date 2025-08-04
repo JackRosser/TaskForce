@@ -20,8 +20,48 @@ $isys-active: #B4CDBE;
 $isys-alternate: #B4CDBE;
 $isys-important: #FF4081;
 
-// Merge nel theme-colors dei nuovi colori
+// Tema Sobrio (gray-)
+$gray-font: 'Segoe UI', sans-serif;
+$gray-primary: #6C757D;
+$gray-background: #E0E0E0;
+$gray-text: #212529;
+$gray-text-hover: #495057;
+$gray-active: #ADB5BD;
+$gray-alternate: #CED4DA;
+$gray-important: #343A40;
+
+// Tema Futuristico (fut-)
+$fut-font: 'Orbitron', sans-serif;
+$fut-primary: #00FFFF;
+$fut-background: #0A0F1D;
+$fut-text: #E0FFFF;
+$fut-text-hover: #7FFFD4;
+$fut-active: #1E90FF;
+$fut-alternate: #8A2BE2;
+$fut-important: #FF00FF;
+
+// Tema Moderno (mod-)
+$mod-font: 'Poppins', sans-serif;
+$mod-primary: #0D6EFD;
+$mod-background: #FFFFFF;
+$mod-text: #212529;
+$mod-text-hover: #6C757D;
+$mod-active: #198754;
+$mod-alternate: #6610F2;
+$mod-important: #DC3545;
+
+// Tema Vintage (vin-)
+$vin-font: 'Courier New', monospace;
+$vin-primary: #A0522D;
+$vin-background: #FFF8DC;
+$vin-text: #5C4033;
+$vin-text-hover: #8B7355;
+$vin-active: #CD853F;
+$vin-alternate: #DEB887;
+$vin-important: #B22222;
+
 $theme-colors: map-merge( $theme-colors, ( 
+    // Visual Studio
     "vs-primary": $vs-primary, 
     "vs-background": $vs-background,
     "vs-text": $vs-text,
@@ -30,6 +70,7 @@ $theme-colors: map-merge( $theme-colors, (
     "vs-alternate": $vs-alternate,
     "vs-important": $vs-important,
 
+    // ISystem
     "isys-primary": $isys-primary, 
     "isys-background": $isys-background,
     "isys-text": $isys-text,
@@ -37,4 +78,41 @@ $theme-colors: map-merge( $theme-colors, (
     "isys-active": $isys-active,
     "isys-alternate": $isys-alternate,
     "isys-important": $isys-important,
+
+    // Sobrio
+    "gray-primary": $gray-primary, 
+    "gray-background": $gray-background,
+    "gray-text": $gray-text,
+    "gray-text-hover": $gray-text-hover,
+    "gray-active": $gray-active,
+    "gray-alternate": $gray-alternate,
+    "gray-important": $gray-important,
+
+    // Futuristico
+    "fut-primary": $fut-primary, 
+    "fut-background": $fut-background,
+    "fut-text": $fut-text,
+    "fut-text-hover": $fut-text-hover,
+    "fut-active": $fut-active,
+    "fut-alternate": $fut-alternate,
+    "fut-important": $fut-important,
+
+    // Moderno
+    "mod-primary": $mod-primary, 
+    "mod-background": $mod-background,
+    "mod-text": $mod-text,
+    "mod-text-hover": $mod-text-hover,
+    "mod-active": $mod-active,
+    "mod-alternate": $mod-alternate,
+    "mod-important": $mod-important,
+
+    // Vintage
+    "vin-primary": $vin-primary, 
+    "vin-background": $vin-background,
+    "vin-text": $vin-text,
+    "vin-text-hover": $vin-text-hover,
+    "vin-active": $vin-active,
+    "vin-alternate": $vin-alternate,
+    "vin-important": $vin-important,
 ) );
+

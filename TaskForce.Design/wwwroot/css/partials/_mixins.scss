@@ -6,6 +6,22 @@ main {
     &.isys {
         @include maintheme($isys-font, $isys-background);
     }
+
+    &.gray {
+        @include maintheme($gray-font, $gray-background);
+    }
+
+    &.fut {
+        @include maintheme($fut-font, $fut-background);
+    }
+
+    &.mod {
+        @include maintheme($mod-font, $mod-background);
+    }
+
+    &.vin {
+        @include maintheme($vin-font, $vin-background);
+    }
 }
 
 .progettocontainer {
@@ -15,6 +31,22 @@ main {
 
     &.isys {
         @include progettoContainer($isys-background, $isys-text, $isys-text-hover, $isys-primary, $isys-active, $isys-important, $isys-alternate);
+    }
+
+    &.gray {
+        @include progettoContainer($gray-background, $gray-text, $gray-text-hover, $gray-primary, $gray-active, $gray-important, $gray-alternate);
+    }
+
+    &.fut {
+        @include progettoContainer($fut-background, $fut-text, $fut-text-hover, $fut-primary, $fut-active, $fut-important, $fut-alternate);
+    }
+
+    &.mod {
+        @include progettoContainer($mod-background, $mod-text, $mod-text-hover, $mod-primary, $mod-active, $mod-important, $mod-alternate);
+    }
+
+    &.vin {
+        @include progettoContainer($vin-background, $vin-text, $vin-text-hover, $vin-primary, $vin-active, $vin-important, $vin-alternate);
     }
 }
 
@@ -26,16 +58,47 @@ main {
     &.isys {
         @include index($isys-background, $isys-text, $isys-text-hover, $isys-active, 1px, 5%);
     }
+
+    &.gray {
+        @include index($gray-background, $gray-text, $gray-text-hover, $gray-active, 1px, 5%);
+    }
+
+    &.fut {
+        @include index($fut-background, $fut-text, $fut-text-hover, $fut-active, 1px, 5%);
+    }
+
+    &.mod {
+        @include index($mod-background, $mod-text, $mod-text-hover, $mod-active, 1px, 5%);
+    }
+
+    &.vin {
+        @include index($vin-background, $vin-text, $vin-text-hover, $vin-active, 1px, 5%);
+    }
 }
 
-.btn
-{
+.btn {
     &.vs {
         @include button($vs-font);
     }
 
     &.isys {
         @include button($isys-font);
+    }
+
+    &.gray {
+        @include button($gray-font);
+    }
+
+    &.fut {
+        @include button($fut-font);
+    }
+
+    &.mod {
+        @include button($mod-font);
+    }
+
+    &.vin {
+        @include button($vin-font);
     }
 
     &.new-project-btn {
@@ -45,6 +108,22 @@ main {
 
         &.isys {
             @include newProject($isys-active);
+        }
+
+        &.gray {
+            @include newProject($gray-active);
+        }
+
+        &.fut {
+            @include newProject($fut-active);
+        }
+
+        &.mod {
+            @include newProject($mod-active);
+        }
+
+        &.vin {
+            @include newProject($vin-active);
         }
     }
 }
@@ -57,16 +136,47 @@ main {
     &.isys {
         @include modal($isys-background, $isys-text, $isys-text-hover);
     }
+
+    &.gray {
+        @include modal($gray-background, $gray-text, $gray-text-hover);
+    }
+
+    &.fut {
+        @include modal($fut-background, $fut-text, $fut-text-hover);
+    }
+
+    &.mod {
+        @include modal($mod-background, $mod-text, $mod-text-hover);
+    }
+
+    &.vin {
+        @include modal($vin-background, $vin-text, $vin-text-hover);
+    }
 }
 
-.dropdown-menu
-{
+.dropdown-menu {
     &.vs {
         @include dropdown($vs-background, $vs-text, $vs-active, $vs-text-hover, $vs-important, $vs-font);
     }
 
     &.isys {
         @include dropdown($isys-background, $isys-text, $isys-active, $isys-text-hover, $isys-important, $isys-font);
+    }
+
+    &.gray {
+        @include dropdown($gray-background, $gray-text, $gray-active, $gray-text-hover, $gray-important, $gray-font);
+    }
+
+    &.fut {
+        @include dropdown($fut-background, $fut-text, $fut-active, $fut-text-hover, $fut-important, $fut-font);
+    }
+
+    &.mod {
+        @include dropdown($mod-background, $mod-text, $mod-active, $mod-text-hover, $mod-important, $mod-font);
+    }
+
+    &.vin {
+        @include dropdown($vin-background, $vin-text, $vin-active, $vin-text-hover, $vin-important, $vin-font);
     }
 }
 
@@ -77,5 +187,21 @@ main {
 
     &.isys {
         @include loader($isys-primary);
+    }
+
+    &.gray {
+        @include loader($gray-primary);
+    }
+
+    &.fut {
+        @include loader($fut-primary);
+    }
+
+    &.mod {
+        @include loader($mod-primary);
+    }
+
+    &.vin {
+        @include loader($vin-primary);
     }
 }
