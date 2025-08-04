@@ -26,16 +26,16 @@
         }
 
         & .date {
-            color: $active;
+            color: $text;
         }
 
         & .countdown span {
             font-weight: 500;
-            color: $important;
+            color: $text;
         }
 
         & .expired {
-            color: $danger;
+            color: $text;
             font-weight: bold;
         }
     }
