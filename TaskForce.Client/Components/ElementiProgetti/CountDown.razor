@@ -7,6 +7,11 @@
         <div class="info">
             <strong>Consegna prevista:</strong>
             <span class="date">@Progetto.Consegna.ToShortDateString()</span>
+            @{
+                var sommaGiorni = Progetto.MacroFasi?.Sum(m => m.Fasi?.Sum(f => f.GiorniPrevisti) ?? 0) ?? 0;
+            }
+            <strong>Giorni inseriti:</strong>
+            <span>@sommaGiorni</span>
         </div>
 
         @{
