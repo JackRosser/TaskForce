@@ -5,9 +5,7 @@
         vs = 0,
         isys,
         gray,
-        fut,
-        mod,
-        vin
+        excel
 
     }
 }

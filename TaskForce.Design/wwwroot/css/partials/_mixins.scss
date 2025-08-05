@@ -11,16 +11,8 @@ main {
         @include maintheme($gray-font, $gray-background);
     }
 
-    &.fut {
-        @include maintheme($fut-font, $fut-background);
-    }
-
-    &.mod {
-        @include maintheme($mod-font, $mod-background);
-    }
-
-    &.vin {
-        @include maintheme($vin-font, $vin-background);
+    &.excel {
+        @include maintheme($excel-font, $excel-background);
     }
 }
 
@@ -37,17 +29,11 @@ main {
         @include progettoContainer($gray-background, $gray-text, $gray-text-hover, $gray-primary, $gray-active, $gray-important, $gray-alternate);
     }
 
-    &.fut {
-        @include progettoContainer($fut-background, $fut-text, $fut-text-hover, $fut-primary, $fut-active, $fut-important, $fut-alternate);
+    &.excel {
+        @include progettoContainer($excel-background, $excel-text, $excel-text-hover, $excel-primary, $excel-active, $excel-important, $excel-alternate);
     }
 
-    &.mod {
-        @include progettoContainer($mod-background, $mod-text, $mod-text-hover, $mod-primary, $mod-active, $mod-important, $mod-alternate);
-    }
 
-    &.vin {
-        @include progettoContainer($vin-background, $vin-text, $vin-text-hover, $vin-primary, $vin-active, $vin-important, $vin-alternate);
-    }
 }
 
 .index {
@@ -63,17 +49,10 @@ main {
         @include index($gray-background, $gray-text, $gray-text-hover, $gray-active, 1px, 5%);
     }
 
-    &.fut {
-        @include index($fut-background, $fut-text, $fut-text-hover, $fut-active, 1px, 5%);
+    &.excel {
+        @include index($excel-background, $excel-text, $excel-text-hover, $excel-active, 1px, 5%);
     }
 
-    &.mod {
-        @include index($mod-background, $mod-text, $mod-text-hover, $mod-active, 1px, 5%);
-    }
-
-    &.vin {
-        @include index($vin-background, $vin-text, $vin-text-hover, $vin-active, 1px, 5%);
-    }
 }
 
 .btn {
@@ -89,17 +68,10 @@ main {
         @include button($gray-font);
     }
 
-    &.fut {
-        @include button($fut-font);
+    &.excel {
+        @include button($excel-font);
     }
 
-    &.mod {
-        @include button($mod-font);
-    }
-
-    &.vin {
-        @include button($vin-font);
-    }
 
     &.new-project-btn {
         &.vs {
@@ -114,17 +86,10 @@ main {
             @include newProject($gray-active);
         }
 
-        &.fut {
-            @include newProject($fut-active);
+        &.excel {
+            @include newProject($excel-active);
         }
 
-        &.mod {
-            @include newProject($mod-active);
-        }
-
-        &.vin {
-            @include newProject($vin-active);
-        }
     }
 }
 
@@ -141,17 +106,10 @@ main {
         @include modal($gray-background, $gray-text, $gray-text-hover);
     }
 
-    &.fut {
-        @include modal($fut-background, $fut-text, $fut-text-hover);
+    &.excel {
+        @include modal($excel-background, $excel-text, $excel-text-hover);
     }
 
-    &.mod {
-        @include modal($mod-background, $mod-text, $mod-text-hover);
-    }
-
-    &.vin {
-        @include modal($vin-background, $vin-text, $vin-text-hover);
-    }
 }
 
 .dropdown-menu {
@@ -167,17 +125,10 @@ main {
         @include dropdown($gray-background, $gray-text, $gray-active, $gray-text-hover, $gray-important, $gray-font);
     }
 
-    &.fut {
-        @include dropdown($fut-background, $fut-text, $fut-active, $fut-text-hover, $fut-important, $fut-font);
+    &.excel {
+        @include dropdown($excel-background, $excel-text, $excel-active, $excel-text-hover, $excel-important, $excel-font);
     }
 
-    &.mod {
-        @include dropdown($mod-background, $mod-text, $mod-active, $mod-text-hover, $mod-important, $mod-font);
-    }
-
-    &.vin {
-        @include dropdown($vin-background, $vin-text, $vin-active, $vin-text-hover, $vin-important, $vin-font);
-    }
 }
 
 .loadercontainer {
@@ -193,15 +144,8 @@ main {
         @include loader($gray-primary);
     }
 
-    &.fut {
-        @include loader($fut-primary);
+    &.excel {
+        @include loader($excel-primary);
     }
 
-    &.mod {
-        @include loader($mod-primary);
-    }
-
-    &.vin {
-        @include loader($vin-primary);
-    }
 }

@@ -172,19 +172,11 @@ main.isys {
 }
 main.gray {
   font-family: "Segoe UI", sans-serif;
-  background-color: #E0E0E0;
+  background-color: #ADB5BD;
 }
-main.fut {
-  font-family: "Orbitron", sans-serif;
-  background-color: #0A0F1D;
-}
-main.mod {
-  font-family: "Poppins", sans-serif;
-  background-color: #FFFFFF;
-}
-main.vin {
-  font-family: "Courier New", monospace;
-  background-color: #FFF8DC;
+main.excel {
+  font-family: "Calibri", sans-serif;
+  background-color: #92D050;
 }
 
 .progettocontainer.vs {
@@ -470,8 +462,8 @@ main.vin {
   overflow: hidden;
 }
 .progettocontainer.gray .project-deadline {
-  background-color: #6C757D;
-  color: #212529;
+  background-color: #B0B3B8;
+  color: #343A40;
   padding: 1rem;
   border-radius: 15px 15px 0 0;
   display: flex;
@@ -487,14 +479,14 @@ main.vin {
   flex-grow: 1;
 }
 .progettocontainer.gray .project-deadline .date {
-  color: #212529;
+  color: #343A40;
 }
 .progettocontainer.gray .project-deadline .countdown span {
   font-weight: 500;
-  color: #212529;
+  color: #343A40;
 }
 .progettocontainer.gray .project-deadline .expired {
-  color: #212529;
+  color: #343A40;
   font-weight: bold;
 }
 .progettocontainer.gray .macrobox {
@@ -502,14 +494,14 @@ main.vin {
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: #212529;
+  color: #343A40;
   overflow: auto;
 }
 .progettocontainer.gray .macrobox .macrocontainer {
   cursor: grab;
   padding: 1rem;
-  background-color: #495057;
-  color: #212529;
+  background-color: #6C757D;
+  color: #343A40;
 }
 .progettocontainer.gray .macrobox .macrocontainer h2, .progettocontainer.gray .macrobox .macrocontainer .h2 {
   margin: 0;
@@ -530,7 +522,7 @@ main.vin {
   cursor: default;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table thead tr {
-  background-color: #E0E0E0;
+  background-color: #ADB5BD;
   border-radius: 15px;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table thead tr th {
@@ -538,10 +530,10 @@ main.vin {
   font-weight: 600;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr {
-  background-color: rgba(224, 224, 224, 0.6);
+  background-color: rgba(173, 181, 189, 0.6);
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr:nth-child(even) {
-  background-color: rgba(224, 224, 224, 0.4);
+  background-color: rgba(173, 181, 189, 0.4);
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr td {
   padding: 1rem;
@@ -551,7 +543,7 @@ main.vin {
   font-size: 1.2rem;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table tr, .progettocontainer.gray .macrobox .macrocontainer .macro-table th {
-  color: #212529;
+  color: #343A40;
   text-transform: capitalize;
   text-align: center;
 }
@@ -564,7 +556,7 @@ main.vin {
   font-size: 0.8rem;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead tr {
-  background-color: #6C757D;
+  background-color: #B0B3B8;
   border-radius: 15px;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead tr th {
@@ -584,21 +576,21 @@ main.vin {
   font-size: 1rem;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody tr:hover {
-  background-color: #E0E0E0 !important;
+  background-color: #ADB5BD !important;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tr, .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table th {
-  color: #212529;
+  color: #343A40;
   text-transform: capitalize;
   text-align: center;
 }
 .progettocontainer.gray .macrobox .macrocontainer:nth-child(even) {
   background-color: #CED4DA;
-  color: #E0E0E0;
+  color: #ADB5BD;
 }
 .progettocontainer.gray .macrobox .macrocontainer:active {
   cursor: grabbing;
 }
-.progettocontainer.fut {
+.progettocontainer.excel {
   width: 100%;
   height: calc(95% - 71px);
   padding-inline: 2rem;
@@ -606,49 +598,49 @@ main.vin {
   flex-direction: column;
   overflow: hidden;
 }
-.progettocontainer.fut .project-deadline {
-  background-color: #00FFFF;
-  color: #E0FFFF;
+.progettocontainer.excel .project-deadline {
+  background-color: #F5F5F5;
+  color: #20382F;
   padding: 1rem;
   border-radius: 15px 15px 0 0;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.progettocontainer.fut .project-deadline .info, .progettocontainer.fut .project-deadline .countdown {
+.progettocontainer.excel .project-deadline .info, .progettocontainer.excel .project-deadline .countdown {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.progettocontainer.fut .project-deadline .info {
+.progettocontainer.excel .project-deadline .info {
   flex-grow: 1;
 }
-.progettocontainer.fut .project-deadline .date {
-  color: #E0FFFF;
+.progettocontainer.excel .project-deadline .date {
+  color: #20382F;
 }
-.progettocontainer.fut .project-deadline .countdown span {
+.progettocontainer.excel .project-deadline .countdown span {
   font-weight: 500;
-  color: #E0FFFF;
+  color: #20382F;
 }
-.progettocontainer.fut .project-deadline .expired {
-  color: #E0FFFF;
+.progettocontainer.excel .project-deadline .expired {
+  color: #20382F;
   font-weight: bold;
 }
-.progettocontainer.fut .macrobox {
+.progettocontainer.excel .macrobox {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: #E0FFFF;
+  color: #20382F;
   overflow: auto;
 }
-.progettocontainer.fut .macrobox .macrocontainer {
+.progettocontainer.excel .macrobox .macrocontainer {
   cursor: grab;
   padding: 1rem;
-  background-color: #7FFFD4;
-  color: #E0FFFF;
+  background-color: #D9D9D9;
+  color: #20382F;
 }
-.progettocontainer.fut .macrobox .macrocontainer h2, .progettocontainer.fut .macrobox .macrocontainer .h2 {
+.progettocontainer.excel .macrobox .macrocontainer h2, .progettocontainer.excel .macrobox .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
   font-size: 1.5rem;
@@ -657,7 +649,7 @@ main.vin {
   justify-content: space-between;
   align-items: center;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table {
   margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
@@ -666,33 +658,33 @@ main.vin {
   overflow: hidden;
   cursor: default;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table thead tr {
-  background-color: #0A0F1D;
+.progettocontainer.excel .macrobox .macrocontainer .macro-table thead tr {
+  background-color: #92D050;
   border-radius: 15px;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table thead tr th {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table thead tr th {
   padding: 0.5rem;
   font-weight: 600;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table tbody tr {
-  background-color: rgba(10, 15, 29, 0.6);
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr {
+  background-color: rgba(146, 208, 80, 0.6);
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table tbody tr:nth-child(even) {
-  background-color: rgba(10, 15, 29, 0.4);
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr:nth-child(even) {
+  background-color: rgba(146, 208, 80, 0.4);
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table tbody tr td {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr td {
   padding: 1rem;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
   text-align: start;
   font-size: 1.2rem;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table tr, .progettocontainer.fut .macrobox .macrocontainer .macro-table th {
-  color: #E0FFFF;
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tr, .progettocontainer.excel .macrobox .macrocontainer .macro-table th {
+  color: #20382F;
   text-transform: capitalize;
   text-align: center;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -700,313 +692,39 @@ main.vin {
   overflow: hidden;
   font-size: 0.8rem;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table thead tr {
-  background-color: #00FFFF;
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead tr {
+  background-color: #F5F5F5;
   border-radius: 15px;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table thead tr th {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead tr th {
   padding: 0.5rem;
   font-weight: 600;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table tbody tr {
-  background-color: #8A2BE2;
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr {
+  background-color: #fff;
 }
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(138, 43, 226, 0.6);
-}
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
-  padding: 1rem;
-}
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table tbody tr td:first-child {
-  font-size: 1rem;
-}
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table tbody tr:hover {
-  background-color: #0A0F1D !important;
-}
-.progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table tr, .progettocontainer.fut .macrobox .macrocontainer .macro-table .dev-table th {
-  color: #E0FFFF;
-  text-transform: capitalize;
-  text-align: center;
-}
-.progettocontainer.fut .macrobox .macrocontainer:nth-child(even) {
-  background-color: #8A2BE2;
-  color: #0A0F1D;
-}
-.progettocontainer.fut .macrobox .macrocontainer:active {
-  cursor: grabbing;
-}
-.progettocontainer.mod {
-  width: 100%;
-  height: calc(95% - 71px);
-  padding-inline: 2rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.progettocontainer.mod .project-deadline {
-  background-color: #0D6EFD;
-  color: #212529;
-  padding: 1rem;
-  border-radius: 15px 15px 0 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.progettocontainer.mod .project-deadline .info, .progettocontainer.mod .project-deadline .countdown {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.progettocontainer.mod .project-deadline .info {
-  flex-grow: 1;
-}
-.progettocontainer.mod .project-deadline .date {
-  color: #212529;
-}
-.progettocontainer.mod .project-deadline .countdown span {
-  font-weight: 500;
-  color: #212529;
-}
-.progettocontainer.mod .project-deadline .expired {
-  color: #212529;
-  font-weight: bold;
-}
-.progettocontainer.mod .macrobox {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  color: #212529;
-  overflow: auto;
-}
-.progettocontainer.mod .macrobox .macrocontainer {
-  cursor: grab;
-  padding: 1rem;
-  background-color: #6C757D;
-  color: #212529;
-}
-.progettocontainer.mod .macrobox .macrocontainer h2, .progettocontainer.mod .macrobox .macrocontainer .h2 {
-  margin: 0;
-  font-weight: 800;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table {
-  margin-top: 1rem;
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: default;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table thead tr {
-  background-color: #FFFFFF;
-  border-radius: 15px;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table thead tr th {
-  padding: 0.5rem;
-  font-weight: 600;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table tbody tr {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.6);
 }
-.progettocontainer.mod .macrobox .macrocontainer .macro-table tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table tbody tr td {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
   padding: 1rem;
 }
-.progettocontainer.mod .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
-  text-align: start;
-  font-size: 1.2rem;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table tr, .progettocontainer.mod .macrobox .macrocontainer .macro-table th {
-  color: #212529;
-  text-transform: capitalize;
-  text-align: center;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 15px;
-  overflow: hidden;
-  font-size: 0.8rem;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table thead tr {
-  background-color: #0D6EFD;
-  border-radius: 15px;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table thead tr th {
-  padding: 0.5rem;
-  font-weight: 600;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table tbody tr {
-  background-color: #6610F2;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(102, 16, 242, 0.6);
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
-  padding: 1rem;
-}
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table tbody tr td:first-child {
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr td:first-child {
   font-size: 1rem;
 }
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table tbody tr:hover {
-  background-color: #FFFFFF !important;
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr:hover {
+  background-color: #92D050 !important;
 }
-.progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table tr, .progettocontainer.mod .macrobox .macrocontainer .macro-table .dev-table th {
-  color: #212529;
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tr, .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table th {
+  color: #20382F;
   text-transform: capitalize;
   text-align: center;
 }
-.progettocontainer.mod .macrobox .macrocontainer:nth-child(even) {
-  background-color: #6610F2;
-  color: #FFFFFF;
+.progettocontainer.excel .macrobox .macrocontainer:nth-child(even) {
+  background-color: #fff;
+  color: #92D050;
 }
-.progettocontainer.mod .macrobox .macrocontainer:active {
-  cursor: grabbing;
-}
-.progettocontainer.vin {
-  width: 100%;
-  height: calc(95% - 71px);
-  padding-inline: 2rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.progettocontainer.vin .project-deadline {
-  background-color: #A0522D;
-  color: #5C4033;
-  padding: 1rem;
-  border-radius: 15px 15px 0 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.progettocontainer.vin .project-deadline .info, .progettocontainer.vin .project-deadline .countdown {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.progettocontainer.vin .project-deadline .info {
-  flex-grow: 1;
-}
-.progettocontainer.vin .project-deadline .date {
-  color: #5C4033;
-}
-.progettocontainer.vin .project-deadline .countdown span {
-  font-weight: 500;
-  color: #5C4033;
-}
-.progettocontainer.vin .project-deadline .expired {
-  color: #5C4033;
-  font-weight: bold;
-}
-.progettocontainer.vin .macrobox {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  color: #5C4033;
-  overflow: auto;
-}
-.progettocontainer.vin .macrobox .macrocontainer {
-  cursor: grab;
-  padding: 1rem;
-  background-color: #8B7355;
-  color: #5C4033;
-}
-.progettocontainer.vin .macrobox .macrocontainer h2, .progettocontainer.vin .macrobox .macrocontainer .h2 {
-  margin: 0;
-  font-weight: 800;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table {
-  margin-top: 1rem;
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: default;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table thead tr {
-  background-color: #FFF8DC;
-  border-radius: 15px;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table thead tr th {
-  padding: 0.5rem;
-  font-weight: 600;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table tbody tr {
-  background-color: rgba(255, 248, 220, 0.6);
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table tbody tr:nth-child(even) {
-  background-color: rgba(255, 248, 220, 0.4);
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table tbody tr td {
-  padding: 1rem;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
-  text-align: start;
-  font-size: 1.2rem;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table tr, .progettocontainer.vin .macrobox .macrocontainer .macro-table th {
-  color: #5C4033;
-  text-transform: capitalize;
-  text-align: center;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 15px;
-  overflow: hidden;
-  font-size: 0.8rem;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table thead tr {
-  background-color: #A0522D;
-  border-radius: 15px;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table thead tr th {
-  padding: 0.5rem;
-  font-weight: 600;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table tbody tr {
-  background-color: #DEB887;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(222, 184, 135, 0.6);
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
-  padding: 1rem;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table tbody tr td:first-child {
-  font-size: 1rem;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table tbody tr:hover {
-  background-color: #FFF8DC !important;
-}
-.progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table tr, .progettocontainer.vin .macrobox .macrocontainer .macro-table .dev-table th {
-  color: #5C4033;
-  text-transform: capitalize;
-  text-align: center;
-}
-.progettocontainer.vin .macrobox .macrocontainer:nth-child(even) {
-  background-color: #DEB887;
-  color: #FFF8DC;
-}
-.progettocontainer.vin .macrobox .macrocontainer:active {
+.progettocontainer.excel .macrobox .macrocontainer:active {
   cursor: grabbing;
 }
 
@@ -1064,100 +782,50 @@ main.vin {
   height: 5%;
   padding-left: 2rem;
   overflow: auto;
-  border-top: 1px solid #495057;
+  border-top: 1px solid #6C757D;
   display: flex;
   align-items: center;
 }
 .index.gray button {
   border: none;
-  border-right: 1px solid #495057;
-  padding-inline: 0.8rem;
-  font-size: 0.9rem;
-  background-color: transparent;
-  color: #212529;
-}
-.index.gray button:hover {
-  background-color: #495057;
-}
-.index.gray button.active {
-  background-color: #ADB5BD;
-  font-weight: bold;
-  color: #E0E0E0;
-  border-right: none;
-}
-.index.fut {
-  height: 5%;
-  padding-left: 2rem;
-  overflow: auto;
-  border-top: 1px solid #7FFFD4;
-  display: flex;
-  align-items: center;
-}
-.index.fut button {
-  border: none;
-  border-right: 1px solid #7FFFD4;
-  padding-inline: 0.8rem;
-  font-size: 0.9rem;
-  background-color: transparent;
-  color: #E0FFFF;
-}
-.index.fut button:hover {
-  background-color: #7FFFD4;
-}
-.index.fut button.active {
-  background-color: #1E90FF;
-  font-weight: bold;
-  color: #0A0F1D;
-  border-right: none;
-}
-.index.mod {
-  height: 5%;
-  padding-left: 2rem;
-  overflow: auto;
-  border-top: 1px solid #6C757D;
-  display: flex;
-  align-items: center;
-}
-.index.mod button {
-  border: none;
   border-right: 1px solid #6C757D;
   padding-inline: 0.8rem;
   font-size: 0.9rem;
   background-color: transparent;
-  color: #212529;
+  color: #343A40;
 }
-.index.mod button:hover {
+.index.gray button:hover {
   background-color: #6C757D;
 }
-.index.mod button.active {
-  background-color: #198754;
+.index.gray button.active {
+  background-color: #DEE2E6;
   font-weight: bold;
-  color: #FFFFFF;
+  color: #ADB5BD;
   border-right: none;
 }
-.index.vin {
+.index.excel {
   height: 5%;
   padding-left: 2rem;
   overflow: auto;
-  border-top: 1px solid #8B7355;
+  border-top: 1px solid #D9D9D9;
   display: flex;
   align-items: center;
 }
-.index.vin button {
+.index.excel button {
   border: none;
-  border-right: 1px solid #8B7355;
+  border-right: 1px solid #D9D9D9;
   padding-inline: 0.8rem;
   font-size: 0.9rem;
   background-color: transparent;
-  color: #5C4033;
+  color: #20382F;
 }
-.index.vin button:hover {
-  background-color: #8B7355;
+.index.excel button:hover {
+  background-color: #D9D9D9;
 }
-.index.vin button.active {
-  background-color: #CD853F;
+.index.excel button.active {
+  background-color: #343a40;
   font-weight: bold;
-  color: #FFF8DC;
+  color: #92D050;
   border-right: none;
 }
 
@@ -1182,25 +850,11 @@ main.vin {
 .btn.gray.max {
   min-width: 200px;
 }
-.btn.fut {
+.btn.excel {
   font-family: "Consolas", sans-serif !important;
   border-radius: 5px;
 }
-.btn.fut.max {
-  min-width: 200px;
-}
-.btn.mod {
-  font-family: "Consolas", sans-serif !important;
-  border-radius: 5px;
-}
-.btn.mod.max {
-  min-width: 200px;
-}
-.btn.vin {
-  font-family: "Consolas", sans-serif !important;
-  border-radius: 5px;
-}
-.btn.vin.max {
+.btn.excel.max {
   min-width: 200px;
 }
 .btn.new-project-btn.vs {
@@ -1243,72 +897,36 @@ main.vin {
   padding: 2rem 4rem;
   font-size: 2rem;
   font-weight: 600;
-  color: #ADB5BD;
-  background: linear-gradient(#ADB5BD, white, #ADB5BD);
+  color: #DEE2E6;
+  background: linear-gradient(#DEE2E6, white, #DEE2E6);
   border: none;
   border-radius: 15px !important;
   transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
 }
 .btn.new-project-btn.gray:hover {
   transform: scale(1.03);
-  background: linear-gradient(white, #ADB5BD, white);
+  background: linear-gradient(white, #DEE2E6, white);
   color: white;
 }
 .btn.new-project-btn.gray:active {
   transform: scale(0.97);
 }
-.btn.new-project-btn.fut {
+.btn.new-project-btn.excel {
   padding: 2rem 4rem;
   font-size: 2rem;
   font-weight: 600;
-  color: #1E90FF;
-  background: linear-gradient(#1E90FF, white, #1E90FF);
+  color: #343a40;
+  background: linear-gradient(#343a40, white, #343a40);
   border: none;
   border-radius: 15px !important;
   transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
 }
-.btn.new-project-btn.fut:hover {
+.btn.new-project-btn.excel:hover {
   transform: scale(1.03);
-  background: linear-gradient(white, #1E90FF, white);
+  background: linear-gradient(white, #343a40, white);
   color: white;
 }
-.btn.new-project-btn.fut:active {
-  transform: scale(0.97);
-}
-.btn.new-project-btn.mod {
-  padding: 2rem 4rem;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #198754;
-  background: linear-gradient(#198754, white, #198754);
-  border: none;
-  border-radius: 15px !important;
-  transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
-}
-.btn.new-project-btn.mod:hover {
-  transform: scale(1.03);
-  background: linear-gradient(white, #198754, white);
-  color: white;
-}
-.btn.new-project-btn.mod:active {
-  transform: scale(0.97);
-}
-.btn.new-project-btn.vin {
-  padding: 2rem 4rem;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #CD853F;
-  background: linear-gradient(#CD853F, white, #CD853F);
-  border: none;
-  border-radius: 15px !important;
-  transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
-}
-.btn.new-project-btn.vin:hover {
-  transform: scale(1.03);
-  background: linear-gradient(white, #CD853F, white);
-  color: white;
-}
-.btn.new-project-btn.vin:active {
+.btn.new-project-btn.excel:active {
   transform: scale(0.97);
 }
 
@@ -1381,73 +999,27 @@ main.vin {
 .modal-content.gray .modal-footer {
   border: none;
 }
-.modal-content.fut {
+.modal-content.excel {
   border-radius: 15px !important;
   overflow: hidden;
   font-size: 1rem;
   background-color: #303030 !important;
   color: #F5F5F0 !important;
 }
-.modal-content.fut .modal-header {
+.modal-content.excel .modal-header {
   padding: 0.5rem 1rem;
   background-color: #7F7F7F;
   border: none;
 }
-.modal-content.fut .modal-header h1, .modal-content.fut .modal-header .h1 {
+.modal-content.excel .modal-header h1, .modal-content.excel .modal-header .h1 {
   font-size: 1rem !important;
   color: #F5F5F0;
   font-weight: 400;
 }
-.modal-content.fut .modal-header .btn-close {
+.modal-content.excel .modal-header .btn-close {
   color: #F5F5F0 !important;
 }
-.modal-content.fut .modal-footer {
-  border: none;
-}
-.modal-content.mod {
-  border-radius: 15px !important;
-  overflow: hidden;
-  font-size: 1rem;
-  background-color: #303030 !important;
-  color: #F5F5F0 !important;
-}
-.modal-content.mod .modal-header {
-  padding: 0.5rem 1rem;
-  background-color: #7F7F7F;
-  border: none;
-}
-.modal-content.mod .modal-header h1, .modal-content.mod .modal-header .h1 {
-  font-size: 1rem !important;
-  color: #F5F5F0;
-  font-weight: 400;
-}
-.modal-content.mod .modal-header .btn-close {
-  color: #F5F5F0 !important;
-}
-.modal-content.mod .modal-footer {
-  border: none;
-}
-.modal-content.vin {
-  border-radius: 15px !important;
-  overflow: hidden;
-  font-size: 1rem;
-  background-color: #303030 !important;
-  color: #F5F5F0 !important;
-}
-.modal-content.vin .modal-header {
-  padding: 0.5rem 1rem;
-  background-color: #7F7F7F;
-  border: none;
-}
-.modal-content.vin .modal-header h1, .modal-content.vin .modal-header .h1 {
-  font-size: 1rem !important;
-  color: #F5F5F0;
-  font-weight: 400;
-}
-.modal-content.vin .modal-header .btn-close {
-  color: #F5F5F0 !important;
-}
-.modal-content.vin .modal-footer {
+.modal-content.excel .modal-footer {
   border: none;
 }
 
@@ -1496,92 +1068,48 @@ main.vin {
   color: #ECECE4;
 }
 .dropdown-menu.gray {
-  background-color: #E0E0E0 !important;
+  background-color: #ADB5BD !important;
   cursor: pointer;
   min-width: 250px !important;
   font-family: "Segoe UI", sans-serif !important;
 }
 .dropdown-menu.gray .dropdown-item {
-  color: #212529;
+  color: #343A40;
   padding: 1rem;
   font-family: "Segoe UI", sans-serif !important;
 }
 .dropdown-menu.gray .dropdown-item:hover {
-  background-color: #495057;
-  color: #212529;
+  background-color: #6C757D;
+  color: #343A40;
 }
 .dropdown-menu.gray.first-line li:first-child .dropdown-item {
-  background-color: #ADB5BD;
+  background-color: #DEE2E6;
 }
 .dropdown-menu.gray.first-line li:first-child .dropdown-item:hover {
-  background-color: #343A40;
-  color: #E0E0E0;
+  background-color: #ADB5BD;
+  color: #ADB5BD;
 }
-.dropdown-menu.fut {
-  background-color: #0A0F1D !important;
+.dropdown-menu.excel {
+  background-color: #92D050 !important;
   cursor: pointer;
   min-width: 250px !important;
-  font-family: "Orbitron", sans-serif !important;
+  font-family: "Calibri", sans-serif !important;
 }
-.dropdown-menu.fut .dropdown-item {
-  color: #E0FFFF;
+.dropdown-menu.excel .dropdown-item {
+  color: #20382F;
   padding: 1rem;
-  font-family: "Orbitron", sans-serif !important;
+  font-family: "Calibri", sans-serif !important;
 }
-.dropdown-menu.fut .dropdown-item:hover {
-  background-color: #7FFFD4;
-  color: #E0FFFF;
+.dropdown-menu.excel .dropdown-item:hover {
+  background-color: #D9D9D9;
+  color: #20382F;
 }
-.dropdown-menu.fut.first-line li:first-child .dropdown-item {
-  background-color: #1E90FF;
+.dropdown-menu.excel.first-line li:first-child .dropdown-item {
+  background-color: #343a40;
 }
-.dropdown-menu.fut.first-line li:first-child .dropdown-item:hover {
-  background-color: #FF00FF;
-  color: #0A0F1D;
-}
-.dropdown-menu.mod {
-  background-color: #FFFFFF !important;
-  cursor: pointer;
-  min-width: 250px !important;
-  font-family: "Poppins", sans-serif !important;
-}
-.dropdown-menu.mod .dropdown-item {
-  color: #212529;
-  padding: 1rem;
-  font-family: "Poppins", sans-serif !important;
-}
-.dropdown-menu.mod .dropdown-item:hover {
-  background-color: #6C757D;
-  color: #212529;
-}
-.dropdown-menu.mod.first-line li:first-child .dropdown-item {
-  background-color: #198754;
-}
-.dropdown-menu.mod.first-line li:first-child .dropdown-item:hover {
-  background-color: #DC3545;
-  color: #FFFFFF;
-}
-.dropdown-menu.vin {
-  background-color: #FFF8DC !important;
-  cursor: pointer;
-  min-width: 250px !important;
-  font-family: "Courier New", monospace !important;
-}
-.dropdown-menu.vin .dropdown-item {
-  color: #5C4033;
-  padding: 1rem;
-  font-family: "Courier New", monospace !important;
-}
-.dropdown-menu.vin .dropdown-item:hover {
-  background-color: #8B7355;
-  color: #5C4033;
-}
-.dropdown-menu.vin.first-line li:first-child .dropdown-item {
-  background-color: #CD853F;
-}
-.dropdown-menu.vin.first-line li:first-child .dropdown-item:hover {
-  background-color: #B22222;
-  color: #FFF8DC;
+.dropdown-menu.excel.first-line li:first-child .dropdown-item:hover {
+  background-color: #2E7D32;
+  color: #92D050;
 }
 
 .loadercontainer.vs .loader {
@@ -1624,7 +1152,7 @@ main.vin {
   width: 100px;
   height: 100px;
   border: 15px solid #FFF;
-  border-bottom-color: #6C757D;
+  border-bottom-color: #B0B3B8;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
@@ -1638,47 +1166,11 @@ main.vin {
     transform: rotate(360deg);
   }
 }
-.loadercontainer.fut .loader {
+.loadercontainer.excel .loader {
   width: 100px;
   height: 100px;
   border: 15px solid #FFF;
-  border-bottom-color: #00FFFF;
-  border-radius: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.loadercontainer.mod .loader {
-  width: 100px;
-  height: 100px;
-  border: 15px solid #FFF;
-  border-bottom-color: #0D6EFD;
-  border-radius: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.loadercontainer.vin .loader {
-  width: 100px;
-  height: 100px;
-  border: 15px solid #FFF;
-  border-bottom-color: #A0522D;
+  border-bottom-color: #F5F5F5;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
@@ -1745,34 +1237,13 @@ main.vin {
   --bs-isys-active: #B4CDBE;
   --bs-isys-alternate: #B4CDBE;
   --bs-isys-important: #FF4081;
-  --bs-gray-primary: #6C757D;
-  --bs-gray-background: #E0E0E0;
-  --bs-gray-text: #212529;
-  --bs-gray-text-hover: #495057;
-  --bs-gray-active: #ADB5BD;
-  --bs-gray-alternate: #CED4DA;
-  --bs-gray-important: #343A40;
-  --bs-fut-primary: #00FFFF;
-  --bs-fut-background: #0A0F1D;
-  --bs-fut-text: #E0FFFF;
-  --bs-fut-text-hover: #7FFFD4;
-  --bs-fut-active: #1E90FF;
-  --bs-fut-alternate: #8A2BE2;
-  --bs-fut-important: #FF00FF;
-  --bs-mod-primary: #0D6EFD;
-  --bs-mod-background: #FFFFFF;
-  --bs-mod-text: #212529;
-  --bs-mod-text-hover: #6C757D;
-  --bs-mod-active: #198754;
-  --bs-mod-alternate: #6610F2;
-  --bs-mod-important: #DC3545;
-  --bs-vin-primary: #A0522D;
-  --bs-vin-background: #FFF8DC;
-  --bs-vin-text: #5C4033;
-  --bs-vin-text-hover: #8B7355;
-  --bs-vin-active: #CD853F;
-  --bs-vin-alternate: #DEB887;
-  --bs-vin-important: #B22222;
+  --bs-excel-primary: #FF5A1E;
+  --bs-excel-background: #ECECE4;
+  --bs-excel-text: #343a40;
+  --bs-excel-text-hover: #C8C3B9;
+  --bs-excel-active: #B4CDBE;
+  --bs-excel-alternate: #B4CDBE;
+  --bs-excel-important: #FF4081;
   --bs-primary-rgb: 69, 130, 236;
   --bs-secondary-rgb: 173, 181, 189;
   --bs-success-rgb: 2, 184, 117;
@@ -1795,34 +1266,13 @@ main.vin {
   --bs-isys-active-rgb: 180, 205, 190;
   --bs-isys-alternate-rgb: 180, 205, 190;
   --bs-isys-important-rgb: 255, 64, 129;
-  --bs-gray-primary-rgb: 108, 117, 125;
-  --bs-gray-background-rgb: 224, 224, 224;
-  --bs-gray-text-rgb: 33, 37, 41;
-  --bs-gray-text-hover-rgb: 73, 80, 87;
-  --bs-gray-active-rgb: 173, 181, 189;
-  --bs-gray-alternate-rgb: 206, 212, 218;
-  --bs-gray-important-rgb: 52, 58, 64;
-  --bs-fut-primary-rgb: 0, 255, 255;
-  --bs-fut-background-rgb: 10, 15, 29;
-  --bs-fut-text-rgb: 224, 255, 255;
-  --bs-fut-text-hover-rgb: 127, 255, 212;
-  --bs-fut-active-rgb: 30, 144, 255;
-  --bs-fut-alternate-rgb: 138, 43, 226;
-  --bs-fut-important-rgb: 255, 0, 255;
-  --bs-mod-primary-rgb: 13, 110, 253;
-  --bs-mod-background-rgb: 255, 255, 255;
-  --bs-mod-text-rgb: 33, 37, 41;
-  --bs-mod-text-hover-rgb: 108, 117, 125;
-  --bs-mod-active-rgb: 25, 135, 84;
-  --bs-mod-alternate-rgb: 102, 16, 242;
-  --bs-mod-important-rgb: 220, 53, 69;
-  --bs-vin-primary-rgb: 160, 82, 45;
-  --bs-vin-background-rgb: 255, 248, 220;
-  --bs-vin-text-rgb: 92, 64, 51;
-  --bs-vin-text-hover-rgb: 139, 115, 85;
-  --bs-vin-active-rgb: 205, 133, 63;
-  --bs-vin-alternate-rgb: 222, 184, 135;
-  --bs-vin-important-rgb: 178, 34, 34;
+  --bs-excel-primary-rgb: 255, 90, 30;
+  --bs-excel-background-rgb: 236, 236, 228;
+  --bs-excel-text-rgb: 52, 58, 64;
+  --bs-excel-text-hover-rgb: 200, 195, 185;
+  --bs-excel-active-rgb: 180, 205, 190;
+  --bs-excel-alternate-rgb: 180, 205, 190;
+  --bs-excel-important-rgb: 255, 64, 129;
   --bs-primary-text-emphasis: rgb(27.6, 52, 94.4);
   --bs-secondary-text-emphasis: rgb(69.2, 72.4, 75.6);
   --bs-success-text-emphasis: rgb(0.8, 73.6, 46.8);
@@ -5154,112 +4604,44 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #FF4081;
 }
 
-.btn-gray-primary {
+.btn-excel-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #6C757D;
-  --bs-btn-border-color: #6C757D;
+  --bs-btn-bg: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(91.8, 99.45, 106.25);
-  --bs-btn-hover-border-color: rgb(86.4, 93.6, 100);
-  --bs-btn-focus-shadow-rgb: 130, 138, 145;
+  --bs-btn-hover-bg: rgb(216.75, 76.5, 25.5);
+  --bs-btn-hover-border-color: #cc4818;
+  --bs-btn-focus-shadow-rgb: 255, 115, 64;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(86.4, 93.6, 100);
-  --bs-btn-active-border-color: rgb(81, 87.75, 93.75);
+  --bs-btn-active-bg: #cc4818;
+  --bs-btn-active-border-color: rgb(191.25, 67.5, 22.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #6C757D;
-  --bs-btn-disabled-border-color: #6C757D;
+  --bs-btn-disabled-bg: #FF5A1E;
+  --bs-btn-disabled-border-color: #FF5A1E;
 }
 
-.btn-gray-background {
+.btn-excel-background {
   --bs-btn-color: #000;
-  --bs-btn-bg: #E0E0E0;
-  --bs-btn-border-color: #E0E0E0;
+  --bs-btn-bg: #ECECE4;
+  --bs-btn-border-color: #ECECE4;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(228.65, 228.65, 228.65);
-  --bs-btn-hover-border-color: rgb(227.1, 227.1, 227.1);
-  --bs-btn-focus-shadow-rgb: 190, 190, 190;
+  --bs-btn-hover-bg: rgb(238.85, 238.85, 232.05);
+  --bs-btn-hover-border-color: rgb(237.9, 237.9, 230.7);
+  --bs-btn-focus-shadow-rgb: 201, 201, 194;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(230.2, 230.2, 230.2);
-  --bs-btn-active-border-color: rgb(227.1, 227.1, 227.1);
+  --bs-btn-active-bg: rgb(239.8, 239.8, 233.4);
+  --bs-btn-active-border-color: rgb(237.9, 237.9, 230.7);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #E0E0E0;
-  --bs-btn-disabled-border-color: #E0E0E0;
+  --bs-btn-disabled-bg: #ECECE4;
+  --bs-btn-disabled-border-color: #ECECE4;
 }
 
-.btn-gray-text {
+.btn-excel-text {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #212529;
-  --bs-btn-border-color: #212529;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(28.05, 31.45, 34.85);
-  --bs-btn-hover-border-color: rgb(26.4, 29.6, 32.8);
-  --bs-btn-focus-shadow-rgb: 66, 70, 73;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(26.4, 29.6, 32.8);
-  --bs-btn-active-border-color: rgb(24.75, 27.75, 30.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #212529;
-  --bs-btn-disabled-border-color: #212529;
-}
-
-.btn-gray-text-hover {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #495057;
-  --bs-btn-border-color: #495057;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(62.05, 68, 73.95);
-  --bs-btn-hover-border-color: rgb(58.4, 64, 69.6);
-  --bs-btn-focus-shadow-rgb: 100, 106, 112;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(58.4, 64, 69.6);
-  --bs-btn-active-border-color: rgb(54.75, 60, 65.25);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #495057;
-  --bs-btn-disabled-border-color: #495057;
-}
-
-.btn-gray-active {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #ADB5BD;
-  --bs-btn-border-color: #ADB5BD;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(147.05, 153.85, 160.65);
-  --bs-btn-hover-border-color: rgb(138.4, 144.8, 151.2);
-  --bs-btn-focus-shadow-rgb: 185, 192, 199;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(138.4, 144.8, 151.2);
-  --bs-btn-active-border-color: rgb(129.75, 135.75, 141.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #ADB5BD;
-  --bs-btn-disabled-border-color: #ADB5BD;
-}
-
-.btn-gray-alternate {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #CED4DA;
-  --bs-btn-border-color: #CED4DA;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(213.35, 218.45, 223.55);
-  --bs-btn-hover-border-color: rgb(210.9, 216.3, 221.7);
-  --bs-btn-focus-shadow-rgb: 175, 180, 185;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(215.8, 220.6, 225.4);
-  --bs-btn-active-border-color: rgb(210.9, 216.3, 221.7);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #CED4DA;
-  --bs-btn-disabled-border-color: #CED4DA;
-}
-
-.btn-gray-important {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #343A40;
-  --bs-btn-border-color: #343A40;
+  --bs-btn-bg: #343a40;
+  --bs-btn-border-color: #343a40;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: rgb(44.2, 49.3, 54.4);
   --bs-btn-hover-border-color: rgb(41.6, 46.4, 51.2);
@@ -5269,365 +4651,76 @@ textarea.form-control-lg {
   --bs-btn-active-border-color: rgb(39, 43.5, 48);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #343A40;
-  --bs-btn-disabled-border-color: #343A40;
+  --bs-btn-disabled-bg: #343a40;
+  --bs-btn-disabled-border-color: #343a40;
 }
 
-.btn-fut-primary {
+.btn-excel-text-hover {
   --bs-btn-color: #000;
-  --bs-btn-bg: #00FFFF;
-  --bs-btn-border-color: #00FFFF;
+  --bs-btn-bg: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(38.25, 255, 255);
-  --bs-btn-hover-border-color: rgb(25.5, 255, 255);
-  --bs-btn-focus-shadow-rgb: 0, 217, 217;
+  --bs-btn-hover-bg: rgb(208.25, 204, 195.5);
+  --bs-btn-hover-border-color: rgb(205.5, 201, 192);
+  --bs-btn-focus-shadow-rgb: 170, 166, 157;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #33ffff;
-  --bs-btn-active-border-color: rgb(25.5, 255, 255);
+  --bs-btn-active-bg: #d3cfc7;
+  --bs-btn-active-border-color: rgb(205.5, 201, 192);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #00FFFF;
-  --bs-btn-disabled-border-color: #00FFFF;
+  --bs-btn-disabled-bg: #C8C3B9;
+  --bs-btn-disabled-border-color: #C8C3B9;
 }
 
-.btn-fut-background {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #0A0F1D;
-  --bs-btn-border-color: #0A0F1D;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(8.5, 12.75, 24.65);
-  --bs-btn-hover-border-color: rgb(8, 12, 23.2);
-  --bs-btn-focus-shadow-rgb: 47, 51, 63;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(8, 12, 23.2);
-  --bs-btn-active-border-color: rgb(7.5, 11.25, 21.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0A0F1D;
-  --bs-btn-disabled-border-color: #0A0F1D;
-}
-
-.btn-fut-text {
+.btn-excel-active {
   --bs-btn-color: #000;
-  --bs-btn-bg: #E0FFFF;
-  --bs-btn-border-color: #E0FFFF;
+  --bs-btn-bg: #B4CDBE;
+  --bs-btn-border-color: #B4CDBE;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(228.65, 255, 255);
-  --bs-btn-hover-border-color: rgb(227.1, 255, 255);
-  --bs-btn-focus-shadow-rgb: 190, 217, 217;
+  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
+  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-focus-shadow-rgb: 153, 174, 162;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(230.2, 255, 255);
-  --bs-btn-active-border-color: rgb(227.1, 255, 255);
+  --bs-btn-active-bg: #c3d7cb;
+  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #E0FFFF;
-  --bs-btn-disabled-border-color: #E0FFFF;
+  --bs-btn-disabled-bg: #B4CDBE;
+  --bs-btn-disabled-border-color: #B4CDBE;
 }
 
-.btn-fut-text-hover {
+.btn-excel-alternate {
   --bs-btn-color: #000;
-  --bs-btn-bg: #7FFFD4;
-  --bs-btn-border-color: #7FFFD4;
+  --bs-btn-bg: #B4CDBE;
+  --bs-btn-border-color: #B4CDBE;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(146.2, 255, 218.45);
-  --bs-btn-hover-border-color: rgb(139.8, 255, 216.3);
-  --bs-btn-focus-shadow-rgb: 108, 217, 180;
+  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
+  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-focus-shadow-rgb: 153, 174, 162;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(152.6, 255, 220.6);
-  --bs-btn-active-border-color: rgb(139.8, 255, 216.3);
+  --bs-btn-active-bg: #c3d7cb;
+  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #7FFFD4;
-  --bs-btn-disabled-border-color: #7FFFD4;
+  --bs-btn-disabled-bg: #B4CDBE;
+  --bs-btn-disabled-border-color: #B4CDBE;
 }
 
-.btn-fut-active {
+.btn-excel-important {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #1E90FF;
-  --bs-btn-border-color: #1E90FF;
+  --bs-btn-bg: #FF4081;
+  --bs-btn-border-color: #FF4081;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(25.5, 122.4, 216.75);
-  --bs-btn-hover-border-color: rgb(24, 115.2, 204);
-  --bs-btn-focus-shadow-rgb: 64, 161, 255;
+  --bs-btn-hover-bg: rgb(216.75, 54.4, 109.65);
+  --bs-btn-hover-border-color: rgb(204, 51.2, 103.2);
+  --bs-btn-focus-shadow-rgb: 255, 93, 148;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(24, 115.2, 204);
-  --bs-btn-active-border-color: rgb(22.5, 108, 191.25);
+  --bs-btn-active-bg: rgb(204, 51.2, 103.2);
+  --bs-btn-active-border-color: rgb(191.25, 48, 96.75);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #1E90FF;
-  --bs-btn-disabled-border-color: #1E90FF;
-}
-
-.btn-fut-alternate {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #8A2BE2;
-  --bs-btn-border-color: #8A2BE2;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(117.3, 36.55, 192.1);
-  --bs-btn-hover-border-color: rgb(110.4, 34.4, 180.8);
-  --bs-btn-focus-shadow-rgb: 156, 75, 230;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(110.4, 34.4, 180.8);
-  --bs-btn-active-border-color: rgb(103.5, 32.25, 169.5);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #8A2BE2;
-  --bs-btn-disabled-border-color: #8A2BE2;
-}
-
-.btn-fut-important {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #FF00FF;
-  --bs-btn-border-color: #FF00FF;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(216.75, 0, 216.75);
-  --bs-btn-hover-border-color: #cc00cc;
-  --bs-btn-focus-shadow-rgb: 255, 38, 255;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #cc00cc;
-  --bs-btn-active-border-color: rgb(191.25, 0, 191.25);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #FF00FF;
-  --bs-btn-disabled-border-color: #FF00FF;
-}
-
-.btn-mod-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #0D6EFD;
-  --bs-btn-border-color: #0D6EFD;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(11.05, 93.5, 215.05);
-  --bs-btn-hover-border-color: rgb(10.4, 88, 202.4);
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(10.4, 88, 202.4);
-  --bs-btn-active-border-color: rgb(9.75, 82.5, 189.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0D6EFD;
-  --bs-btn-disabled-border-color: #0D6EFD;
-}
-
-.btn-mod-background {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #FFFFFF;
-  --bs-btn-border-color: #FFFFFF;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: white;
-  --bs-btn-hover-border-color: white;
-  --bs-btn-focus-shadow-rgb: 217, 217, 217;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: white;
-  --bs-btn-active-border-color: white;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #FFFFFF;
-  --bs-btn-disabled-border-color: #FFFFFF;
-}
-
-.btn-mod-text {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #212529;
-  --bs-btn-border-color: #212529;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(28.05, 31.45, 34.85);
-  --bs-btn-hover-border-color: rgb(26.4, 29.6, 32.8);
-  --bs-btn-focus-shadow-rgb: 66, 70, 73;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(26.4, 29.6, 32.8);
-  --bs-btn-active-border-color: rgb(24.75, 27.75, 30.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #212529;
-  --bs-btn-disabled-border-color: #212529;
-}
-
-.btn-mod-text-hover {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #6C757D;
-  --bs-btn-border-color: #6C757D;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(91.8, 99.45, 106.25);
-  --bs-btn-hover-border-color: rgb(86.4, 93.6, 100);
-  --bs-btn-focus-shadow-rgb: 130, 138, 145;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(86.4, 93.6, 100);
-  --bs-btn-active-border-color: rgb(81, 87.75, 93.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #6C757D;
-  --bs-btn-disabled-border-color: #6C757D;
-}
-
-.btn-mod-active {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #198754;
-  --bs-btn-border-color: #198754;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(21.25, 114.75, 71.4);
-  --bs-btn-hover-border-color: rgb(20, 108, 67.2);
-  --bs-btn-focus-shadow-rgb: 60, 153, 110;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(20, 108, 67.2);
-  --bs-btn-active-border-color: rgb(18.75, 101.25, 63);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #198754;
-  --bs-btn-disabled-border-color: #198754;
-}
-
-.btn-mod-alternate {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #6610F2;
-  --bs-btn-border-color: #6610F2;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(86.7, 13.6, 205.7);
-  --bs-btn-hover-border-color: rgb(81.6, 12.8, 193.6);
-  --bs-btn-focus-shadow-rgb: 125, 52, 244;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(81.6, 12.8, 193.6);
-  --bs-btn-active-border-color: rgb(76.5, 12, 181.5);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #6610F2;
-  --bs-btn-disabled-border-color: #6610F2;
-}
-
-.btn-mod-important {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #DC3545;
-  --bs-btn-border-color: #DC3545;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(187, 45.05, 58.65);
-  --bs-btn-hover-border-color: rgb(176, 42.4, 55.2);
-  --bs-btn-focus-shadow-rgb: 225, 83, 97;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(176, 42.4, 55.2);
-  --bs-btn-active-border-color: rgb(165, 39.75, 51.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #DC3545;
-  --bs-btn-disabled-border-color: #DC3545;
-}
-
-.btn-vin-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #A0522D;
-  --bs-btn-border-color: #A0522D;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(136, 69.7, 38.25);
-  --bs-btn-hover-border-color: rgb(128, 65.6, 36);
-  --bs-btn-focus-shadow-rgb: 174, 108, 77;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(128, 65.6, 36);
-  --bs-btn-active-border-color: rgb(120, 61.5, 33.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #A0522D;
-  --bs-btn-disabled-border-color: #A0522D;
-}
-
-.btn-vin-background {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #FFF8DC;
-  --bs-btn-border-color: #FFF8DC;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(255, 249.05, 225.25);
-  --bs-btn-hover-border-color: rgb(255, 248.7, 223.5);
-  --bs-btn-focus-shadow-rgb: 217, 211, 187;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(255, 249.4, 227);
-  --bs-btn-active-border-color: rgb(255, 248.7, 223.5);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #FFF8DC;
-  --bs-btn-disabled-border-color: #FFF8DC;
-}
-
-.btn-vin-text {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #5C4033;
-  --bs-btn-border-color: #5C4033;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(78.2, 54.4, 43.35);
-  --bs-btn-hover-border-color: rgb(73.6, 51.2, 40.8);
-  --bs-btn-focus-shadow-rgb: 116, 93, 82;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(73.6, 51.2, 40.8);
-  --bs-btn-active-border-color: rgb(69, 48, 38.25);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #5C4033;
-  --bs-btn-disabled-border-color: #5C4033;
-}
-
-.btn-vin-text-hover {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #8B7355;
-  --bs-btn-border-color: #8B7355;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(118.15, 97.75, 72.25);
-  --bs-btn-hover-border-color: rgb(111.2, 92, 68);
-  --bs-btn-focus-shadow-rgb: 156, 136, 111;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(111.2, 92, 68);
-  --bs-btn-active-border-color: rgb(104.25, 86.25, 63.75);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #8B7355;
-  --bs-btn-disabled-border-color: #8B7355;
-}
-
-.btn-vin-active {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #CD853F;
-  --bs-btn-border-color: #CD853F;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(174.25, 113.05, 53.55);
-  --bs-btn-hover-border-color: rgb(164, 106.4, 50.4);
-  --bs-btn-focus-shadow-rgb: 213, 151, 92;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(164, 106.4, 50.4);
-  --bs-btn-active-border-color: rgb(153.75, 99.75, 47.25);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #CD853F;
-  --bs-btn-disabled-border-color: #CD853F;
-}
-
-.btn-vin-alternate {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #DEB887;
-  --bs-btn-border-color: #DEB887;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(188.7, 156.4, 114.75);
-  --bs-btn-hover-border-color: rgb(177.6, 147.2, 108);
-  --bs-btn-focus-shadow-rgb: 227, 195, 153;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(177.6, 147.2, 108);
-  --bs-btn-active-border-color: rgb(166.5, 138, 101.25);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #DEB887;
-  --bs-btn-disabled-border-color: #DEB887;
-}
-
-.btn-vin-important {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #B22222;
-  --bs-btn-border-color: #B22222;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(151.3, 28.9, 28.9);
-  --bs-btn-hover-border-color: rgb(142.4, 27.2, 27.2);
-  --bs-btn-focus-shadow-rgb: 190, 67, 67;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(142.4, 27.2, 27.2);
-  --bs-btn-active-border-color: rgb(133.5, 25.5, 25.5);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #B22222;
-  --bs-btn-disabled-border-color: #B22222;
+  --bs-btn-disabled-bg: #FF4081;
+  --bs-btn-disabled-border-color: #FF4081;
 }
 
 .btn-outline-primary {
@@ -6004,479 +5097,122 @@ textarea.form-control-lg {
   --bs-gradient: none;
 }
 
-.btn-outline-gray-primary {
-  --bs-btn-color: #6C757D;
-  --bs-btn-border-color: #6C757D;
+.btn-outline-excel-primary {
+  --bs-btn-color: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #6C757D;
-  --bs-btn-hover-border-color: #6C757D;
-  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-hover-bg: #FF5A1E;
+  --bs-btn-hover-border-color: #FF5A1E;
+  --bs-btn-focus-shadow-rgb: 255, 90, 30;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #6C757D;
-  --bs-btn-active-border-color: #6C757D;
+  --bs-btn-active-bg: #FF5A1E;
+  --bs-btn-active-border-color: #FF5A1E;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #6C757D;
+  --bs-btn-disabled-color: #FF5A1E;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #6C757D;
+  --bs-btn-disabled-border-color: #FF5A1E;
   --bs-gradient: none;
 }
 
-.btn-outline-gray-background {
-  --bs-btn-color: #E0E0E0;
-  --bs-btn-border-color: #E0E0E0;
+.btn-outline-excel-background {
+  --bs-btn-color: #ECECE4;
+  --bs-btn-border-color: #ECECE4;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #E0E0E0;
-  --bs-btn-hover-border-color: #E0E0E0;
-  --bs-btn-focus-shadow-rgb: 224, 224, 224;
+  --bs-btn-hover-bg: #ECECE4;
+  --bs-btn-hover-border-color: #ECECE4;
+  --bs-btn-focus-shadow-rgb: 236, 236, 228;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #E0E0E0;
-  --bs-btn-active-border-color: #E0E0E0;
+  --bs-btn-active-bg: #ECECE4;
+  --bs-btn-active-border-color: #ECECE4;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #E0E0E0;
+  --bs-btn-disabled-color: #ECECE4;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #E0E0E0;
+  --bs-btn-disabled-border-color: #ECECE4;
   --bs-gradient: none;
 }
 
-.btn-outline-gray-text {
-  --bs-btn-color: #212529;
-  --bs-btn-border-color: #212529;
+.btn-outline-excel-text {
+  --bs-btn-color: #343a40;
+  --bs-btn-border-color: #343a40;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #212529;
-  --bs-btn-hover-border-color: #212529;
-  --bs-btn-focus-shadow-rgb: 33, 37, 41;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #212529;
-  --bs-btn-active-border-color: #212529;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #212529;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #212529;
-  --bs-gradient: none;
-}
-
-.btn-outline-gray-text-hover {
-  --bs-btn-color: #495057;
-  --bs-btn-border-color: #495057;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #495057;
-  --bs-btn-hover-border-color: #495057;
-  --bs-btn-focus-shadow-rgb: 73, 80, 87;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #495057;
-  --bs-btn-active-border-color: #495057;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #495057;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #495057;
-  --bs-gradient: none;
-}
-
-.btn-outline-gray-active {
-  --bs-btn-color: #ADB5BD;
-  --bs-btn-border-color: #ADB5BD;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #ADB5BD;
-  --bs-btn-hover-border-color: #ADB5BD;
-  --bs-btn-focus-shadow-rgb: 173, 181, 189;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #ADB5BD;
-  --bs-btn-active-border-color: #ADB5BD;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #ADB5BD;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #ADB5BD;
-  --bs-gradient: none;
-}
-
-.btn-outline-gray-alternate {
-  --bs-btn-color: #CED4DA;
-  --bs-btn-border-color: #CED4DA;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #CED4DA;
-  --bs-btn-hover-border-color: #CED4DA;
-  --bs-btn-focus-shadow-rgb: 206, 212, 218;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #CED4DA;
-  --bs-btn-active-border-color: #CED4DA;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #CED4DA;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #CED4DA;
-  --bs-gradient: none;
-}
-
-.btn-outline-gray-important {
-  --bs-btn-color: #343A40;
-  --bs-btn-border-color: #343A40;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #343A40;
-  --bs-btn-hover-border-color: #343A40;
+  --bs-btn-hover-bg: #343a40;
+  --bs-btn-hover-border-color: #343a40;
   --bs-btn-focus-shadow-rgb: 52, 58, 64;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #343A40;
-  --bs-btn-active-border-color: #343A40;
+  --bs-btn-active-bg: #343a40;
+  --bs-btn-active-border-color: #343a40;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #343A40;
+  --bs-btn-disabled-color: #343a40;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #343A40;
+  --bs-btn-disabled-border-color: #343a40;
   --bs-gradient: none;
 }
 
-.btn-outline-fut-primary {
-  --bs-btn-color: #00FFFF;
-  --bs-btn-border-color: #00FFFF;
+.btn-outline-excel-text-hover {
+  --bs-btn-color: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #00FFFF;
-  --bs-btn-hover-border-color: #00FFFF;
-  --bs-btn-focus-shadow-rgb: 0, 255, 255;
+  --bs-btn-hover-bg: #C8C3B9;
+  --bs-btn-hover-border-color: #C8C3B9;
+  --bs-btn-focus-shadow-rgb: 200, 195, 185;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #00FFFF;
-  --bs-btn-active-border-color: #00FFFF;
+  --bs-btn-active-bg: #C8C3B9;
+  --bs-btn-active-border-color: #C8C3B9;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #00FFFF;
+  --bs-btn-disabled-color: #C8C3B9;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #00FFFF;
+  --bs-btn-disabled-border-color: #C8C3B9;
   --bs-gradient: none;
 }
 
-.btn-outline-fut-background {
-  --bs-btn-color: #0A0F1D;
-  --bs-btn-border-color: #0A0F1D;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0A0F1D;
-  --bs-btn-hover-border-color: #0A0F1D;
-  --bs-btn-focus-shadow-rgb: 10, 15, 29;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0A0F1D;
-  --bs-btn-active-border-color: #0A0F1D;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0A0F1D;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0A0F1D;
-  --bs-gradient: none;
-}
-
-.btn-outline-fut-text {
-  --bs-btn-color: #E0FFFF;
-  --bs-btn-border-color: #E0FFFF;
+.btn-outline-excel-active {
+  --bs-btn-color: #B4CDBE;
+  --bs-btn-border-color: #B4CDBE;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #E0FFFF;
-  --bs-btn-hover-border-color: #E0FFFF;
-  --bs-btn-focus-shadow-rgb: 224, 255, 255;
+  --bs-btn-hover-bg: #B4CDBE;
+  --bs-btn-hover-border-color: #B4CDBE;
+  --bs-btn-focus-shadow-rgb: 180, 205, 190;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #E0FFFF;
-  --bs-btn-active-border-color: #E0FFFF;
+  --bs-btn-active-bg: #B4CDBE;
+  --bs-btn-active-border-color: #B4CDBE;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #E0FFFF;
+  --bs-btn-disabled-color: #B4CDBE;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #E0FFFF;
+  --bs-btn-disabled-border-color: #B4CDBE;
   --bs-gradient: none;
 }
 
-.btn-outline-fut-text-hover {
-  --bs-btn-color: #7FFFD4;
-  --bs-btn-border-color: #7FFFD4;
+.btn-outline-excel-alternate {
+  --bs-btn-color: #B4CDBE;
+  --bs-btn-border-color: #B4CDBE;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #7FFFD4;
-  --bs-btn-hover-border-color: #7FFFD4;
-  --bs-btn-focus-shadow-rgb: 127, 255, 212;
+  --bs-btn-hover-bg: #B4CDBE;
+  --bs-btn-hover-border-color: #B4CDBE;
+  --bs-btn-focus-shadow-rgb: 180, 205, 190;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #7FFFD4;
-  --bs-btn-active-border-color: #7FFFD4;
+  --bs-btn-active-bg: #B4CDBE;
+  --bs-btn-active-border-color: #B4CDBE;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #7FFFD4;
+  --bs-btn-disabled-color: #B4CDBE;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #7FFFD4;
+  --bs-btn-disabled-border-color: #B4CDBE;
   --bs-gradient: none;
 }
 
-.btn-outline-fut-active {
-  --bs-btn-color: #1E90FF;
-  --bs-btn-border-color: #1E90FF;
+.btn-outline-excel-important {
+  --bs-btn-color: #FF4081;
+  --bs-btn-border-color: #FF4081;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #1E90FF;
-  --bs-btn-hover-border-color: #1E90FF;
-  --bs-btn-focus-shadow-rgb: 30, 144, 255;
+  --bs-btn-hover-bg: #FF4081;
+  --bs-btn-hover-border-color: #FF4081;
+  --bs-btn-focus-shadow-rgb: 255, 64, 129;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #1E90FF;
-  --bs-btn-active-border-color: #1E90FF;
+  --bs-btn-active-bg: #FF4081;
+  --bs-btn-active-border-color: #FF4081;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #1E90FF;
+  --bs-btn-disabled-color: #FF4081;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #1E90FF;
-  --bs-gradient: none;
-}
-
-.btn-outline-fut-alternate {
-  --bs-btn-color: #8A2BE2;
-  --bs-btn-border-color: #8A2BE2;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #8A2BE2;
-  --bs-btn-hover-border-color: #8A2BE2;
-  --bs-btn-focus-shadow-rgb: 138, 43, 226;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #8A2BE2;
-  --bs-btn-active-border-color: #8A2BE2;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #8A2BE2;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #8A2BE2;
-  --bs-gradient: none;
-}
-
-.btn-outline-fut-important {
-  --bs-btn-color: #FF00FF;
-  --bs-btn-border-color: #FF00FF;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #FF00FF;
-  --bs-btn-hover-border-color: #FF00FF;
-  --bs-btn-focus-shadow-rgb: 255, 0, 255;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #FF00FF;
-  --bs-btn-active-border-color: #FF00FF;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #FF00FF;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #FF00FF;
-  --bs-gradient: none;
-}
-
-.btn-outline-mod-primary {
-  --bs-btn-color: #0D6EFD;
-  --bs-btn-border-color: #0D6EFD;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0D6EFD;
-  --bs-btn-hover-border-color: #0D6EFD;
-  --bs-btn-focus-shadow-rgb: 13, 110, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0D6EFD;
-  --bs-btn-active-border-color: #0D6EFD;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0D6EFD;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0D6EFD;
-  --bs-gradient: none;
-}
-
-.btn-outline-mod-background {
-  --bs-btn-color: #FFFFFF;
-  --bs-btn-border-color: #FFFFFF;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #FFFFFF;
-  --bs-btn-hover-border-color: #FFFFFF;
-  --bs-btn-focus-shadow-rgb: 255, 255, 255;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #FFFFFF;
-  --bs-btn-active-border-color: #FFFFFF;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #FFFFFF;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #FFFFFF;
-  --bs-gradient: none;
-}
-
-.btn-outline-mod-text {
-  --bs-btn-color: #212529;
-  --bs-btn-border-color: #212529;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #212529;
-  --bs-btn-hover-border-color: #212529;
-  --bs-btn-focus-shadow-rgb: 33, 37, 41;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #212529;
-  --bs-btn-active-border-color: #212529;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #212529;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #212529;
-  --bs-gradient: none;
-}
-
-.btn-outline-mod-text-hover {
-  --bs-btn-color: #6C757D;
-  --bs-btn-border-color: #6C757D;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #6C757D;
-  --bs-btn-hover-border-color: #6C757D;
-  --bs-btn-focus-shadow-rgb: 108, 117, 125;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #6C757D;
-  --bs-btn-active-border-color: #6C757D;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #6C757D;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #6C757D;
-  --bs-gradient: none;
-}
-
-.btn-outline-mod-active {
-  --bs-btn-color: #198754;
-  --bs-btn-border-color: #198754;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #198754;
-  --bs-btn-hover-border-color: #198754;
-  --bs-btn-focus-shadow-rgb: 25, 135, 84;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #198754;
-  --bs-btn-active-border-color: #198754;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #198754;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #198754;
-  --bs-gradient: none;
-}
-
-.btn-outline-mod-alternate {
-  --bs-btn-color: #6610F2;
-  --bs-btn-border-color: #6610F2;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #6610F2;
-  --bs-btn-hover-border-color: #6610F2;
-  --bs-btn-focus-shadow-rgb: 102, 16, 242;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #6610F2;
-  --bs-btn-active-border-color: #6610F2;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #6610F2;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #6610F2;
-  --bs-gradient: none;
-}
-
-.btn-outline-mod-important {
-  --bs-btn-color: #DC3545;
-  --bs-btn-border-color: #DC3545;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #DC3545;
-  --bs-btn-hover-border-color: #DC3545;
-  --bs-btn-focus-shadow-rgb: 220, 53, 69;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #DC3545;
-  --bs-btn-active-border-color: #DC3545;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #DC3545;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #DC3545;
-  --bs-gradient: none;
-}
-
-.btn-outline-vin-primary {
-  --bs-btn-color: #A0522D;
-  --bs-btn-border-color: #A0522D;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #A0522D;
-  --bs-btn-hover-border-color: #A0522D;
-  --bs-btn-focus-shadow-rgb: 160, 82, 45;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #A0522D;
-  --bs-btn-active-border-color: #A0522D;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #A0522D;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #A0522D;
-  --bs-gradient: none;
-}
-
-.btn-outline-vin-background {
-  --bs-btn-color: #FFF8DC;
-  --bs-btn-border-color: #FFF8DC;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #FFF8DC;
-  --bs-btn-hover-border-color: #FFF8DC;
-  --bs-btn-focus-shadow-rgb: 255, 248, 220;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #FFF8DC;
-  --bs-btn-active-border-color: #FFF8DC;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #FFF8DC;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #FFF8DC;
-  --bs-gradient: none;
-}
-
-.btn-outline-vin-text {
-  --bs-btn-color: #5C4033;
-  --bs-btn-border-color: #5C4033;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #5C4033;
-  --bs-btn-hover-border-color: #5C4033;
-  --bs-btn-focus-shadow-rgb: 92, 64, 51;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #5C4033;
-  --bs-btn-active-border-color: #5C4033;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #5C4033;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #5C4033;
-  --bs-gradient: none;
-}
-
-.btn-outline-vin-text-hover {
-  --bs-btn-color: #8B7355;
-  --bs-btn-border-color: #8B7355;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #8B7355;
-  --bs-btn-hover-border-color: #8B7355;
-  --bs-btn-focus-shadow-rgb: 139, 115, 85;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #8B7355;
-  --bs-btn-active-border-color: #8B7355;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #8B7355;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #8B7355;
-  --bs-gradient: none;
-}
-
-.btn-outline-vin-active {
-  --bs-btn-color: #CD853F;
-  --bs-btn-border-color: #CD853F;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #CD853F;
-  --bs-btn-hover-border-color: #CD853F;
-  --bs-btn-focus-shadow-rgb: 205, 133, 63;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #CD853F;
-  --bs-btn-active-border-color: #CD853F;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #CD853F;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #CD853F;
-  --bs-gradient: none;
-}
-
-.btn-outline-vin-alternate {
-  --bs-btn-color: #DEB887;
-  --bs-btn-border-color: #DEB887;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #DEB887;
-  --bs-btn-hover-border-color: #DEB887;
-  --bs-btn-focus-shadow-rgb: 222, 184, 135;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #DEB887;
-  --bs-btn-active-border-color: #DEB887;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #DEB887;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #DEB887;
-  --bs-gradient: none;
-}
-
-.btn-outline-vin-important {
-  --bs-btn-color: #B22222;
-  --bs-btn-border-color: #B22222;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #B22222;
-  --bs-btn-hover-border-color: #B22222;
-  --bs-btn-focus-shadow-rgb: 178, 34, 34;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #B22222;
-  --bs-btn-active-border-color: #B22222;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #B22222;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #B22222;
+  --bs-btn-disabled-border-color: #FF4081;
   --bs-gradient: none;
 }
 
@@ -8213,200 +6949,53 @@ textarea.form-control-lg {
   --bs-alert-link-color: var(--bs-isys-important-text-emphasis);
 }
 
-.alert-gray-primary {
-  --bs-alert-color: var(--bs-gray-primary-text-emphasis);
-  --bs-alert-bg: var(--bs-gray-primary-bg-subtle);
-  --bs-alert-border-color: var(--bs-gray-primary-border-subtle);
-  --bs-alert-link-color: var(--bs-gray-primary-text-emphasis);
+.alert-excel-primary {
+  --bs-alert-color: var(--bs-excel-primary-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-primary-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-primary-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-primary-text-emphasis);
 }
 
-.alert-gray-background {
-  --bs-alert-color: var(--bs-gray-background-text-emphasis);
-  --bs-alert-bg: var(--bs-gray-background-bg-subtle);
-  --bs-alert-border-color: var(--bs-gray-background-border-subtle);
-  --bs-alert-link-color: var(--bs-gray-background-text-emphasis);
+.alert-excel-background {
+  --bs-alert-color: var(--bs-excel-background-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-background-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-background-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-background-text-emphasis);
 }
 
-.alert-gray-text {
-  --bs-alert-color: var(--bs-gray-text-text-emphasis);
-  --bs-alert-bg: var(--bs-gray-text-bg-subtle);
-  --bs-alert-border-color: var(--bs-gray-text-border-subtle);
-  --bs-alert-link-color: var(--bs-gray-text-text-emphasis);
+.alert-excel-text {
+  --bs-alert-color: var(--bs-excel-text-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-text-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-text-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-text-text-emphasis);
 }
 
-.alert-gray-text-hover {
-  --bs-alert-color: var(--bs-gray-text-hover-text-emphasis);
-  --bs-alert-bg: var(--bs-gray-text-hover-bg-subtle);
-  --bs-alert-border-color: var(--bs-gray-text-hover-border-subtle);
-  --bs-alert-link-color: var(--bs-gray-text-hover-text-emphasis);
+.alert-excel-text-hover {
+  --bs-alert-color: var(--bs-excel-text-hover-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-text-hover-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-text-hover-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-text-hover-text-emphasis);
 }
 
-.alert-gray-active {
-  --bs-alert-color: var(--bs-gray-active-text-emphasis);
-  --bs-alert-bg: var(--bs-gray-active-bg-subtle);
-  --bs-alert-border-color: var(--bs-gray-active-border-subtle);
-  --bs-alert-link-color: var(--bs-gray-active-text-emphasis);
+.alert-excel-active {
+  --bs-alert-color: var(--bs-excel-active-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-active-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-active-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-active-text-emphasis);
 }
 
-.alert-gray-alternate {
-  --bs-alert-color: var(--bs-gray-alternate-text-emphasis);
-  --bs-alert-bg: var(--bs-gray-alternate-bg-subtle);
-  --bs-alert-border-color: var(--bs-gray-alternate-border-subtle);
-  --bs-alert-link-color: var(--bs-gray-alternate-text-emphasis);
+.alert-excel-alternate {
+  --bs-alert-color: var(--bs-excel-alternate-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-alternate-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-alternate-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-alternate-text-emphasis);
 }
 
-.alert-gray-important {
-  --bs-alert-color: var(--bs-gray-important-text-emphasis);
-  --bs-alert-bg: var(--bs-gray-important-bg-subtle);
-  --bs-alert-border-color: var(--bs-gray-important-border-subtle);
-  --bs-alert-link-color: var(--bs-gray-important-text-emphasis);
-}
-
-.alert-fut-primary {
-  --bs-alert-color: var(--bs-fut-primary-text-emphasis);
-  --bs-alert-bg: var(--bs-fut-primary-bg-subtle);
-  --bs-alert-border-color: var(--bs-fut-primary-border-subtle);
-  --bs-alert-link-color: var(--bs-fut-primary-text-emphasis);
-}
-
-.alert-fut-background {
-  --bs-alert-color: var(--bs-fut-background-text-emphasis);
-  --bs-alert-bg: var(--bs-fut-background-bg-subtle);
-  --bs-alert-border-color: var(--bs-fut-background-border-subtle);
-  --bs-alert-link-color: var(--bs-fut-background-text-emphasis);
-}
-
-.alert-fut-text {
-  --bs-alert-color: var(--bs-fut-text-text-emphasis);
-  --bs-alert-bg: var(--bs-fut-text-bg-subtle);
-  --bs-alert-border-color: var(--bs-fut-text-border-subtle);
-  --bs-alert-link-color: var(--bs-fut-text-text-emphasis);
-}
-
-.alert-fut-text-hover {
-  --bs-alert-color: var(--bs-fut-text-hover-text-emphasis);
-  --bs-alert-bg: var(--bs-fut-text-hover-bg-subtle);
-  --bs-alert-border-color: var(--bs-fut-text-hover-border-subtle);
-  --bs-alert-link-color: var(--bs-fut-text-hover-text-emphasis);
-}
-
-.alert-fut-active {
-  --bs-alert-color: var(--bs-fut-active-text-emphasis);
-  --bs-alert-bg: var(--bs-fut-active-bg-subtle);
-  --bs-alert-border-color: var(--bs-fut-active-border-subtle);
-  --bs-alert-link-color: var(--bs-fut-active-text-emphasis);
-}
-
-.alert-fut-alternate {
-  --bs-alert-color: var(--bs-fut-alternate-text-emphasis);
-  --bs-alert-bg: var(--bs-fut-alternate-bg-subtle);
-  --bs-alert-border-color: var(--bs-fut-alternate-border-subtle);
-  --bs-alert-link-color: var(--bs-fut-alternate-text-emphasis);
-}
-
-.alert-fut-important {
-  --bs-alert-color: var(--bs-fut-important-text-emphasis);
-  --bs-alert-bg: var(--bs-fut-important-bg-subtle);
-  --bs-alert-border-color: var(--bs-fut-important-border-subtle);
-  --bs-alert-link-color: var(--bs-fut-important-text-emphasis);
-}
-
-.alert-mod-primary {
-  --bs-alert-color: var(--bs-mod-primary-text-emphasis);
-  --bs-alert-bg: var(--bs-mod-primary-bg-subtle);
-  --bs-alert-border-color: var(--bs-mod-primary-border-subtle);
-  --bs-alert-link-color: var(--bs-mod-primary-text-emphasis);
-}
-
-.alert-mod-background {
-  --bs-alert-color: var(--bs-mod-background-text-emphasis);
-  --bs-alert-bg: var(--bs-mod-background-bg-subtle);
-  --bs-alert-border-color: var(--bs-mod-background-border-subtle);
-  --bs-alert-link-color: var(--bs-mod-background-text-emphasis);
-}
-
-.alert-mod-text {
-  --bs-alert-color: var(--bs-mod-text-text-emphasis);
-  --bs-alert-bg: var(--bs-mod-text-bg-subtle);
-  --bs-alert-border-color: var(--bs-mod-text-border-subtle);
-  --bs-alert-link-color: var(--bs-mod-text-text-emphasis);
-}
-
-.alert-mod-text-hover {
-  --bs-alert-color: var(--bs-mod-text-hover-text-emphasis);
-  --bs-alert-bg: var(--bs-mod-text-hover-bg-subtle);
-  --bs-alert-border-color: var(--bs-mod-text-hover-border-subtle);
-  --bs-alert-link-color: var(--bs-mod-text-hover-text-emphasis);
-}
-
-.alert-mod-active {
-  --bs-alert-color: var(--bs-mod-active-text-emphasis);
-  --bs-alert-bg: var(--bs-mod-active-bg-subtle);
-  --bs-alert-border-color: var(--bs-mod-active-border-subtle);
-  --bs-alert-link-color: var(--bs-mod-active-text-emphasis);
-}
-
-.alert-mod-alternate {
-  --bs-alert-color: var(--bs-mod-alternate-text-emphasis);
-  --bs-alert-bg: var(--bs-mod-alternate-bg-subtle);
-  --bs-alert-border-color: var(--bs-mod-alternate-border-subtle);
-  --bs-alert-link-color: var(--bs-mod-alternate-text-emphasis);
-}
-
-.alert-mod-important {
-  --bs-alert-color: var(--bs-mod-important-text-emphasis);
-  --bs-alert-bg: var(--bs-mod-important-bg-subtle);
-  --bs-alert-border-color: var(--bs-mod-important-border-subtle);
-  --bs-alert-link-color: var(--bs-mod-important-text-emphasis);
-}
-
-.alert-vin-primary {
-  --bs-alert-color: var(--bs-vin-primary-text-emphasis);
-  --bs-alert-bg: var(--bs-vin-primary-bg-subtle);
-  --bs-alert-border-color: var(--bs-vin-primary-border-subtle);
-  --bs-alert-link-color: var(--bs-vin-primary-text-emphasis);
-}
-
-.alert-vin-background {
-  --bs-alert-color: var(--bs-vin-background-text-emphasis);
-  --bs-alert-bg: var(--bs-vin-background-bg-subtle);
-  --bs-alert-border-color: var(--bs-vin-background-border-subtle);
-  --bs-alert-link-color: var(--bs-vin-background-text-emphasis);
-}
-
-.alert-vin-text {
-  --bs-alert-color: var(--bs-vin-text-text-emphasis);
-  --bs-alert-bg: var(--bs-vin-text-bg-subtle);
-  --bs-alert-border-color: var(--bs-vin-text-border-subtle);
-  --bs-alert-link-color: var(--bs-vin-text-text-emphasis);
-}
-
-.alert-vin-text-hover {
-  --bs-alert-color: var(--bs-vin-text-hover-text-emphasis);
-  --bs-alert-bg: var(--bs-vin-text-hover-bg-subtle);
-  --bs-alert-border-color: var(--bs-vin-text-hover-border-subtle);
-  --bs-alert-link-color: var(--bs-vin-text-hover-text-emphasis);
-}
-
-.alert-vin-active {
-  --bs-alert-color: var(--bs-vin-active-text-emphasis);
-  --bs-alert-bg: var(--bs-vin-active-bg-subtle);
-  --bs-alert-border-color: var(--bs-vin-active-border-subtle);
-  --bs-alert-link-color: var(--bs-vin-active-text-emphasis);
-}
-
-.alert-vin-alternate {
-  --bs-alert-color: var(--bs-vin-alternate-text-emphasis);
-  --bs-alert-bg: var(--bs-vin-alternate-bg-subtle);
-  --bs-alert-border-color: var(--bs-vin-alternate-border-subtle);
-  --bs-alert-link-color: var(--bs-vin-alternate-text-emphasis);
-}
-
-.alert-vin-important {
-  --bs-alert-color: var(--bs-vin-important-text-emphasis);
-  --bs-alert-bg: var(--bs-vin-important-bg-subtle);
-  --bs-alert-border-color: var(--bs-vin-important-border-subtle);
-  --bs-alert-link-color: var(--bs-vin-important-text-emphasis);
+.alert-excel-important {
+  --bs-alert-color: var(--bs-excel-important-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-important-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-important-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-important-text-emphasis);
 }
 
 @keyframes progress-bar-stripes {
@@ -8996,368 +7585,95 @@ textarea.form-control-lg {
   --bs-list-group-active-border-color: var(--bs-isys-important-text-emphasis);
 }
 
-.list-group-item-gray-primary {
-  --bs-list-group-color: var(--bs-gray-primary-text-emphasis);
-  --bs-list-group-bg: var(--bs-gray-primary-bg-subtle);
-  --bs-list-group-border-color: var(--bs-gray-primary-border-subtle);
+.list-group-item-excel-primary {
+  --bs-list-group-color: var(--bs-excel-primary-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-primary-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-primary-border-subtle);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-gray-primary-border-subtle);
+  --bs-list-group-action-hover-bg: var(--bs-excel-primary-border-subtle);
   --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-gray-primary-border-subtle);
-  --bs-list-group-active-color: var(--bs-gray-primary-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-gray-primary-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-gray-primary-text-emphasis);
+  --bs-list-group-action-active-bg: var(--bs-excel-primary-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-primary-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-primary-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-primary-text-emphasis);
 }
 
-.list-group-item-gray-background {
-  --bs-list-group-color: var(--bs-gray-background-text-emphasis);
-  --bs-list-group-bg: var(--bs-gray-background-bg-subtle);
-  --bs-list-group-border-color: var(--bs-gray-background-border-subtle);
+.list-group-item-excel-background {
+  --bs-list-group-color: var(--bs-excel-background-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-background-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-background-border-subtle);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-gray-background-border-subtle);
+  --bs-list-group-action-hover-bg: var(--bs-excel-background-border-subtle);
   --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-gray-background-border-subtle);
-  --bs-list-group-active-color: var(--bs-gray-background-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-gray-background-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-gray-background-text-emphasis);
+  --bs-list-group-action-active-bg: var(--bs-excel-background-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-background-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-background-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-background-text-emphasis);
 }
 
-.list-group-item-gray-text {
-  --bs-list-group-color: var(--bs-gray-text-text-emphasis);
-  --bs-list-group-bg: var(--bs-gray-text-bg-subtle);
-  --bs-list-group-border-color: var(--bs-gray-text-border-subtle);
+.list-group-item-excel-text {
+  --bs-list-group-color: var(--bs-excel-text-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-text-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-text-border-subtle);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-gray-text-border-subtle);
+  --bs-list-group-action-hover-bg: var(--bs-excel-text-border-subtle);
   --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-gray-text-border-subtle);
-  --bs-list-group-active-color: var(--bs-gray-text-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-gray-text-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-gray-text-text-emphasis);
+  --bs-list-group-action-active-bg: var(--bs-excel-text-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-text-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-text-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-text-text-emphasis);
 }
 
-.list-group-item-gray-text-hover {
-  --bs-list-group-color: var(--bs-gray-text-hover-text-emphasis);
-  --bs-list-group-bg: var(--bs-gray-text-hover-bg-subtle);
-  --bs-list-group-border-color: var(--bs-gray-text-hover-border-subtle);
+.list-group-item-excel-text-hover {
+  --bs-list-group-color: var(--bs-excel-text-hover-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-text-hover-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-text-hover-border-subtle);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-gray-text-hover-border-subtle);
+  --bs-list-group-action-hover-bg: var(--bs-excel-text-hover-border-subtle);
   --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-gray-text-hover-border-subtle);
-  --bs-list-group-active-color: var(--bs-gray-text-hover-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-gray-text-hover-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-gray-text-hover-text-emphasis);
+  --bs-list-group-action-active-bg: var(--bs-excel-text-hover-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-text-hover-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-text-hover-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-text-hover-text-emphasis);
 }
 
-.list-group-item-gray-active {
-  --bs-list-group-color: var(--bs-gray-active-text-emphasis);
-  --bs-list-group-bg: var(--bs-gray-active-bg-subtle);
-  --bs-list-group-border-color: var(--bs-gray-active-border-subtle);
+.list-group-item-excel-active {
+  --bs-list-group-color: var(--bs-excel-active-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-active-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-active-border-subtle);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-gray-active-border-subtle);
+  --bs-list-group-action-hover-bg: var(--bs-excel-active-border-subtle);
   --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-gray-active-border-subtle);
-  --bs-list-group-active-color: var(--bs-gray-active-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-gray-active-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-gray-active-text-emphasis);
+  --bs-list-group-action-active-bg: var(--bs-excel-active-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-active-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-active-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-active-text-emphasis);
 }
 
-.list-group-item-gray-alternate {
-  --bs-list-group-color: var(--bs-gray-alternate-text-emphasis);
-  --bs-list-group-bg: var(--bs-gray-alternate-bg-subtle);
-  --bs-list-group-border-color: var(--bs-gray-alternate-border-subtle);
+.list-group-item-excel-alternate {
+  --bs-list-group-color: var(--bs-excel-alternate-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-alternate-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-alternate-border-subtle);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-gray-alternate-border-subtle);
+  --bs-list-group-action-hover-bg: var(--bs-excel-alternate-border-subtle);
   --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-gray-alternate-border-subtle);
-  --bs-list-group-active-color: var(--bs-gray-alternate-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-gray-alternate-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-gray-alternate-text-emphasis);
+  --bs-list-group-action-active-bg: var(--bs-excel-alternate-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-alternate-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-alternate-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-alternate-text-emphasis);
 }
 
-.list-group-item-gray-important {
-  --bs-list-group-color: var(--bs-gray-important-text-emphasis);
-  --bs-list-group-bg: var(--bs-gray-important-bg-subtle);
-  --bs-list-group-border-color: var(--bs-gray-important-border-subtle);
+.list-group-item-excel-important {
+  --bs-list-group-color: var(--bs-excel-important-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-important-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-important-border-subtle);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-gray-important-border-subtle);
+  --bs-list-group-action-hover-bg: var(--bs-excel-important-border-subtle);
   --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-gray-important-border-subtle);
-  --bs-list-group-active-color: var(--bs-gray-important-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-gray-important-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-gray-important-text-emphasis);
-}
-
-.list-group-item-fut-primary {
-  --bs-list-group-color: var(--bs-fut-primary-text-emphasis);
-  --bs-list-group-bg: var(--bs-fut-primary-bg-subtle);
-  --bs-list-group-border-color: var(--bs-fut-primary-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-fut-primary-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-fut-primary-border-subtle);
-  --bs-list-group-active-color: var(--bs-fut-primary-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-fut-primary-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-fut-primary-text-emphasis);
-}
-
-.list-group-item-fut-background {
-  --bs-list-group-color: var(--bs-fut-background-text-emphasis);
-  --bs-list-group-bg: var(--bs-fut-background-bg-subtle);
-  --bs-list-group-border-color: var(--bs-fut-background-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-fut-background-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-fut-background-border-subtle);
-  --bs-list-group-active-color: var(--bs-fut-background-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-fut-background-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-fut-background-text-emphasis);
-}
-
-.list-group-item-fut-text {
-  --bs-list-group-color: var(--bs-fut-text-text-emphasis);
-  --bs-list-group-bg: var(--bs-fut-text-bg-subtle);
-  --bs-list-group-border-color: var(--bs-fut-text-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-fut-text-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-fut-text-border-subtle);
-  --bs-list-group-active-color: var(--bs-fut-text-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-fut-text-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-fut-text-text-emphasis);
-}
-
-.list-group-item-fut-text-hover {
-  --bs-list-group-color: var(--bs-fut-text-hover-text-emphasis);
-  --bs-list-group-bg: var(--bs-fut-text-hover-bg-subtle);
-  --bs-list-group-border-color: var(--bs-fut-text-hover-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-fut-text-hover-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-fut-text-hover-border-subtle);
-  --bs-list-group-active-color: var(--bs-fut-text-hover-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-fut-text-hover-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-fut-text-hover-text-emphasis);
-}
-
-.list-group-item-fut-active {
-  --bs-list-group-color: var(--bs-fut-active-text-emphasis);
-  --bs-list-group-bg: var(--bs-fut-active-bg-subtle);
-  --bs-list-group-border-color: var(--bs-fut-active-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-fut-active-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-fut-active-border-subtle);
-  --bs-list-group-active-color: var(--bs-fut-active-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-fut-active-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-fut-active-text-emphasis);
-}
-
-.list-group-item-fut-alternate {
-  --bs-list-group-color: var(--bs-fut-alternate-text-emphasis);
-  --bs-list-group-bg: var(--bs-fut-alternate-bg-subtle);
-  --bs-list-group-border-color: var(--bs-fut-alternate-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-fut-alternate-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-fut-alternate-border-subtle);
-  --bs-list-group-active-color: var(--bs-fut-alternate-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-fut-alternate-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-fut-alternate-text-emphasis);
-}
-
-.list-group-item-fut-important {
-  --bs-list-group-color: var(--bs-fut-important-text-emphasis);
-  --bs-list-group-bg: var(--bs-fut-important-bg-subtle);
-  --bs-list-group-border-color: var(--bs-fut-important-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-fut-important-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-fut-important-border-subtle);
-  --bs-list-group-active-color: var(--bs-fut-important-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-fut-important-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-fut-important-text-emphasis);
-}
-
-.list-group-item-mod-primary {
-  --bs-list-group-color: var(--bs-mod-primary-text-emphasis);
-  --bs-list-group-bg: var(--bs-mod-primary-bg-subtle);
-  --bs-list-group-border-color: var(--bs-mod-primary-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-mod-primary-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-mod-primary-border-subtle);
-  --bs-list-group-active-color: var(--bs-mod-primary-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-mod-primary-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-mod-primary-text-emphasis);
-}
-
-.list-group-item-mod-background {
-  --bs-list-group-color: var(--bs-mod-background-text-emphasis);
-  --bs-list-group-bg: var(--bs-mod-background-bg-subtle);
-  --bs-list-group-border-color: var(--bs-mod-background-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-mod-background-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-mod-background-border-subtle);
-  --bs-list-group-active-color: var(--bs-mod-background-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-mod-background-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-mod-background-text-emphasis);
-}
-
-.list-group-item-mod-text {
-  --bs-list-group-color: var(--bs-mod-text-text-emphasis);
-  --bs-list-group-bg: var(--bs-mod-text-bg-subtle);
-  --bs-list-group-border-color: var(--bs-mod-text-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-mod-text-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-mod-text-border-subtle);
-  --bs-list-group-active-color: var(--bs-mod-text-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-mod-text-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-mod-text-text-emphasis);
-}
-
-.list-group-item-mod-text-hover {
-  --bs-list-group-color: var(--bs-mod-text-hover-text-emphasis);
-  --bs-list-group-bg: var(--bs-mod-text-hover-bg-subtle);
-  --bs-list-group-border-color: var(--bs-mod-text-hover-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-mod-text-hover-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-mod-text-hover-border-subtle);
-  --bs-list-group-active-color: var(--bs-mod-text-hover-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-mod-text-hover-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-mod-text-hover-text-emphasis);
-}
-
-.list-group-item-mod-active {
-  --bs-list-group-color: var(--bs-mod-active-text-emphasis);
-  --bs-list-group-bg: var(--bs-mod-active-bg-subtle);
-  --bs-list-group-border-color: var(--bs-mod-active-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-mod-active-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-mod-active-border-subtle);
-  --bs-list-group-active-color: var(--bs-mod-active-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-mod-active-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-mod-active-text-emphasis);
-}
-
-.list-group-item-mod-alternate {
-  --bs-list-group-color: var(--bs-mod-alternate-text-emphasis);
-  --bs-list-group-bg: var(--bs-mod-alternate-bg-subtle);
-  --bs-list-group-border-color: var(--bs-mod-alternate-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-mod-alternate-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-mod-alternate-border-subtle);
-  --bs-list-group-active-color: var(--bs-mod-alternate-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-mod-alternate-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-mod-alternate-text-emphasis);
-}
-
-.list-group-item-mod-important {
-  --bs-list-group-color: var(--bs-mod-important-text-emphasis);
-  --bs-list-group-bg: var(--bs-mod-important-bg-subtle);
-  --bs-list-group-border-color: var(--bs-mod-important-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-mod-important-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-mod-important-border-subtle);
-  --bs-list-group-active-color: var(--bs-mod-important-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-mod-important-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-mod-important-text-emphasis);
-}
-
-.list-group-item-vin-primary {
-  --bs-list-group-color: var(--bs-vin-primary-text-emphasis);
-  --bs-list-group-bg: var(--bs-vin-primary-bg-subtle);
-  --bs-list-group-border-color: var(--bs-vin-primary-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-vin-primary-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-vin-primary-border-subtle);
-  --bs-list-group-active-color: var(--bs-vin-primary-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-vin-primary-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-vin-primary-text-emphasis);
-}
-
-.list-group-item-vin-background {
-  --bs-list-group-color: var(--bs-vin-background-text-emphasis);
-  --bs-list-group-bg: var(--bs-vin-background-bg-subtle);
-  --bs-list-group-border-color: var(--bs-vin-background-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-vin-background-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-vin-background-border-subtle);
-  --bs-list-group-active-color: var(--bs-vin-background-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-vin-background-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-vin-background-text-emphasis);
-}
-
-.list-group-item-vin-text {
-  --bs-list-group-color: var(--bs-vin-text-text-emphasis);
-  --bs-list-group-bg: var(--bs-vin-text-bg-subtle);
-  --bs-list-group-border-color: var(--bs-vin-text-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-vin-text-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-vin-text-border-subtle);
-  --bs-list-group-active-color: var(--bs-vin-text-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-vin-text-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-vin-text-text-emphasis);
-}
-
-.list-group-item-vin-text-hover {
-  --bs-list-group-color: var(--bs-vin-text-hover-text-emphasis);
-  --bs-list-group-bg: var(--bs-vin-text-hover-bg-subtle);
-  --bs-list-group-border-color: var(--bs-vin-text-hover-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-vin-text-hover-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-vin-text-hover-border-subtle);
-  --bs-list-group-active-color: var(--bs-vin-text-hover-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-vin-text-hover-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-vin-text-hover-text-emphasis);
-}
-
-.list-group-item-vin-active {
-  --bs-list-group-color: var(--bs-vin-active-text-emphasis);
-  --bs-list-group-bg: var(--bs-vin-active-bg-subtle);
-  --bs-list-group-border-color: var(--bs-vin-active-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-vin-active-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-vin-active-border-subtle);
-  --bs-list-group-active-color: var(--bs-vin-active-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-vin-active-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-vin-active-text-emphasis);
-}
-
-.list-group-item-vin-alternate {
-  --bs-list-group-color: var(--bs-vin-alternate-text-emphasis);
-  --bs-list-group-bg: var(--bs-vin-alternate-bg-subtle);
-  --bs-list-group-border-color: var(--bs-vin-alternate-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-vin-alternate-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-vin-alternate-border-subtle);
-  --bs-list-group-active-color: var(--bs-vin-alternate-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-vin-alternate-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-vin-alternate-text-emphasis);
-}
-
-.list-group-item-vin-important {
-  --bs-list-group-color: var(--bs-vin-important-text-emphasis);
-  --bs-list-group-bg: var(--bs-vin-important-bg-subtle);
-  --bs-list-group-border-color: var(--bs-vin-important-border-subtle);
-  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-vin-important-border-subtle);
-  --bs-list-group-action-active-color: var(--bs-emphasis-color);
-  --bs-list-group-action-active-bg: var(--bs-vin-important-border-subtle);
-  --bs-list-group-active-color: var(--bs-vin-important-bg-subtle);
-  --bs-list-group-active-bg: var(--bs-vin-important-text-emphasis);
-  --bs-list-group-active-border-color: var(--bs-vin-important-text-emphasis);
+  --bs-list-group-action-active-bg: var(--bs-excel-important-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-important-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-important-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-important-text-emphasis);
 }
 
 .btn-close {
@@ -10950,144 +9266,39 @@ textarea.form-control-lg {
   background-color: RGBA(var(--bs-isys-important-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-gray-primary {
+.text-bg-excel-primary {
   color: #fff !important;
-  background-color: RGBA(var(--bs-gray-primary-rgb), var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-excel-primary-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-gray-background {
+.text-bg-excel-background {
   color: #000 !important;
-  background-color: RGBA(var(--bs-gray-background-rgb), var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-excel-background-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-gray-text {
+.text-bg-excel-text {
   color: #fff !important;
-  background-color: RGBA(var(--bs-gray-text-rgb), var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-excel-text-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-gray-text-hover {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-gray-text-hover-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-gray-active {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-gray-active-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-gray-alternate {
+.text-bg-excel-text-hover {
   color: #000 !important;
-  background-color: RGBA(var(--bs-gray-alternate-rgb), var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-excel-text-hover-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-gray-important {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-gray-important-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-fut-primary {
+.text-bg-excel-active {
   color: #000 !important;
-  background-color: RGBA(var(--bs-fut-primary-rgb), var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-excel-active-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-fut-background {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-fut-background-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-fut-text {
+.text-bg-excel-alternate {
   color: #000 !important;
-  background-color: RGBA(var(--bs-fut-text-rgb), var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-excel-alternate-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-fut-text-hover {
-  color: #000 !important;
-  background-color: RGBA(var(--bs-fut-text-hover-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-fut-active {
+.text-bg-excel-important {
   color: #fff !important;
-  background-color: RGBA(var(--bs-fut-active-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-fut-alternate {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-fut-alternate-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-fut-important {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-fut-important-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-mod-primary {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-mod-primary-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-mod-background {
-  color: #000 !important;
-  background-color: RGBA(var(--bs-mod-background-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-mod-text {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-mod-text-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-mod-text-hover {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-mod-text-hover-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-mod-active {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-mod-active-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-mod-alternate {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-mod-alternate-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-mod-important {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-mod-important-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-vin-primary {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-vin-primary-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-vin-background {
-  color: #000 !important;
-  background-color: RGBA(var(--bs-vin-background-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-vin-text {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-vin-text-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-vin-text-hover {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-vin-text-hover-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-vin-active {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-vin-active-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-vin-alternate {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-vin-alternate-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-vin-important {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-vin-important-rgb), var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-excel-important-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .link-primary {
@@ -11288,256 +9499,67 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(204, 51, 103, var(--bs-link-underline-opacity, 1)) !important;
 }
 
-.link-gray-primary {
-  color: RGBA(var(--bs-gray-primary-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-gray-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-primary {
+  color: RGBA(var(--bs-excel-primary-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-gray-primary:hover, .link-gray-primary:focus {
-  color: RGBA(86, 94, 100, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(86, 94, 100, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-gray-background {
-  color: RGBA(var(--bs-gray-background-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-gray-background-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-gray-background:hover, .link-gray-background:focus {
-  color: RGBA(230, 230, 230, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(230, 230, 230, var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-primary:hover, .link-excel-primary:focus {
+  color: RGBA(204, 72, 24, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 72, 24, var(--bs-link-underline-opacity, 1)) !important;
 }
 
-.link-gray-text {
-  color: RGBA(var(--bs-gray-text-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-gray-text-rgb), var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-background {
+  color: RGBA(var(--bs-excel-background-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-background-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-gray-text:hover, .link-gray-text:focus {
-  color: RGBA(26, 30, 33, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-gray-text-hover {
-  color: RGBA(var(--bs-gray-text-hover-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-gray-text-hover-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-gray-text-hover:hover, .link-gray-text-hover:focus {
-  color: RGBA(58, 64, 70, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(58, 64, 70, var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-background:hover, .link-excel-background:focus {
+  color: RGBA(240, 240, 233, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(240, 240, 233, var(--bs-link-underline-opacity, 1)) !important;
 }
 
-.link-gray-active {
-  color: RGBA(var(--bs-gray-active-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-gray-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-text {
+  color: RGBA(var(--bs-excel-text-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-text-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-gray-active:hover, .link-gray-active:focus {
-  color: RGBA(138, 145, 151, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(138, 145, 151, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-gray-alternate {
-  color: RGBA(var(--bs-gray-alternate-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-gray-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-gray-alternate:hover, .link-gray-alternate:focus {
-  color: RGBA(216, 221, 225, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(216, 221, 225, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-gray-important {
-  color: RGBA(var(--bs-gray-important-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-gray-important-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-gray-important:hover, .link-gray-important:focus {
+.link-excel-text:hover, .link-excel-text:focus {
   color: RGBA(42, 46, 51, var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(42, 46, 51, var(--bs-link-underline-opacity, 1)) !important;
 }
 
-.link-fut-primary {
-  color: RGBA(var(--bs-fut-primary-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-fut-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-text-hover {
+  color: RGBA(var(--bs-excel-text-hover-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-text-hover-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-fut-primary:hover, .link-fut-primary:focus {
-  color: RGBA(51, 255, 255, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(51, 255, 255, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-fut-background {
-  color: RGBA(var(--bs-fut-background-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-fut-background-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-fut-background:hover, .link-fut-background:focus {
-  color: RGBA(8, 12, 23, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(8, 12, 23, var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-text-hover:hover, .link-excel-text-hover:focus {
+  color: RGBA(211, 207, 199, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(211, 207, 199, var(--bs-link-underline-opacity, 1)) !important;
 }
 
-.link-fut-text {
-  color: RGBA(var(--bs-fut-text-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-fut-text-rgb), var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-active {
+  color: RGBA(var(--bs-excel-active-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-fut-text:hover, .link-fut-text:focus {
-  color: RGBA(230, 255, 255, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(230, 255, 255, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-fut-text-hover {
-  color: RGBA(var(--bs-fut-text-hover-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-fut-text-hover-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-fut-text-hover:hover, .link-fut-text-hover:focus {
-  color: RGBA(153, 255, 221, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(153, 255, 221, var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-active:hover, .link-excel-active:focus {
+  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
 }
 
-.link-fut-active {
-  color: RGBA(var(--bs-fut-active-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-fut-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-alternate {
+  color: RGBA(var(--bs-excel-alternate-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-fut-active:hover, .link-fut-active:focus {
-  color: RGBA(24, 115, 204, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(24, 115, 204, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-fut-alternate {
-  color: RGBA(var(--bs-fut-alternate-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-fut-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-fut-alternate:hover, .link-fut-alternate:focus {
-  color: RGBA(110, 34, 181, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(110, 34, 181, var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-alternate:hover, .link-excel-alternate:focus {
+  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
 }
 
-.link-fut-important {
-  color: RGBA(var(--bs-fut-important-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-fut-important-rgb), var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-important {
+  color: RGBA(var(--bs-excel-important-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-important-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-fut-important:hover, .link-fut-important:focus {
-  color: RGBA(204, 0, 204, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(204, 0, 204, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-mod-primary {
-  color: RGBA(var(--bs-mod-primary-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-mod-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-mod-primary:hover, .link-mod-primary:focus {
-  color: RGBA(10, 88, 202, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(10, 88, 202, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-mod-background {
-  color: RGBA(var(--bs-mod-background-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-mod-background-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-mod-background:hover, .link-mod-background:focus {
-  color: RGBA(255, 255, 255, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(255, 255, 255, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-mod-text {
-  color: RGBA(var(--bs-mod-text-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-mod-text-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-mod-text:hover, .link-mod-text:focus {
-  color: RGBA(26, 30, 33, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-mod-text-hover {
-  color: RGBA(var(--bs-mod-text-hover-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-mod-text-hover-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-mod-text-hover:hover, .link-mod-text-hover:focus {
-  color: RGBA(86, 94, 100, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(86, 94, 100, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-mod-active {
-  color: RGBA(var(--bs-mod-active-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-mod-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-mod-active:hover, .link-mod-active:focus {
-  color: RGBA(20, 108, 67, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(20, 108, 67, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-mod-alternate {
-  color: RGBA(var(--bs-mod-alternate-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-mod-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-mod-alternate:hover, .link-mod-alternate:focus {
-  color: RGBA(82, 13, 194, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(82, 13, 194, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-mod-important {
-  color: RGBA(var(--bs-mod-important-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-mod-important-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-mod-important:hover, .link-mod-important:focus {
-  color: RGBA(176, 42, 55, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(176, 42, 55, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-vin-primary {
-  color: RGBA(var(--bs-vin-primary-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-vin-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-vin-primary:hover, .link-vin-primary:focus {
-  color: RGBA(128, 66, 36, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(128, 66, 36, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-vin-background {
-  color: RGBA(var(--bs-vin-background-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-vin-background-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-vin-background:hover, .link-vin-background:focus {
-  color: RGBA(255, 249, 227, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(255, 249, 227, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-vin-text {
-  color: RGBA(var(--bs-vin-text-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-vin-text-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-vin-text:hover, .link-vin-text:focus {
-  color: RGBA(74, 51, 41, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(74, 51, 41, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-vin-text-hover {
-  color: RGBA(var(--bs-vin-text-hover-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-vin-text-hover-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-vin-text-hover:hover, .link-vin-text-hover:focus {
-  color: RGBA(111, 92, 68, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(111, 92, 68, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-vin-active {
-  color: RGBA(var(--bs-vin-active-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-vin-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-vin-active:hover, .link-vin-active:focus {
-  color: RGBA(164, 106, 50, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(164, 106, 50, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-vin-alternate {
-  color: RGBA(var(--bs-vin-alternate-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-vin-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-vin-alternate:hover, .link-vin-alternate:focus {
-  color: RGBA(178, 147, 108, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(178, 147, 108, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-vin-important {
-  color: RGBA(var(--bs-vin-important-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-vin-important-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-vin-important:hover, .link-vin-important:focus {
-  color: RGBA(142, 27, 27, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(142, 27, 27, var(--bs-link-underline-opacity, 1)) !important;
+.link-excel-important:hover, .link-excel-important:focus {
+  color: RGBA(204, 51, 103, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 51, 103, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-body-emphasis {
@@ -12027,116 +10049,32 @@ textarea.form-control-lg {
   --bs-focus-ring-color: rgba(var(--bs-isys-important-rgb), var(--bs-focus-ring-opacity));
 }
 
-.focus-ring-gray-primary {
-  --bs-focus-ring-color: rgba(var(--bs-gray-primary-rgb), var(--bs-focus-ring-opacity));
+.focus-ring-excel-primary {
+  --bs-focus-ring-color: rgba(var(--bs-excel-primary-rgb), var(--bs-focus-ring-opacity));
 }
 
-.focus-ring-gray-background {
-  --bs-focus-ring-color: rgba(var(--bs-gray-background-rgb), var(--bs-focus-ring-opacity));
+.focus-ring-excel-background {
+  --bs-focus-ring-color: rgba(var(--bs-excel-background-rgb), var(--bs-focus-ring-opacity));
 }
 
-.focus-ring-gray-text {
-  --bs-focus-ring-color: rgba(var(--bs-gray-text-rgb), var(--bs-focus-ring-opacity));
+.focus-ring-excel-text {
+  --bs-focus-ring-color: rgba(var(--bs-excel-text-rgb), var(--bs-focus-ring-opacity));
 }
 
-.focus-ring-gray-text-hover {
-  --bs-focus-ring-color: rgba(var(--bs-gray-text-hover-rgb), var(--bs-focus-ring-opacity));
+.focus-ring-excel-text-hover {
+  --bs-focus-ring-color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-focus-ring-opacity));
 }
 
-.focus-ring-gray-active {
-  --bs-focus-ring-color: rgba(var(--bs-gray-active-rgb), var(--bs-focus-ring-opacity));
+.focus-ring-excel-active {
+  --bs-focus-ring-color: rgba(var(--bs-excel-active-rgb), var(--bs-focus-ring-opacity));
 }
 
-.focus-ring-gray-alternate {
-  --bs-focus-ring-color: rgba(var(--bs-gray-alternate-rgb), var(--bs-focus-ring-opacity));
+.focus-ring-excel-alternate {
+  --bs-focus-ring-color: rgba(var(--bs-excel-alternate-rgb), var(--bs-focus-ring-opacity));
 }
 
-.focus-ring-gray-important {
-  --bs-focus-ring-color: rgba(var(--bs-gray-important-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-fut-primary {
-  --bs-focus-ring-color: rgba(var(--bs-fut-primary-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-fut-background {
-  --bs-focus-ring-color: rgba(var(--bs-fut-background-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-fut-text {
-  --bs-focus-ring-color: rgba(var(--bs-fut-text-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-fut-text-hover {
-  --bs-focus-ring-color: rgba(var(--bs-fut-text-hover-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-fut-active {
-  --bs-focus-ring-color: rgba(var(--bs-fut-active-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-fut-alternate {
-  --bs-focus-ring-color: rgba(var(--bs-fut-alternate-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-fut-important {
-  --bs-focus-ring-color: rgba(var(--bs-fut-important-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-mod-primary {
-  --bs-focus-ring-color: rgba(var(--bs-mod-primary-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-mod-background {
-  --bs-focus-ring-color: rgba(var(--bs-mod-background-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-mod-text {
-  --bs-focus-ring-color: rgba(var(--bs-mod-text-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-mod-text-hover {
-  --bs-focus-ring-color: rgba(var(--bs-mod-text-hover-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-mod-active {
-  --bs-focus-ring-color: rgba(var(--bs-mod-active-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-mod-alternate {
-  --bs-focus-ring-color: rgba(var(--bs-mod-alternate-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-mod-important {
-  --bs-focus-ring-color: rgba(var(--bs-mod-important-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-vin-primary {
-  --bs-focus-ring-color: rgba(var(--bs-vin-primary-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-vin-background {
-  --bs-focus-ring-color: rgba(var(--bs-vin-background-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-vin-text {
-  --bs-focus-ring-color: rgba(var(--bs-vin-text-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-vin-text-hover {
-  --bs-focus-ring-color: rgba(var(--bs-vin-text-hover-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-vin-active {
-  --bs-focus-ring-color: rgba(var(--bs-vin-active-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-vin-alternate {
-  --bs-focus-ring-color: rgba(var(--bs-vin-alternate-rgb), var(--bs-focus-ring-opacity));
-}
-
-.focus-ring-vin-important {
-  --bs-focus-ring-color: rgba(var(--bs-vin-important-rgb), var(--bs-focus-ring-opacity));
+.focus-ring-excel-important {
+  --bs-focus-ring-color: rgba(var(--bs-excel-important-rgb), var(--bs-focus-ring-opacity));
 }
 
 .position-static {
@@ -12369,144 +10307,39 @@ textarea.form-control-lg {
   border-color: rgba(var(--bs-isys-important-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-gray-primary {
+.border-excel-primary {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-gray-primary-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-excel-primary-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-gray-background {
+.border-excel-background {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-gray-background-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-excel-background-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-gray-text {
+.border-excel-text {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-gray-text-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-excel-text-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-gray-text-hover {
+.border-excel-text-hover {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-gray-text-hover-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-gray-active {
+.border-excel-active {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-gray-active-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-excel-active-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-gray-alternate {
+.border-excel-alternate {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-gray-alternate-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-excel-alternate-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-gray-important {
+.border-excel-important {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-gray-important-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-fut-primary {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-fut-primary-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-fut-background {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-fut-background-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-fut-text {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-fut-text-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-fut-text-hover {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-fut-text-hover-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-fut-active {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-fut-active-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-fut-alternate {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-fut-alternate-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-fut-important {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-fut-important-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-mod-primary {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-mod-primary-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-mod-background {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-mod-background-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-mod-text {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-mod-text-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-mod-text-hover {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-mod-text-hover-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-mod-active {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-mod-active-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-mod-alternate {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-mod-alternate-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-mod-important {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-mod-important-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-vin-primary {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-vin-primary-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-vin-background {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-vin-background-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-vin-text {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-vin-text-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-vin-text-hover {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-vin-text-hover-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-vin-active {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-vin-active-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-vin-alternate {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-vin-alternate-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-vin-important {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-vin-important-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-excel-important-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-black {
@@ -13530,144 +11363,39 @@ textarea.form-control-lg {
   color: rgba(var(--bs-isys-important-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-gray-primary {
+.text-excel-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-gray-primary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-excel-primary-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-gray-background {
+.text-excel-background {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-gray-background-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-excel-background-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-gray-text {
+.text-excel-text {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-gray-text-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-excel-text-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-gray-text-hover {
+.text-excel-text-hover {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-gray-text-hover-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-gray-active {
+.text-excel-active {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-gray-active-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-excel-active-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-gray-alternate {
+.text-excel-alternate {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-gray-alternate-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-excel-alternate-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-gray-important {
+.text-excel-important {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-gray-important-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-fut-primary {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-fut-primary-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-fut-background {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-fut-background-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-fut-text {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-fut-text-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-fut-text-hover {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-fut-text-hover-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-fut-active {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-fut-active-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-fut-alternate {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-fut-alternate-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-fut-important {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-fut-important-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-mod-primary {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-mod-primary-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-mod-background {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-mod-background-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-mod-text {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-mod-text-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-mod-text-hover {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-mod-text-hover-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-mod-active {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-mod-active-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-mod-alternate {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-mod-alternate-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-mod-important {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-mod-important-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-vin-primary {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-vin-primary-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-vin-background {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-vin-background-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-vin-text {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-vin-text-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-vin-text-hover {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-vin-text-hover-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-vin-active {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-vin-active-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-vin-alternate {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-vin-alternate-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-vin-important {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-vin-important-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-excel-important-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-black {
@@ -13942,144 +11670,39 @@ textarea.form-control-lg {
   text-decoration-color: rgba(var(--bs-isys-important-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
-.link-underline-gray-primary {
+.link-underline-excel-primary {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-gray-primary-rgb), var(--bs-link-underline-opacity)) !important;
+  text-decoration-color: rgba(var(--bs-excel-primary-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
-.link-underline-gray-background {
+.link-underline-excel-background {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-gray-background-rgb), var(--bs-link-underline-opacity)) !important;
+  text-decoration-color: rgba(var(--bs-excel-background-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
-.link-underline-gray-text {
+.link-underline-excel-text {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-gray-text-rgb), var(--bs-link-underline-opacity)) !important;
+  text-decoration-color: rgba(var(--bs-excel-text-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
-.link-underline-gray-text-hover {
+.link-underline-excel-text-hover {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-gray-text-hover-rgb), var(--bs-link-underline-opacity)) !important;
+  text-decoration-color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
-.link-underline-gray-active {
+.link-underline-excel-active {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-gray-active-rgb), var(--bs-link-underline-opacity)) !important;
+  text-decoration-color: rgba(var(--bs-excel-active-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
-.link-underline-gray-alternate {
+.link-underline-excel-alternate {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-gray-alternate-rgb), var(--bs-link-underline-opacity)) !important;
+  text-decoration-color: rgba(var(--bs-excel-alternate-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
-.link-underline-gray-important {
+.link-underline-excel-important {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-gray-important-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-fut-primary {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-fut-primary-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-fut-background {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-fut-background-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-fut-text {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-fut-text-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-fut-text-hover {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-fut-text-hover-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-fut-active {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-fut-active-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-fut-alternate {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-fut-alternate-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-fut-important {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-fut-important-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-mod-primary {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-mod-primary-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-mod-background {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-mod-background-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-mod-text {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-mod-text-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-mod-text-hover {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-mod-text-hover-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-mod-active {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-mod-active-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-mod-alternate {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-mod-alternate-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-mod-important {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-mod-important-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-vin-primary {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-vin-primary-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-vin-background {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-vin-background-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-vin-text {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-vin-text-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-vin-text-hover {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-vin-text-hover-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-vin-active {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-vin-active-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-vin-alternate {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-vin-alternate-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-vin-important {
-  --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(var(--bs-vin-important-rgb), var(--bs-link-underline-opacity)) !important;
+  text-decoration-color: rgba(var(--bs-excel-important-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline {
@@ -14245,144 +11868,39 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-isys-important-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-gray-primary {
+.bg-excel-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-gray-primary-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-excel-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-gray-background {
+.bg-excel-background {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-gray-background-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-excel-background-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-gray-text {
+.bg-excel-text {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-gray-text-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-excel-text-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-gray-text-hover {
+.bg-excel-text-hover {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-gray-text-hover-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-gray-active {
+.bg-excel-active {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-gray-active-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-excel-active-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-gray-alternate {
+.bg-excel-alternate {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-gray-alternate-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-excel-alternate-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-gray-important {
+.bg-excel-important {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-gray-important-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-fut-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-fut-primary-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-fut-background {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-fut-background-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-fut-text {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-fut-text-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-fut-text-hover {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-fut-text-hover-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-fut-active {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-fut-active-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-fut-alternate {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-fut-alternate-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-fut-important {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-fut-important-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-mod-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-mod-primary-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-mod-background {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-mod-background-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-mod-text {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-mod-text-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-mod-text-hover {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-mod-text-hover-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-mod-active {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-mod-active-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-mod-alternate {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-mod-alternate-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-mod-important {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-mod-important-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-vin-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-vin-primary-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-vin-background {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-vin-background-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-vin-text {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-vin-text-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-vin-text-hover {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-vin-text-hover-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-vin-active {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-vin-active-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-vin-alternate {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-vin-alternate-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-vin-important {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-vin-important-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-excel-important-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black {
@@ -17653,89 +15171,26 @@ table,
 .alert-isys-important {
   background-color: #FF4081;
 }
-.alert-gray-primary {
-  background-color: #6C757D;
+.alert-excel-primary {
+  background-color: #FF5A1E;
 }
-.alert-gray-background {
-  background-color: #E0E0E0;
+.alert-excel-background {
+  background-color: #ECECE4;
 }
-.alert-gray-text {
-  background-color: #212529;
+.alert-excel-text {
+  background-color: #343a40;
 }
-.alert-gray-text-hover {
-  background-color: #495057;
+.alert-excel-text-hover {
+  background-color: #C8C3B9;
 }
-.alert-gray-active {
-  background-color: #ADB5BD;
+.alert-excel-active {
+  background-color: #B4CDBE;
 }
-.alert-gray-alternate {
-  background-color: #CED4DA;
+.alert-excel-alternate {
+  background-color: #B4CDBE;
 }
-.alert-gray-important {
-  background-color: #343A40;
-}
-.alert-fut-primary {
-  background-color: #00FFFF;
-}
-.alert-fut-background {
-  background-color: #0A0F1D;
-}
-.alert-fut-text {
-  background-color: #E0FFFF;
-}
-.alert-fut-text-hover {
-  background-color: #7FFFD4;
-}
-.alert-fut-active {
-  background-color: #1E90FF;
-}
-.alert-fut-alternate {
-  background-color: #8A2BE2;
-}
-.alert-fut-important {
-  background-color: #FF00FF;
-}
-.alert-mod-primary {
-  background-color: #0D6EFD;
-}
-.alert-mod-background {
-  background-color: #FFFFFF;
-}
-.alert-mod-text {
-  background-color: #212529;
-}
-.alert-mod-text-hover {
-  background-color: #6C757D;
-}
-.alert-mod-active {
-  background-color: #198754;
-}
-.alert-mod-alternate {
-  background-color: #6610F2;
-}
-.alert-mod-important {
-  background-color: #DC3545;
-}
-.alert-vin-primary {
-  background-color: #A0522D;
-}
-.alert-vin-background {
-  background-color: #FFF8DC;
-}
-.alert-vin-text {
-  background-color: #5C4033;
-}
-.alert-vin-text-hover {
-  background-color: #8B7355;
-}
-.alert-vin-active {
-  background-color: #CD853F;
-}
-.alert-vin-alternate {
-  background-color: #DEB887;
-}
-.alert-vin-important {
-  background-color: #B22222;
+.alert-excel-important {
+  background-color: #FF4081;
 }
 .alert-light,
 .alert-light a,
