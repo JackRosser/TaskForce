@@ -10,7 +10,7 @@ namespace TaskForce.Client.Components
         private CreaProgettoDto? Form { get; set; }
         private async Task Submit()
         {
-            await Sdk.SendRequestAsync(r => r.CreaProgettoAsync(Form));
+            await Sdk.SendProgettiRequestAsync(r => r.CreaProgettoAsync(Form));
 
         }
 

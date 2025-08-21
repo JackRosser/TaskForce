@@ -170,6 +170,14 @@ main.isys {
   font-family: "Archia", sans-serif;
   background-color: #ECECE4;
 }
+main.gray {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #ADB5BD;
+}
+main.excel {
+  font-family: "Calibri", sans-serif;
+  background-color: #92D050;
+}
 
 .progettocontainer.vs {
   width: 100%;
@@ -180,13 +188,13 @@ main.isys {
   overflow: hidden;
 }
 .progettocontainer.vs .project-deadline {
-  background-color: #68217A;
+  background-color: #E37933;
   color: #F5F5F0;
-  padding: 1rem;
-  border-radius: 15px 15px 0 0;
   display: flex;
+  padding: 0.8rem;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9rem;
 }
 .progettocontainer.vs .project-deadline .info, .progettocontainer.vs .project-deadline .countdown {
   display: flex;
@@ -210,32 +218,28 @@ main.isys {
 .progettocontainer.vs .macrobox {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   color: #F5F5F0;
   overflow: auto;
 }
 .progettocontainer.vs .macrobox .macrocontainer {
   cursor: grab;
-  padding: 1rem;
   background-color: #7F7F7F;
-  color: #F5F5F0;
+  color: #F5F5F0 !important;
 }
 .progettocontainer.vs .macrobox .macrocontainer h2, .progettocontainer.vs .macrobox .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table {
-  margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 10px;
   overflow: hidden;
   cursor: default;
 }
@@ -258,12 +262,36 @@ main.isys {
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
   text-align: start;
-  font-size: 1.2rem;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table tbody tr .tdev {
+  display: flex;
+  justify-content: end;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table tr, .progettocontainer.vs .macrobox .macrocontainer .macro-table th {
   color: #F5F5F0;
   text-transform: capitalize;
+  text-align: right;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(1), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(1) {
+  width: 1%;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(2) {
+  width: 15%;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(3) {
+  width: 10%;
   text-align: center;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(6), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(6) {
+  width: 100%;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table {
   width: 100%;
@@ -272,9 +300,10 @@ main.isys {
   border-radius: 15px;
   overflow: hidden;
   font-size: 0.8rem;
+  table-layout: fixed;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead tr {
-  background-color: #68217A;
+  background-color: #E37933;
   border-radius: 15px;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead tr th {
@@ -282,10 +311,10 @@ main.isys {
   font-weight: 600;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr {
-  background-color: #D473B7;
+  background-color: #7F7F7F;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(212, 115, 183, 0.6);
+  background-color: rgba(127, 127, 127, 0.6);
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
   padding: 1rem;
@@ -301,8 +330,25 @@ main.isys {
   text-transform: capitalize;
   text-align: center;
 }
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(2), .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(2) {
+  width: 90px;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(3), .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(3) {
+  width: 160px;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(4), .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(4) {
+  width: 72px;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead th:first-child, .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table th, .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table td {
+  width: inherit;
+}
 .progettocontainer.vs .macrobox .macrocontainer:nth-child(even) {
-  background-color: #D473B7;
+  background-color: #7F7F7F;
   color: #303030;
 }
 .progettocontainer.vs .macrobox .macrocontainer:active {
@@ -319,11 +365,11 @@ main.isys {
 .progettocontainer.isys .project-deadline {
   background-color: #FF5A1E;
   color: #343a40;
-  padding: 1rem;
-  border-radius: 15px 15px 0 0;
   display: flex;
+  padding: 0.8rem;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9rem;
 }
 .progettocontainer.isys .project-deadline .info, .progettocontainer.isys .project-deadline .countdown {
   display: flex;
@@ -347,32 +393,28 @@ main.isys {
 .progettocontainer.isys .macrobox {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   color: #343a40;
   overflow: auto;
 }
 .progettocontainer.isys .macrobox .macrocontainer {
   cursor: grab;
-  padding: 1rem;
   background-color: #C8C3B9;
-  color: #343a40;
+  color: #343a40 !important;
 }
 .progettocontainer.isys .macrobox .macrocontainer h2, .progettocontainer.isys .macrobox .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table {
-  margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 10px;
   overflow: hidden;
   cursor: default;
 }
@@ -395,12 +437,36 @@ main.isys {
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
   text-align: start;
-  font-size: 1.2rem;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table tbody tr .tdev {
+  display: flex;
+  justify-content: end;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table tr, .progettocontainer.isys .macrobox .macrocontainer .macro-table th {
   color: #343a40;
   text-transform: capitalize;
+  text-align: right;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(1), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(1) {
+  width: 1%;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(2) {
+  width: 15%;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(3) {
+  width: 10%;
   text-align: center;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(6), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(6) {
+  width: 100%;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table {
   width: 100%;
@@ -409,6 +475,7 @@ main.isys {
   border-radius: 15px;
   overflow: hidden;
   font-size: 0.8rem;
+  table-layout: fixed;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead tr {
   background-color: #FF5A1E;
@@ -419,10 +486,10 @@ main.isys {
   font-weight: 600;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody tr {
-  background-color: #B4CDBE;
+  background-color: #C8C3B9;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(180, 205, 190, 0.6);
+  background-color: rgba(200, 195, 185, 0.6);
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
   padding: 1rem;
@@ -438,11 +505,378 @@ main.isys {
   text-transform: capitalize;
   text-align: center;
 }
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(2), .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(2) {
+  width: 90px;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(3), .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(3) {
+  width: 160px;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(4), .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(4) {
+  width: 72px;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead th:first-child, .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table th, .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table td {
+  width: inherit;
+}
 .progettocontainer.isys .macrobox .macrocontainer:nth-child(even) {
-  background-color: #B4CDBE;
+  background-color: #C8C3B9;
   color: #ECECE4;
 }
 .progettocontainer.isys .macrobox .macrocontainer:active {
+  cursor: grabbing;
+}
+.progettocontainer.gray {
+  width: 100%;
+  height: calc(95% - 71px);
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.progettocontainer.gray .project-deadline {
+  background-color: #B0B3B8;
+  color: #343A40;
+  display: flex;
+  padding: 0.8rem;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+.progettocontainer.gray .project-deadline .info, .progettocontainer.gray .project-deadline .countdown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.progettocontainer.gray .project-deadline .info {
+  flex-grow: 1;
+}
+.progettocontainer.gray .project-deadline .date {
+  color: #343A40;
+}
+.progettocontainer.gray .project-deadline .countdown span {
+  font-weight: 500;
+  color: #343A40;
+}
+.progettocontainer.gray .project-deadline .expired {
+  color: #343A40;
+  font-weight: bold;
+}
+.progettocontainer.gray .macrobox {
+  position: relative;
+  width: 100%;
+  color: #343A40;
+  overflow: auto;
+}
+.progettocontainer.gray .macrobox .macrocontainer {
+  cursor: grab;
+  background-color: #6C757D;
+  color: #343A40 !important;
+}
+.progettocontainer.gray .macrobox .macrocontainer h2, .progettocontainer.gray .macrobox .macrocontainer .h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  cursor: default;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table thead tr {
+  background-color: #ADB5BD;
+  border-radius: 15px;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table thead tr th {
+  padding: 0.5rem;
+  font-weight: 600;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr {
+  background-color: rgba(173, 181, 189, 0.6);
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr:nth-child(even) {
+  background-color: rgba(173, 181, 189, 0.4);
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr td {
+  padding: 1rem;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
+  text-align: start;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr .tdev {
+  display: flex;
+  justify-content: end;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table tr, .progettocontainer.gray .macrobox .macrocontainer .macro-table th {
+  color: #343A40;
+  text-transform: capitalize;
+  text-align: right;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(1), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(1) {
+  width: 1%;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(2) {
+  width: 15%;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(3) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(6), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(6) {
+  width: 100%;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  table-layout: fixed;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead tr {
+  background-color: #B0B3B8;
+  border-radius: 15px;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead tr th {
+  padding: 0.5rem;
+  font-weight: 600;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody tr {
+  background-color: #CED4DA;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
+  background-color: rgba(206, 212, 218, 0.6);
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
+  padding: 1rem;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody tr td:first-child {
+  font-size: 1rem;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody tr:hover {
+  background-color: #ADB5BD !important;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tr, .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table th {
+  color: #343A40;
+  text-transform: capitalize;
+  text-align: center;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(2), .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(2) {
+  width: 90px;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(3), .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(3) {
+  width: 160px;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(4), .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(4) {
+  width: 72px;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead th:first-child, .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table th, .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table td {
+  width: inherit;
+}
+.progettocontainer.gray .macrobox .macrocontainer:nth-child(even) {
+  background-color: #CED4DA;
+  color: #ADB5BD;
+}
+.progettocontainer.gray .macrobox .macrocontainer:active {
+  cursor: grabbing;
+}
+.progettocontainer.excel {
+  width: 100%;
+  height: calc(95% - 71px);
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.progettocontainer.excel .project-deadline {
+  background-color: #F5F5F5;
+  color: #20382F;
+  display: flex;
+  padding: 0.8rem;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+.progettocontainer.excel .project-deadline .info, .progettocontainer.excel .project-deadline .countdown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.progettocontainer.excel .project-deadline .info {
+  flex-grow: 1;
+}
+.progettocontainer.excel .project-deadline .date {
+  color: #20382F;
+}
+.progettocontainer.excel .project-deadline .countdown span {
+  font-weight: 500;
+  color: #20382F;
+}
+.progettocontainer.excel .project-deadline .expired {
+  color: #20382F;
+  font-weight: bold;
+}
+.progettocontainer.excel .macrobox {
+  position: relative;
+  width: 100%;
+  color: #20382F;
+  overflow: auto;
+}
+.progettocontainer.excel .macrobox .macrocontainer {
+  cursor: grab;
+  background-color: #D9D9D9;
+  color: #20382F !important;
+}
+.progettocontainer.excel .macrobox .macrocontainer h2, .progettocontainer.excel .macrobox .macrocontainer .h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  cursor: default;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table thead tr {
+  background-color: #92D050;
+  border-radius: 15px;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table thead tr th {
+  padding: 0.5rem;
+  font-weight: 600;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr {
+  background-color: rgba(146, 208, 80, 0.6);
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr:nth-child(even) {
+  background-color: rgba(146, 208, 80, 0.4);
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr td {
+  padding: 1rem;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
+  text-align: start;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr .tdev {
+  display: flex;
+  justify-content: end;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tr, .progettocontainer.excel .macrobox .macrocontainer .macro-table th {
+  color: #20382F;
+  text-transform: capitalize;
+  text-align: right;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(1), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(1) {
+  width: 1%;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(2) {
+  width: 15%;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(3) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(6), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(6) {
+  width: 100%;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  table-layout: fixed;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead tr {
+  background-color: #F5F5F5;
+  border-radius: 15px;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead tr th {
+  padding: 0.5rem;
+  font-weight: 600;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr {
+  background-color: #fff;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
+  padding: 1rem;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr td:first-child {
+  font-size: 1rem;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody tr:hover {
+  background-color: #92D050 !important;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tr, .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table th {
+  color: #20382F;
+  text-transform: capitalize;
+  text-align: center;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(2), .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(2) {
+  width: 90px;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(3), .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(3) {
+  width: 160px;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(4), .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(4) {
+  width: 72px;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead th:first-child, .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table th, .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table td {
+  width: inherit;
+}
+.progettocontainer.excel .macrobox .macrocontainer:nth-child(even) {
+  background-color: #fff;
+  color: #92D050;
+}
+.progettocontainer.excel .macrobox .macrocontainer:active {
   cursor: grabbing;
 }
 
@@ -491,9 +925,59 @@ main.isys {
   background-color: #C8C3B9;
 }
 .index.isys button.active {
-  background-color: #B4CDBE;
+  background-color: #FF5A1E;
   font-weight: bold;
   color: #ECECE4;
+  border-right: none;
+}
+.index.gray {
+  height: 5%;
+  padding-left: 2rem;
+  overflow: auto;
+  border-top: 1px solid #6C757D;
+  display: flex;
+  align-items: center;
+}
+.index.gray button {
+  border: none;
+  border-right: 1px solid #6C757D;
+  padding-inline: 0.8rem;
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: #343A40;
+}
+.index.gray button:hover {
+  background-color: #6C757D;
+}
+.index.gray button.active {
+  background-color: #DEE2E6;
+  font-weight: bold;
+  color: #ADB5BD;
+  border-right: none;
+}
+.index.excel {
+  height: 5%;
+  padding-left: 2rem;
+  overflow: auto;
+  border-top: 1px solid #D9D9D9;
+  display: flex;
+  align-items: center;
+}
+.index.excel button {
+  border: none;
+  border-right: 1px solid #D9D9D9;
+  padding-inline: 0.8rem;
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: #20382F;
+}
+.index.excel button:hover {
+  background-color: #D9D9D9;
+}
+.index.excel button.active {
+  background-color: #343a40;
+  font-weight: bold;
+  color: #92D050;
   border-right: none;
 }
 
@@ -509,6 +993,20 @@ main.isys {
   border-radius: 5px;
 }
 .btn.isys.max {
+  min-width: 200px;
+}
+.btn.gray {
+  font-family: "Consolas", sans-serif !important;
+  border-radius: 5px;
+}
+.btn.gray.max {
+  min-width: 200px;
+}
+.btn.excel {
+  font-family: "Consolas", sans-serif !important;
+  border-radius: 5px;
+}
+.btn.excel.max {
   min-width: 200px;
 }
 .btn.new-project-btn.vs {
@@ -533,18 +1031,54 @@ main.isys {
   padding: 2rem 4rem;
   font-size: 2rem;
   font-weight: 600;
-  color: #B4CDBE;
-  background: linear-gradient(#B4CDBE, white, #B4CDBE);
+  color: #FF5A1E;
+  background: linear-gradient(#FF5A1E, white, #FF5A1E);
   border: none;
   border-radius: 15px !important;
   transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
 }
 .btn.new-project-btn.isys:hover {
   transform: scale(1.03);
-  background: linear-gradient(white, #B4CDBE, white);
+  background: linear-gradient(white, #FF5A1E, white);
   color: white;
 }
 .btn.new-project-btn.isys:active {
+  transform: scale(0.97);
+}
+.btn.new-project-btn.gray {
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #DEE2E6;
+  background: linear-gradient(#DEE2E6, white, #DEE2E6);
+  border: none;
+  border-radius: 15px !important;
+  transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
+}
+.btn.new-project-btn.gray:hover {
+  transform: scale(1.03);
+  background: linear-gradient(white, #DEE2E6, white);
+  color: white;
+}
+.btn.new-project-btn.gray:active {
+  transform: scale(0.97);
+}
+.btn.new-project-btn.excel {
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #343a40;
+  background: linear-gradient(#343a40, white, #343a40);
+  border: none;
+  border-radius: 15px !important;
+  transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
+}
+.btn.new-project-btn.excel:hover {
+  transform: scale(1.03);
+  background: linear-gradient(white, #343a40, white);
+  color: white;
+}
+.btn.new-project-btn.excel:active {
   transform: scale(0.97);
 }
 
@@ -594,6 +1128,52 @@ main.isys {
 .modal-content.isys .modal-footer {
   border: none;
 }
+.modal-content.gray {
+  border-radius: 15px !important;
+  overflow: hidden;
+  font-size: 1rem;
+  background-color: #303030 !important;
+  color: #F5F5F0 !important;
+}
+.modal-content.gray .modal-header {
+  padding: 0.5rem 1rem;
+  background-color: #7F7F7F;
+  border: none;
+}
+.modal-content.gray .modal-header h1, .modal-content.gray .modal-header .h1 {
+  font-size: 1rem !important;
+  color: #F5F5F0;
+  font-weight: 400;
+}
+.modal-content.gray .modal-header .btn-close {
+  color: #F5F5F0 !important;
+}
+.modal-content.gray .modal-footer {
+  border: none;
+}
+.modal-content.excel {
+  border-radius: 15px !important;
+  overflow: hidden;
+  font-size: 1rem;
+  background-color: #303030 !important;
+  color: #F5F5F0 !important;
+}
+.modal-content.excel .modal-header {
+  padding: 0.5rem 1rem;
+  background-color: #7F7F7F;
+  border: none;
+}
+.modal-content.excel .modal-header h1, .modal-content.excel .modal-header .h1 {
+  font-size: 1rem !important;
+  color: #F5F5F0;
+  font-weight: 400;
+}
+.modal-content.excel .modal-header .btn-close {
+  color: #F5F5F0 !important;
+}
+.modal-content.excel .modal-footer {
+  border: none;
+}
 
 .dropdown-menu.vs {
   background-color: #303030 !important;
@@ -633,18 +1213,62 @@ main.isys {
   color: #343a40;
 }
 .dropdown-menu.isys.first-line li:first-child .dropdown-item {
-  background-color: #B4CDBE;
+  background-color: #FF5A1E;
 }
 .dropdown-menu.isys.first-line li:first-child .dropdown-item:hover {
   background-color: #FF4081;
   color: #ECECE4;
+}
+.dropdown-menu.gray {
+  background-color: #ADB5BD !important;
+  cursor: pointer;
+  min-width: 250px !important;
+  font-family: "Segoe UI", sans-serif !important;
+}
+.dropdown-menu.gray .dropdown-item {
+  color: #343A40;
+  padding: 1rem;
+  font-family: "Segoe UI", sans-serif !important;
+}
+.dropdown-menu.gray .dropdown-item:hover {
+  background-color: #6C757D;
+  color: #343A40;
+}
+.dropdown-menu.gray.first-line li:first-child .dropdown-item {
+  background-color: #DEE2E6;
+}
+.dropdown-menu.gray.first-line li:first-child .dropdown-item:hover {
+  background-color: #ADB5BD;
+  color: #ADB5BD;
+}
+.dropdown-menu.excel {
+  background-color: #92D050 !important;
+  cursor: pointer;
+  min-width: 250px !important;
+  font-family: "Calibri", sans-serif !important;
+}
+.dropdown-menu.excel .dropdown-item {
+  color: #20382F;
+  padding: 1rem;
+  font-family: "Calibri", sans-serif !important;
+}
+.dropdown-menu.excel .dropdown-item:hover {
+  background-color: #D9D9D9;
+  color: #20382F;
+}
+.dropdown-menu.excel.first-line li:first-child .dropdown-item {
+  background-color: #343a40;
+}
+.dropdown-menu.excel.first-line li:first-child .dropdown-item:hover {
+  background-color: #2E7D32;
+  color: #92D050;
 }
 
 .loadercontainer.vs .loader {
   width: 100px;
   height: 100px;
   border: 15px solid #FFF;
-  border-bottom-color: #68217A;
+  border-bottom-color: #E37933;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
@@ -675,6 +1299,83 @@ main.isys {
   100% {
     transform: rotate(360deg);
   }
+}
+.loadercontainer.gray .loader {
+  width: 100px;
+  height: 100px;
+  border: 15px solid #FFF;
+  border-bottom-color: #B0B3B8;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loadercontainer.excel .loader {
+  width: 100px;
+  height: 100px;
+  border: 15px solid #FFF;
+  border-bottom-color: #F5F5F5;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.global-table.vs {
+  width: 95%;
+  table-layout: fixed;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.global-table.vs th, .global-table.vs td {
+  padding: 1rem;
+}
+.global-table.vs thead th {
+  text-transform: capitalize;
+  background-color: #E37933;
+  color: white;
+}
+.global-table.vs tbody tr {
+  color: #F5F5F0;
+}
+.global-table.vs tbody tr:nth-child(even) {
+  background-color: rgba(127, 127, 127, 0.2);
+}
+.global-table.isys {
+  width: 95%;
+  table-layout: fixed;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.global-table.isys th, .global-table.isys td {
+  padding: 1rem;
+}
+.global-table.isys thead th {
+  text-transform: capitalize;
+  background-color: #FF5A1E;
+  color: white;
+}
+.global-table.isys tbody tr {
+  color: #343a40;
+}
+.global-table.isys tbody tr:nth-child(even) {
+  background-color: rgba(200, 195, 185, 0.2);
 }
 
 /*!
@@ -715,20 +1416,27 @@ main.isys {
   --bs-danger: #d9534f;
   --bs-light: #f8f9fa;
   --bs-dark: #343a40;
-  --bs-vs-primary: #68217A;
+  --bs-vs-primary: #E37933;
   --bs-vs-background: #303030;
   --bs-vs-text: #F5F5F0;
   --bs-vs-text-hover: #7F7F7F;
   --bs-vs-active: #E37933;
-  --bs-vs-alternate: #D473B7;
+  --bs-vs-alternate: #7F7F7F;
   --bs-vs-important: #A9DCFF;
   --bs-isys-primary: #FF5A1E;
   --bs-isys-background: #ECECE4;
   --bs-isys-text: #343a40;
   --bs-isys-text-hover: #C8C3B9;
-  --bs-isys-active: #B4CDBE;
-  --bs-isys-alternate: #B4CDBE;
+  --bs-isys-active: #FF5A1E;
+  --bs-isys-alternate: #C8C3B9;
   --bs-isys-important: #FF4081;
+  --bs-excel-primary: #FF5A1E;
+  --bs-excel-background: #ECECE4;
+  --bs-excel-text: #343a40;
+  --bs-excel-text-hover: #C8C3B9;
+  --bs-excel-active: #FF5A1E;
+  --bs-excel-alternate: #C8C3B9;
+  --bs-excel-important: #FF4081;
   --bs-primary-rgb: 69, 130, 236;
   --bs-secondary-rgb: 173, 181, 189;
   --bs-success-rgb: 2, 184, 117;
@@ -737,20 +1445,27 @@ main.isys {
   --bs-danger-rgb: 217, 83, 79;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 52, 58, 64;
-  --bs-vs-primary-rgb: 104, 33, 122;
+  --bs-vs-primary-rgb: 227, 121, 51;
   --bs-vs-background-rgb: 48, 48, 48;
   --bs-vs-text-rgb: 245, 245, 240;
   --bs-vs-text-hover-rgb: 127, 127, 127;
   --bs-vs-active-rgb: 227, 121, 51;
-  --bs-vs-alternate-rgb: 212, 115, 183;
+  --bs-vs-alternate-rgb: 127, 127, 127;
   --bs-vs-important-rgb: 169, 220, 255;
   --bs-isys-primary-rgb: 255, 90, 30;
   --bs-isys-background-rgb: 236, 236, 228;
   --bs-isys-text-rgb: 52, 58, 64;
   --bs-isys-text-hover-rgb: 200, 195, 185;
-  --bs-isys-active-rgb: 180, 205, 190;
-  --bs-isys-alternate-rgb: 180, 205, 190;
+  --bs-isys-active-rgb: 255, 90, 30;
+  --bs-isys-alternate-rgb: 200, 195, 185;
   --bs-isys-important-rgb: 255, 64, 129;
+  --bs-excel-primary-rgb: 255, 90, 30;
+  --bs-excel-background-rgb: 236, 236, 228;
+  --bs-excel-text-rgb: 52, 58, 64;
+  --bs-excel-text-hover-rgb: 200, 195, 185;
+  --bs-excel-active-rgb: 255, 90, 30;
+  --bs-excel-alternate-rgb: 200, 195, 185;
+  --bs-excel-important-rgb: 255, 64, 129;
   --bs-primary-text-emphasis: rgb(27.6, 52, 94.4);
   --bs-secondary-text-emphasis: rgb(69.2, 72.4, 75.6);
   --bs-success-text-emphasis: rgb(0.8, 73.6, 46.8);
@@ -3846,19 +4561,19 @@ textarea.form-control-lg {
 
 .btn-vs-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #68217A;
-  --bs-btn-border-color: #68217A;
+  --bs-btn-bg: #E37933;
+  --bs-btn-border-color: #E37933;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(88.4, 28.05, 103.7);
-  --bs-btn-hover-border-color: rgb(83.2, 26.4, 97.6);
-  --bs-btn-focus-shadow-rgb: 127, 66, 142;
+  --bs-btn-hover-bg: rgb(192.95, 102.85, 43.35);
+  --bs-btn-hover-border-color: rgb(181.6, 96.8, 40.8);
+  --bs-btn-focus-shadow-rgb: 231, 141, 82;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(83.2, 26.4, 97.6);
-  --bs-btn-active-border-color: rgb(78, 24.75, 91.5);
+  --bs-btn-active-bg: rgb(181.6, 96.8, 40.8);
+  --bs-btn-active-border-color: rgb(170.25, 90.75, 38.25);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #68217A;
-  --bs-btn-disabled-border-color: #68217A;
+  --bs-btn-disabled-bg: #E37933;
+  --bs-btn-disabled-border-color: #E37933;
 }
 
 .btn-vs-background {
@@ -3931,19 +4646,19 @@ textarea.form-control-lg {
 
 .btn-vs-alternate {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #D473B7;
-  --bs-btn-border-color: #D473B7;
+  --bs-btn-bg: #7F7F7F;
+  --bs-btn-border-color: #7F7F7F;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(180.2, 97.75, 155.55);
-  --bs-btn-hover-border-color: rgb(169.6, 92, 146.4);
-  --bs-btn-focus-shadow-rgb: 218, 136, 194;
+  --bs-btn-hover-bg: rgb(107.95, 107.95, 107.95);
+  --bs-btn-hover-border-color: rgb(101.6, 101.6, 101.6);
+  --bs-btn-focus-shadow-rgb: 146, 146, 146;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(169.6, 92, 146.4);
-  --bs-btn-active-border-color: rgb(159, 86.25, 137.25);
+  --bs-btn-active-bg: rgb(101.6, 101.6, 101.6);
+  --bs-btn-active-border-color: rgb(95.25, 95.25, 95.25);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #D473B7;
-  --bs-btn-disabled-border-color: #D473B7;
+  --bs-btn-disabled-bg: #7F7F7F;
+  --bs-btn-disabled-border-color: #7F7F7F;
 }
 
 .btn-vs-important {
@@ -4032,40 +4747,159 @@ textarea.form-control-lg {
 }
 
 .btn-isys-active {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
-  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
-  --bs-btn-focus-shadow-rgb: 153, 174, 162;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #c3d7cb;
-  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(216.75, 76.5, 25.5);
+  --bs-btn-hover-border-color: #cc4818;
+  --bs-btn-focus-shadow-rgb: 255, 115, 64;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #cc4818;
+  --bs-btn-active-border-color: rgb(191.25, 67.5, 22.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #B4CDBE;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #FF5A1E;
+  --bs-btn-disabled-border-color: #FF5A1E;
 }
 
 .btn-isys-alternate {
   --bs-btn-color: #000;
-  --bs-btn-bg: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
+  --bs-btn-bg: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
-  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
-  --bs-btn-focus-shadow-rgb: 153, 174, 162;
+  --bs-btn-hover-bg: rgb(208.25, 204, 195.5);
+  --bs-btn-hover-border-color: rgb(205.5, 201, 192);
+  --bs-btn-focus-shadow-rgb: 170, 166, 157;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #c3d7cb;
-  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-active-bg: #d3cfc7;
+  --bs-btn-active-border-color: rgb(205.5, 201, 192);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #B4CDBE;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-bg: #C8C3B9;
+  --bs-btn-disabled-border-color: #C8C3B9;
 }
 
 .btn-isys-important {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #FF4081;
+  --bs-btn-border-color: #FF4081;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(216.75, 54.4, 109.65);
+  --bs-btn-hover-border-color: rgb(204, 51.2, 103.2);
+  --bs-btn-focus-shadow-rgb: 255, 93, 148;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(204, 51.2, 103.2);
+  --bs-btn-active-border-color: rgb(191.25, 48, 96.75);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #FF4081;
+  --bs-btn-disabled-border-color: #FF4081;
+}
+
+.btn-excel-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(216.75, 76.5, 25.5);
+  --bs-btn-hover-border-color: #cc4818;
+  --bs-btn-focus-shadow-rgb: 255, 115, 64;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #cc4818;
+  --bs-btn-active-border-color: rgb(191.25, 67.5, 22.5);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #FF5A1E;
+  --bs-btn-disabled-border-color: #FF5A1E;
+}
+
+.btn-excel-background {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #ECECE4;
+  --bs-btn-border-color: #ECECE4;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(238.85, 238.85, 232.05);
+  --bs-btn-hover-border-color: rgb(237.9, 237.9, 230.7);
+  --bs-btn-focus-shadow-rgb: 201, 201, 194;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: rgb(239.8, 239.8, 233.4);
+  --bs-btn-active-border-color: rgb(237.9, 237.9, 230.7);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #ECECE4;
+  --bs-btn-disabled-border-color: #ECECE4;
+}
+
+.btn-excel-text {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #343a40;
+  --bs-btn-border-color: #343a40;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(44.2, 49.3, 54.4);
+  --bs-btn-hover-border-color: rgb(41.6, 46.4, 51.2);
+  --bs-btn-focus-shadow-rgb: 82, 88, 93;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(41.6, 46.4, 51.2);
+  --bs-btn-active-border-color: rgb(39, 43.5, 48);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #343a40;
+  --bs-btn-disabled-border-color: #343a40;
+}
+
+.btn-excel-text-hover {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(208.25, 204, 195.5);
+  --bs-btn-hover-border-color: rgb(205.5, 201, 192);
+  --bs-btn-focus-shadow-rgb: 170, 166, 157;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #d3cfc7;
+  --bs-btn-active-border-color: rgb(205.5, 201, 192);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #C8C3B9;
+  --bs-btn-disabled-border-color: #C8C3B9;
+}
+
+.btn-excel-active {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(216.75, 76.5, 25.5);
+  --bs-btn-hover-border-color: #cc4818;
+  --bs-btn-focus-shadow-rgb: 255, 115, 64;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #cc4818;
+  --bs-btn-active-border-color: rgb(191.25, 67.5, 22.5);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #FF5A1E;
+  --bs-btn-disabled-border-color: #FF5A1E;
+}
+
+.btn-excel-alternate {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(208.25, 204, 195.5);
+  --bs-btn-hover-border-color: rgb(205.5, 201, 192);
+  --bs-btn-focus-shadow-rgb: 170, 166, 157;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #d3cfc7;
+  --bs-btn-active-border-color: rgb(205.5, 201, 192);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #C8C3B9;
+  --bs-btn-disabled-border-color: #C8C3B9;
+}
+
+.btn-excel-important {
   --bs-btn-color: #fff;
   --bs-btn-bg: #FF4081;
   --bs-btn-border-color: #FF4081;
@@ -4219,19 +5053,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-vs-primary {
-  --bs-btn-color: #68217A;
-  --bs-btn-border-color: #68217A;
+  --bs-btn-color: #E37933;
+  --bs-btn-border-color: #E37933;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #68217A;
-  --bs-btn-hover-border-color: #68217A;
-  --bs-btn-focus-shadow-rgb: 104, 33, 122;
+  --bs-btn-hover-bg: #E37933;
+  --bs-btn-hover-border-color: #E37933;
+  --bs-btn-focus-shadow-rgb: 227, 121, 51;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #68217A;
-  --bs-btn-active-border-color: #68217A;
+  --bs-btn-active-bg: #E37933;
+  --bs-btn-active-border-color: #E37933;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #68217A;
+  --bs-btn-disabled-color: #E37933;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #68217A;
+  --bs-btn-disabled-border-color: #E37933;
   --bs-gradient: none;
 }
 
@@ -4304,19 +5138,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-vs-alternate {
-  --bs-btn-color: #D473B7;
-  --bs-btn-border-color: #D473B7;
+  --bs-btn-color: #7F7F7F;
+  --bs-btn-border-color: #7F7F7F;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #D473B7;
-  --bs-btn-hover-border-color: #D473B7;
-  --bs-btn-focus-shadow-rgb: 212, 115, 183;
+  --bs-btn-hover-bg: #7F7F7F;
+  --bs-btn-hover-border-color: #7F7F7F;
+  --bs-btn-focus-shadow-rgb: 127, 127, 127;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #D473B7;
-  --bs-btn-active-border-color: #D473B7;
+  --bs-btn-active-bg: #7F7F7F;
+  --bs-btn-active-border-color: #7F7F7F;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #D473B7;
+  --bs-btn-disabled-color: #7F7F7F;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #D473B7;
+  --bs-btn-disabled-border-color: #7F7F7F;
   --bs-gradient: none;
 }
 
@@ -4406,40 +5240,159 @@ textarea.form-control-lg {
 }
 
 .btn-outline-isys-active {
-  --bs-btn-color: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #B4CDBE;
-  --bs-btn-hover-border-color: #B4CDBE;
-  --bs-btn-focus-shadow-rgb: 180, 205, 190;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #B4CDBE;
-  --bs-btn-active-border-color: #B4CDBE;
+  --bs-btn-color: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #FF5A1E;
+  --bs-btn-hover-border-color: #FF5A1E;
+  --bs-btn-focus-shadow-rgb: 255, 90, 30;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #FF5A1E;
+  --bs-btn-active-border-color: #FF5A1E;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #B4CDBE;
+  --bs-btn-disabled-color: #FF5A1E;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-border-color: #FF5A1E;
   --bs-gradient: none;
 }
 
 .btn-outline-isys-alternate {
-  --bs-btn-color: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
+  --bs-btn-color: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #B4CDBE;
-  --bs-btn-hover-border-color: #B4CDBE;
-  --bs-btn-focus-shadow-rgb: 180, 205, 190;
+  --bs-btn-hover-bg: #C8C3B9;
+  --bs-btn-hover-border-color: #C8C3B9;
+  --bs-btn-focus-shadow-rgb: 200, 195, 185;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #B4CDBE;
-  --bs-btn-active-border-color: #B4CDBE;
+  --bs-btn-active-bg: #C8C3B9;
+  --bs-btn-active-border-color: #C8C3B9;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #B4CDBE;
+  --bs-btn-disabled-color: #C8C3B9;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-border-color: #C8C3B9;
   --bs-gradient: none;
 }
 
 .btn-outline-isys-important {
+  --bs-btn-color: #FF4081;
+  --bs-btn-border-color: #FF4081;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #FF4081;
+  --bs-btn-hover-border-color: #FF4081;
+  --bs-btn-focus-shadow-rgb: 255, 64, 129;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #FF4081;
+  --bs-btn-active-border-color: #FF4081;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #FF4081;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #FF4081;
+  --bs-gradient: none;
+}
+
+.btn-outline-excel-primary {
+  --bs-btn-color: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #FF5A1E;
+  --bs-btn-hover-border-color: #FF5A1E;
+  --bs-btn-focus-shadow-rgb: 255, 90, 30;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #FF5A1E;
+  --bs-btn-active-border-color: #FF5A1E;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #FF5A1E;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #FF5A1E;
+  --bs-gradient: none;
+}
+
+.btn-outline-excel-background {
+  --bs-btn-color: #ECECE4;
+  --bs-btn-border-color: #ECECE4;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #ECECE4;
+  --bs-btn-hover-border-color: #ECECE4;
+  --bs-btn-focus-shadow-rgb: 236, 236, 228;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #ECECE4;
+  --bs-btn-active-border-color: #ECECE4;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #ECECE4;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #ECECE4;
+  --bs-gradient: none;
+}
+
+.btn-outline-excel-text {
+  --bs-btn-color: #343a40;
+  --bs-btn-border-color: #343a40;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #343a40;
+  --bs-btn-hover-border-color: #343a40;
+  --bs-btn-focus-shadow-rgb: 52, 58, 64;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #343a40;
+  --bs-btn-active-border-color: #343a40;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #343a40;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #343a40;
+  --bs-gradient: none;
+}
+
+.btn-outline-excel-text-hover {
+  --bs-btn-color: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #C8C3B9;
+  --bs-btn-hover-border-color: #C8C3B9;
+  --bs-btn-focus-shadow-rgb: 200, 195, 185;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #C8C3B9;
+  --bs-btn-active-border-color: #C8C3B9;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #C8C3B9;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #C8C3B9;
+  --bs-gradient: none;
+}
+
+.btn-outline-excel-active {
+  --bs-btn-color: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #FF5A1E;
+  --bs-btn-hover-border-color: #FF5A1E;
+  --bs-btn-focus-shadow-rgb: 255, 90, 30;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #FF5A1E;
+  --bs-btn-active-border-color: #FF5A1E;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #FF5A1E;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #FF5A1E;
+  --bs-gradient: none;
+}
+
+.btn-outline-excel-alternate {
+  --bs-btn-color: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #C8C3B9;
+  --bs-btn-hover-border-color: #C8C3B9;
+  --bs-btn-focus-shadow-rgb: 200, 195, 185;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #C8C3B9;
+  --bs-btn-active-border-color: #C8C3B9;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #C8C3B9;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #C8C3B9;
+  --bs-gradient: none;
+}
+
+.btn-outline-excel-important {
   --bs-btn-color: #FF4081;
   --bs-btn-border-color: #FF4081;
   --bs-btn-hover-color: #fff;
@@ -6189,6 +7142,55 @@ textarea.form-control-lg {
   --bs-alert-link-color: var(--bs-isys-important-text-emphasis);
 }
 
+.alert-excel-primary {
+  --bs-alert-color: var(--bs-excel-primary-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-primary-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-primary-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-primary-text-emphasis);
+}
+
+.alert-excel-background {
+  --bs-alert-color: var(--bs-excel-background-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-background-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-background-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-background-text-emphasis);
+}
+
+.alert-excel-text {
+  --bs-alert-color: var(--bs-excel-text-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-text-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-text-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-text-text-emphasis);
+}
+
+.alert-excel-text-hover {
+  --bs-alert-color: var(--bs-excel-text-hover-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-text-hover-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-text-hover-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-text-hover-text-emphasis);
+}
+
+.alert-excel-active {
+  --bs-alert-color: var(--bs-excel-active-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-active-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-active-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-active-text-emphasis);
+}
+
+.alert-excel-alternate {
+  --bs-alert-color: var(--bs-excel-alternate-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-alternate-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-alternate-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-alternate-text-emphasis);
+}
+
+.alert-excel-important {
+  --bs-alert-color: var(--bs-excel-important-text-emphasis);
+  --bs-alert-bg: var(--bs-excel-important-bg-subtle);
+  --bs-alert-border-color: var(--bs-excel-important-border-subtle);
+  --bs-alert-link-color: var(--bs-excel-important-text-emphasis);
+}
+
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -6774,6 +7776,97 @@ textarea.form-control-lg {
   --bs-list-group-active-color: var(--bs-isys-important-bg-subtle);
   --bs-list-group-active-bg: var(--bs-isys-important-text-emphasis);
   --bs-list-group-active-border-color: var(--bs-isys-important-text-emphasis);
+}
+
+.list-group-item-excel-primary {
+  --bs-list-group-color: var(--bs-excel-primary-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-primary-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-primary-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-excel-primary-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-excel-primary-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-primary-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-primary-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-primary-text-emphasis);
+}
+
+.list-group-item-excel-background {
+  --bs-list-group-color: var(--bs-excel-background-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-background-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-background-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-excel-background-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-excel-background-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-background-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-background-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-background-text-emphasis);
+}
+
+.list-group-item-excel-text {
+  --bs-list-group-color: var(--bs-excel-text-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-text-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-text-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-excel-text-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-excel-text-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-text-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-text-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-text-text-emphasis);
+}
+
+.list-group-item-excel-text-hover {
+  --bs-list-group-color: var(--bs-excel-text-hover-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-text-hover-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-text-hover-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-excel-text-hover-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-excel-text-hover-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-text-hover-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-text-hover-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-text-hover-text-emphasis);
+}
+
+.list-group-item-excel-active {
+  --bs-list-group-color: var(--bs-excel-active-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-active-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-active-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-excel-active-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-excel-active-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-active-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-active-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-active-text-emphasis);
+}
+
+.list-group-item-excel-alternate {
+  --bs-list-group-color: var(--bs-excel-alternate-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-alternate-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-alternate-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-excel-alternate-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-excel-alternate-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-alternate-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-alternate-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-alternate-text-emphasis);
+}
+
+.list-group-item-excel-important {
+  --bs-list-group-color: var(--bs-excel-important-text-emphasis);
+  --bs-list-group-bg: var(--bs-excel-important-bg-subtle);
+  --bs-list-group-border-color: var(--bs-excel-important-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-excel-important-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-excel-important-border-subtle);
+  --bs-list-group-active-color: var(--bs-excel-important-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-excel-important-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-excel-important-text-emphasis);
 }
 
 .btn-close {
@@ -8352,7 +9445,7 @@ textarea.form-control-lg {
 }
 
 .text-bg-isys-active {
-  color: #000 !important;
+  color: #fff !important;
   background-color: RGBA(var(--bs-isys-active-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -8364,6 +9457,41 @@ textarea.form-control-lg {
 .text-bg-isys-important {
   color: #fff !important;
   background-color: RGBA(var(--bs-isys-important-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-excel-primary {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-excel-primary-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-excel-background {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-excel-background-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-excel-text {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-excel-text-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-excel-text-hover {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-excel-text-hover-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-excel-active {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-excel-active-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-excel-alternate {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-excel-alternate-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-excel-important {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-excel-important-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .link-primary {
@@ -8443,8 +9571,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-vs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-vs-primary:hover, .link-vs-primary:focus {
-  color: RGBA(83, 26, 98, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(83, 26, 98, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(182, 97, 41, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(182, 97, 41, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-vs-background {
@@ -8488,8 +9616,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-vs-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-vs-alternate:hover, .link-vs-alternate:focus {
-  color: RGBA(170, 92, 146, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(170, 92, 146, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(102, 102, 102, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(102, 102, 102, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-vs-important {
@@ -8542,8 +9670,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-isys-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-isys-active:hover, .link-isys-active:focus {
-  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(204, 72, 24, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 72, 24, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-isys-alternate {
@@ -8551,8 +9679,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-isys-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-isys-alternate:hover, .link-isys-alternate:focus {
-  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(211, 207, 199, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(211, 207, 199, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-isys-important {
@@ -8560,6 +9688,69 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-isys-important-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-isys-important:hover, .link-isys-important:focus {
+  color: RGBA(204, 51, 103, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 51, 103, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-excel-primary {
+  color: RGBA(var(--bs-excel-primary-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-excel-primary:hover, .link-excel-primary:focus {
+  color: RGBA(204, 72, 24, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 72, 24, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-excel-background {
+  color: RGBA(var(--bs-excel-background-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-background-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-excel-background:hover, .link-excel-background:focus {
+  color: RGBA(240, 240, 233, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(240, 240, 233, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-excel-text {
+  color: RGBA(var(--bs-excel-text-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-text-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-excel-text:hover, .link-excel-text:focus {
+  color: RGBA(42, 46, 51, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(42, 46, 51, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-excel-text-hover {
+  color: RGBA(var(--bs-excel-text-hover-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-text-hover-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-excel-text-hover:hover, .link-excel-text-hover:focus {
+  color: RGBA(211, 207, 199, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(211, 207, 199, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-excel-active {
+  color: RGBA(var(--bs-excel-active-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-excel-active:hover, .link-excel-active:focus {
+  color: RGBA(204, 72, 24, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 72, 24, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-excel-alternate {
+  color: RGBA(var(--bs-excel-alternate-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-excel-alternate:hover, .link-excel-alternate:focus {
+  color: RGBA(211, 207, 199, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(211, 207, 199, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-excel-important {
+  color: RGBA(var(--bs-excel-important-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-excel-important-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-excel-important:hover, .link-excel-important:focus {
   color: RGBA(204, 51, 103, var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(204, 51, 103, var(--bs-link-underline-opacity, 1)) !important;
 }
@@ -9051,6 +10242,34 @@ textarea.form-control-lg {
   --bs-focus-ring-color: rgba(var(--bs-isys-important-rgb), var(--bs-focus-ring-opacity));
 }
 
+.focus-ring-excel-primary {
+  --bs-focus-ring-color: rgba(var(--bs-excel-primary-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-excel-background {
+  --bs-focus-ring-color: rgba(var(--bs-excel-background-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-excel-text {
+  --bs-focus-ring-color: rgba(var(--bs-excel-text-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-excel-text-hover {
+  --bs-focus-ring-color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-excel-active {
+  --bs-focus-ring-color: rgba(var(--bs-excel-active-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-excel-alternate {
+  --bs-focus-ring-color: rgba(var(--bs-excel-alternate-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-excel-important {
+  --bs-focus-ring-color: rgba(var(--bs-excel-important-rgb), var(--bs-focus-ring-opacity));
+}
+
 .position-static {
   position: static !important;
 }
@@ -9279,6 +10498,41 @@ textarea.form-control-lg {
 .border-isys-important {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-isys-important-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-excel-primary {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-excel-primary-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-excel-background {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-excel-background-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-excel-text {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-excel-text-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-excel-text-hover {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-excel-active {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-excel-active-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-excel-alternate {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-excel-alternate-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-excel-important {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-excel-important-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-black {
@@ -10302,6 +11556,41 @@ textarea.form-control-lg {
   color: rgba(var(--bs-isys-important-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-excel-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-excel-primary-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-excel-background {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-excel-background-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-excel-text {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-excel-text-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-excel-text-hover {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-excel-active {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-excel-active-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-excel-alternate {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-excel-alternate-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-excel-important {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-excel-important-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-black {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
@@ -10574,6 +11863,41 @@ textarea.form-control-lg {
   text-decoration-color: rgba(var(--bs-isys-important-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
+.link-underline-excel-primary {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-excel-primary-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-excel-background {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-excel-background-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-excel-text {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-excel-text-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-excel-text-hover {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-excel-active {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-excel-active-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-excel-alternate {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-excel-alternate-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-excel-important {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-excel-important-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
 .link-underline {
   --bs-link-underline-opacity: 1;
   text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
@@ -10735,6 +12059,41 @@ textarea.form-control-lg {
 .bg-isys-important {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-isys-important-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-excel-primary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-excel-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-excel-background {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-excel-background-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-excel-text {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-excel-text-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-excel-text-hover {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-excel-text-hover-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-excel-active {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-excel-active-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-excel-alternate {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-excel-alternate-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-excel-important {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-excel-important-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black {
@@ -13964,7 +15323,7 @@ table,
   background-color: #343a40;
 }
 .alert-vs-primary {
-  background-color: #68217A;
+  background-color: #E37933;
 }
 .alert-vs-background {
   background-color: #303030;
@@ -13979,7 +15338,7 @@ table,
   background-color: #E37933;
 }
 .alert-vs-alternate {
-  background-color: #D473B7;
+  background-color: #7F7F7F;
 }
 .alert-vs-important {
   background-color: #A9DCFF;
@@ -13997,12 +15356,33 @@ table,
   background-color: #C8C3B9;
 }
 .alert-isys-active {
-  background-color: #B4CDBE;
+  background-color: #FF5A1E;
 }
 .alert-isys-alternate {
-  background-color: #B4CDBE;
+  background-color: #C8C3B9;
 }
 .alert-isys-important {
+  background-color: #FF4081;
+}
+.alert-excel-primary {
+  background-color: #FF5A1E;
+}
+.alert-excel-background {
+  background-color: #ECECE4;
+}
+.alert-excel-text {
+  background-color: #343a40;
+}
+.alert-excel-text-hover {
+  background-color: #C8C3B9;
+}
+.alert-excel-active {
+  background-color: #FF5A1E;
+}
+.alert-excel-alternate {
+  background-color: #C8C3B9;
+}
+.alert-excel-important {
   background-color: #FF4081;
 }
 .alert-light,

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TaskForce.Dto;
 using TaskForce.Dto.Progetto;
 using TaskForce.Services;
 
@@ -63,5 +64,13 @@ public class ProgettiController(IProgettoService svc) : ControllerBase
     [ProducesResponseType(typeof(IEnumerable<GetProgettoWithFasiRequest>), StatusCodes.Status200OK)]
     public async Task<ActionResult<IEnumerable<GetProgettoWithFasiRequest>>> GetAllWithInfo(CancellationToken ct)
         => Ok(await svc.GetAllWithInfoAsync(ct));
+
+    [HttpGet("overview")]
+    [EndpointName("GetProgettiPortfolioOverview")]
+    [EndpointSummary("Panoramica portfolio: carico, giorni disponibili e fattibilità per scadenza")]
+    [ProducesResponseType(typeof(IEnumerable<PortfolioProjectOverviewDto>), StatusCodes.Status200OK)]
+    public async Task<ActionResult<IEnumerable<PortfolioProjectOverviewDto>>> GetOverview(CancellationToken ct)
+    => Ok(await svc.GetPortfolioOverviewAsync(ct));
+
 
 }

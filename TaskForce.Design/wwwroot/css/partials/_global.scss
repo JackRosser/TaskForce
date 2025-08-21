@@ -1,0 +1,29 @@
+@mixin global($background, $text, $text-hover, $primary, $active, $important, $alternate) {
+    width: 95%;
+    table-layout: fixed;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    & th,
+    & td {
+        padding: 1rem;
+    }
+
+    & thead {
+        & th {
+            text-transform: capitalize;
+            background-color: $primary;
+            color: white;
+        }
+    }
+
+    & tbody {
+        & tr {
+            color: $text;
+
+            &:nth-child(even) {
+                background-color: rgba($alternate, 0.2);
+            }
+        }
+    }
+}

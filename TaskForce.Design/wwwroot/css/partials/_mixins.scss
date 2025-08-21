@@ -6,6 +6,14 @@ main {
     &.isys {
         @include maintheme($isys-font, $isys-background);
     }
+
+    &.gray {
+        @include maintheme($gray-font, $gray-background);
+    }
+
+    &.excel {
+        @include maintheme($excel-font, $excel-background);
+    }
 }
 
 .progettocontainer {
@@ -16,6 +24,16 @@ main {
     &.isys {
         @include progettoContainer($isys-background, $isys-text, $isys-text-hover, $isys-primary, $isys-active, $isys-important, $isys-alternate);
     }
+
+    &.gray {
+        @include progettoContainer($gray-background, $gray-text, $gray-text-hover, $gray-primary, $gray-active, $gray-important, $gray-alternate);
+    }
+
+    &.excel {
+        @include progettoContainer($excel-background, $excel-text, $excel-text-hover, $excel-primary, $excel-active, $excel-important, $excel-alternate);
+    }
+
+
 }
 
 .index {
@@ -26,10 +44,18 @@ main {
     &.isys {
         @include index($isys-background, $isys-text, $isys-text-hover, $isys-active, 1px, 5%);
     }
+
+    &.gray {
+        @include index($gray-background, $gray-text, $gray-text-hover, $gray-active, 1px, 5%);
+    }
+
+    &.excel {
+        @include index($excel-background, $excel-text, $excel-text-hover, $excel-active, 1px, 5%);
+    }
+
 }
 
-.btn
-{
+.btn {
     &.vs {
         @include button($vs-font);
     }
@@ -37,6 +63,15 @@ main {
     &.isys {
         @include button($isys-font);
     }
+
+    &.gray {
+        @include button($gray-font);
+    }
+
+    &.excel {
+        @include button($excel-font);
+    }
+
 
     &.new-project-btn {
         &.vs {
@@ -46,6 +81,15 @@ main {
         &.isys {
             @include newProject($isys-active);
         }
+
+        &.gray {
+            @include newProject($gray-active);
+        }
+
+        &.excel {
+            @include newProject($excel-active);
+        }
+
     }
 }
 
@@ -57,10 +101,18 @@ main {
     &.isys {
         @include modal($isys-background, $isys-text, $isys-text-hover);
     }
+
+    &.gray {
+        @include modal($gray-background, $gray-text, $gray-text-hover);
+    }
+
+    &.excel {
+        @include modal($excel-background, $excel-text, $excel-text-hover);
+    }
+
 }
 
-.dropdown-menu
-{
+.dropdown-menu {
     &.vs {
         @include dropdown($vs-background, $vs-text, $vs-active, $vs-text-hover, $vs-important, $vs-font);
     }
@@ -68,6 +120,15 @@ main {
     &.isys {
         @include dropdown($isys-background, $isys-text, $isys-active, $isys-text-hover, $isys-important, $isys-font);
     }
+
+    &.gray {
+        @include dropdown($gray-background, $gray-text, $gray-active, $gray-text-hover, $gray-important, $gray-font);
+    }
+
+    &.excel {
+        @include dropdown($excel-background, $excel-text, $excel-active, $excel-text-hover, $excel-important, $excel-font);
+    }
+
 }
 
 .loadercontainer {
@@ -77,5 +138,24 @@ main {
 
     &.isys {
         @include loader($isys-primary);
+    }
+
+    &.gray {
+        @include loader($gray-primary);
+    }
+
+    &.excel {
+        @include loader($excel-primary);
+    }
+
+}
+
+.global-table {
+    &.vs {
+        @include global($vs-background, $vs-text, $vs-text-hover, $vs-primary, $vs-active, $vs-important, $vs-alternate);
+    }
+
+    &.isys {
+        @include global($isys-background, $isys-text, $isys-text-hover, $isys-primary, $isys-active, $isys-important, $isys-alternate);
     }
 }

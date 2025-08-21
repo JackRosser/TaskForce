@@ -17,7 +17,7 @@ namespace TaskForce.Client.Pages
         protected override async Task GetRecords()
         {
             IsLoading = true;
-            var response = await Sdk.SendRequestAsync(c => c.GetProgettiWithFasiInfoAsync());
+            var response = await Sdk.SendProgettiRequestAsync(c => c.GetProgettiWithFasiInfoAsync());
             if (response.IsFailed) return;
             Progetti = response.Value;
             if (Progetti is null || !Progetti.Any()) NessunProgettoInizializzato = true;

@@ -2,12 +2,12 @@ $custom-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 
 // Tema visual studio
 $vs-font: 'Consolas', sans-serif;
-$vs-primary: #68217A;
+$vs-primary: #E37933;
 $vs-background: #303030;
 $vs-text: #F5F5F0;
 $vs-text-hover: #7F7F7F;
 $vs-active: #E37933;
-$vs-alternate: #D473B7;
+$vs-alternate: #7F7F7F;
 $vs-important: #A9DCFF;
 
 // Tema ISystem
@@ -16,12 +16,34 @@ $isys-primary: #FF5A1E;
 $isys-background: #ECECE4;
 $isys-text: $dark;
 $isys-text-hover: #C8C3B9;
-$isys-active: #B4CDBE;
-$isys-alternate: #B4CDBE;
+$isys-active: #FF5A1E;
+$isys-alternate: #C8C3B9;
 $isys-important: #FF4081;
 
-// Merge nel theme-colors dei nuovi colori
+// Tema Sobrio (gray-)
+$gray-font: 'Segoe UI', sans-serif;
+$gray-primary: #B0B3B8;
+$gray-background: #ADB5BD; 
+$gray-text: #343A40;
+$gray-text-hover: #6C757D; 
+$gray-active: #DEE2E6;
+$gray-alternate: #CED4DA; 
+$gray-important: #ADB5BD;
+
+// Tema Excel-like (excel-)
+$excel-font: 'Calibri', sans-serif;
+$excel-primary: #F5F5F5;
+$excel-background: #92D050;
+$excel-text: #20382F;
+$excel-text-hover: #D9D9D9;
+$excel-active: $dark;
+$excel-alternate: $white;
+$excel-important: #2E7D32;
+
+
+
 $theme-colors: map-merge( $theme-colors, ( 
+    // Visual Studio
     "vs-primary": $vs-primary, 
     "vs-background": $vs-background,
     "vs-text": $vs-text,
@@ -30,6 +52,7 @@ $theme-colors: map-merge( $theme-colors, (
     "vs-alternate": $vs-alternate,
     "vs-important": $vs-important,
 
+    // ISystem
     "isys-primary": $isys-primary, 
     "isys-background": $isys-background,
     "isys-text": $isys-text,
@@ -37,4 +60,14 @@ $theme-colors: map-merge( $theme-colors, (
     "isys-active": $isys-active,
     "isys-alternate": $isys-alternate,
     "isys-important": $isys-important,
+
+    // ISystem
+    "excel-primary": $isys-primary, 
+    "excel-background": $isys-background,
+    "excel-text": $isys-text,
+    "excel-text-hover": $isys-text-hover,
+    "excel-active": $isys-active,
+    "excel-alternate": $isys-alternate,
+    "excel-important": $isys-important,
 ) );
+

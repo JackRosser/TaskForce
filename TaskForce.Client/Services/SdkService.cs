@@ -69,7 +69,7 @@ namespace TaskForce.Client.Services
             }
         }
 
-        public async Task<Result<T>> SendRequestAsync<T>(Func<ProgettiClient, Task<T>> action, [CallerMemberName] string caller = "")
+        public async Task<Result<T>> SendProgettiRequestAsync<T>(Func<ProgettiClient, Task<T>> action, [CallerMemberName] string caller = "")
         {
             try
             {
@@ -117,6 +117,20 @@ namespace TaskForce.Client.Services
             try
             {
                 await action(preseInCaricoClient);
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError($"Caller {caller},{ex.Message}");
+                return Result.Fail(ex.Message);
+            }
+        }
+
+        public async Task<Result> SendProgettiRequestAsync(Func<ProgettiClient, Task> action, [CallerMemberName] string caller = "")
+        {
+            try
+            {
+                await action(progettiClient);
                 return Result.Ok();
             }
             catch (Exception ex)
