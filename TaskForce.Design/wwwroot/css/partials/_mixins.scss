@@ -149,3 +149,13 @@ main {
     }
 
 }
+
+.global-table {
+    &.vs {
+        @include global($vs-background, $vs-text, $vs-text-hover, $vs-primary, $vs-active, $vs-important, $vs-alternate);
+    }
+
+    &.isys {
+        @include global($isys-background, $isys-text, $isys-text-hover, $isys-primary, $isys-active, $isys-important, $isys-alternate);
+    }
+}

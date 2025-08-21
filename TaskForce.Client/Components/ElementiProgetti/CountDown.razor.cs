@@ -60,5 +60,13 @@ namespace TaskForce.Client.Components.ElementiProgetti
             if (Progetto is null) return;
             if (SezioneCreata.HasDelegate) { await SezioneCreata.InvokeAsync(Progetto); }
         }
+
+        private async Task DeleteProject()
+        {
+            if (Progetto is null) return;
+            var response = await Sdk.SendProgettiRequestAsync(r => r.DeleteProgettoAsync(Progetto.Id));
+            if (!response.IsSuccess) return;
+            await SezioneCreata.InvokeAsync(Progetto);
+        }
     }
 }

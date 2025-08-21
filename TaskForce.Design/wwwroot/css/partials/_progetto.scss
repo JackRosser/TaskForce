@@ -50,7 +50,7 @@
         & .macrocontainer {
             cursor: grab;
             background-color: $text-hover;
-            color: $text;
+            color: $text !important;
 
 
             & h2 {

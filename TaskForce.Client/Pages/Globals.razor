@@ -1,2 +1,55 @@
 ﻿@inherits SdkBase
 @page "/globals"
+@using TaskForce.Enum
+
+<Loading Toggle="@IsLoading" />
+@if (Progetti is not null)
+{
+    <table class="global-table @Theme">
+        <thead>
+            <tr>
+                <th>nome</th>
+                <th>consegna</th>
+                <th>giorni inseriti</th>
+                <th>giorni lavorati</th>
+                <th>residuo</th>
+                <th>disponibili totali</th>
+                <th>disponibili netti</th>
+                <th>margine</th>
+                <th>esito</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var progetto in Progetti)
+            {
+                <tr>
+                    <td>@progetto.Nome</td>
+                    <td>@progetto.Consegna.ToShortDateString()</td>
+                    <td>@progetto.GiorniInseriti</td>
+                    <td>@progetto.GiorniLavorati</td>
+                    <td>@progetto.GiorniRimanenti</td>
+                    <td>@progetto.GiorniLavorativiDisponibiliTot</td>
+                    <td>@progetto.GiorniLavorativiDisponibiliNetti</td>
+                    <td>@progetto.SlackGiorni</td>
+                    <td>
+                        @{
+                            var esitoColor = progetto.Esito switch
+                            {
+                                TipoEsito.NonFattibile => "danger",
+                                TipoEsito.Warning => "warning",
+                                _ => "success"
+                            };
+                            var esitoText = progetto.Esito switch
+                            {
+                                TipoEsito.NonFattibile => "Non fattibile",
+                                TipoEsito.Warning => "Poco margine",
+                                _ => "In linea"
+                            };
+                        }
+                        <Badge Title="@esitoText" StaticColor="@esitoColor" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

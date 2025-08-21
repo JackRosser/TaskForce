@@ -25,5 +25,6 @@ namespace TaskForce.Design.Components
         public static string Edit = "bi bi-pencil-fill";
         public static string AddUser = "bi bi-person-plus-fill";
         public static string AddFase = "bi bi-node-plus";
+        public static string Trash = "bi bi-trash3-fill";
     }
 }

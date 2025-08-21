@@ -188,7 +188,7 @@ main.excel {
   overflow: hidden;
 }
 .progettocontainer.vs .project-deadline {
-  background-color: #68217A;
+  background-color: #E37933;
   color: #F5F5F0;
   display: flex;
   padding: 0.8rem;
@@ -224,7 +224,7 @@ main.excel {
 .progettocontainer.vs .macrobox .macrocontainer {
   cursor: grab;
   background-color: #7F7F7F;
-  color: #F5F5F0;
+  color: #F5F5F0 !important;
 }
 .progettocontainer.vs .macrobox .macrocontainer h2, .progettocontainer.vs .macrobox .macrocontainer .h2 {
   margin: 0;
@@ -299,7 +299,7 @@ main.excel {
   table-layout: fixed;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead tr {
-  background-color: #68217A;
+  background-color: #E37933;
   border-radius: 15px;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead tr th {
@@ -307,10 +307,10 @@ main.excel {
   font-weight: 600;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr {
-  background-color: #D473B7;
+  background-color: #7F7F7F;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(212, 115, 183, 0.6);
+  background-color: rgba(127, 127, 127, 0.6);
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
   padding: 1rem;
@@ -344,7 +344,7 @@ main.excel {
   width: inherit;
 }
 .progettocontainer.vs .macrobox .macrocontainer:nth-child(even) {
-  background-color: #D473B7;
+  background-color: #7F7F7F;
   color: #303030;
 }
 .progettocontainer.vs .macrobox .macrocontainer:active {
@@ -395,7 +395,7 @@ main.excel {
 .progettocontainer.isys .macrobox .macrocontainer {
   cursor: grab;
   background-color: #C8C3B9;
-  color: #343a40;
+  color: #343a40 !important;
 }
 .progettocontainer.isys .macrobox .macrocontainer h2, .progettocontainer.isys .macrobox .macrocontainer .h2 {
   margin: 0;
@@ -478,10 +478,10 @@ main.excel {
   font-weight: 600;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody tr {
-  background-color: #B4CDBE;
+  background-color: #C8C3B9;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody tr:nth-child(even) {
-  background-color: rgba(180, 205, 190, 0.6);
+  background-color: rgba(200, 195, 185, 0.6);
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody tr td {
   padding: 1rem;
@@ -515,7 +515,7 @@ main.excel {
   width: inherit;
 }
 .progettocontainer.isys .macrobox .macrocontainer:nth-child(even) {
-  background-color: #B4CDBE;
+  background-color: #C8C3B9;
   color: #ECECE4;
 }
 .progettocontainer.isys .macrobox .macrocontainer:active {
@@ -566,7 +566,7 @@ main.excel {
 .progettocontainer.gray .macrobox .macrocontainer {
   cursor: grab;
   background-color: #6C757D;
-  color: #343A40;
+  color: #343A40 !important;
 }
 .progettocontainer.gray .macrobox .macrocontainer h2, .progettocontainer.gray .macrobox .macrocontainer .h2 {
   margin: 0;
@@ -737,7 +737,7 @@ main.excel {
 .progettocontainer.excel .macrobox .macrocontainer {
   cursor: grab;
   background-color: #D9D9D9;
-  color: #20382F;
+  color: #20382F !important;
 }
 .progettocontainer.excel .macrobox .macrocontainer h2, .progettocontainer.excel .macrobox .macrocontainer .h2 {
   margin: 0;
@@ -909,7 +909,7 @@ main.excel {
   background-color: #C8C3B9;
 }
 .index.isys button.active {
-  background-color: #B4CDBE;
+  background-color: #FF5A1E;
   font-weight: bold;
   color: #ECECE4;
   border-right: none;
@@ -1015,15 +1015,15 @@ main.excel {
   padding: 2rem 4rem;
   font-size: 2rem;
   font-weight: 600;
-  color: #B4CDBE;
-  background: linear-gradient(#B4CDBE, white, #B4CDBE);
+  color: #FF5A1E;
+  background: linear-gradient(#FF5A1E, white, #FF5A1E);
   border: none;
   border-radius: 15px !important;
   transition: transform 300ms ease-in, background-color 300ms ease-in, background-position 300ms ease-in, background-size 300ms ease-in;
 }
 .btn.new-project-btn.isys:hover {
   transform: scale(1.03);
-  background: linear-gradient(white, #B4CDBE, white);
+  background: linear-gradient(white, #FF5A1E, white);
   color: white;
 }
 .btn.new-project-btn.isys:active {
@@ -1197,7 +1197,7 @@ main.excel {
   color: #343a40;
 }
 .dropdown-menu.isys.first-line li:first-child .dropdown-item {
-  background-color: #B4CDBE;
+  background-color: #FF5A1E;
 }
 .dropdown-menu.isys.first-line li:first-child .dropdown-item:hover {
   background-color: #FF4081;
@@ -1252,7 +1252,7 @@ main.excel {
   width: 100px;
   height: 100px;
   border: 15px solid #FFF;
-  border-bottom-color: #68217A;
+  border-bottom-color: #E37933;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
@@ -1321,6 +1321,47 @@ main.excel {
   }
 }
 
+.global-table.vs {
+  width: 95%;
+  table-layout: fixed;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.global-table.vs th, .global-table.vs td {
+  padding: 1rem;
+}
+.global-table.vs thead th {
+  text-transform: capitalize;
+  background-color: #E37933;
+  color: white;
+}
+.global-table.vs tbody tr {
+  color: #F5F5F0;
+}
+.global-table.vs tbody tr:nth-child(even) {
+  background-color: rgba(127, 127, 127, 0.2);
+}
+.global-table.isys {
+  width: 95%;
+  table-layout: fixed;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.global-table.isys th, .global-table.isys td {
+  padding: 1rem;
+}
+.global-table.isys thead th {
+  text-transform: capitalize;
+  background-color: #FF5A1E;
+  color: white;
+}
+.global-table.isys tbody tr {
+  color: #343a40;
+}
+.global-table.isys tbody tr:nth-child(even) {
+  background-color: rgba(200, 195, 185, 0.2);
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -1359,26 +1400,26 @@ main.excel {
   --bs-danger: #d9534f;
   --bs-light: #f8f9fa;
   --bs-dark: #343a40;
-  --bs-vs-primary: #68217A;
+  --bs-vs-primary: #E37933;
   --bs-vs-background: #303030;
   --bs-vs-text: #F5F5F0;
   --bs-vs-text-hover: #7F7F7F;
   --bs-vs-active: #E37933;
-  --bs-vs-alternate: #D473B7;
+  --bs-vs-alternate: #7F7F7F;
   --bs-vs-important: #A9DCFF;
   --bs-isys-primary: #FF5A1E;
   --bs-isys-background: #ECECE4;
   --bs-isys-text: #343a40;
   --bs-isys-text-hover: #C8C3B9;
-  --bs-isys-active: #B4CDBE;
-  --bs-isys-alternate: #B4CDBE;
+  --bs-isys-active: #FF5A1E;
+  --bs-isys-alternate: #C8C3B9;
   --bs-isys-important: #FF4081;
   --bs-excel-primary: #FF5A1E;
   --bs-excel-background: #ECECE4;
   --bs-excel-text: #343a40;
   --bs-excel-text-hover: #C8C3B9;
-  --bs-excel-active: #B4CDBE;
-  --bs-excel-alternate: #B4CDBE;
+  --bs-excel-active: #FF5A1E;
+  --bs-excel-alternate: #C8C3B9;
   --bs-excel-important: #FF4081;
   --bs-primary-rgb: 69, 130, 236;
   --bs-secondary-rgb: 173, 181, 189;
@@ -1388,26 +1429,26 @@ main.excel {
   --bs-danger-rgb: 217, 83, 79;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 52, 58, 64;
-  --bs-vs-primary-rgb: 104, 33, 122;
+  --bs-vs-primary-rgb: 227, 121, 51;
   --bs-vs-background-rgb: 48, 48, 48;
   --bs-vs-text-rgb: 245, 245, 240;
   --bs-vs-text-hover-rgb: 127, 127, 127;
   --bs-vs-active-rgb: 227, 121, 51;
-  --bs-vs-alternate-rgb: 212, 115, 183;
+  --bs-vs-alternate-rgb: 127, 127, 127;
   --bs-vs-important-rgb: 169, 220, 255;
   --bs-isys-primary-rgb: 255, 90, 30;
   --bs-isys-background-rgb: 236, 236, 228;
   --bs-isys-text-rgb: 52, 58, 64;
   --bs-isys-text-hover-rgb: 200, 195, 185;
-  --bs-isys-active-rgb: 180, 205, 190;
-  --bs-isys-alternate-rgb: 180, 205, 190;
+  --bs-isys-active-rgb: 255, 90, 30;
+  --bs-isys-alternate-rgb: 200, 195, 185;
   --bs-isys-important-rgb: 255, 64, 129;
   --bs-excel-primary-rgb: 255, 90, 30;
   --bs-excel-background-rgb: 236, 236, 228;
   --bs-excel-text-rgb: 52, 58, 64;
   --bs-excel-text-hover-rgb: 200, 195, 185;
-  --bs-excel-active-rgb: 180, 205, 190;
-  --bs-excel-alternate-rgb: 180, 205, 190;
+  --bs-excel-active-rgb: 255, 90, 30;
+  --bs-excel-alternate-rgb: 200, 195, 185;
   --bs-excel-important-rgb: 255, 64, 129;
   --bs-primary-text-emphasis: rgb(27.6, 52, 94.4);
   --bs-secondary-text-emphasis: rgb(69.2, 72.4, 75.6);
@@ -4504,19 +4545,19 @@ textarea.form-control-lg {
 
 .btn-vs-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #68217A;
-  --bs-btn-border-color: #68217A;
+  --bs-btn-bg: #E37933;
+  --bs-btn-border-color: #E37933;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(88.4, 28.05, 103.7);
-  --bs-btn-hover-border-color: rgb(83.2, 26.4, 97.6);
-  --bs-btn-focus-shadow-rgb: 127, 66, 142;
+  --bs-btn-hover-bg: rgb(192.95, 102.85, 43.35);
+  --bs-btn-hover-border-color: rgb(181.6, 96.8, 40.8);
+  --bs-btn-focus-shadow-rgb: 231, 141, 82;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(83.2, 26.4, 97.6);
-  --bs-btn-active-border-color: rgb(78, 24.75, 91.5);
+  --bs-btn-active-bg: rgb(181.6, 96.8, 40.8);
+  --bs-btn-active-border-color: rgb(170.25, 90.75, 38.25);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #68217A;
-  --bs-btn-disabled-border-color: #68217A;
+  --bs-btn-disabled-bg: #E37933;
+  --bs-btn-disabled-border-color: #E37933;
 }
 
 .btn-vs-background {
@@ -4589,19 +4630,19 @@ textarea.form-control-lg {
 
 .btn-vs-alternate {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #D473B7;
-  --bs-btn-border-color: #D473B7;
+  --bs-btn-bg: #7F7F7F;
+  --bs-btn-border-color: #7F7F7F;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(180.2, 97.75, 155.55);
-  --bs-btn-hover-border-color: rgb(169.6, 92, 146.4);
-  --bs-btn-focus-shadow-rgb: 218, 136, 194;
+  --bs-btn-hover-bg: rgb(107.95, 107.95, 107.95);
+  --bs-btn-hover-border-color: rgb(101.6, 101.6, 101.6);
+  --bs-btn-focus-shadow-rgb: 146, 146, 146;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(169.6, 92, 146.4);
-  --bs-btn-active-border-color: rgb(159, 86.25, 137.25);
+  --bs-btn-active-bg: rgb(101.6, 101.6, 101.6);
+  --bs-btn-active-border-color: rgb(95.25, 95.25, 95.25);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #D473B7;
-  --bs-btn-disabled-border-color: #D473B7;
+  --bs-btn-disabled-bg: #7F7F7F;
+  --bs-btn-disabled-border-color: #7F7F7F;
 }
 
 .btn-vs-important {
@@ -4690,37 +4731,37 @@ textarea.form-control-lg {
 }
 
 .btn-isys-active {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
-  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
-  --bs-btn-focus-shadow-rgb: 153, 174, 162;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #c3d7cb;
-  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(216.75, 76.5, 25.5);
+  --bs-btn-hover-border-color: #cc4818;
+  --bs-btn-focus-shadow-rgb: 255, 115, 64;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #cc4818;
+  --bs-btn-active-border-color: rgb(191.25, 67.5, 22.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #B4CDBE;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #FF5A1E;
+  --bs-btn-disabled-border-color: #FF5A1E;
 }
 
 .btn-isys-alternate {
   --bs-btn-color: #000;
-  --bs-btn-bg: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
+  --bs-btn-bg: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
-  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
-  --bs-btn-focus-shadow-rgb: 153, 174, 162;
+  --bs-btn-hover-bg: rgb(208.25, 204, 195.5);
+  --bs-btn-hover-border-color: rgb(205.5, 201, 192);
+  --bs-btn-focus-shadow-rgb: 170, 166, 157;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #c3d7cb;
-  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-active-bg: #d3cfc7;
+  --bs-btn-active-border-color: rgb(205.5, 201, 192);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #B4CDBE;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-bg: #C8C3B9;
+  --bs-btn-disabled-border-color: #C8C3B9;
 }
 
 .btn-isys-important {
@@ -4809,37 +4850,37 @@ textarea.form-control-lg {
 }
 
 .btn-excel-active {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
-  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
-  --bs-btn-focus-shadow-rgb: 153, 174, 162;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #c3d7cb;
-  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(216.75, 76.5, 25.5);
+  --bs-btn-hover-border-color: #cc4818;
+  --bs-btn-focus-shadow-rgb: 255, 115, 64;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #cc4818;
+  --bs-btn-active-border-color: rgb(191.25, 67.5, 22.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #B4CDBE;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #FF5A1E;
+  --bs-btn-disabled-border-color: #FF5A1E;
 }
 
 .btn-excel-alternate {
   --bs-btn-color: #000;
-  --bs-btn-bg: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
+  --bs-btn-bg: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(191.25, 212.5, 199.75);
-  --bs-btn-hover-border-color: rgb(187.5, 210, 196.5);
-  --bs-btn-focus-shadow-rgb: 153, 174, 162;
+  --bs-btn-hover-bg: rgb(208.25, 204, 195.5);
+  --bs-btn-hover-border-color: rgb(205.5, 201, 192);
+  --bs-btn-focus-shadow-rgb: 170, 166, 157;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #c3d7cb;
-  --bs-btn-active-border-color: rgb(187.5, 210, 196.5);
+  --bs-btn-active-bg: #d3cfc7;
+  --bs-btn-active-border-color: rgb(205.5, 201, 192);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #B4CDBE;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-bg: #C8C3B9;
+  --bs-btn-disabled-border-color: #C8C3B9;
 }
 
 .btn-excel-important {
@@ -4996,19 +5037,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-vs-primary {
-  --bs-btn-color: #68217A;
-  --bs-btn-border-color: #68217A;
+  --bs-btn-color: #E37933;
+  --bs-btn-border-color: #E37933;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #68217A;
-  --bs-btn-hover-border-color: #68217A;
-  --bs-btn-focus-shadow-rgb: 104, 33, 122;
+  --bs-btn-hover-bg: #E37933;
+  --bs-btn-hover-border-color: #E37933;
+  --bs-btn-focus-shadow-rgb: 227, 121, 51;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #68217A;
-  --bs-btn-active-border-color: #68217A;
+  --bs-btn-active-bg: #E37933;
+  --bs-btn-active-border-color: #E37933;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #68217A;
+  --bs-btn-disabled-color: #E37933;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #68217A;
+  --bs-btn-disabled-border-color: #E37933;
   --bs-gradient: none;
 }
 
@@ -5081,19 +5122,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-vs-alternate {
-  --bs-btn-color: #D473B7;
-  --bs-btn-border-color: #D473B7;
+  --bs-btn-color: #7F7F7F;
+  --bs-btn-border-color: #7F7F7F;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #D473B7;
-  --bs-btn-hover-border-color: #D473B7;
-  --bs-btn-focus-shadow-rgb: 212, 115, 183;
+  --bs-btn-hover-bg: #7F7F7F;
+  --bs-btn-hover-border-color: #7F7F7F;
+  --bs-btn-focus-shadow-rgb: 127, 127, 127;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #D473B7;
-  --bs-btn-active-border-color: #D473B7;
+  --bs-btn-active-bg: #7F7F7F;
+  --bs-btn-active-border-color: #7F7F7F;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #D473B7;
+  --bs-btn-disabled-color: #7F7F7F;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #D473B7;
+  --bs-btn-disabled-border-color: #7F7F7F;
   --bs-gradient: none;
 }
 
@@ -5183,36 +5224,36 @@ textarea.form-control-lg {
 }
 
 .btn-outline-isys-active {
-  --bs-btn-color: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #B4CDBE;
-  --bs-btn-hover-border-color: #B4CDBE;
-  --bs-btn-focus-shadow-rgb: 180, 205, 190;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #B4CDBE;
-  --bs-btn-active-border-color: #B4CDBE;
+  --bs-btn-color: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #FF5A1E;
+  --bs-btn-hover-border-color: #FF5A1E;
+  --bs-btn-focus-shadow-rgb: 255, 90, 30;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #FF5A1E;
+  --bs-btn-active-border-color: #FF5A1E;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #B4CDBE;
+  --bs-btn-disabled-color: #FF5A1E;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-border-color: #FF5A1E;
   --bs-gradient: none;
 }
 
 .btn-outline-isys-alternate {
-  --bs-btn-color: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
+  --bs-btn-color: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #B4CDBE;
-  --bs-btn-hover-border-color: #B4CDBE;
-  --bs-btn-focus-shadow-rgb: 180, 205, 190;
+  --bs-btn-hover-bg: #C8C3B9;
+  --bs-btn-hover-border-color: #C8C3B9;
+  --bs-btn-focus-shadow-rgb: 200, 195, 185;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #B4CDBE;
-  --bs-btn-active-border-color: #B4CDBE;
+  --bs-btn-active-bg: #C8C3B9;
+  --bs-btn-active-border-color: #C8C3B9;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #B4CDBE;
+  --bs-btn-disabled-color: #C8C3B9;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-border-color: #C8C3B9;
   --bs-gradient: none;
 }
 
@@ -5302,36 +5343,36 @@ textarea.form-control-lg {
 }
 
 .btn-outline-excel-active {
-  --bs-btn-color: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #B4CDBE;
-  --bs-btn-hover-border-color: #B4CDBE;
-  --bs-btn-focus-shadow-rgb: 180, 205, 190;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #B4CDBE;
-  --bs-btn-active-border-color: #B4CDBE;
+  --bs-btn-color: #FF5A1E;
+  --bs-btn-border-color: #FF5A1E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #FF5A1E;
+  --bs-btn-hover-border-color: #FF5A1E;
+  --bs-btn-focus-shadow-rgb: 255, 90, 30;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #FF5A1E;
+  --bs-btn-active-border-color: #FF5A1E;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #B4CDBE;
+  --bs-btn-disabled-color: #FF5A1E;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-border-color: #FF5A1E;
   --bs-gradient: none;
 }
 
 .btn-outline-excel-alternate {
-  --bs-btn-color: #B4CDBE;
-  --bs-btn-border-color: #B4CDBE;
+  --bs-btn-color: #C8C3B9;
+  --bs-btn-border-color: #C8C3B9;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #B4CDBE;
-  --bs-btn-hover-border-color: #B4CDBE;
-  --bs-btn-focus-shadow-rgb: 180, 205, 190;
+  --bs-btn-hover-bg: #C8C3B9;
+  --bs-btn-hover-border-color: #C8C3B9;
+  --bs-btn-focus-shadow-rgb: 200, 195, 185;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #B4CDBE;
-  --bs-btn-active-border-color: #B4CDBE;
+  --bs-btn-active-bg: #C8C3B9;
+  --bs-btn-active-border-color: #C8C3B9;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #B4CDBE;
+  --bs-btn-disabled-color: #C8C3B9;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #B4CDBE;
+  --bs-btn-disabled-border-color: #C8C3B9;
   --bs-gradient: none;
 }
 
@@ -9388,7 +9429,7 @@ textarea.form-control-lg {
 }
 
 .text-bg-isys-active {
-  color: #000 !important;
+  color: #fff !important;
   background-color: RGBA(var(--bs-isys-active-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -9423,7 +9464,7 @@ textarea.form-control-lg {
 }
 
 .text-bg-excel-active {
-  color: #000 !important;
+  color: #fff !important;
   background-color: RGBA(var(--bs-excel-active-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -9514,8 +9555,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-vs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-vs-primary:hover, .link-vs-primary:focus {
-  color: RGBA(83, 26, 98, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(83, 26, 98, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(182, 97, 41, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(182, 97, 41, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-vs-background {
@@ -9559,8 +9600,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-vs-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-vs-alternate:hover, .link-vs-alternate:focus {
-  color: RGBA(170, 92, 146, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(170, 92, 146, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(102, 102, 102, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(102, 102, 102, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-vs-important {
@@ -9613,8 +9654,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-isys-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-isys-active:hover, .link-isys-active:focus {
-  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(204, 72, 24, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 72, 24, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-isys-alternate {
@@ -9622,8 +9663,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-isys-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-isys-alternate:hover, .link-isys-alternate:focus {
-  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(211, 207, 199, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(211, 207, 199, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-isys-important {
@@ -9676,8 +9717,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-excel-active-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-excel-active:hover, .link-excel-active:focus {
-  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(204, 72, 24, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 72, 24, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-excel-alternate {
@@ -9685,8 +9726,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-excel-alternate-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-excel-alternate:hover, .link-excel-alternate:focus {
-  color: RGBA(195, 215, 203, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(195, 215, 203, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(211, 207, 199, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(211, 207, 199, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-excel-important {
@@ -15266,7 +15307,7 @@ table,
   background-color: #343a40;
 }
 .alert-vs-primary {
-  background-color: #68217A;
+  background-color: #E37933;
 }
 .alert-vs-background {
   background-color: #303030;
@@ -15281,7 +15322,7 @@ table,
   background-color: #E37933;
 }
 .alert-vs-alternate {
-  background-color: #D473B7;
+  background-color: #7F7F7F;
 }
 .alert-vs-important {
   background-color: #A9DCFF;
@@ -15299,10 +15340,10 @@ table,
   background-color: #C8C3B9;
 }
 .alert-isys-active {
-  background-color: #B4CDBE;
+  background-color: #FF5A1E;
 }
 .alert-isys-alternate {
-  background-color: #B4CDBE;
+  background-color: #C8C3B9;
 }
 .alert-isys-important {
   background-color: #FF4081;
@@ -15320,10 +15361,10 @@ table,
   background-color: #C8C3B9;
 }
 .alert-excel-active {
-  background-color: #B4CDBE;
+  background-color: #FF5A1E;
 }
 .alert-excel-alternate {
-  background-color: #B4CDBE;
+  background-color: #C8C3B9;
 }
 .alert-excel-important {
   background-color: #FF4081;
