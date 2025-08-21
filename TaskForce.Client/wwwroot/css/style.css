@@ -276,17 +276,21 @@ main.excel {
   width: 1%;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(2) {
-  width: 20%;
+  width: 15%;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(3) {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(4) {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(6), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(6) {
   width: 100%;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table {
@@ -447,17 +451,21 @@ main.excel {
   width: 1%;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(2) {
-  width: 20%;
+  width: 15%;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(3) {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(4) {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(6), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(6) {
   width: 100%;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table {
@@ -618,17 +626,21 @@ main.excel {
   width: 1%;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(2) {
-  width: 20%;
+  width: 15%;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(3) {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(4) {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(6), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(6) {
   width: 100%;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table {
@@ -789,17 +801,21 @@ main.excel {
   width: 1%;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(2) {
-  width: 20%;
+  width: 15%;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(3) {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(4) {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(6), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(6) {
   width: 100%;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table {

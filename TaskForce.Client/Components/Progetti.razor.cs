@@ -44,6 +44,7 @@ namespace TaskForce.Client.Components
         {
             Headers = new()
             {
+                new() { Name = "reparto" },
                 new() { Name = "giorni previsti" },
                 new() { Name = "stato" },
                 new() { Name = "" }
