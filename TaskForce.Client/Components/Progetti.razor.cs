@@ -46,7 +46,7 @@ namespace TaskForce.Client.Components
             {
                 new() { Name = "giorni previsti" },
                 new() { Name = "stato" },
-                new() { Name = "lavorazione" }
+                new() { Name = "" }
             };
         }
 

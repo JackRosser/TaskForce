@@ -9,11 +9,11 @@
     & .project-deadline {
         background-color: $primary;
         color: $text;
-        padding: 1rem;
-        border-radius: 15px 15px 0 0;
         display: flex;
+        padding: 0.8rem;
         align-items: center;
         gap: 1rem;
+        font-size: 0.9rem;
 
         & .info,
         & .countdown {
@@ -44,14 +44,11 @@
     & .macrobox {
         position: relative;
         width: 100%;
-        display: flex;
-        flex-direction: column;
         color: $text;
         overflow: auto;
 
         & .macrocontainer {
             cursor: grab;
-            padding: 1rem;
             background-color: $text-hover;
             color: $text;
 
@@ -59,19 +56,18 @@
             & h2 {
                 margin: 0;
                 font-weight: 800;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 text-transform: uppercase;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 0.5rem;
             }
 
             & .macro-table {
-                margin-top: 1rem;
                 width: 100%;
                 border-collapse: separate;
                 border-spacing: 0;
-                border-radius: 10px;
                 overflow: hidden;
                 cursor: default;
 
@@ -98,11 +94,14 @@
                         & td {
                             padding: 1rem;
 
-
                             &.intestazione {
                                 text-align: start;
-                                font-size: 1.2rem;
                             }
+                        }
+
+                        & .tdev {
+                            display: flex;
+                            justify-content: end;
                         }
                     }
                 }
@@ -111,7 +110,32 @@
                 & th {
                     color: $text;
                     text-transform: capitalize;
-                    text-align: center;
+                    text-align: right;
+                }
+
+                & th,
+                & td {
+                    &:nth-child(1) {
+                        width: 1%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 20%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 15%;
+                        text-align: center;
+                    }
+
+                    &:nth-child(4) {
+                        width: 15%;
+                        text-align: center;
+                    }
+
+                    &:nth-child(5) {
+                        width: 100%;
+                    }
                 }
 
                 & .dev-table {
@@ -121,6 +145,7 @@
                     border-radius: 15px;
                     overflow: hidden;
                     font-size: 0.8rem;
+                    table-layout: fixed;
 
                     & thead {
                         & tr {
@@ -142,7 +167,6 @@
                                 background-color: rgba($alternate, 0.6);
                             }
 
-
                             & td {
                                 padding: 1rem;
 
@@ -163,8 +187,36 @@
                         text-transform: capitalize;
                         text-align: center;
                     }
+
+                    & thead th:nth-child(2),
+                    & tbody td:nth-child(2) {
+                        width: 90px;
+                    }
+
+                    & thead th:nth-child(3),
+                    & tbody td:nth-child(3) {
+                        width: 160px;
+                    }
+
+                    & thead th:nth-child(4),
+                    & tbody td:nth-child(4) {
+                        width: 72px;
+                    }
+
+                    & thead th:first-child,
+                    & tbody td:first-child {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    & th,
+                    & td {
+                        width: inherit;
+                    }
                 }
             }
+
 
             &:nth-child(even) {
                 background-color: $alternate;

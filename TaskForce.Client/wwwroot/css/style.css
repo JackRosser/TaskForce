@@ -190,11 +190,11 @@ main.excel {
 .progettocontainer.vs .project-deadline {
   background-color: #68217A;
   color: #F5F5F0;
-  padding: 1rem;
-  border-radius: 15px 15px 0 0;
   display: flex;
+  padding: 0.8rem;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9rem;
 }
 .progettocontainer.vs .project-deadline .info, .progettocontainer.vs .project-deadline .countdown {
   display: flex;
@@ -218,32 +218,28 @@ main.excel {
 .progettocontainer.vs .macrobox {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   color: #F5F5F0;
   overflow: auto;
 }
 .progettocontainer.vs .macrobox .macrocontainer {
   cursor: grab;
-  padding: 1rem;
   background-color: #7F7F7F;
   color: #F5F5F0;
 }
 .progettocontainer.vs .macrobox .macrocontainer h2, .progettocontainer.vs .macrobox .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table {
-  margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 10px;
   overflow: hidden;
   cursor: default;
 }
@@ -266,12 +262,32 @@ main.excel {
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
   text-align: start;
-  font-size: 1.2rem;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table tbody tr .tdev {
+  display: flex;
+  justify-content: end;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table tr, .progettocontainer.vs .macrobox .macrocontainer .macro-table th {
   color: #F5F5F0;
   text-transform: capitalize;
+  text-align: right;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(1), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(1) {
+  width: 1%;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(2) {
+  width: 20%;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(3) {
+  width: 15%;
   text-align: center;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.vs .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 100%;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table {
   width: 100%;
@@ -280,6 +296,7 @@ main.excel {
   border-radius: 15px;
   overflow: hidden;
   font-size: 0.8rem;
+  table-layout: fixed;
 }
 .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead tr {
   background-color: #68217A;
@@ -309,6 +326,23 @@ main.excel {
   text-transform: capitalize;
   text-align: center;
 }
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(2), .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(2) {
+  width: 90px;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(3), .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(3) {
+  width: 160px;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(4), .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(4) {
+  width: 72px;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table thead th:first-child, .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table tbody td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table th, .progettocontainer.vs .macrobox .macrocontainer .macro-table .dev-table td {
+  width: inherit;
+}
 .progettocontainer.vs .macrobox .macrocontainer:nth-child(even) {
   background-color: #D473B7;
   color: #303030;
@@ -327,11 +361,11 @@ main.excel {
 .progettocontainer.isys .project-deadline {
   background-color: #FF5A1E;
   color: #343a40;
-  padding: 1rem;
-  border-radius: 15px 15px 0 0;
   display: flex;
+  padding: 0.8rem;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9rem;
 }
 .progettocontainer.isys .project-deadline .info, .progettocontainer.isys .project-deadline .countdown {
   display: flex;
@@ -355,32 +389,28 @@ main.excel {
 .progettocontainer.isys .macrobox {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   color: #343a40;
   overflow: auto;
 }
 .progettocontainer.isys .macrobox .macrocontainer {
   cursor: grab;
-  padding: 1rem;
   background-color: #C8C3B9;
   color: #343a40;
 }
 .progettocontainer.isys .macrobox .macrocontainer h2, .progettocontainer.isys .macrobox .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table {
-  margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 10px;
   overflow: hidden;
   cursor: default;
 }
@@ -403,12 +433,32 @@ main.excel {
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
   text-align: start;
-  font-size: 1.2rem;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table tbody tr .tdev {
+  display: flex;
+  justify-content: end;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table tr, .progettocontainer.isys .macrobox .macrocontainer .macro-table th {
   color: #343a40;
   text-transform: capitalize;
+  text-align: right;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(1), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(1) {
+  width: 1%;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(2) {
+  width: 20%;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(3) {
+  width: 15%;
   text-align: center;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.isys .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 100%;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table {
   width: 100%;
@@ -417,6 +467,7 @@ main.excel {
   border-radius: 15px;
   overflow: hidden;
   font-size: 0.8rem;
+  table-layout: fixed;
 }
 .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead tr {
   background-color: #FF5A1E;
@@ -446,6 +497,23 @@ main.excel {
   text-transform: capitalize;
   text-align: center;
 }
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(2), .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(2) {
+  width: 90px;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(3), .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(3) {
+  width: 160px;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(4), .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(4) {
+  width: 72px;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table thead th:first-child, .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table tbody td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table th, .progettocontainer.isys .macrobox .macrocontainer .macro-table .dev-table td {
+  width: inherit;
+}
 .progettocontainer.isys .macrobox .macrocontainer:nth-child(even) {
   background-color: #B4CDBE;
   color: #ECECE4;
@@ -464,11 +532,11 @@ main.excel {
 .progettocontainer.gray .project-deadline {
   background-color: #B0B3B8;
   color: #343A40;
-  padding: 1rem;
-  border-radius: 15px 15px 0 0;
   display: flex;
+  padding: 0.8rem;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9rem;
 }
 .progettocontainer.gray .project-deadline .info, .progettocontainer.gray .project-deadline .countdown {
   display: flex;
@@ -492,32 +560,28 @@ main.excel {
 .progettocontainer.gray .macrobox {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   color: #343A40;
   overflow: auto;
 }
 .progettocontainer.gray .macrobox .macrocontainer {
   cursor: grab;
-  padding: 1rem;
   background-color: #6C757D;
   color: #343A40;
 }
 .progettocontainer.gray .macrobox .macrocontainer h2, .progettocontainer.gray .macrobox .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table {
-  margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 10px;
   overflow: hidden;
   cursor: default;
 }
@@ -540,12 +604,32 @@ main.excel {
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
   text-align: start;
-  font-size: 1.2rem;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table tbody tr .tdev {
+  display: flex;
+  justify-content: end;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table tr, .progettocontainer.gray .macrobox .macrocontainer .macro-table th {
   color: #343A40;
   text-transform: capitalize;
+  text-align: right;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(1), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(1) {
+  width: 1%;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(2) {
+  width: 20%;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(3) {
+  width: 15%;
   text-align: center;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.gray .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 100%;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table {
   width: 100%;
@@ -554,6 +638,7 @@ main.excel {
   border-radius: 15px;
   overflow: hidden;
   font-size: 0.8rem;
+  table-layout: fixed;
 }
 .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead tr {
   background-color: #B0B3B8;
@@ -583,6 +668,23 @@ main.excel {
   text-transform: capitalize;
   text-align: center;
 }
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(2), .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(2) {
+  width: 90px;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(3), .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(3) {
+  width: 160px;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(4), .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(4) {
+  width: 72px;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table thead th:first-child, .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table tbody td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table th, .progettocontainer.gray .macrobox .macrocontainer .macro-table .dev-table td {
+  width: inherit;
+}
 .progettocontainer.gray .macrobox .macrocontainer:nth-child(even) {
   background-color: #CED4DA;
   color: #ADB5BD;
@@ -601,11 +703,11 @@ main.excel {
 .progettocontainer.excel .project-deadline {
   background-color: #F5F5F5;
   color: #20382F;
-  padding: 1rem;
-  border-radius: 15px 15px 0 0;
   display: flex;
+  padding: 0.8rem;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9rem;
 }
 .progettocontainer.excel .project-deadline .info, .progettocontainer.excel .project-deadline .countdown {
   display: flex;
@@ -629,32 +731,28 @@ main.excel {
 .progettocontainer.excel .macrobox {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   color: #20382F;
   overflow: auto;
 }
 .progettocontainer.excel .macrobox .macrocontainer {
   cursor: grab;
-  padding: 1rem;
   background-color: #D9D9D9;
   color: #20382F;
 }
 .progettocontainer.excel .macrobox .macrocontainer h2, .progettocontainer.excel .macrobox .macrocontainer .h2 {
   margin: 0;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table {
-  margin-top: 1rem;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 10px;
   overflow: hidden;
   cursor: default;
 }
@@ -677,12 +775,32 @@ main.excel {
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr td.intestazione {
   text-align: start;
-  font-size: 1.2rem;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table tbody tr .tdev {
+  display: flex;
+  justify-content: end;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table tr, .progettocontainer.excel .macrobox .macrocontainer .macro-table th {
   color: #20382F;
   text-transform: capitalize;
+  text-align: right;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(1), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(1) {
+  width: 1%;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(2), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(2) {
+  width: 20%;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(3), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(3) {
+  width: 15%;
   text-align: center;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(4), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table th:nth-child(5), .progettocontainer.excel .macrobox .macrocontainer .macro-table td:nth-child(5) {
+  width: 100%;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table {
   width: 100%;
@@ -691,6 +809,7 @@ main.excel {
   border-radius: 15px;
   overflow: hidden;
   font-size: 0.8rem;
+  table-layout: fixed;
 }
 .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead tr {
   background-color: #F5F5F5;
@@ -719,6 +838,23 @@ main.excel {
   color: #20382F;
   text-transform: capitalize;
   text-align: center;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(2), .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(2) {
+  width: 90px;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(3), .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(3) {
+  width: 160px;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead th:nth-child(4), .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody td:nth-child(4) {
+  width: 72px;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table thead th:first-child, .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table tbody td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table th, .progettocontainer.excel .macrobox .macrocontainer .macro-table .dev-table td {
+  width: inherit;
 }
 .progettocontainer.excel .macrobox .macrocontainer:nth-child(even) {
   background-color: #fff;
